@@ -1,0 +1,175 @@
+{
+  "_id": "BUfAq9Ypabhdaq47",
+  "name": "Проклятие стихий / Elemental Bane",
+  "type": "spell",
+  "img": "icons/magic/defensive/armor-shield-barrier-steel.webp",
+  "effects": [],
+  "folder": "5iZ8qMTOt7ODg7B1",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "elemental%20bane_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Elemental Bane",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\">\n<div class=\"rd__spc-inline-post\">Выберите одно существо, видимое в пределах дистанции заклинания, а затем выберите один из следующих видов урона: гром, кислота, огонь, холод или молния.</div>\n<div class=\"rd__spc-inline-post\">Цель должна преуспеть в испытании Выносливости, иначе будет подвержена эффекту заклинания в течение времени его действия.</div>\n<div class=\"rd__spc-inline-post\">Когда цель впервые за ход получает урон выбранного вида, она также получает дополнительно [[/r 2d6]] урона этого вида.</div>\n<div class=\"rd__spc-inline-post\">Кроме того, цель теряет любые устойчиовости к этому виду урона, пока не закончится заклинание.</div>\n<div class=\"rd__spc-inline-post\"><strong>На высоких кругах</strong>.  Если вы сотворяете это заклинание, используя ячейку 5 круга или выше, вы можете выбрать одну дополнительную цель за каждый круг ячейки выше 5. Цели должны находиться в пределах 30 футов друг от друга, когда вы сотворяете заклинание.</div>\n</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "90",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 4,
+    "school": "trs",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": "con",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "proklyatie-stihij--elemental-bane"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028207253,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!BUfAq9Ypabhdaq47"
+}

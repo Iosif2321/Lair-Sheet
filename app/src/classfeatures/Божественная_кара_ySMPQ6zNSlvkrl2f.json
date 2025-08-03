@@ -1,0 +1,411 @@
+{
+  "_id": "ySMPQ6zNSlvkrl2f",
+  "name": "Божественная кара",
+  "type": "feat",
+  "img": "icons/skills/melee/weapons-crossed-swords-yellow-teal.webp",
+  "effects": [],
+  "folder": "j2nOx3D2Ol0XnFtC",
+  "flags": {
+    "core": {},
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "tidy5e-sheet": {
+      "section": "",
+      "actionSection": ""
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Со 2-го уровня, когда вы попадаете по существу атакой оружием в ближнем бою, вы можете потратить одну ячейку заклинания, чтобы нанести по цели лучистый урон вдобавок к урону от оружия. </p><p>Дополнительный урон равен [[/r 2d8]] для ячейки 1-го круга + [[/r 1d8]] за каждый круг выше 1-го, максимум [[/r 5d8]]. Урон увеличивается ещё на [[/r 1d8]], если цель – нежить или бестия, до максимума в [[/r 6d8]].</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB pg. 85",
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "special",
+      "cost": null,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": ""
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": "1",
+      "width": null,
+      "units": "",
+      "type": "creature",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": ""
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": "",
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": "",
+    "actionType": "other",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        [
+          "2d8",
+          "radiant"
+        ]
+      ],
+      "versatile": "1d8"
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Paladin 2",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "enchantment": null,
+    "summons": null,
+    "prerequisites": {
+      "level": null
+    },
+    "properties": [],
+    "activities": {
+      "dnd5eactivity000": {
+        "consumption": {
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "1",
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": true,
+            "max": "4"
+          }
+        },
+        "name": "Лучистый урон",
+        "img": "",
+        "duration": {
+          "units": "inst"
+        },
+        "range": {
+          "units": "any"
+        },
+        "damage": {
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": "8",
+              "bonus": "",
+              "types": [
+                "radiant"
+              ],
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ],
+          "critical": {
+            "allow": true
+          }
+        },
+        "appliedEffects": []
+      },
+      "dnd5eactivity200": {
+        "name": "Лучистый урон для бестии/нежити",
+        "img": "",
+        "duration": {
+          "units": "inst"
+        },
+        "range": {
+          "units": "any"
+        },
+        "damage": {
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": "8",
+              "bonus": "",
+              "types": [
+                "radiant"
+              ],
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ],
+          "critical": {
+            "allow": true
+          }
+        },
+        "appliedEffects": [],
+        "effects": [],
+        "consumption": {
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "1",
+              "scaling": {
+                "mode": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": true,
+            "max": "4"
+          }
+        }
+      },
+      "VxKzihud1aukr1EO": {
+        "type": "damage",
+        "_id": "VxKzihud1aukr1EO",
+        "sort": 0,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": true,
+            "max": "4"
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "1",
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "any",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "type": "creature",
+            "count": "",
+            "special": ""
+          },
+          "override": false,
+          "prompt": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "damage": {
+          "critical": {
+            "allow": true,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": "8",
+              "bonus": "",
+              "types": [
+                "radiant"
+              ],
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "name": "Лучистый урон",
+        "img": "",
+        "appliedEffects": []
+      },
+      "HD06qfhBXCzXL71D": {
+        "type": "damage",
+        "sort": 0,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": true,
+            "max": "4"
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "1",
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "any",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "creature",
+            "special": ""
+          },
+          "override": false,
+          "prompt": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "damage": {
+          "critical": {
+            "allow": true,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": "8",
+              "bonus": "",
+              "types": [
+                "radiant"
+              ],
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "name": "Лучистый урон бестии/нежити",
+        "_id": "HD06qfhBXCzXL71D",
+        "img": "",
+        "appliedEffects": []
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ySMPQ6zNSlvkrl2f"
+}

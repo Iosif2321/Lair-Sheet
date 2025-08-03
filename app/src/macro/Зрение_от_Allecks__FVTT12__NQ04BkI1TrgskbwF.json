@@ -1,0 +1,48 @@
+{
+  "_id": "NQ04BkI1TrgskbwF",
+  "name": "Зрение от Allecks (FVTT12)",
+  "type": "script",
+  "author": "uygtCpIWAtXlcaXr",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+  "scope": "global",
+  "command": "//автор Allecks\n//Вы можете задать вопрос и поддержать на https://boosty.to/allecks\n// версия 1.0 (12.09.24)\n\nlet dialogTemplate = `\n  <div>\n    <form name=\"vision\">\n      <div class=\"form-group\">\n        <label for=\"dropdownMenu\">Выберите тип зрения:</label>\n        <select id=\"dropdownMenu\" name=\"dropdownMenu\">\n          <option value=\"off\">Отключить</option>\n          <option value=\"basic\">Обычное зрение</option>\n          <option value=\"darkvision\">Ночное зрение</option>\n          <option value=\"devil\">Дьявольское зрение(Колдун)</option>\n          <option value=\"blind\">Слепое зрение</option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"inputField\">Введите дальность зрения:</label>\n        <input type=\"number\" id=\"inputField\" name=\"inputField\" value=\"0\">\n      </div>\n    </form>\n  </div>`;\n\nnew Dialog({\n  title: \"Зрение\",\n  content: dialogTemplate,\n  buttons: {\n    confirm: {\n      label: \"Подтвердить\",\n      callback: (html) => {\n        let form = html.find('[name=\"vision\"]')[0]\n        let dropdownValue = form.dropdownMenu.value;\n        let inputValue = form.inputField.value;\n        updateToken(dropdownValue, inputValue)\n        form.dropdownMenu.addEventListener('change', function () {\n            if(dropdownValue===\"off\"){\n                form.inputField.value = 0\n            }else if(dropdownValue===\"devil\"){\n                form.inputField.value = 120\n            }else{\n                form.inputField.value = 30\n            }\n        });\n      },\n    },\n    cancel: {\n      label: \"Отмена\",\n    },\n  },\n}).render(true);\n\nfunction updateToken(vision, value){\n    for ( let token of canvas.tokens.controlled ) {\n        if(vision===\"off\"){\n            token.document.update(\n                {\n                    \"sight.vision\": false,\n                    \"sight.visionMode\": \"basic\",\n                    \"sight.range\": 0,\n                    \"dimSight\": 0,\n                    \"brightSight\": 0,\n                    \"detectionModes\": [{\n                      enabled: true,\n                      id: \"lightPerception\",\n                      range: 0\n                  }]\n                }\n            );\n\n        }else if(vision===\"blind\"){\n            token.document.update(\n                {\n                    \"sight.vision\": true,\n                    \"detectionModes\": [{\n                        enabled: true,\n                        id: \"blindsight\",\n                        range: value\n                    }]\n                }\n        );\n        }else if(vision===\"devil\"){\n            token.document.update(\n                {\n                    \"sight.vision\": true,\n                    \"sight.visionMode\": \"basic\",\n                    \"dimSight\": 0,\n                    \"sight.range\": value,\n                    \"brightSight\": value,\n                }\n            );\n        }else if(vision===\"basic\"){\n          token.document.update(\n              {\n                  \"sight.vision\": true,\n                  \"sight.visionMode\": \"basic\",\n                  \"dimSight\": 0,\n                  \"sight.range\": 0,\n                  \"brightSight\": 0,\n                  \"detectionModes\": [{\n                        enabled: true,\n                        id: \"lightPerception\",\n                        range: value\n                    }]\n              }\n          );\n        }else if(vision===\"darkvision\"){\n          token.document.update(\n              {\n                  \"sight.vision\": true,\n                  \"sight.visionMode\": \"darkvision\",\n                  \"dimSight\": 0,\n                  \"sight.range\": 0,\n                  \"brightSight\": 0,\n                  \"detectionModes\": [{\n                        enabled: true,\n                        id: \"lightPerception\",\n                        range: value\n                    },\n                    {\n                        enabled: true,\n                        id: \"basicSight\",\n                        range: value\n                    }]\n              }\n          );\n        }else{\n            token.document.update(\n                {\n                    \"sight.vision\": true,\n                    \"sight.visionMode\": vision,\n                    \"dimSight\": value,\n                    \"sight.range\": value,\n                    \"brightSight\": 0,\n                    \"detectionModes\": [{\n                        enabled: true,\n                        id: \"blindsight\",\n                        range: value\n                    }]\n                }\n            );\n        }\n    }\n}\n\n\nsetTimeout(() => {\n    const dropdownMenu = document.getElementById('dropdownMenu');\n    const inputField = document.getElementById('inputField');\n    dropdownMenu.addEventListener('change', function () {\n        if(dropdownMenu.value ===\"off\"){\n            inputField.value = 0\n        }else if(dropdownMenu.value ===\"devil\"){\n            inputField.value = 120\n        }else{\n            inputField.value = 30\n        }\n    });\n  }, 100);",
+  "folder": "zM3lWtEgwdtFJ9Xy",
+  "flags": {
+    "scene-packer": {
+      "hash": "5188e6ec28231171e3ec1d1964a7706234303ad1",
+      "sourceId": "Macro.6N0B0ZXbO2oeLqX2"
+    },
+    "combat-utility-belt": {
+      "macroTrigger": ""
+    },
+    "advanced-macros": {
+      "runAsGM": false
+    },
+    "socketmacros": {
+      "isSocket": false
+    },
+    "exportSource": {
+      "world": "test",
+      "system": "dnd5e",
+      "coreVersion": "12.327",
+      "systemVersion": "3.3.0"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "3.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1722508555438,
+    "modifiedTime": 1726128453894,
+    "lastModifiedBy": "Ap3u2NndQnPP92Ld",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "WOfH6XpTSmINbcuE": 3
+  },
+  "_key": "!macros!NQ04BkI1TrgskbwF"
+}

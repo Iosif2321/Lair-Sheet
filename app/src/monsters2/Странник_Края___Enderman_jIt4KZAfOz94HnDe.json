@@ -1,0 +1,1489 @@
+{
+  "name": "Странник Края / Enderman",
+  "type": "npc",
+  "flags": {
+    "core": {}
+  },
+  "_id": "jIt4KZAfOz94HnDe",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Enderman.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 15,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "dex": {
+        "value": 18,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "con": {
+        "value": 15,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "int": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "wis": {
+        "value": 18,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "cha": {
+        "value": 11,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": null,
+        "calc": "default",
+        "formula": ""
+      },
+      "hp": {
+        "value": 78,
+        "max": 78,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "12d8 + 24"
+      },
+      "init": {
+        "ability": "",
+        "bonus": "0",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "burrow": null,
+        "climb": null,
+        "fly": null,
+        "swim": null,
+        "walk": 40,
+        "units": "ft",
+        "hover": false
+      },
+      "attunement": {
+        "max": 3
+      },
+      "senses": {
+        "darkvision": 60,
+        "blindsight": null,
+        "tremorsense": null,
+        "truesight": null,
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "",
+      "exhaustion": 0,
+      "concentration": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "bonuses": {
+          "save": ""
+        },
+        "limit": 1
+      },
+      "death": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "success": 0,
+        "failure": 0
+      },
+      "hd": {
+        "spent": 0
+      }
+    },
+    "details": {
+      "biography": {
+        "value": "<p>Странники Края — высокие, черные, двуногие существа с длинными тонкими конечностями и пронзительными фиолетовыми глазами. Фиолетовые частицы то появляются, то исчезают вокруг них. Странники Края нервны и загадочны, их действия почти невозможно интерпретировать.</p><p>Странников Края особенно привязаны к Краю, где они собираются большими группами. Они необычные гости в других измерениях, хотя чаще появляются парами в таких своеобразных местах, как искажённые леса Нижнего мира. Они избегают солнечного света и страдают от воды, включая дождь. Когда странник Края становится целью дистанционного оружия или получает урон, он телепортируется в более безопасное место поблизости и издаёт характерный звук «вуп» в месте назначения.</p><p>Странники Края не отличаются хищничеством. Когда Гуманоид смотрит прямо на странника, странник приходит в ярость, ужасно широко открывает рот и бросается в атаку своими длинными руками. Побежденный странник взрывается и иногда оставляет после себя @Compendium[laaru-dnd5-hw.items.coxsg0cYPhzxCtUx]{Жемчуг Края}, который при броске телепортирует метателя к месту приземления.</p>",
+        "public": ""
+      },
+      "alignment": "хаотичная нейтральная",
+      "race": null,
+      "type": {
+        "value": "aberration",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "environment": "",
+      "cr": 6,
+      "spellLevel": 0,
+      "ideal": "",
+      "bond": "",
+      "flaw": ""
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [
+          "necrotic"
+        ],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [],
+        "custom": "Язык Края"
+      },
+      "dm": {
+        "amount": {},
+        "bypasses": []
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "skills": {
+      "acr": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ani": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "arc": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ath": {
+        "value": 0,
+        "ability": "str",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "dec": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "his": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ins": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "itm": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "inv": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "med": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "nat": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prc": {
+        "value": 1,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prf": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "per": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "rel": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "slt": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ste": {
+        "value": 1,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "sur": {
+        "value": 1,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      }
+    },
+    "tools": {},
+    "spells": {
+      "spell1": {
+        "value": 0,
+        "override": null
+      },
+      "spell2": {
+        "value": 0,
+        "override": null
+      },
+      "spell3": {
+        "value": 0,
+        "override": null
+      },
+      "spell4": {
+        "value": 0,
+        "override": null
+      },
+      "spell5": {
+        "value": 0,
+        "override": null
+      },
+      "spell6": {
+        "value": 0,
+        "override": null
+      },
+      "spell7": {
+        "value": 0,
+        "override": null
+      },
+      "spell8": {
+        "value": 0,
+        "override": null
+      },
+      "spell9": {
+        "value": 0,
+        "override": null
+      },
+      "pact": {
+        "value": 0,
+        "override": null
+      },
+      "spell0": {
+        "value": 0,
+        "override": null
+      }
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "resources": {
+      "legact": {
+        "value": 0,
+        "max": 0
+      },
+      "legres": {
+        "value": 0,
+        "max": 0
+      },
+      "lair": {
+        "value": false,
+        "initiative": 20
+      }
+    },
+    "source": {
+      "page": "",
+      "license": "",
+      "rules": "2014",
+      "book": "MCV3MC"
+    }
+  },
+  "prototypeToken": {
+    "name": "Странник Края",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "modules/laaru-dnd5-hw/assets/images/MM/Enderman.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "hexagonalShape": 0,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Мультиатака",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Cтранник совершает две атаки крушащим ударом.</p>",
+          "chat": "<p>У существа есть мультиатака.</p>"
+        },
+        "source": {
+          "custom": "MCV3MC",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "N5s4uI6OpcSYQoF8": 3
+      },
+      "img": "icons/skills/melee/strike-weapons-orange.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "_id": "jWWeuvNvvLltisHO",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!jIt4KZAfOz94HnDe.jWWeuvNvvLltisHO"
+    },
+    {
+      "system": {
+        "description": {
+          "value": "<section><p><em>Атака оружием в ближнем бою:</em> [[/r 1d20+7]]{+7} to hit; reach 10 футов, одна цель.</p><p><em>Попадание:</em> 8 ([[/r 1d8 + 4]]) дробящего урона плюс 9 ([[/r 2d8]]) некротического урона.</p></section>",
+          "chat": "<p>Существо бьёт с размаху!</p>"
+        },
+        "source": {
+          "custom": "MCV3MC",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "attunement": "",
+        "equipped": true,
+        "rarity": "",
+        "identified": true,
+        "cover": null,
+        "crewed": false,
+        "range": {
+          "value": 10,
+          "long": null,
+          "units": "ft",
+          "reach": null
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "damage": {
+          "versatile": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "base": {
+            "number": 1,
+            "denomination": 8,
+            "bonus": "",
+            "types": [
+              "bludgeoning"
+            ],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        },
+        "armor": {
+          "value": null
+        },
+        "hp": {
+          "value": null,
+          "max": null,
+          "dt": null,
+          "conditions": ""
+        },
+        "properties": [],
+        "proficient": 1,
+        "unidentified": {
+          "description": ""
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "container": null,
+        "magicalBonus": null,
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "10",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "attuned": false,
+        "ammunition": {}
+      },
+      "name": "Крушащий удар",
+      "type": "weapon",
+      "ownership": {
+        "default": 0,
+        "N5s4uI6OpcSYQoF8": 3
+      },
+      "img": "icons/equipment/hand/gauntlet-tooled-leather-brown.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "_id": "N3VC0LhR4cMyh2JC",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!jIt4KZAfOz94HnDe.N3VC0LhR4cMyh2JC"
+    },
+    {
+      "_id": "0oll48S1uSC0znLr",
+      "name": "Ускользающая телепортация",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Всякий раз, когда он получает урон или становится целью дистанционной атаки, странник может телепортироваться вместе со всем снаряжением, которое он носит или держит, в незанятое пространство, которое он может видеть в пределах 20 футов от себя (никаких действий не требуется). Если этот эффект срабатывает при дистанционной атаке, странник телепортируется непосредственно перед попаданием атаки, из-за чего атака промахивается. Эта особенность подавляется, пока странник @UUID[Compendium.laaru-dnd5-hw.actions.3yQzUJzdrHg1OlIL]{выведен из строя}.</p>",
+          "chat": "<p>Всякий раз, когда он получает урон или становится целью дистанционной атаки, странник может телепортироваться (никаких действий не требуется). Если этот эффект срабатывает при дистанционной атаке, странник телепортируется непосредственно перед попаданием атаки, из-за чего атака промахивается.</p>"
+        },
+        "source": {
+          "custom": "MCV3MC",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "N5s4uI6OpcSYQoF8": 3
+      },
+      "img": "icons/magic/movement/trail-streak-zigzag-teal.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!jIt4KZAfOz94HnDe.0oll48S1uSC0znLr"
+    },
+    {
+      "_id": "ESnuVsCKruIbhNJr",
+      "name": "Имплозия",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Когда ПЗ странника падают до 0, он умирает, а его тело взрывается. Бросьте [[/r d10]]. При броске 9 или меньше странник не оставляет следов. При броске 10 странник оставляет после себя светящуюся пурпурную сферу, называемую @UUID[Compendium.laaru-dnd5-hw.items.coxsg0cYPhzxCtUx]{жемчугом Края}, стоимостью 500 зм. Существо может бросить жемчужину на расстояние до 60 футов; если жемчужина приземляется в незанятом пространстве, достаточно большом, чтобы вместить существо, существо телепортируется в это пространство вместе со всем снаряжением, которое оно носит или держит, и жемчужина исчезает.</p>",
+          "chat": "<p>Когда ПЗ странника падают до 0, он умирает, а его тело взрывается.</p>"
+        },
+        "source": {
+          "custom": "MCV3MC",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "N5s4uI6OpcSYQoF8": 3
+      },
+      "img": "icons/magic/unholy/orb-stone-pink.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!jIt4KZAfOz94HnDe.ESnuVsCKruIbhNJr"
+    },
+    {
+      "_id": "Knv5WXtoRJz26X46",
+      "name": "Чувствительность к солнцу",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Находясь на солнце, странник совершает броски атаки с помехой.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MCV3MC",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "N5s4uI6OpcSYQoF8": 3
+      },
+      "img": "icons/magic/nature/root-vine-thorned-fire-purple.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!jIt4KZAfOz94HnDe.Knv5WXtoRJz26X46"
+    },
+    {
+      "_id": "5Et1x2Aw28RpdZrz",
+      "name": "Восприимчивость к воде",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Странник получает 1 урона холодом за каждые 5 футов, которые он проходит в воде, за каждый галлон воды, вылитый на него, или каждый раз, когда он начинает свой ход под дождем.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MCV3MC",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "damage",
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "critical": {
+                "allow": false,
+                "bonus": ""
+              },
+              "parts": [
+                {
+                  "number": null,
+                  "denomination": null,
+                  "bonus": "",
+                  "types": [
+                    "cold"
+                  ],
+                  "custom": {
+                    "enabled": true,
+                    "formula": "1"
+                  },
+                  "scaling": {
+                    "mode": "whole",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "N5s4uI6OpcSYQoF8": 3
+      },
+      "img": "icons/commodities/materials/slime-thick-blue.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!jIt4KZAfOz94HnDe.5Et1x2Aw28RpdZrz"
+    }
+  ],
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.1",
+    "createdTime": 1726588007280,
+    "modifiedTime": 1726588007280,
+    "lastModifiedBy": "T0BtUpu1XTcoijv3"
+  },
+  "folder": "ggyO5Tb0txc4joEi",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "T0BtUpu1XTcoijv3": 3
+  },
+  "_key": "!actors!jIt4KZAfOz94HnDe"
+}

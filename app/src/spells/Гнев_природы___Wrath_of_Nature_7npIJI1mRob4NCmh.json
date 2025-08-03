@@ -1,0 +1,279 @@
+{
+  "_id": "7npIJI1mRob4NCmh",
+  "name": "Гнев природы / Wrath of Nature",
+  "type": "spell",
+  "img": "icons/magic/fire/flame-burning-tree-face.webp",
+  "effects": [],
+  "folder": "3zIZihf4NL02gtMG",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "wrath%20of%20nature_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "fumbleThreshold": null,
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Wrath of Nature",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\"><div class=\"rd__spc-inline-post\"><p>Вы взываете к духам природы, чтобы обратить их против ваших врагов. Выберите точку, которую вы можете видеть в пределах дистанции. Духи оживляют деревья, камни и травы в 60-футовом кубе с центром в этой точке на всё время действия заклинания.</p><ul><li><p><strong>Травы и подлесок.</strong> Любая область земли в кубе, покрытая травой или подлеском, является &amp;reference[difficultterrain]{пересечённой местностью} для ваших врагов.</p></li><li><p><strong>Деревья</strong>. В начале каждого вашего хода каждый из ваших врагов в пределах 10 футов от любого дерева внутри куба должен преуспеть в испытании Ловкости или получить [[/r 4d6]] рубящего урона от хлещущих его ветвей.</p></li><li><p><strong>Корни и лозы</strong>. В конце каждого вашего хода одно существо по вашему выбору, которое находится на земле внутри куба, должно преуспеть в испытании Силы или становится &amp;reference[restrained]{обездвиженным} до тех пор, пока заклинание не закончится. Обездвиженное существо может действием совершить проверку Силы (Атлетика) против СЛ вашего заклинания. При успехе эффект для него заканчивается.</p></li><li><p><strong>Камни</strong>. Бонусным действием в свой ход вы можете призвать камень внутри куба, чтобы запустить его в существо, которое вы можете видеть в границах куба. Совершите дистанционную атаку заклинанием против этой цели. При попадании цель получает [[/r 3d8]] немагического дробящего урона и должна преуспеть в испытании Силы или &amp;reference[prone]{распластаться}.</p></li></ul></div></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "cube",
+        "size": "60",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "120",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 5,
+    "school": "evo",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "ranged",
+            "classification": "spell"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": [
+            {
+              "number": 4,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "slashing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "sort": 0
+      },
+      "dnd5eactivity100": {
+        "_id": "dnd5eactivity100",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 4,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "slashing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "dex",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "gnev-prirody--wrath-of-nature"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028204927,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!7npIJI1mRob4NCmh"
+}

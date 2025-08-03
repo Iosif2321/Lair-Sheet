@@ -1,0 +1,202 @@
+{
+  "_id": "CKvMliOdnw7iJO4p",
+  "name": "Корона звёзд / Crown of Stars",
+  "type": "spell",
+  "img": "icons/magic/control/control-influence-crown-yellow.webp",
+  "effects": [],
+  "folder": "j0as9Trr663mrAHf",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "crown%20of%20stars_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "fumbleThreshold": null,
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Crown of Stars",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\">\n<div class=\"rd__spc-inline-post\">Семь похожих на звезды частиц света начинают вращаться вокруг вашей головы, пока заклинание не закончится. Бонусным действием вы можете отправить одну из частиц к одному существу или объекту на расстояние 120 футов от вас.</div>\n<div class=\"rd__spc-inline-post\">Если вы так делаете, совершите дистанционную атаку заклинанием. При попадании цель получает [[/r 4d12]]лучистого урона. Независимо от того, попали вы или нет, частица света исчезает.</div>\n<div class=\"rd__spc-inline-post\">Действие заклинания заканчивается, когда исчезнет последняя частица света. Пока у вас остается четыре или более частиц, они испускают &amp;reference[brightlight]{яркий свет} в радиусе 30 футов и &amp;reference[dimlight]{тусклый} в пределах еще 30 футов. Если у вас осталось три или менее частиц, то они испускают &amp;reference[dimlight]{тусклый свет} в радиусе 30 футов.</div>\n<div class=\"rd__spc-inline-post\"><strong>На высоких кругах</strong>.  Если вы сотворяете это заклинание, используя ячейку заклинания 8 круга или выше, количество создаваемых частиц света увеличивается на две за каждый круг ячейки выше 7.</div>\n</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "type": "self",
+        "count": "",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "units": "self"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 7,
+    "school": "evo",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "ranged",
+            "classification": "spell"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": [
+            {
+              "number": 4,
+              "denomination": 12,
+              "bonus": "",
+              "types": [
+                "radiant"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "korona-zvyozd--crown-of-stars"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028207877,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!CKvMliOdnw7iJO4p"
+}

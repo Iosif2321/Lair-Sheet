@@ -1,0 +1,292 @@
+{
+  "name": "Железный клык / Ironfang",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "system": {
+    "description": {
+      "value": "<p><em>Требуется настроенность</em></p><p>Сделанная из цельного куска железа, @Compendium[dnd5e.items.2YdfjN1PIIrSHZii]{Клевец} Железный Клык обладает похожим на длинный клюв остриём, покрытым древними рунами. Спер­ва кирка кажется тяжёлой, но когда её владелец начинает в ярости размахивать ей, то она становится почти невесомой. Это оружие обладает невосприимчивостью к коррозии, неуязвимо к воздействию кислоты — ничто не может испортить его, поскольку Железный клык несёт в себе часть силы Огремоха, Принца Злой Земли.</p><p>Вы получаете +2 к броскам атаки и урона этим магическим оружием. При попадании цель получает дополнительный урон громом [[/r 1d8]].</p><p><em><strong>Власть над землёй</strong></em>. Если вы вооружены Железным клыком, то получаете следующие преимущества:</p><ul><li><p>Вы свободно говорите на Терране.</p></li><li><p>Вы обладаете устойчивостью к урону кислотой.</p></li><li><p>Вы получаете чувство вибрации в радиусе 60 футов</p></li><li><p>Вы чувствуете залежи драгоценных камней и металлов в 60 футах от вас, но не знаете их чёткого местоположения.</p></li><li><p>Вы можете сотворить заклинание @Compendium[laaru-dnd5-hw.spells.N8fdjpdFRpncMCLg]{Подчинение чудовища} (СЛ испытания 17) на @Compendium[laaru-dnd5-hw.monsters.GvwIu2ijVKLJ8rFB]{элементаля земли}. Если вы сотворили это заклинание, то не сможете вновь использовать данное свойство до следующего рассвета.</p></li></ul><p><em><strong>Разбивающий звук</strong></em>. Железный Клык содержит 3 заряда. Вы можете действием потратить один заряд и сотворить заклинание @Compendium[laaru-dnd5-hw.spells.xSG5mIFLlHV59QiK]{Разбивающий звук} (СЛ испытания 17). Считается, что заклинание тратит ячейку 2 круга. Железный клык восстанавливает [[/r 1d3]] заря­да ежедневно на рассвете.</p><p><em><strong>Грохот</strong></em>. Находясь в элементальном узле земли, вы, с помощью Железного клыка, можете совершить ритуал под названием «Грохот», который позволит вам создать @UUID[Compendium.laaru-dnd5-hw.items.ZtfaMeJJmmkJT7y7]{земляную сферу опустошения} (см. описание сфер опустошения для информации о времени и стоимости ритуала). После окончания ритуала, вы не сможете повторить его до следующего рассвета.</p><section id=\"secret-kavI7aFKLfAW74Rt\" class=\"secret\"><p><em><strong>Изъян</strong></em>. Железный клык пробуждает разрушительную природу своего владельца. Пока существо настроено на это оружие, оно получает следующий изъян: «Я люблю ломать и разрушать всё вокруг».</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PotA",
+      "revision": 1,
+      "book": "PotA",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "legendary",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "range": {
+      "value": null,
+      "long": 0,
+      "units": "ft",
+      "reach": null
+    },
+    "uses": {
+      "max": "3",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d3"
+        }
+      ],
+      "spent": 0
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [
+          "piercing"
+        ],
+        "custom": {
+          "enabled": true,
+          "formula": "1d8+2+@mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      }
+    },
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "proficient": 1,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "martialM",
+      "baseItem": "warpick"
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "str",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "zheleznyj-klyk--ironfang",
+    "container": null,
+    "attuned": false,
+    "ammunition": {},
+    "magicalBonus": null
+  },
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Ironfang.webp",
+  "flags": {
+    "core": {
+      "sourceId": "Item.C58VsrfcSnh79rQb"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Ironfang",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 3
+    }
+  },
+  "effects": [
+    {
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 0,
+          "value": "acid",
+          "priority": 7
+        },
+        {
+          "key": "system.traits.languages.value",
+          "mode": 2,
+          "value": "terran",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": []
+        },
+        "core": {
+          "statusId": ""
+        }
+      },
+      "_id": "dNf140A75xC8Jsu4",
+      "name": "Устойчивость, Терран",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "modules/laaru-dnd5-hw/assets/images/pic/Ironfang.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!k94vQljLPTbw9RRw.dNf140A75xC8Jsu4"
+    }
+  ],
+  "_stats": {
+    "compendiumSource": "Item.C58VsrfcSnh79rQb",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "k94vQljLPTbw9RRw",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!k94vQljLPTbw9RRw"
+}

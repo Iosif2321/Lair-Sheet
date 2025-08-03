@@ -1,0 +1,246 @@
+{
+  "name": "Аметистовый магнетит / Amethyst Lodestone",
+  "type": "equipment",
+  "system": {
+    "description": {
+      "value": "<p>Этот кусок аметиста размером с кулак наделен способностью аметистового дракона преодолевать гравитацию. Пока вы несёте или носите магнетит, вы получаете преимущество на испытания Силы*.</p><p>Магнетит имеет 6 зарядов для следующих свойств, которые вы можете использовать, пока держите камень. Камень ежедневно, на рассвете, восстанавливает [[/r 1d6]] зарядов.</p><ul><li><p><strong>Полёт</strong>. Бонусным действием вы можете потратить 1 заряд, чтобы получить способность летать в течение 10 минут. На это время вы получаете скорость полёта, равную вашей скорости ходьбы, и можете парить.</p></li><li><p><strong>Гравитационный бросок</strong>. Действием вы можете потратить 1 заряд, чтобы сконцентрировать гравитацию вокруг существа, которое вы видите в 60 футах от вас. Цель должна преуспеть в испытании Силы СЛ 18, иначе будет отброшена на 20 футов в направлении по вашему выбору, обратном силе притяжения.</p></li><li><p><strong>Изменение тяготения</strong>. Действием вы можете потратить 3 заряда, чтобы сотворить @UUID[Compendium.laaru-dnd5-hw.spells.0jNc2SPkWrLIjRfz]{Обратная гравитация} (Сл испытания 18).</p><hr /></li></ul><p>*<em>Автоматически при установленном MidiQol</em>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "FTD",
+      "revision": 1,
+      "book": "FTD",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "veryRare",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "uses": {
+      "max": "6",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d6"
+        }
+      ],
+      "spent": 0
+    },
+    "armor": {
+      "value": null,
+      "dex": null,
+      "magicalBonus": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "speed": {
+      "value": null,
+      "conditions": ""
+    },
+    "strength": null,
+    "proficient": 1,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "baseItem": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "special",
+          "value": 0,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "ametistovyj-magnetit--amethyst-lodestone",
+    "container": null,
+    "attuned": false,
+    "properties": []
+  },
+  "img": "icons/commodities/gems/gem-faceted-rough-purple.webp",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.laaru-dnd5-hw.items.ES9SroVLNwEHYU3x"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Amethyst Lodestone",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 6
+    }
+  },
+  "effects": [
+    {
+      "changes": [
+        {
+          "key": "system.attributes.movement.fly",
+          "mode": 4,
+          "value": "@attributes.movement.walk",
+          "priority": 4
+        },
+        {
+          "key": "flags.midi-qol.advantage.ability.save.str",
+          "mode": 2,
+          "value": "1",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "dfreds-convenient-effects": {
+          "description": ""
+        },
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "macroRepeat": "none",
+          "specialDuration": []
+        },
+        "core": {
+          "statusId": ""
+        }
+      },
+      "_id": "tD71RxMdYBzBwhiQ",
+      "name": "Бонусы магнетита",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/commodities/gems/gem-faceted-rough-purple.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!ES9SroVLNwEHYU3x.tD71RxMdYBzBwhiQ"
+    }
+  ],
+  "_stats": {
+    "compendiumSource": "Compendium.laaru-dnd5-hw.items.ES9SroVLNwEHYU3x",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "ES9SroVLNwEHYU3x",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!ES9SroVLNwEHYU3x"
+}

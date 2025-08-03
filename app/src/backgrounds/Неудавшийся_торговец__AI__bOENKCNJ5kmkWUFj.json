@@ -1,0 +1,141 @@
+{
+  "name": "Неудавшийся торговец (AI)",
+  "type": "background",
+  "img": "icons/tools/hand/scale-balances-merchant-brown.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.laaru-dnd5-hw.backgrounds.l9HetCajbSO9Mo3y"
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Может быть, вы происходите из длинной династии торговцев. Возможно, вы были предпринимателем. Так или иначе, все ваши начинания закончились плохо. Было ли это из-за внешнего влияния, невезения или просто из-за того, что ваша деловая хватка была слабой, но вы потеряли все.</p><p>Однако с провалом приходит опыт. Вы освободились от той старой жизни, установили некоторые связи и усвоили уроки. Будучи готовым вести жизнь авантюриста, со своим пониманием мира коммерции вы прибыли в сферу Acquisitions Incorporated, и, возможно, в будущем у вас появится франшиза.</p><hr style=\"border-top:1px solid var(--color-border-light-primary);border-bottom:1px solid var(--color-border-light-highlight)\" /><p><strong>Умения в навыках:</strong> Расследование, Убеждение.</p><p><strong>Языки</strong>: Один любой на ваш выбор.</p><p><strong>Инструменты</strong>: Один набор @UUID[Compendium.laaru-dnd5-hw.items.swZnOS5MtbDThDkK]{ремесленных инструментов}.</p><p><strong>Снаряжение</strong>: Один набор @UUID[Compendium.laaru-dnd5-hw.items.swZnOS5MtbDThDkK]{ремесленных инструментов}, @UUID[Compendium.dnd5e.items.vJvb6fx3JVPmhG8x]{торговые весы}, комплект @UUID[Compendium.dnd5e.items.3OXueEpvDDCVfGFA]{парадной одежды}, @UUID[Compendium.dnd5e.items.9bWTRRDym06PzSAf]{поясной кошель} с 10 зм.</p><p><strong>Особенность:</strong> </p><p>@UUID[Compendium.laaru-dnd5-hw.classfeatures.3jbrzP0HLAo19Hb5]{Цепочка поставок}</p><hr style=\"border-top:1px solid var(--color-border-light-primary);border-bottom:1px solid var(--color-border-light-highlight)\" /><h3>Рекомендуемые личные качества</h3><p>Торговец должен уметь считать, быть сильной личностью, иметь способность заключать сделки с враждебными противниками, иметь сильную руку с мечом для борьбы с бандитами и интуицию для понимания того, чего хотят и в чем нуждаются люди. Искусство бизнеса — это искусство находить наилучший путь к прибыли и этот путь может быть разным для каждой сделки. Чтобы добиться успеха, нужен сильный ум и крепкий желудок. Так почему же вы потерпели неудачу?</p><p>@UUID[Compendium.laaru-dnd5-hw.tables.7s1eHnpvv7kgi3QJ]{Свойства личности}</p><p>@UUID[Compendium.laaru-dnd5-hw.tables.KqB6zigO5wrbMqYp]{Идеал}</p><p>@UUID[Compendium.laaru-dnd5-hw.tables.tpqwpQiT14AdJddd]{Узы}</p><p>@UUID[Compendium.laaru-dnd5-hw.tables.RKkRCmYPs89Is4Uy]{Изъян}</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AI",
+      "page": "",
+      "license": "",
+      "rules": "2014",
+      "custom": "AI",
+      "revision": 1
+    },
+    "advancement": [
+      {
+        "_id": "0usdj0956slmhmvp",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.laaru-dnd5-hw.classfeatures.3jbrzP0HLAo19Hb5",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              ""
+            ],
+            "preparation": "",
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Особенность"
+      },
+      {
+        "_id": "uvoath7hutvqgbvw",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.items.9bWTRRDym06PzSAf",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.items.3OXueEpvDDCVfGFA",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.items.vJvb6fx3JVPmhG8x",
+              "optional": false
+            }
+          ],
+          "optional": true,
+          "spell": {
+            "ability": [
+              ""
+            ],
+            "preparation": "",
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Снаряжение"
+      },
+      {
+        "_id": "zy9NoBOMx7x09tO5",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "skills:inv",
+            "skills:per"
+          ],
+          "choices": [
+            {
+              "count": 1,
+              "pool": [
+                "languages:*"
+              ]
+            },
+            {
+              "count": 1,
+              "pool": [
+                "tool:art:*"
+              ]
+            }
+          ]
+        },
+        "level": 0,
+        "title": "Умения",
+        "value": {
+          "chosen": []
+        }
+      }
+    ],
+    "wealth": "",
+    "identifier": "neudavshijsya-torgovec-ai",
+    "startingEquipment": []
+  },
+  "ownership": {
+    "default": 0,
+    "ekSJaSkR4p1sowmM": 3
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.1",
+    "coreVersion": "12.331",
+    "createdTime": 1669712175746,
+    "modifiedTime": 1726672709346,
+    "lastModifiedBy": "RcfZuGA1DXFKUxUn",
+    "compendiumSource": "Compendium.laaru-dnd5-hw.backgrounds.l9HetCajbSO9Mo3y",
+    "duplicateSource": null
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "bOENKCNJ5kmkWUFj",
+  "_key": "!items!bOENKCNJ5kmkWUFj"
+}

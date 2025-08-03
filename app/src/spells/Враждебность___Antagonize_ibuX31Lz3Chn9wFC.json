@@ -1,0 +1,170 @@
+{
+  "name": "Враждебность / Antagonize",
+  "type": "spell",
+  "system": {
+    "description": {
+      "value": "<p>Вы шепчете магические слова, вызывающие враждебность у одного существа по вашему выбору в пределах дистанции. Цель должна преуспеть в испытании Мудрости, иначе получит [[/r 4d4]] психического урона и должна немедленно @Compendium[laaru-dnd5-hw.actions.mMwkUE20bEfKeetq]{ответным действием} совершить атаку в ближнем бою по другому существу по вашему выбору, которое вы можете видеть. Если цель не может совершить эту атаку (например, если в пределах её досягаемости никого нет или у неё не осталось ответных действий), цель совершает следующий бросок атаки до начала вашего следующего хода с помехой.</p><p><strong>На высоких кругах</strong>: Когда вы творите это заклинание, используя ячейку 4-го круга или выше, урон увеличивается на [[/r 1d4]] за каждый круг ячейки выше 3-го.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "BMT",
+      "book": "BMT",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "30",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 3,
+    "school": "enc",
+    "materials": {
+      "value": "игральная карта с изображением плута",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 4,
+              "denomination": 4,
+              "bonus": "",
+              "types": [
+                "psychic"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "wis",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "vrazhdebnost--antagonize"
+  },
+  "img": "icons/magic/control/fear-fright-shadow-monster-red.webp",
+  "flags": {
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "effects": [],
+  "folder": "V8qhuGxP5pE0yKU2",
+  "_id": "ibuX31Lz3Chn9wFC",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028228736,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!ibuX31Lz3Chn9wFC"
+}

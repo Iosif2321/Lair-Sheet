@@ -1,0 +1,263 @@
+{
+  "_id": "TXndfwZDERV0H0gI",
+  "name": "Возвращение к жизни / Raise Dead",
+  "type": "spell",
+  "img": "icons/magic/life/heart-area-circle-red-green.webp",
+  "effects": [],
+  "folder": "3zIZihf4NL02gtMG",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "raise%20dead_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": {
+          "0": true
+        },
+        "altValue": {
+          "0": true
+        },
+        "context": {
+          "0": ""
+        }
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "autoFailFriendly": false,
+      "offHandWeapon": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Raise Dead",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы касаетесь мёртвого существа и возвращаете его к жизни, если оно было мертво не дольше 10 дней. Если душа существа свободна и хочет вернуться в тело, существо оживает с1 ПЗ.</p>\n<p>Заклинание нейтрализует все яды и исцеляет немагические болезни, влиявшие на существо на момент смерти. Однако заклинание не снимает магические болезни, проклятия и тому подобные эффекты. Если их не снять перед сотворением этого заклинания, они продолжат действовать, когда существо вернётся к жизни. Заклинание не может вернуть к жизни нежить.</p>\n<p>Заклинание заставляет все смертельные раны зарасти, но потерянные части тела не восстанавливает. Если существу не хватает жизненно важных частей тела или органов — например, головы, — заклинание автоматически не срабатывает.</p>\n<p>Возвращение из мёртвых — тяжёлое испытание. Цель получает штраф -4 ко всем броскам атак, испытаниям и проверкам характеристик. Каждый раз, когда цель завершает долгий отдых, штраф уменьшается на 1, пока не исчезнет.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "hour",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "target": {
+      "affects": {
+        "type": "creature",
+        "count": "1",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "units": "touch"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 5,
+    "school": "nec",
+    "materials": {
+      "value": "алмаз стоимостью не менее 500 зм, исчезает при сотворении заклинания",
+      "consumed": true,
+      "cost": 500,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "heal",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "healing": {
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [
+            "healing"
+          ],
+          "custom": {
+            "enabled": true,
+            "formula": "1"
+          },
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "vozvrashenie-k-zhizni--raise-dead"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028218772,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!TXndfwZDERV0H0gI"
+}

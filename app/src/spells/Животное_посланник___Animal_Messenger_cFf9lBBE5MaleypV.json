@@ -1,0 +1,231 @@
+{
+  "_id": "cFf9lBBE5MaleypV",
+  "name": "Животное-посланник / Animal Messenger",
+  "type": "spell",
+  "img": "icons/creatures/birds/dove-pigeon-flying-white.webp",
+  "effects": [],
+  "folder": "1laDscZ7Bn7NoviD",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "animal%20messenger_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [],
+        "altValue": [],
+        "context": []
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Animal Messenger",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\">С помощью этого заклинания вы заставляете животное доставить ваше сообщение. Выберите маленькое животное, которое видите в пределах дистанции, вроде белки, сойки или летучей мыши, Выберите место, которое прежде посещали, адресата, подходящего под описание, например: «мужчина или женщина в форме городского стража» или «рыжий дварф в колпаке». Затем произнесите сообщение не длиннее 25 слов. Пока длится заклинание, животное будет пытаться попасть в указанное место и доставить сообщение. Оно преодолевает около 50 миль за 24 часа, если оно летающее, или 25 миль для прочих животных.</div>\n<div class=\"rd__spc-inline-post\">Прибыв на место, посланник доставит сообщение описанному вами существу, копируя звук вашего голоса. Посланник будет говорить только с существом, которое подходит под описание. Если посланник не доберётся до места назначения, пока длится заклинание, послание пропадёт, а животное вернется туда, где вы сотворяли заклинание</div>\n<div class=\"rd__spc-inline-post\"><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку 3-го круга или выше, его длительность увеличивается на 48 часов за каждый круг ячейки выше 2-го.</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "24",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "type": "creature",
+        "count": "1",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "30",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 2,
+    "school": "enc",
+    "materials": {
+      "value": "кусочек пищи",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "ritual"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "zhivotnoe-poslannik--animal-messenger"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028224817,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!cFf9lBBE5MaleypV"
+}

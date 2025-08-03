@@ -1,0 +1,2914 @@
+{
+  "name": "Очаровательный лазутчик / Enchanting Infiltrator",
+  "type": "npc",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Enchanting%20Infiltrator.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "dex": {
+        "value": 20,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "con": {
+        "value": 15,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "int": {
+        "value": 20,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "wis": {
+        "value": 16,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "cha": {
+        "value": 18,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": null,
+        "calc": "custom",
+        "formula": "@attributes.ac.armor + @attributes.ac.dex +3"
+      },
+      "hp": {
+        "value": 156,
+        "max": 156,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "24d8 + 48"
+      },
+      "init": {
+        "ability": "",
+        "bonus": "0",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "burrow": null,
+        "climb": null,
+        "fly": null,
+        "swim": null,
+        "walk": 40,
+        "units": "ft",
+        "hover": false
+      },
+      "attunement": {
+        "max": 3
+      },
+      "senses": {
+        "darkvision": 0,
+        "blindsight": 30,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "",
+      "exhaustion": 0,
+      "concentration": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "bonuses": {
+          "save": ""
+        },
+        "limit": 1
+      },
+      "death": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "success": 0,
+        "failure": 0
+      },
+      "hd": {
+        "spent": 0
+      }
+    },
+    "details": {
+      "biography": {
+        "value": "<blockquote><p>\"Восковые беруши\", на мой взгляд, являются незаменимым снаряжением в приключениях. Гоняетесь за злодеями по шумному городу? Решение. Столкновение с шепчущими, завораживающими чарами? Решение. Отчаянно нуждаетесь в тишине и покое в оживленной таверне? Решение\".</p><p style=\"text-align:right\">- Астерия</p></blockquote><p>Антагонист для групп 2-го уровня (уровни с 5 по 10), очаровательный лазутчик - это фея, которая обольщает и вводит в заблуждение.</p><h2 class=\"rd__h rd__h--1\" data-title-index=\"1\"><span class=\"entry-title-inner\">Логово</span></h2><p><span class=\"entry-title-inner\">Этот лазутчик обитает в месте силы и безопасности, будь то скрытое здание гильдии воров или роскошный особняк. Логово наполнено хитроумными ловушками, которые дезориентируют, ослабляют и убивают незваных гостей.</span></p><p><span class=\"entry-title-inner\">КО лазутчика увеличивается до 12 (8,400 опыта), если столкновение происходит в его логове.</span></p><p><strong>Действия логова:</strong></p><p>При значении инициативы «20» (проигрыш при ничьей), лазутчик может совершить действие в логове, чтобы создать один из следующих эффектов; он не может использовать один и тот же эффект два раунда подряд:</p><ul><li><p><strong>Отвлечение</strong>. Пронзительный звук наполняет логово. Существа, которые могут его слышать, должны преуспеть в испытании Выносливости со СЛ 15, иначе их концентрация прерывается.</p></li><li><p><strong>Западня</strong>. Скрытые ловушки нацеливаются на трёх существ, которых лазутчик может видеть в логове. Каждое существо должно преуспеть в испытании Силы со СЛ 15, иначе станет захваченным (СЛ освобождения 15) и обездвиженным до тех пор, пока не высвободится или удерживающая его ловушка не будет уничтожена. Каждая ловушка имеет КБ 11, 10 ПЗ и обладает невосприимчивостью к урону ядом и психическому урону.</p></li><li><p>Ловушки нацеливаются на двух существ, которых лазутчик может видеть в логове. Каждая цель должна успешно пройти испытание Ловкости со СЛ 15 или попадёт в ловушку. Лазутчик делает бросок d6, равный его бонусу умения, и цели попавшие в ловушку получают урон, равный общей сумме. Урон является дробящим, колющим, режущим, уроном ядом или огнём, по выбору лазутчика, когда он использует это действие.</p></li></ul><p><strong>Эффекты местности</strong>:</p><p>Местность, в которой находится логово лазутчика, искажается его присутствием, создавая один или несколько из следующих эффектов:</p><ul><li><p><strong>Процветание коррупции</strong>. Находясь в пределах 3 миль от логова, существа, которые не являются членами организации лазутчика с помехой совершают проверки характеристик, основанных на навыках Проницательности, Внимания и Убеждения.</p></li><li><p><strong>Сильнодействующие токсины</strong>. Когда члены организации лазутчика наносят урон ядом, находясь в пределах 3 миль от логова, они игнорируют устойчивость цели к урону ядом.</p></li></ul><p>Если лазутчик умирает, эти эффекты исчезают в течение 1d10 дней.</p>",
+        "public": ""
+      },
+      "alignment": "нейтральная злая",
+      "race": null,
+      "type": {
+        "value": "fey",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "environment": "",
+      "cr": 11,
+      "spellLevel": 0,
+      "ideal": "",
+      "bond": "",
+      "flaw": ""
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [
+          "charmed",
+          "frightened"
+        ],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "cant"
+        ],
+        "custom": "плюс один любой язык"
+      },
+      "dm": {
+        "amount": {},
+        "bypasses": []
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "skills": {
+      "acr": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ani": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "arc": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ath": {
+        "value": 0,
+        "ability": "str",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "dec": {
+        "value": 2,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "his": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ins": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "itm": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "inv": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "med": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "nat": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prc": {
+        "value": 1,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prf": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "per": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "rel": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "slt": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ste": {
+        "value": 2,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "sur": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      }
+    },
+    "tools": {},
+    "spells": {
+      "spell1": {
+        "value": 0,
+        "override": null
+      },
+      "spell2": {
+        "value": 0,
+        "override": null
+      },
+      "spell3": {
+        "value": 0,
+        "override": null
+      },
+      "spell4": {
+        "value": 0,
+        "override": null
+      },
+      "spell5": {
+        "value": 0,
+        "override": null
+      },
+      "spell6": {
+        "value": 0,
+        "override": null
+      },
+      "spell7": {
+        "value": 0,
+        "override": null
+      },
+      "spell8": {
+        "value": 0,
+        "override": null
+      },
+      "spell9": {
+        "value": 0,
+        "override": null
+      },
+      "pact": {
+        "value": 0,
+        "override": null
+      },
+      "spell0": {
+        "value": 0,
+        "override": null
+      }
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "resources": {
+      "legact": {
+        "value": 3,
+        "max": 3
+      },
+      "legres": {
+        "value": 3,
+        "max": 3
+      },
+      "lair": {
+        "value": true,
+        "initiative": 20
+      }
+    },
+    "source": {
+      "page": "",
+      "license": "",
+      "rules": "2014",
+      "book": "BMT"
+    }
+  },
+  "prototypeToken": {
+    "name": "Очаровательный лазутчик",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "modules/laaru-dnd5-hw/assets/images/MM/Enchanting Infiltrator.webp",
+      "scaleX": 0.8,
+      "scaleY": 0.8,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": true,
+      "range": 30,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "hexagonalShape": 0,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Мультиатака",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Лазутчик совершает две атаки Отравленным клинком и может использовать Соблазнительный шёпот.</p>",
+          "chat": "<p>У существа есть мультиатака.</p>"
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/skills/melee/strike-weapons-orange.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "_id": "pHrqWldI3Af9GbwS",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.pHrqWldI3Af9GbwS"
+    },
+    {
+      "system": {
+        "description": {
+          "value": "<p><i>Атака оружием в ближнем бою:</i> [[/r 1d20+9]]{+9} к броску, зона досягаемости 5 футов, одна цель. </p><p><i>Попадание:</i> 7 ([[/r 1d4 + 5]]) колющего урона плюс 11 ([[/r 2d10]]) урона ядом.</p>",
+          "chat": "<p>Атака клинком!</p>"
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "attunement": "",
+        "equipped": true,
+        "rarity": "",
+        "identified": true,
+        "cover": null,
+        "crewed": false,
+        "range": {
+          "value": 5,
+          "long": null,
+          "units": "ft",
+          "reach": null
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "damage": {
+          "versatile": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "base": {
+            "number": 1,
+            "denomination": 4,
+            "bonus": "",
+            "types": [
+              "piercing"
+            ],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        },
+        "armor": {
+          "value": null
+        },
+        "hp": {
+          "value": null,
+          "max": null,
+          "dt": null,
+          "conditions": ""
+        },
+        "properties": [],
+        "proficient": 1,
+        "unidentified": {
+          "description": ""
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "container": null,
+        "magicalBonus": null,
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "attuned": false,
+        "ammunition": {}
+      },
+      "name": "Отравленный клинок (ближняя)",
+      "type": "weapon",
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/weapons/daggers/dagger-poisoned-curved-green.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "_id": "FWd8jSEQV7v2yOQN",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.FWd8jSEQV7v2yOQN"
+    },
+    {
+      "system": {
+        "description": {
+          "value": "<p><i>Дистанционная атака оружием:</i> [[/r 1d20+9]]{+9} к броску, дистанция 60 футов, одна цель. </p><p><i>Попадание:</i> 7 ([[/r 1d4 + 5]]) колющего урона плюс 11 ([[/r 2d10]]) урона ядом.</p>",
+          "chat": "<p>Бросок клинка!</p>"
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "attunement": "",
+        "equipped": true,
+        "rarity": "",
+        "identified": true,
+        "cover": null,
+        "crewed": false,
+        "range": {
+          "value": 60,
+          "long": null,
+          "units": "ft",
+          "reach": null
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "damage": {
+          "versatile": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "base": {
+            "number": 1,
+            "denomination": 4,
+            "bonus": "",
+            "types": [
+              "piercing"
+            ],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        },
+        "armor": {
+          "value": null
+        },
+        "hp": {
+          "value": null,
+          "max": null,
+          "dt": null,
+          "conditions": ""
+        },
+        "properties": [],
+        "proficient": 1,
+        "unidentified": {
+          "description": ""
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "container": null,
+        "magicalBonus": null,
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "60",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "ranged",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "attuned": false,
+        "ammunition": {}
+      },
+      "name": "Отравленный клинок (дистанционная)",
+      "type": "weapon",
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/weapons/daggers/dagger-poisoned-curved-green.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "_id": "SnetJYe4beMmRg3c",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.SnetJYe4beMmRg3c"
+    },
+    {
+      "name": "Соблазнительный шёпот",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Лазутчик магическим образом шепчет существу, которое он может видеть в пределах 30 футов. Цель должна преуспеть в испытании Мудрости со СЛ 17, иначе будет в @UUID[Compendium.laaru-dnd5-hw.actions.OviWCQAGcXISdTbj]{Шоке} из-за страха или восторга (по выбору лазутчика) до конца своего следующего хода, после чего цель становится невосприимчивой к этому Соблазнительному шёпоту в течение 24 часов.</p>",
+          "chat": "<p>Лазутчик магическим образом шепчет существу, которое он может видеть в пределах 30 футов. Цель должна преуспеть в испытании Мудрости.</p>"
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "wis",
+              "dc": {
+                "calculation": "int",
+                "formula": "17"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "_id": "4hzt8wWCqdsYYPnx",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.4hzt8wWCqdsYYPnx"
+    },
+    {
+      "_id": "f4mooYjbTLXzjudL",
+      "name": "Скрытое присутствие",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>К КБ лазутчика прибавляется его модификатор Мудрости, и лазутчик не может стать целью магии школы Прорицания или особенностей, позволяющих читать его мысли или определять тип его существа.</p>",
+          "chat": "<p>Существо не может стать целью магии школы Прорицания или особенностей, позволяющих читать его мысли или определять тип его существа.</p>"
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/magic/control/silhouette-grow-shrink-blue.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.f4mooYjbTLXzjudL"
+    },
+    {
+      "_id": "z5vEs1X0tMRdkQ8J",
+      "name": "Невероятное уклонение",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Когда нападающий, которого лазутчик может видеть, попадает по нему атакой, он может @Compendium[laaru-dnd5-hw.actions.mMwkUE20bEfKeetq]{Ответным действием} уменьшить вдвое урон, наносимой ему этой атакой.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "reaction",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+      "flags": {
+        "adnd5e": {
+          "itemInfo": {
+            "type": "reaction"
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.z5vEs1X0tMRdkQ8J"
+    },
+    {
+      "_id": "dX1Njexx8Ru9vN6M",
+      "name": "Легендарное действие: Ловкость",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Лазутчик выпутывается из немагической обездвиженности и заканчивает на состояние @UUID[Compendium.laaru-dnd5-hw.actions.7f8T5CkJ4jx0rzsy]{Захвата} после чего перемещается на свою скорость, не провоцируя @Compendium[laaru-dnd5-hw.actions.VYUx2EEt4eJxOamp]{Внеочередных атак}.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "legendary",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "resources.legact.value",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/magic/control/debuff-energy-hold-levitate-blue-yellow.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.dX1Njexx8Ru9vN6M"
+    },
+    {
+      "_id": "DrwpSEfAeJJOlFmu",
+      "name": "Легендарное действие: Ранение",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Лазутчик совершает одну атаку Отравленным клинком.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "legendary",
+              "value": 2,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "resources.legact.value",
+                  "value": "2",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/weapons/daggers/dagger-simple-stone-black.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.DrwpSEfAeJJOlFmu"
+    },
+    {
+      "_id": "Ivmmu4YfjXUJLrPw",
+      "name": "Легендарное действие: Дезориентирующий побег",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Лазутчик магическим образом становится @UUID[Compendium.laaru-dnd5-hw.actions.z03U5lNQtd71dWJT]{Невидимым} и создает иллюзорную копию самого себя в собственном пространстве, после чего телепортируется вместе с любым снаряжением, которое на нем надето, в незанятое пространство в пределах 15 футов от себя. Иллюзия метает иллюзорные клинки в двух существ по выбору лазутчика, находящихся в пределах 20 футов от иллюзии. Каждая цель должна совершить спабросок Мудрости со СЛ 17, получая 13 ([[/r 3d8]]) психического урона при провале или половину этого урона при успехе. Невидимость действует до конца следующего хода лазутчика.</p>",
+          "chat": "<p>Существо начинает метать клинки в двух существ! Каждая цель должна совершить спабросок Мудрости.</p>"
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "legendary",
+              "value": 3,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "resources.legact.value",
+                  "value": "3",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "number": 3,
+                  "denomination": 8,
+                  "bonus": "",
+                  "types": [
+                    "psychic"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "mode": "whole",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": "wis",
+              "dc": {
+                "calculation": "int",
+                "formula": "17"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/magic/movement/trail-streak-zigzag-yellow.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.Ivmmu4YfjXUJLrPw"
+    },
+    {
+      "name": "Легендарные действия",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<div><div><p>Очаровательный лазутчик может совершить 3 легендарных действия, выбирая из представленных ниже вариантов. За один раз можно использовать только одно легендарное действие, и только в конце хода другого существа. Очаровательный лазутчик восстанавливает использованные легендарные действия в начале своего хода.</p></div><div><ul class=\"rd__list\"><li class=\"rd__li \">@UUID[.dX1Njexx8Ru9vN6M]{Ловкость}</li><li class=\"rd__li \">@UUID[.DrwpSEfAeJJOlFmu]{Ранение}</li><li class=\"rd__li \">@UUID[.Ivmmu4YfjXUJLrPw]{Дезориентирующий побег}</li></ul></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {},
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/skills/targeting/target-strike-triple-blue.webp",
+      "flags": {},
+      "effects": [],
+      "_id": "MFDRhdFHSN2dfG7x",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.MFDRhdFHSN2dfG7x"
+    },
+    {
+      "name": "Эффекты местности",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Местность, в которой находится логово лазутчика, искажается его присутствием, создавая один или несколько из следующих эффектов:</p><ul><li><p><em><strong>Процветание коррупции</strong></em>. Находясь в пределах 3 миль от логова, существа, которые не являются членами организации лазутчика с помехой совершают проверки характеристик, основанных на навыках Проницательности, Внимания и Убеждения.</p></li><li><p><em><strong>Сильнодействующие токсины</strong></em>. Когда члены организации лазутчика наносят урон ядом, находясь в пределах 3 миль от логова, они игнорируют устойчивость цели к урону ядом.</p></li></ul><p>Если лазутчик умирает, эти эффекты исчезают в течение [[/r 1d10]] дней. </p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/magic/air/wind-tornado-funnel-damage-blue.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "_id": "GemI1VLuB5puZC5z",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.GemI1VLuB5puZC5z"
+    },
+    {
+      "name": "Легендарная устойчивость",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\"><p>Если существо проваливает испытание, оно может вместо этого сделать испытание успешным.</p><div class=\"rd__spc-inline-post\"></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "special",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "img": "icons/magic/water/orb-water-bubbles.webp",
+      "flags": {
+        "core": {
+          "sourceId": "Actor.wuYwKuvf9t1hq1NL.Item.vawVYIdXg8sLQBFE"
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "_stats": {
+        "compendiumSource": "Actor.wuYwKuvf9t1hq1NL.Item.vawVYIdXg8sLQBFE",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "folder": "LICWB9YsIP3bzBdB",
+      "sort": 0,
+      "_id": "qx6xasMhuAcMuTlb",
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.qx6xasMhuAcMuTlb"
+    },
+    {
+      "name": "Логово: Отвлечение",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Пронзительный звук наполняет логово. Существа, которые могут его слышать, должны преуспеть в испытании Выносливости со СЛ 15, иначе их концентрация прерывается.</p>",
+          "chat": "<p>Пронзительный звук наполняет логово. Существа, которые могут его слышать, должны преуспеть в испытании Выносливости.</p>"
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "lair",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          },
+          "dnd5eactivity100": {
+            "_id": "dnd5eactivity100",
+            "type": "save",
+            "activation": {
+              "type": "lair",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "con",
+              "dc": {
+                "calculation": "int",
+                "formula": "15"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/environment/settlement/watchtower-silhouette-yellow.webp",
+      "flags": {
+        "core": {
+          "sourceId": "Actor.v8avjnsh2cqKdVjq.Item.S1y0OGM2GPjD4d83"
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "_id": "yp7VqJqXFDwn0pVa",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Actor.v8avjnsh2cqKdVjq.Item.S1y0OGM2GPjD4d83",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.yp7VqJqXFDwn0pVa"
+    },
+    {
+      "name": "Логово: Западня",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Скрытые ловушки нацеливаются на трёх существ, которых ассасин может видеть в логове. Каждое существо должно преуспеть в испытании Силы со СЛ 15, иначе станет @UUID[Compendium.laaru-dnd5-hw.actions.7f8T5CkJ4jx0rzsy]{захваченным} (СЛ освобождения 15) и &amp;reference[restrained]{Обездвиженным} до тех пор, пока не высвободится или удерживающая его ловушка не будет уничтожена. Каждая ловушка имеет КБ 11, 10 ПЗ и обладает невосприимчивостью к урону ядом и психическому урону.</p>",
+          "chat": "<p>Скрытые ловушки нацеливаются на трёх существ, которых существо может видеть в логове. Каждое существо должно преуспеть в испытании Силы.</p>"
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "lair",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          },
+          "dnd5eactivity100": {
+            "_id": "dnd5eactivity100",
+            "type": "save",
+            "activation": {
+              "type": "lair",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "str",
+              "dc": {
+                "calculation": "int",
+                "formula": "15"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/environment/settlement/watchtower-silhouette-yellow.webp",
+      "flags": {
+        "core": {
+          "sourceId": "Actor.v8avjnsh2cqKdVjq.Item.WvB0IRHpX4b37MBq"
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "_id": "qkYLqzmRh2xl7d5H",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Actor.v8avjnsh2cqKdVjq.Item.WvB0IRHpX4b37MBq",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.qkYLqzmRh2xl7d5H"
+    },
+    {
+      "name": "Логово: Ловушки",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Ловушки нацеливаются на двух существ, которых лазутчик может видеть в логове. Каждая цель должна успешно пройти испытание Ловкости со СЛ 15 или попадёт в ловушку. Лазутчик делает бросок [[/r d6]], равный его бонусу умения, и цели попавшие в ловушку получают урон, равный общей сумме. Урон является дробящим, колющим, режущим, уроном ядом или огнём, по выбору лазутчика, когда он использует это действие.</p>",
+          "chat": "<p>Ловушки нацеливаются на двух существ, которых существо может видеть в логове. Каждая цель должна успешно пройти испытание Ловкости.</p>"
+        },
+        "source": {
+          "custom": "BMT",
+          "book": "",
+          "page": "",
+          "license": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "lair",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          },
+          "dnd5eactivity100": {
+            "_id": "dnd5eactivity100",
+            "type": "save",
+            "activation": {
+              "type": "lair",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "dex",
+              "dc": {
+                "calculation": "int",
+                "formula": "15"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "uEnlnSz9LeemNvEF": 3
+      },
+      "img": "icons/environment/settlement/watchtower-silhouette-yellow.webp",
+      "flags": {
+        "core": {
+          "sourceId": "Actor.v8avjnsh2cqKdVjq.Item.Yc1UkyE0KppxhTbx"
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "_id": "9Ldjwv7uT2556eGH",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Actor.v8avjnsh2cqKdVjq.Item.Yc1UkyE0KppxhTbx",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!rtZR7jK1MsW9Db0w.9Ldjwv7uT2556eGH"
+    }
+  ],
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.1",
+    "createdTime": 1726588007280,
+    "modifiedTime": 1726588007280,
+    "lastModifiedBy": "T0BtUpu1XTcoijv3"
+  },
+  "_id": "rtZR7jK1MsW9Db0w",
+  "folder": "lUDoRBpkUbN4kp60",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "T0BtUpu1XTcoijv3": 3
+  },
+  "_key": "!actors!rtZR7jK1MsW9Db0w"
+}

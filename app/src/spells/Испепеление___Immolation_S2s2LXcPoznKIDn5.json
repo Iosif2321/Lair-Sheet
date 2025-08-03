@@ -1,0 +1,196 @@
+{
+  "_id": "S2s2LXcPoznKIDn5",
+  "name": "Испепеление / Immolation",
+  "type": "spell",
+  "img": "icons/magic/death/projectile-skull-fire-orange.webp",
+  "effects": [],
+  "folder": "3zIZihf4NL02gtMG",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "immolation_xge"
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Immolation",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Пламя обвивает одно существо, которое вы видите в радиусе действия. Цель должна пройти испытание Ловкости.</p><p>Существо получает урон огнём [[/r 8d6]] при провале или половину этого урона при успехе. Также при неудачном испытании цель воспламеняется на время действия заклинания. Горящая цель испускает &amp;reference[brightlight]{яркий свет} в радиусе 30 футов и &amp;reference[dimlight]{тусклый свет} в пределах еще 30 футов.</p><p>В конце каждого своего хода цель повторяет испытание. При неудачном испытании цель получает урон огнём [[/r 4d6]]. В случае успеха заклинание заканчивается.</p><p>Этот магический огонь не может быть погашен немагическими средствами. Если урон от этого заклинания убивает цель, то цель превращается в пепел.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "radius",
+        "size": "30",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "90",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 5,
+    "school": "evo",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 8,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "fire"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            {
+              "number": 4,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "fire"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "dex",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "ispepelenie--immolation"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028217884,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!S2s2LXcPoznKIDn5"
+}

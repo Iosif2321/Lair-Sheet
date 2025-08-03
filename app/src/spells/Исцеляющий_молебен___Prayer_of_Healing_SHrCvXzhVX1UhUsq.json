@@ -1,0 +1,245 @@
+{
+  "_id": "SHrCvXzhVX1UhUsq",
+  "name": "Исцеляющий молебен / Prayer of Healing",
+  "type": "spell",
+  "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+  "effects": [],
+  "folder": "1laDscZ7Bn7NoviD",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "prayer%20of%20healing_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": {
+          "0": true
+        },
+        "altValue": {
+          "0": true
+        },
+        "context": {
+          "0": ""
+        }
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Prayer of Healing",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\">Каждое из не более чем шести выбранных вами существ, которых вы видите в пределах дистанции, восстанавливает ПЗ в количестве [[/r 2d8]]+ модификатор вашей заклинательной характеристики. Заклинание не действует на нежить и конструкции</div>\n<div class=\"rd__spc-inline-post\"><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку 3-го круга или выше, исцеление увеличивается на [[/r 1d8]] каждый круг ячейки выше 2-го.</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "minute",
+      "condition": "",
+      "value": 10
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "target": {
+      "affects": {
+        "type": "creature",
+        "count": "6",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "30",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 2,
+    "school": "evo",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "heal",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "healing": {
+          "number": 2,
+          "denomination": 8,
+          "bonus": "@mod",
+          "types": [
+            "healing"
+          ],
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "scaling": {
+            "mode": "whole",
+            "number": 1,
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "iscelyayushij-moleben--prayer-of-healing"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028218109,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!SHrCvXzhVX1UhUsq"
+}

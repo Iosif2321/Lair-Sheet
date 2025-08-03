@@ -1,0 +1,258 @@
+{
+  "_id": "XfXq2LJxcGhiunDf",
+  "name": "Призыв духа дракона / Summon Draconic Spirit",
+  "type": "spell",
+  "img": "icons/creatures/reptiles/dragon-winged-blue.webp",
+  "effects": [],
+  "folder": "3zIZihf4NL02gtMG",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "FTD",
+      "hash": "summon%20draconic%20spirit_ftd"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "autoFailFriendly": false,
+      "autoSaveFriendly": false,
+      "offHandWeapon": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Summon Draconic Spirit",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы призываете @Compendium[laaru-dnd5-hw.monsters.E3jWvR4z9IMR3VzF]{Духа дракона}. Он проявляется в незанятом пространстве, которое вы можете видеть в пределах дистанции.</p><p>Воплощённая форма духа использует блок параметров @Compendium[laaru-dnd5-hw.monsters.E3jWvR4z9IMR3VzF]{Дух дракона}. Когда вы сотворяете заклинание, выберите род дракона: цветной, самоцветный или металлический. Существо напоминает дракона выбранного рода, что определяет особенности духа, описанные в блоке параметров. Существо исчезает, когда его ПЗ опускаются до 0 или когда заклинание заканчивается. </p><p>Это существо дружелюбно к вам и вашим спутникам. В бою существо получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно применяет действие @Compendium[laaru-dnd5-hw.actions.UMuz44p8fXeLCZn7]{Уклонение} и перемещается, избегая опасностей.</p><p><strong>На высоких кругах</strong>. Если вы творите это заклинание, используя ячейку 6-го круга или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке параметров.</p><section class=\"secret\" id=\"secret-xxXuZb5Gx2UNpnQQ\"><p><em>Примечание. Для работоспособности Призыва, мастеру нужно в настройках прав игроков разрешить создавать Токены и Актёров.</em></p></section>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "FTD",
+      "book": "FTD",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 5,
+    "school": "con",
+    "materials": {
+      "value": "предмет с выгравированным на нём изображением дракона, стоимостью не менее 500 зм",
+      "consumed": false,
+      "cost": 500,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "summon",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "bonuses": {
+          "ac": "",
+          "hd": "",
+          "hp": "",
+          "attackDamage": "",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "proficiency": false,
+          "attacks": false,
+          "saves": false
+        },
+        "profiles": [
+          {
+            "count": "",
+            "name": "",
+            "_id": "tw2hUh0HhsZeJZ20",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.E3jWvR4z9IMR3VzF",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          }
+        ],
+        "summon": {
+          "identifier": "",
+          "mode": "",
+          "prompt": true
+        },
+        "sort": 0
+      },
+      "dnd5eactivity100": {
+        "_id": "dnd5eactivity100",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": "dex",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "prizyv-duha-drakona--summon-draconic-spirit"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028221607,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!XfXq2LJxcGhiunDf"
+}

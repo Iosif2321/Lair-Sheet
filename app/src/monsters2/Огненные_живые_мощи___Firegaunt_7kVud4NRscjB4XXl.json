@@ -1,0 +1,1383 @@
+{
+  "name": "Огненные живые мощи / Firegaunt",
+  "type": "npc",
+  "flags": {
+    "tidy5e-sheet": {
+      "gender": "",
+      "age": "",
+      "height": "",
+      "weight": "",
+      "eyes": "",
+      "skin": "",
+      "hair": "",
+      "notes1": {
+        "name": ""
+      },
+      "notes2": {
+        "name": ""
+      },
+      "notes3": {
+        "name": ""
+      },
+      "notes4": {
+        "name": ""
+      }
+    },
+    "core": {}
+  },
+  "_id": "7kVud4NRscjB4XXl",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Firegaunt.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 25,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "dex": {
+        "value": 7,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "con": {
+        "value": 23,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "int": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "wis": {
+        "value": 14,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      },
+      "cha": {
+        "value": 13,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        }
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": null,
+        "calc": "custom",
+        "formula": "@attributes.ac.armor + @attributes.ac.dex +7"
+      },
+      "hp": {
+        "value": 175,
+        "max": 175,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "14d12 + 84"
+      },
+      "init": {
+        "ability": "",
+        "bonus": "0",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 0,
+        "walk": 40,
+        "units": "ft",
+        "hover": false
+      },
+      "attunement": {
+        "max": 3
+      },
+      "senses": {
+        "darkvision": 0,
+        "blindsight": 0,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "",
+      "exhaustion": 0,
+      "concentration": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "bonuses": {
+          "save": ""
+        },
+        "limit": 1
+      },
+      "death": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "success": 0,
+        "failure": 0
+      },
+      "hd": {
+        "spent": 0
+      }
+    },
+    "details": {
+      "biography": {
+        "value": "<p>@UUID[Compendium.laaru-dnd5-hw.monsters.WQg2rxexc1jxKzeQ]{Огненный великан}, чья пылающая ненависть мешает ему перейти в загробную жизнь, восстает в виде огненных живых мощей. Порожденные глубокой ненавистью, огненные живые мощи выискивают живых существ, чтобы уничтожить их. Подобно призраку, они не ищут искупления; они просто надеются причинить как можно больше разрушений, прежде чем достичь своего окончательного забвения.</p><p>Огненные живые мощи выглядят как сильно обгоревший труп. Сверхъестественное багровое пламя течет по их венам, вырываясь из ран и рта.</p>",
+        "public": ""
+      },
+      "alignment": "принципиальная злая",
+      "race": null,
+      "type": {
+        "value": "undead",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "environment": "",
+      "cr": 11,
+      "spellLevel": 0,
+      "ideal": "",
+      "bond": "",
+      "flaw": ""
+    },
+    "traits": {
+      "size": "huge",
+      "di": {
+        "value": [
+          "fire",
+          "poison"
+        ],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [
+          "necrotic"
+        ],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [
+          "exhaustion",
+          "petrified",
+          "poisoned"
+        ],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "giant"
+        ],
+        "custom": ""
+      },
+      "dm": {
+        "amount": {},
+        "bypasses": []
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "skills": {
+      "acr": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ani": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "arc": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ath": {
+        "value": 1,
+        "ability": "str",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "dec": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "his": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ins": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "itm": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "inv": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "med": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "nat": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prc": {
+        "value": 1,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prf": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "per": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "rel": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "slt": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ste": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "sur": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      }
+    },
+    "tools": {},
+    "spells": {
+      "spell1": {
+        "value": 0,
+        "override": null
+      },
+      "spell2": {
+        "value": 0,
+        "override": null
+      },
+      "spell3": {
+        "value": 0,
+        "override": null
+      },
+      "spell4": {
+        "value": 0,
+        "override": null
+      },
+      "spell5": {
+        "value": 0,
+        "override": null
+      },
+      "spell6": {
+        "value": 0,
+        "override": null
+      },
+      "spell7": {
+        "value": 0,
+        "override": null
+      },
+      "spell8": {
+        "value": 0,
+        "override": null
+      },
+      "spell9": {
+        "value": 0,
+        "override": null
+      },
+      "pact": {
+        "value": 0,
+        "override": null
+      },
+      "spell0": {
+        "value": 0,
+        "override": null
+      }
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "resources": {
+      "legact": {
+        "value": 0,
+        "max": 0
+      },
+      "legres": {
+        "value": 0,
+        "max": 0
+      },
+      "lair": {
+        "value": false,
+        "initiative": 20
+      }
+    },
+    "source": {
+      "page": "",
+      "license": "",
+      "rules": "2014",
+      "book": "BGG"
+    }
+  },
+  "prototypeToken": {
+    "name": "Огненные живые мощи",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "modules/laaru-dnd5-hw/assets/images/MM/Firegaunt.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 3,
+    "height": 3,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "hexagonalShape": 0,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Мультиатака",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\"><section id=\"secret-3t2gZ9su3pOImsoZ\" class=\"secret\"><p>Огненные живые мощи совершают две атаки Раскаленным молотом.</p></section><div class=\"rd__spc-inline-post\"><p>У существа есть мультиатака.</p></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "BGG",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "N5s4uI6OpcSYQoF8": 3
+      },
+      "img": "icons/skills/melee/strike-weapons-orange.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "_id": "cBKDdqnZez1UFFmi",
+      "folder": "YjGeoEpWds6gd2MV",
+      "sort": 100000,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!7kVud4NRscjB4XXl.cBKDdqnZez1UFFmi"
+    },
+    {
+      "system": {
+        "description": {
+          "value": "<section class=\"secret py-1\" id=\"secret-NUdKxDAwqWQoQZzC\"><div class=\"rd__b  rd__b--3\"><p><em>Атака оружием в ближнем бою:</em> [[/r 1d20+11]]{+11} к броску, зона досягаемости 10 футов, одна цель.</p><p><em>Попадание:</em> 23 ([[/r 3d10 + 7]]) дробящего урона. Огненные живые мощи могут заставить молот вспыхнуть алым пламенем, и цель должна пройти испытание Ловкости СЛ 18, иначе получит 10 ([[/r 3d6]]) урона огнём и 10 ([[/r 3d6]]) некротического урона. Молот может извергать пламя подобным образом лишь один раз за ход.</p></div></section><p>Атака молотом! Огненные живые мощи могут заставить молот вспыхнуть алым пламенем, и цель должна пройти испытание Ловкости.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "BGG",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "attunement": "",
+        "equipped": true,
+        "rarity": "",
+        "identified": true,
+        "cover": null,
+        "crewed": false,
+        "range": {
+          "value": 10,
+          "long": null,
+          "units": "ft",
+          "reach": null
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "damage": {
+          "versatile": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "base": {
+            "number": 3,
+            "denomination": 10,
+            "bonus": "",
+            "types": [
+              "bludgeoning"
+            ],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        },
+        "armor": {
+          "value": null
+        },
+        "hp": {
+          "value": null,
+          "max": null,
+          "dt": null,
+          "conditions": ""
+        },
+        "properties": [],
+        "proficient": 1,
+        "unidentified": {
+          "description": ""
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "container": null,
+        "magicalBonus": null,
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "10",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            },
+            "sort": 0
+          },
+          "dnd5eactivity100": {
+            "_id": "dnd5eactivity100",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "10",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "dex",
+              "dc": {
+                "calculation": "con",
+                "formula": "18"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "attuned": false,
+        "ammunition": {}
+      },
+      "name": "Раскаленный молот",
+      "type": "weapon",
+      "ownership": {
+        "default": 0,
+        "N5s4uI6OpcSYQoF8": 3
+      },
+      "img": "icons/weapons/hammers/hammer-double-glowing-yellow.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "_id": "nB2Sm8ejSh2DSscg",
+      "folder": "YjGeoEpWds6gd2MV",
+      "sort": 100000,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!7kVud4NRscjB4XXl.nB2Sm8ejSh2DSscg"
+    },
+    {
+      "name": "Багряные лучи",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\"><section id=\"secret-C0pnJM9dWm0JAWaj\" class=\"secret\"><p><strong>(перезарядка 5-6)</strong></p><p>Огненные живые мощи испускают пылающие лучи из своих глаз, рта и ран в виде 30-футового конуса. Каждое существо в этой области должно пройти испытание Ловкости СЛ 18, получая 31 ([[/r 7d8]]) урона огнём при провале, или половину при успехе. В случае успеха или провала существо загорается. Пока горящее существо или другое существо, которое может дотянуться до него, не использует действие для тушению пламени, горящее существо не сможет восстанавливать ПЗ и получает 5 ([[/r 1d10]]) урона огнём в начале каждого своего хода.</p></section><div class=\"rd__spc-inline-post\"><p>Огненные живые мощи испускают пылающие лучи из своих глаз, рта и ран в виде 30-футового конуса. Каждое существо в этой области должно пройти испытание Ловкости.</p></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "BGG",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "recharge",
+              "formula": "5",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "target": "",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "cone",
+                "size": "30",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "number": 7,
+                  "denomination": 8,
+                  "bonus": "",
+                  "types": [
+                    "fire"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "mode": "whole",
+                    "number": null,
+                    "formula": ""
+                  }
+                },
+                {
+                  "number": 1,
+                  "denomination": 10,
+                  "bonus": "",
+                  "types": [
+                    "fire"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "mode": "whole",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": "dex",
+              "dc": {
+                "calculation": "con",
+                "formula": "18"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "N5s4uI6OpcSYQoF8": 3
+      },
+      "img": "icons/magic/fire/blast-jet-stream-embers-red.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true,
+          "migratedUses": null
+        }
+      },
+      "effects": [],
+      "_id": "JXq3ChCYVHZ19uox",
+      "folder": "YjGeoEpWds6gd2MV",
+      "sort": 100000,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!7kVud4NRscjB4XXl.JXq3ChCYVHZ19uox"
+    },
+    {
+      "_id": "60GhN9ozgjBsKJX4",
+      "name": "Пламенная кровь",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\"><section id=\"secret-PzYrTeyON0LVOvvk\" class=\"secret\"><p>Всякий раз, когда существо, находящееся в пределах 5 футов от живых мощей, попадает по ним атакой оружием в ближнем бою, наносящей колющий или режущий урон, это существо получает 5 ([[/r 1d10]]) урона огнём.</p></section><div class=\"rd__spc-inline-post\"><p>Всякий раз, когда существо, находящееся в пределах 5 футов от живых мощей, попадает по ним атакой оружием в ближнем бою, наносящей колющий или режущий урон, это существо получает урон огнём.</p></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "BGG",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "damage",
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "critical": {
+                "allow": false,
+                "bonus": ""
+              },
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 10,
+                  "bonus": "",
+                  "types": [
+                    "fire"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "mode": "whole",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "N5s4uI6OpcSYQoF8": 3
+      },
+      "img": "icons/skills/melee/strike-sword-blood-red.webp",
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "effects": [],
+      "folder": "YjGeoEpWds6gd2MV",
+      "sort": 100000,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!7kVud4NRscjB4XXl.60GhN9ozgjBsKJX4"
+    }
+  ],
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.1",
+    "createdTime": 1726588007280,
+    "modifiedTime": 1726588007280,
+    "lastModifiedBy": "T0BtUpu1XTcoijv3"
+  },
+  "folder": "YjGeoEpWds6gd2MV",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "T0BtUpu1XTcoijv3": 3
+  },
+  "_key": "!actors!7kVud4NRscjB4XXl"
+}

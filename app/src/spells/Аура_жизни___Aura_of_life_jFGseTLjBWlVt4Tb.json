@@ -1,0 +1,263 @@
+{
+  "_id": "jFGseTLjBWlVt4Tb",
+  "name": "Аура жизни / Aura of life",
+  "type": "spell",
+  "img": "icons/magic/life/cross-yellow-green.webp",
+  "effects": [],
+  "folder": "5iZ8qMTOt7ODg7B1",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "aura%20of%20life_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": {
+          "0": true
+        },
+        "altValue": {
+          "0": true
+        },
+        "context": {
+          "0": ""
+        }
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "autoFailFriendly": false,
+      "rollOther": false,
+      "critOther": false,
+      "offHandWeapon": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Aura of life",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Энергия жизни исходит от вас в ауре радиусом 30 футов. Пока длится заклинание, аура перемещается вместе с вами — вы остаётесь в её центре. Каждое невраждебное существо в ауре (включая вас) получает @UUID[Compendium.laaru-dnd5-hw.actions.w7WKEM8had6v4vy8]{устойчивость} к некротическому урону, а его максимум ПЗ нельзя уменьшить. Кроме того, каждое невраждебное живое существо внутри ауры восстанавливает 1 ПЗ, когда начинает свой ход в ауре с 0 ПЗ.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "10",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "radius",
+        "size": "30",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "0",
+      "units": ""
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 4,
+    "school": "abj",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "heal",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "healing": {
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [
+            "healing"
+          ],
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "aura-zhizni--aura-of-life"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028229241,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!jFGseTLjBWlVt4Tb"
+}

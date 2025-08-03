@@ -1,0 +1,2949 @@
+{
+  "_id": "76viGQiX3TgjGYkz",
+  "name": "Двергар деспот / Duergar Despot",
+  "type": "npc",
+  "img": "modules/laaru-dnd5-hw/assets/images/MM/Duergar%20Despot.png",
+  "items": [
+    {
+      "_id": "yIG9EVeepMmKLOus",
+      "name": "Мультиатака",
+      "type": "feat",
+      "img": "icons/skills/melee/blade-tips-triple-steel.webp",
+      "effects": [],
+      "folder": "l3uPp5S2He9H36lZ",
+      "sort": 100000,
+      "flags": {
+        "srd5e": {
+          "page": "monsterAction",
+          "source": "MPMM",
+          "hash": "multiattack_duergar%20despot_mpmm_mpmm"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<div class=\"rd__spc-inline-post\">Деспот совершает две атаки Железным кулаком и две атаки Топотом. После одной из атак двергар может переместиться на свою скорость, не провоцируя атак. Вместо одной из атак он может использовать Струю пламени.</div>\n</section>\n<div class=\"rd__spc-inline-post\">У двергара есть мультиатака.</div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!76viGQiX3TgjGYkz.yIG9EVeepMmKLOus"
+    },
+    {
+      "_id": "RUVxPLP2cDGhhotN",
+      "name": "Железный кулак",
+      "type": "weapon",
+      "img": "icons/skills/melee/unarmed-punch-fist-blue.webp",
+      "effects": [],
+      "folder": "l3uPp5S2He9H36lZ",
+      "sort": 100000,
+      "flags": {
+        "srd5e": {
+          "page": "monsterAction",
+          "source": "MPMM",
+          "hash": "iron%20fist_duergar%20despot_mpmm_mpmm"
+        },
+        "midi-qol": {
+          "fumbleThreshold": null,
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<p><em>Атака оружием в ближнем бою:</em> [[/r 1d20+9]] (+9) к броску, зона досягаемости 5 футов, одна цель.</p>\n<p><em>Попадание:</em> 23 ([[/r 4d8 + 5]]) дробящего урона. Если цель – существо крупного или менее @Compendium.laaru-dnd5-hw.actions.sDPntYBdmN7jMZc6]{размера}, она должна пройти испытание Силы СЛ 17, при провале она будет откинута на 30 футов по прямой линии и будет @Compendium.laaru-dnd5-hw.actions.eMFvAErGzA4N1CNW]{распластана}.</p>\n</section>\n<p>Двергар бьёт кулаком! Цель должна пройти испытание Силы.</p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "attunement": "",
+        "equipped": true,
+        "rarity": "",
+        "identified": true,
+        "range": {
+          "value": 5,
+          "long": 0,
+          "units": "ft",
+          "reach": null
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "damage": {
+          "versatile": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "base": {
+            "number": 4,
+            "denomination": 8,
+            "bonus": "",
+            "types": [
+              "bludgeoning"
+            ],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "properties": [],
+        "proficient": 1,
+        "unidentified": {
+          "description": ""
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "container": null,
+        "attuned": false,
+        "cover": null,
+        "crewed": false,
+        "magicalBonus": null,
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            },
+            "sort": 0
+          },
+          "dnd5eactivity100": {
+            "_id": "dnd5eactivity100",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "str",
+              "dc": {
+                "calculation": "str",
+                "formula": "17"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "ammunition": {}
+      },
+      "ownership": {
+        "default": 0,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!76viGQiX3TgjGYkz.RUVxPLP2cDGhhotN"
+    },
+    {
+      "_id": "aQsPjg8ZeKCFWGiU",
+      "name": "Топот",
+      "type": "weapon",
+      "img": "icons/skills/movement/feet-bladed-boots-fire.webp",
+      "effects": [],
+      "folder": "l3uPp5S2He9H36lZ",
+      "sort": 100000,
+      "flags": {
+        "srd5e": {
+          "page": "monsterAction",
+          "source": "MPMM",
+          "hash": "stomping%20foot_duergar%20despot_mpmm_mpmm"
+        },
+        "midi-qol": {
+          "fumbleThreshold": null,
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<p><em>Атака оружием в ближнем бою:</em> [[/r 1d20+9]] (+9) к броску, зона досягаемости 5 футов, одна цель.</p>\n<p><em>Попадание:</em> 10 ([[/r 1d10 + 5]]) дробящего урона, или 21 ([[/r 3d10 + 5]]) если цель @Compendium.laaru-dnd5-hw.actions.eMFvAErGzA4N1CNW]{распластана}.</p>\n</section>\n<p>Двергар использует топот!</p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "attunement": "",
+        "equipped": true,
+        "rarity": "",
+        "identified": true,
+        "range": {
+          "value": 5,
+          "long": 0,
+          "units": "ft",
+          "reach": null
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "damage": {
+          "versatile": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "base": {
+            "number": 1,
+            "denomination": 10,
+            "bonus": "",
+            "types": [
+              "bludgeoning"
+            ],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "properties": [],
+        "proficient": 1,
+        "unidentified": {
+          "description": ""
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "container": null,
+        "attuned": false,
+        "cover": null,
+        "crewed": false,
+        "magicalBonus": null,
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "ammunition": {}
+      },
+      "ownership": {
+        "default": 0,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!76viGQiX3TgjGYkz.aQsPjg8ZeKCFWGiU"
+    },
+    {
+      "_id": "zy3vJhekwwRnR5da",
+      "name": "Струя пламени",
+      "type": "feat",
+      "img": "icons/magic/fire/beam-jet-stream-trails-orange.webp",
+      "effects": [],
+      "folder": "l3uPp5S2He9H36lZ",
+      "sort": 100000,
+      "flags": {
+        "srd5e": {
+          "page": "monsterAction",
+          "source": "MPMM",
+          "hash": "flame%20jet_duergar%20despot_mpmm_mpmm"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<div class=\"rd__spc-inline-post\">Двергар изрыгает струю пламени длиной 100 футов и шириной 5 футов. Каждое существо, оказавшееся в радиусе действия, должно пройти испытание Ловкости СЛ 16, получая 18 ([[/r 4d8]]) урона огнём при провале или половину этого урона при успехе.</div>\n</section>\n<div class=\"rd__spc-inline-post\"><span style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\">Двергар изрыгает струю пламени длиной 100 футов и шириной 5 футов. Каждое существо, оказавшееся в радиусе действия, должно пройти испытание Ловкости.</span></div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "number": 4,
+                  "denomination": 8,
+                  "bonus": "",
+                  "types": [
+                    "fire"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "mode": "whole",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": "dex",
+              "dc": {
+                "calculation": "con",
+                "formula": "16"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!76viGQiX3TgjGYkz.zy3vJhekwwRnR5da"
+    },
+    {
+      "_id": "dy9xt1ib1pvDCtSS",
+      "name": "Психический источник энергии",
+      "type": "feat",
+      "img": "icons/magic/sonic/explosion-shock-wave-teal.webp",
+      "effects": [],
+      "folder": "l3uPp5S2He9H36lZ",
+      "sort": 100000,
+      "flags": {
+        "srd5e": {
+          "page": "monsterTrait",
+          "source": "MPMM",
+          "hash": "psychic%20engine_duergar%20despot_mpmm_mpmm"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div>\n<section class=\"secret\">\n<div>Когда двергар деспот получает критический урон или его здоровье опускается до 0, сдерживаемая психическая энергия вырывается наружу, нанося 14 ([[/r 4d6]]) психического урона всем существам в радиусе 5 футов от него.</div>\n</section>\n<div>От двергара исходит психическая энергия и наносит урон.</div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!76viGQiX3TgjGYkz.dy9xt1ib1pvDCtSS"
+    },
+    {
+      "_id": "3EXVvbrJLrb7dnGt",
+      "name": "Устойчивость к магии",
+      "type": "feat",
+      "img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
+      "effects": [],
+      "folder": "Cv2iOibkWnP07cMI",
+      "sort": 150000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": [],
+            "altValue": [],
+            "context": []
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            },
+            "altValue": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "magicitems": {
+          "enabled": false,
+          "equipped": false,
+          "attuned": false,
+          "charges": "0",
+          "chargeType": "c1",
+          "destroy": false,
+          "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
+          "rechargeable": false,
+          "recharge": "0",
+          "rechargeType": "t1",
+          "rechargeUnit": "r1",
+          "sorting": "l"
+        },
+        "core": {
+          "sourceId": "Item.7UnIiVDcKzZGiFTH"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<p>У существа преимущество к испытаниям против заклинаний и других магических эффектов. </p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "Zs7yJru4DCapi5DP": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.7UnIiVDcKzZGiFTH",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!76viGQiX3TgjGYkz.3EXVvbrJLrb7dnGt"
+    },
+    {
+      "_id": "Ldd7YkBiLS3vZ3Nu",
+      "name": "Чувствительность к солнцу",
+      "type": "feat",
+      "img": "icons/magic/light/explosion-star-glow-blue-purple.webp",
+      "effects": [],
+      "folder": "Cv2iOibkWnP07cMI",
+      "sort": -50000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": [],
+            "altValue": [],
+            "context": []
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            },
+            "altValue": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "magicitems": {
+          "enabled": false,
+          "equipped": false,
+          "attuned": false,
+          "charges": "0",
+          "chargeType": "c1",
+          "destroy": false,
+          "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
+          "rechargeable": false,
+          "recharge": "0",
+          "rechargeType": "t1",
+          "rechargeUnit": "r1",
+          "sorting": "l"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "core": {
+          "sourceId": "Item.CvU8anJXYs6t346D"
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<p>Пока существо на солнечном свету, оно получает помеху к броскам атаки и проверкам Мудрости (<strong>Внимание</strong>), основанным на зрении. </p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "Zs7yJru4DCapi5DP": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.CvU8anJXYs6t346D",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!76viGQiX3TgjGYkz.Ldd7YkBiLS3vZ3Nu"
+    },
+    {
+      "_id": "e9iVzcv0Y0sS6FtV",
+      "name": "Смрадное облако",
+      "type": "spell",
+      "img": "modules/laaru-dnd5-hw/assets/icons/spell/phb-stinking-cloud.webp",
+      "effects": [],
+      "folder": "kXvy7NyGE6c44fa4",
+      "sort": 100000,
+      "flags": {
+        "srd5e": {
+          "page": "",
+          "source": "PHB",
+          "hash": "stinking%20cloud_phb"
+        },
+        "betterRolls5e": {
+          "critRange": {
+            "type": "String",
+            "value": null
+          },
+          "critDamage": {
+            "type": "String",
+            "value": ""
+          },
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": [],
+            "altValue": [],
+            "context": []
+          },
+          "quickVersatile": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "use": true,
+              "resource": true
+            },
+            "altValue": {
+              "use": true,
+              "resource": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "core": {
+          "sourceId": "Item.L9nexnJhHVnNLOkE"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "migratedProperties": [
+            "vocal",
+            "somatic",
+            "material",
+            "concentration"
+          ],
+          "persistSourceMigration": true,
+          "migratedUses": 1
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<p>Вы создаёте сферу тошнотворного жёлтого газа радиусом 20 футов вокруг точки в пределах дистанции. Облако распространяется и за углы, и в его области видимость @Compendium.laaru-dnd5-hw.actions.3salIGyUpQe469BU]{крайне затруднена}. Облако существует, пока длится заклинание.</p>\n<p>Каждое существо, полностью оказавшееся в пределах облака в начале своего хода, должно пройти испытание Выносливости против яда. При провале существо тратит своё действие в этот ход на рвоту. Существа, которым не нужно дышать или невосприимчивые к яду, автоматически проходят испытание успешно.</p>\n<p>Средний ветер (не менее 10 миль в час) может развеять облако за 4 раунда. Сильный ветер (не менее 20 миль в час) развеет его за 1 раунд.</p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "PHB",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "activation": {
+          "type": "action",
+          "condition": "",
+          "value": 1
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute"
+        },
+        "target": {
+          "affects": {
+            "choice": false
+          },
+          "template": {
+            "units": "ft",
+            "type": "sphere",
+            "size": "20",
+            "contiguous": false
+          }
+        },
+        "range": {
+          "value": "90",
+          "units": "ft"
+        },
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "ability": "",
+        "level": 3,
+        "school": "con",
+        "materials": {
+          "value": "тухлое яйцо или пара листьев капусты-вонючки",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "innate",
+          "prepared": true
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": null,
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "target": "",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "override": false
+            },
+            "target": {
+              "prompt": true,
+              "template": {
+                "contiguous": false,
+                "units": "ft"
+              },
+              "affects": {
+                "choice": false
+              },
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "con",
+              "dc": {
+                "calculation": "spellcasting",
+                "formula": ""
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": ""
+      },
+      "ownership": {
+        "default": 0,
+        "Zs7yJru4DCapi5DP": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.L9nexnJhHVnNLOkE",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!76viGQiX3TgjGYkz.e9iVzcv0Y0sS6FtV"
+    },
+    {
+      "_id": "jw0CIOHGvkKzplPN",
+      "name": "Магическая рука",
+      "type": "spell",
+      "img": "icons/magic/light/orbs-hand-gray.webp",
+      "effects": [],
+      "folder": "kXvy7NyGE6c44fa4",
+      "sort": 100000,
+      "flags": {
+        "srd5e": {
+          "page": "",
+          "source": "PHB",
+          "hash": "mage%20hand_phb"
+        },
+        "betterRolls5e": {
+          "critRange": {
+            "type": "String",
+            "value": null
+          },
+          "critDamage": {
+            "type": "String",
+            "value": ""
+          },
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": [],
+            "altValue": [],
+            "context": []
+          },
+          "quickVersatile": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "use": true,
+              "resource": true
+            },
+            "altValue": {
+              "use": true,
+              "resource": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "core": {
+          "sourceId": "Item.1M9GjexjbsKc2XX9"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "migratedProperties": [
+            "vocal",
+            "somatic"
+          ],
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<p>Призрачная рука появляется в воздухе в выбранной вами точке в пределах дистанции. Она существует до окончания длительности или пока вы не прекратите заклинание, потратив действие. Рука исчезает, если окажется более чем в 30 футах от вас или если вы снова сотворите это заклинание. Вы можете использовать действие, чтобы управлять рукой. С её помощью вы можете манипулировать предметами, открыть незапертую дверь или контейнер, убрать или достать предмет из открытого контейнера или выплеснуть содержимое пузырька. Вы можете перемещать руку на расстояние до 30 футов каждый раз, когда используете её. Рука не может атаковать, активировать магические предметы и поднимать более 10 фунтов.</p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "PHB",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "activation": {
+          "type": "action",
+          "condition": "",
+          "value": 1
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute"
+        },
+        "target": {
+          "affects": {
+            "type": "space",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "units": "",
+            "contiguous": false
+          }
+        },
+        "range": {
+          "value": "30",
+          "units": "ft"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "ability": "int",
+        "level": 0,
+        "school": "con",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "always",
+          "prepared": true
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "action",
+              "value": null,
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "override": false
+            },
+            "target": {
+              "prompt": true,
+              "template": {
+                "contiguous": false,
+                "units": "ft"
+              },
+              "affects": {
+                "choice": false
+              },
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": ""
+      },
+      "ownership": {
+        "default": 0,
+        "Zs7yJru4DCapi5DP": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.1M9GjexjbsKc2XX9",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!76viGQiX3TgjGYkz.jw0CIOHGvkKzplPN"
+    },
+    {
+      "_id": "GwLmF31GCGMSwE3x",
+      "name": "Малая иллюзия",
+      "type": "spell",
+      "img": "modules/laaru-dnd5-hw/assets/icons/spell/phb-minor-illusion.webp",
+      "effects": [],
+      "folder": "kXvy7NyGE6c44fa4",
+      "sort": 100000,
+      "flags": {
+        "srd5e": {
+          "page": "",
+          "source": "PHB",
+          "hash": "minor%20illusion_phb"
+        },
+        "betterRolls5e": {
+          "critRange": {
+            "type": "String",
+            "value": null
+          },
+          "critDamage": {
+            "type": "String",
+            "value": ""
+          },
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": [],
+            "altValue": [],
+            "context": []
+          },
+          "quickVersatile": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "use": true,
+              "resource": true
+            },
+            "altValue": {
+              "use": true,
+              "resource": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "core": {
+          "sourceId": "Item.zAb5VU9g0ThRSnp3"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "migratedProperties": [
+            "somatic",
+            "material"
+          ],
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<p>Вы создаёте звук или образ объекта в пределах дистанции. Он существует, пока длится заклинание. Иллюзия также рассеивается, если вы прекратите её в качестве действия или сотворите это заклинание снова.</p>\n<p>Если вы создаёте звук, его громкость может варьироваться от шёпота до крика. Это может быть ваш или чей-то ещё голос, рёв льва, бой барабанов или что угодно ещё на ваш выбор. Звук может продолжаться всю длительность, или вы можете выбрать отдельные звуки, звучащие в разное время, пока длится заклинание.</p>\n<p>Если вы создаёте образ объекта — например, кресло, грязные следы ног или сундучок, — он должен быть не больше 5-футового куба. Образ не может создавать звук, свет, запах или иной сенсорный эффект. Физическое взаимодействие с образом выдаёт, что это иллюзия, потому что предметы проходят сквозь неё.</p>\n<p>Если существо использует действие, чтобы изучить звук или образ, оно может понять, что это иллюзия, успешно пройдя проверку Интеллекта (Расследование). СЛ проверки равна СЛ испытаний против ваших заклинаний. Если существо распознаёт иллюзию, она становится для него едва различимой</p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "PHB",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "activation": {
+          "type": "action",
+          "condition": "",
+          "value": 1
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute"
+        },
+        "target": {
+          "affects": {
+            "choice": false
+          },
+          "template": {
+            "units": "ft",
+            "type": "cube",
+            "size": "5",
+            "contiguous": false
+          }
+        },
+        "range": {
+          "value": "30",
+          "units": "ft"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "ability": "",
+        "level": 0,
+        "school": "ill",
+        "materials": {
+          "value": "клочок овечьей шерсти",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "always",
+          "prepared": true
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "action",
+              "value": null,
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "override": false
+            },
+            "target": {
+              "prompt": true,
+              "template": {
+                "contiguous": false,
+                "units": "ft"
+              },
+              "affects": {
+                "choice": false
+              },
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": ""
+      },
+      "ownership": {
+        "default": 0,
+        "Zs7yJru4DCapi5DP": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.zAb5VU9g0ThRSnp3",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!76viGQiX3TgjGYkz.GwLmF31GCGMSwE3x"
+    },
+    {
+      "_id": "NpLXINyYquoay8Wq",
+      "name": "Врождённые заклинания",
+      "type": "feat",
+      "img": "icons/magic/light/projectiles-star-purple.webp",
+      "effects": [],
+      "folder": "Cv2iOibkWnP07cMI",
+      "sort": 200000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "core": {
+          "sourceId": "Item.9Q0XMvAV7fLx3wIc"
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\"><div class=\"rd__spc-inline-post\"><p> двергар сотворяетодно из следующих заклинаний, используя Интеллекст в качестве базовой характеристики и без использования реагентов (СЛ испытания от заклинаний 12):</p></div><ul><li class=\"rd__spc-inline-post\"><p><strong>Неограниченно:</strong></p><hr /><p>@UUID[.GwLmF31GCGMSwE3x]{Малая иллюзия}<br /></p><hr /><p>@UUID[.jw0CIOHGvkKzplPN]{Магическая рука}</p><hr /></li><li class=\"rd__spc-inline-post\"><p><strong>1/день:</strong><br /></p><hr /><p>@UUID[.e9iVzcv0Y0sS6FtV]{Смрадное облако}</p></li></ul></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.9Q0XMvAV7fLx3wIc",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!76viGQiX3TgjGYkz.NpLXINyYquoay8Wq"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "MPMM",
+      "hash": "duergar%20despot_mpmm"
+    },
+    "core": {},
+    "midi-qol": {
+      "concentration-damage": 0
+    }
+  },
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 20,
+        "proficient": 0,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        },
+        "max": null
+      },
+      "dex": {
+        "value": 5,
+        "proficient": 0,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        },
+        "max": null
+      },
+      "con": {
+        "value": 19,
+        "proficient": 1,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        },
+        "max": null
+      },
+      "int": {
+        "value": 15,
+        "proficient": 0,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        },
+        "max": null
+      },
+      "wis": {
+        "value": 14,
+        "proficient": 1,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        },
+        "max": null
+      },
+      "cha": {
+        "value": 13,
+        "proficient": 0,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        },
+        "max": null
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 21,
+        "calc": "natural",
+        "formula": ""
+      },
+      "hp": {
+        "value": 119,
+        "max": 119,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "14d8 + 56"
+      },
+      "init": {
+        "ability": "",
+        "bonus": "0",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 0,
+        "walk": 25,
+        "units": "ft",
+        "hover": false
+      },
+      "attunement": {
+        "max": 3
+      },
+      "senses": {
+        "darkvision": 120,
+        "blindsight": 0,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "int",
+      "exhaustion": 0,
+      "concentration": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "bonuses": {
+          "save": ""
+        },
+        "limit": 1
+      },
+      "hd": {
+        "spent": 0
+      },
+      "death": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "success": 0,
+        "failure": 0
+      }
+    },
+    "details": {
+      "biography": {
+        "value": "<p><strong>Двергары деспоты</strong> заменяют части своих тел механическими устройствами, которыми они управляют с помощью своих псионических способностей.</p>\n<div class=\"rd__b  rd__b--0\">\n<p class=\"rd__quote-line rd__quote-line--last\">“<em>Архитектура двергаров примечательна своим брутальным величием. Это не тот стиль, который я бы использовал для своих башен — я предпочитаю золото, драгоценные камни и узоры, — но я восхищаюсь смелостью дварфийской каменной кладки.</em>”</p>\n<p><span class=\"rd__quote-by\">— Морденкайнен</span></p>\n<p class=\"rd__quote-line \">“<em>Ментальная сила, которой обладают двергары, была дана им иллитидами. Но зачем иллитидам создавать слуг, которые могли становиться невидимыми или вырастать до размеров огра? Скорее всего, потому, что эти слуги преуспели бы в том, чтобы пасти других приспешников своих хозяев. Оглядываясь назад, кажется очевидным, что двергары избежали рабства, потому что их тюремщики дали им ключи.</em>”</p>\n<p><span class=\"rd__quote-by\">— Морденкайнен</span></p>\n<p>Двергары — дварфы из глубин Подземья и других бессолнечных царств. На их личности и способности оказали глубокое влияние пленение и мучения их предков пожирателями разума; они были наделены мощными псионическими способностями, но также и глубоким мраком. У некоторых это напряжение печали вдохновляет на произведения величественной, но меланхоличной красоты, в то время как у других оно проявляется как ярость.</p>\n<p>Как и многие, кто живет в Подземье, двергары должны постоянно быть начеку от набегов и заговоров своих соседей. С этой целью воины-двергары выполняют различные боевые роли, часто сочетая свою ярость в бою со своими псионическими способностями или дрессируя опасных существ Подземья в качестве верховых животных.</p>\n<p>Некоторые считают двергаров безрадостными, но на самом деле они глубоко увлечены всем, что делают, даже если эта страсть редко проявляется как веселье. Они привносят эмоциональный накал в свою жизнь, независимо от того, исследуют ли они соседние туннели, защищают свои дома, общаются со своими семьями или создают новые смелые работы. Узы дружбы и родства прочны, хотя справиться с неизбежными вспышками разочарования и отчаяния не всегда легко. Точно так же двергары, как правило, очень ориентированы на сообщество - в Подземье все должны сотрудничать, чтобы выжить.</p>\n<p>Среди двергаров Забытых Королевств творение — это безумно страстный процесс. Они, как правило, отдают предпочтение работам, которые являются прочными и величественными, но в своей основе, отдающая предпочтение геометрическим формам. Крепости, которые они проектируют, массивны и суровы, а оружие, которое они создают, явно является орудием насилия. В то время как другие могут осуждать свои творения как холодные и лишенные украшений до аскетизма, двергар видит в них уважение к используемым материалам и честность в отношении их назначения.</p>\n</div>",
+        "public": ""
+      },
+      "alignment": "любое",
+      "race": null,
+      "type": {
+        "value": "humanoid",
+        "subtype": "дварф",
+        "swarm": "",
+        "custom": ""
+      },
+      "environment": "Mountain, Underdark",
+      "cr": 12,
+      "spellLevel": 0,
+      "ideal": "",
+      "bond": "",
+      "flaw": ""
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [
+          "poison"
+        ],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [
+          "charmed",
+          "exhaustion",
+          "frightened",
+          "paralyzed",
+          "poisoned"
+        ],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "dwarvish",
+          "undercommon"
+        ],
+        "custom": ""
+      },
+      "dm": {
+        "amount": {},
+        "bypasses": []
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "skills": {
+      "acr": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ani": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "arc": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ath": {
+        "value": 0,
+        "ability": "str",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "dec": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "his": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ins": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "itm": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "inv": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "med": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "nat": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prc": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prf": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "per": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "rel": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "slt": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ste": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "sur": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      }
+    },
+    "spells": {
+      "spell1": {
+        "value": 0,
+        "override": null
+      },
+      "spell2": {
+        "value": 0,
+        "override": null
+      },
+      "spell3": {
+        "value": 0,
+        "override": null
+      },
+      "spell4": {
+        "value": 0,
+        "override": null
+      },
+      "spell5": {
+        "value": 0,
+        "override": null
+      },
+      "spell6": {
+        "value": 0,
+        "override": null
+      },
+      "spell7": {
+        "value": 0,
+        "override": null
+      },
+      "spell8": {
+        "value": 0,
+        "override": null
+      },
+      "spell9": {
+        "value": 0,
+        "override": null
+      },
+      "pact": {
+        "value": 0,
+        "override": null
+      },
+      "spell0": {
+        "value": 0,
+        "override": null
+      }
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "resources": {
+      "legact": {
+        "value": 0,
+        "max": 0
+      },
+      "legres": {
+        "value": 0,
+        "max": 0
+      },
+      "lair": {
+        "value": false,
+        "initiative": 20
+      }
+    },
+    "tools": {},
+    "source": {
+      "page": "",
+      "license": "",
+      "rules": "2014",
+      "book": "MPMM"
+    }
+  },
+  "prototypeToken": {
+    "name": "Двергар деспот",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false,
+        "type": null
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5,
+      "negative": false,
+      "priority": 0
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "flags": {},
+    "randomImg": false,
+    "texture": {
+      "src": "modules/laaru-dnd5-hw/assets/images/MM/Duergar Despot.png",
+      "tint": "#ffffff",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": true,
+      "range": 120,
+      "brightness": 0,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "appendNumber": false,
+    "prependAdjective": false,
+    "hexagonalShape": 0,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.1",
+    "createdTime": 1726582948342,
+    "modifiedTime": 1726582948342,
+    "lastModifiedBy": "UkvoHT2ggFpbOAml"
+  },
+  "folder": "l3uPp5S2He9H36lZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "UkvoHT2ggFpbOAml": 3
+  },
+  "_key": "!actors!76viGQiX3TgjGYkz"
+}

@@ -1,0 +1,228 @@
+{
+  "name": "Короткий меч повеления Трона / Shortsword of Throne's Command",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "system": {
+    "description": {
+      "value": "<p>Это оружие украшено витиеватой золотой филигранью и темно-синими и бордовыми драгоценными камнями.</p><p>Вы получаете бонус +1 к броскам атаки и урона, совершённым этим магическим оружием.</p><p>Кроме того, вы получаете умения в навыках Запугивание и Убеждение, если у вас еще нет умения в этих навыках.</p><p><em><strong>Использование заклинаний</strong></em>. Оружие имеет 5 зарядов. Вы можете бонусным действием потратить 1 или более зарядов, чтобы сотворить одно из следующих заклинаний (СЛ испытания 16):</p><ul><li><p>@Compendium[laaru-dnd5-hw.spells.bM98WJMhzC5LjfrO]{Приказ} (1 заряд),</p></li><li><p>@Compendium[laaru-dnd5-hw.spells.5dN5AZgmsr5KTJ5j]{Место истины} (2 заряда),</p></li><li><p>@Compendium[laaru-dnd5-hw.spells.B6AsDaR4CpcwqBO6]{Принуждение} (4 заряда),</p></li><li><p>@Compendium[laaru-dnd5-hw.spells.K5SkRCCfmvLnsL3i]{Изгнание} (4 заряда),</p></li><li><p>@Compendium[laaru-dnd5-hw.spells.uLKYcMWQhOpEnJCe]{Подчинение гуманоида} (5 зарядов).</p></li></ul><p>Оружие восстанавливает [[/r 1d4]] израсходованных зарядов ежедневно на рассвете.</p><p>Средних размеров клинок с прочной гардой и обтянутой кожей рукоятью. Универсальное оружие, которое компенсирует универсальностью то, что ему не хватает длины.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "BMT",
+      "book": "BMT",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "veryRare",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "range": {
+      "value": null,
+      "long": 0,
+      "units": "ft",
+      "reach": null
+    },
+    "uses": {
+      "max": "5",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d4"
+        }
+      ],
+      "spent": 0
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [
+          "piercing"
+        ],
+        "custom": {
+          "enabled": true,
+          "formula": "1d6+1+@mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      }
+    },
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "fin",
+      "lgt",
+      "mgc"
+    ],
+    "proficient": null,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "martialM",
+      "baseItem": "shortsword"
+    },
+    "container": null,
+    "magicalBonus": null,
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "0",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "dex",
+          "bonus": "+1",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "korotkij-mech-poveleniya-trona--shortsword-of-thrones-command",
+    "attuned": false,
+    "ammunition": {}
+  },
+  "img": "icons/weapons/swords/sword-guard-brown.webp",
+  "flags": {
+    "core": {},
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 5
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "JCbfXWDEBeTqlgxg",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!JCbfXWDEBeTqlgxg"
+}

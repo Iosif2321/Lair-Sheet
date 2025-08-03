@@ -1,0 +1,195 @@
+{
+  "_id": "A8YesjocKVwn0nFv",
+  "name": "Пронзание разума / Mind Spike",
+  "type": "spell",
+  "img": "icons/magic/perception/hand-eye-pink.webp",
+  "effects": [],
+  "folder": "1laDscZ7Bn7NoviD",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "mind%20spike_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "autoFailFriendly": false,
+      "autoSaveFriendly": false,
+      "offHandWeapon": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Mind Spike",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\">\n<div class=\"rd__spc-inline-post\">Вы достигаете разума одного существа, которое видите в пределах дистанции.</div>\n<div class=\"rd__spc-inline-post\">Цель должна пройти испытание Мудрости и получить психический урон [[/r 3d8]] при провале или половину этого урона при успехе. В случае неудачного испытания вы также всегда знаете местоположение цели до тех пор, пока заклинание активно, но только пока вы находитесь на одном и том же существования.</div>\n<div class=\"rd__spc-inline-post\">Пока у вас есть это знание, цель не может стать спрятанной от вас, и если она &amp;reference[invisible]{невидима}, она не получает никакой выгоды от этого состояния против вас.</div>\n<div class=\"rd__spc-inline-post\"><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку заклинания 3 круга или выше, урон увеличивается на [[/r 1d8]] для каждого круга ячейки выше 2.</div>\n</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 2,
+    "school": "div",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "somatic",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 3,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "psychic"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "wis",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "pronzanie-razuma--mind-spike"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028206330,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!A8YesjocKVwn0nFv"
+}

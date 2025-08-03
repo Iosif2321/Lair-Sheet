@@ -1,0 +1,260 @@
+{
+  "_id": "PMosFOlxIKxFS5Ob",
+  "name": "Флейта крысолова / Pipes of the Sewers",
+  "type": "consumable",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/pipes-of-the-sewers.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "pipes%20of%20the%20sewers_dmg"
+    },
+    "core": {
+      "sourceId": "Compendium.laaru-dnd5-hw.items.PMosFOlxIKxFS5Ob"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Pipes of the Sewers",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 3
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div><p><em>Чудесный предмет, (требуется настроенность)</em></p></div><div><p>Вам нужно умение в духовых инструментах, чтобы играть на этой флейте. Пока вы настроены на флейту, крысы и гигантские крысы безразлично относятся к вам и не атакуют вас, пока вы сами не угрожаете и не вредите им.</p></div><div><p>У флейты 3 заряда. Если вы играете на ней в качестве действия, вы можете использовать бонусное действие, чтобы потратить от 1 до 3 зарядов и вызвать по @Compendium[laaru-dnd5-hw.monsters.5EwHaqgopo5PLhev]{стае крыс} за каждый потраченный заряд при условии, что в пределах полумили от вас достаточно крыс, чтобы их вызвать (это решает мастер). Если вокруг недостаточно крыс для создания стаи, заряд потрачен впустую. Вызванные стаи движутся навстречу музыке по самому короткому пути, но больше вы ими никак не управляете. Ежедневно на рассвете флейта восстанавливает [[/r 1d3]] потраченных заряда.</p></div><div><p>Когда стая крыс, не находящаяся под контролем другого существа, появляется в пределах 30 футов от вас, пока вы играете на флейте, можете пройти проверку Харизмы в состязании с проверкой Мудрости стаи. Если вы проиграете, стая ведёт себя как обычно, а музыка флейты не может подействовать на неё следующие 24 часа. Если вы выиграете, стая зачарована музыкой флейты и становится дружественна вам и вашим спутникам, пока вы продолжаете играть на флейте каждый раунд в качестве действия. Дружественная стая исполняет ваши приказы. Если вы не прикажете ничего, она будет защищаться, но не совершает иных действий. Если дружественная стая в начале своего хода не может слышать музыку флейты, ваш контроль над этой стаей прекращается. Стая начинает вести себя как обычно, а музыка флейты не может подействовать на неё следующие 24 часа.</p></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": false,
+    "rarity": "uncommon",
+    "identified": true,
+    "uses": {
+      "max": "3",
+      "autoDestroy": false,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "check",
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "умение в духовых инструментах",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "check": {
+          "ability": "",
+          "associated": [],
+          "dc": {}
+        },
+        "sort": 0
+      },
+      "dnd5eactivity100": {
+        "_id": "dnd5eactivity100",
+        "type": "save",
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "умение в духовых инструментах",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "wis"
+          ],
+          "dc": {
+            "calculation": "cha",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "flejta-krysolova--pipes-of-the-sewers",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": []
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.laaru-dnd5-hw.items.PMosFOlxIKxFS5Ob",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!PMosFOlxIKxFS5Ob"
+}

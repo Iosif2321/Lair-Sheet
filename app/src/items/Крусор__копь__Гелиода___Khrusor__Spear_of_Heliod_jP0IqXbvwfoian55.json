@@ -1,0 +1,234 @@
+{
+  "name": "Крусор, копьё Гелиода / Khrusor, Spear of Heliod",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "system": {
+    "description": {
+      "value": "<p><em>Требуется настроенность</em></p><p>Гелиод владеет Крусором, копьём, благословлённым силой солнца. В его руках он может быть брошен из Никса в любую точку Тероса. Когда Гелиод одалживает своё оружие смертному, это обычно делается для того, чтобы он мог выполнить какую-то великую работу в его честь или в качестве проверки его достоинства.</p><p><em><strong>Солнечное копьё</strong></em>. Это копьё даёт бонус +3 к броскам атаки и урона, совершённым этим оружием. Когда вы попадаете атакой с помощью этого копья, цель дополнительно получает [[/r 2d8]] лучистого урона.</p><p><em><strong>Благословлённый солнцем</strong></em>. Если вы поклоняетесь Гелиоду, то вы получаете все следующие преимущества, для которых у вас есть необходимое значение благоволения:</p><ul><li><p>Благоволение 3+. Вы получаете 15 временных ПЗ при каждом рассвете.</p></li><li><p>Благоволение 10+. Копье получает 1 случайно определяемое @UUID[Compendium.laaru-dnd5-hw.tables-extra.N34NnokOfBiV1YPJ]{малое полезное свойство}.</p></li><li><p>Благоволение 25+. Копье получает 1 дополнительное случайно определяемое @UUID[Compendium.laaru-dnd5-hw.tables-extra.N34NnokOfBiV1YPJ]{малое полезное свойство}.</p></li><li><p>Благоволение 50+. Копье получает 1 случайно определяемое @UUID[Compendium.laaru-dnd5-hw.tables-extra.hHVqr7nopYSyvqb0]{великое полезное свойство}.</p></li></ul><p>Если вы не поклоняетесь Гелиоду, то копье получает 2 случайно определяемых @UUID[Compendium.laaru-dnd5-hw.tables-extra.2qDg2sz8xYpmHrrC]{великое вредное свойство}.</p><p><em><strong>Сияющий</strong></em>. Копьё излучает @UUID[Compendium.laaru-dnd5-hw.actions.EvGCMCVp1VpUtCbI]{яркий свет} в радиусе 30 футов и @UUID[Compendium.laaru-dnd5-hw.actions.BbWvc4m610EHv070]{тусклый} ещё на 30 футов. Этот свет идентичен солнечному.</p><p><em><strong>Солнечное возмездие</strong></em>. Когда вы получаете урон от существа в пределах 5 футов от вас, вы можете @Compendium[laaru-dnd5-hw.actions.mMwkUE20bEfKeetq]{ответным действием} совершить атаку копьём в ближнем бою против этого существа. При попадании копье наносит урон как обычно, и существо становится @UUID[Compendium.laaru-dnd5-hw.actions.apswG1jicwhlWT5R]{ослеплённым} до начала своего следующего хода. Это свойство копья не может быть использовано снова до следующего рассвета.</p><p><em><strong>Заклинания</strong></em>. Копьё имеет 10 зарядов. Удерживая его, вы можете использовать действие, чтобы израсходовать 1 или более его зарядов, чтобы сотворить одно из следующих заклинаний (СЛ испытания 18): @Compendium[laaru-dnd5-hw.spells.wE7p0clFpTiKXGyl]{Направляющий луч} (1 заряд), @Compendium[laaru-dnd5-hw.spells.xoxTz9mfsHkmHcX6]{Дневной свет} (3 заряда, свет исходит из наконечника копья), @Compendium[laaru-dnd5-hw.spells.cEfz34XuGBEE6rBU]{Солнечный луч} (6 зарядов). Копьё восстанавливает [[/r 1d6 + 4]] израсходованных заряда ежедневно на рассвете.</p><p><em><strong>Уничтожение копья</strong></em>. Если его отвезти во дворец Эреба в Тизере и принести в жертву Эребу чемпиона Гелиода, то Крусор либо уничтожается, либо в фундаментально искажается для служения Эребу.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "MOT",
+      "revision": 1,
+      "book": "MOT",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 3,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "artifact",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "range": {
+      "value": 20,
+      "long": 60,
+      "units": "ft",
+      "reach": null
+    },
+    "uses": {
+      "max": "10",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d6 + 4"
+        }
+      ],
+      "spent": 0
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": true,
+          "formula": "1d8+3+@mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [
+          "piercing"
+        ],
+        "custom": {
+          "enabled": true,
+          "formula": "1d6+3+@mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      }
+    },
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "thr",
+      "ver",
+      "mgc"
+    ],
+    "proficient": 1,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "simpleM",
+      "baseItem": "spear"
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "20",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "str",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "krusor-kopyo-gelioda--khrusor-spear-of-heliod",
+    "container": null,
+    "attuned": false,
+    "ammunition": {},
+    "magicalBonus": null
+  },
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Khrusor%2C%20Spear%20of%20Heliod.webp",
+  "flags": {
+    "core": {
+      "sourceId": "Item.tRRHn7G5V85aUDtT"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Khrusor, Spear of Heliod",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 10
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "compendiumSource": "Item.tRRHn7G5V85aUDtT",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "jP0IqXbvwfoian55",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!jP0IqXbvwfoian55"
+}

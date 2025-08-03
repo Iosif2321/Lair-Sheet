@@ -1,0 +1,227 @@
+{
+  "name": "Полётное одеяние / Wingwear",
+  "type": "equipment",
+  "system": {
+    "description": {
+      "value": "<p><em>Требуется настроенность</em></p><p>На этом удобном одеянии вышиты символы воздуха, а похожие на перепонки кожаные вставки, соединяющие рукава, талию и ноги, играют роль импровизированных крыльев, на которых можно планировать по воздуху. Полётное одеяние имеет 3 заряда. Пока вы носите одеяние, вы можете бонусным действием потратить 1 заряд и получить скорость полёта 30 футов до тех пор, пока не коснётесь земли. В конце каждого своего хода вы опускаетесь на 5 футов. Вы мгновенно опускаетесь до 0 футов, если не пролетаете по крайней мере 30 футов по горизонтали в свой ход. Когда вы опускаетесь до 0 футов, вы приземляетесь (или падаете).</p><p>Чтобы вновь использовать одеяние, вы должны потратить ещё один заряд.</p><p>Одеяние восстанавливает все использованные заряды после перезарядки в элементальном узле воздуха, которая занимает как минимум 1 час.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PotA",
+      "revision": 1,
+      "book": "PotA",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "uncommon",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "uses": {
+      "max": "3",
+      "spent": 0,
+      "recovery": []
+    },
+    "armor": {
+      "value": null,
+      "dex": null,
+      "magicalBonus": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "speed": {
+      "value": null,
+      "conditions": ""
+    },
+    "strength": null,
+    "proficient": 1,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "baseItem": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "special",
+          "value": 0,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "polyotnoe-odeyanie--wingwear",
+    "container": null,
+    "attuned": false,
+    "properties": []
+  },
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Wingwear.webp",
+  "flags": {
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Wingwear",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 3
+    }
+  },
+  "effects": [
+    {
+      "changes": [
+        {
+          "key": "system.attributes.movement.fly",
+          "mode": 4,
+          "value": "30",
+          "priority": 4
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": []
+        },
+        "core": {
+          "statusId": ""
+        }
+      },
+      "_id": "obyeXKjlpIGtQw8B",
+      "name": "Скорость полета",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "modules/laaru-dnd5-hw/assets/images/pic/Wingwear.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!IN0M46Ki8hRB0uqN.obyeXKjlpIGtQw8B"
+    }
+  ],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "IN0M46Ki8hRB0uqN",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!IN0M46Ki8hRB0uqN"
+}

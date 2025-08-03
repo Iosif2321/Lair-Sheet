@@ -1,0 +1,276 @@
+{
+  "_id": "PsMYWgx7KOqV8pzu",
+  "name": "Буря возмездия / Storm of Vengeance",
+  "type": "spell",
+  "img": "icons/magic/lightning/bolt-strike-clouds-blue.webp",
+  "effects": [],
+  "folder": "z7i87cnf1CWurr7r",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "storm%20of%20vengeance_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": {
+          "0": true
+        },
+        "altValue": {
+          "0": true
+        },
+        "context": {
+          "0": ""
+        }
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "autoFailFriendly": false,
+      "offHandWeapon": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Storm of Vengeance",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\"><p>Клубящееся грозовое облако сгущается вокруг точки, которую вы видите, и растекается в радиусе 360 футов. В области сверкают молнии, гремит гром и воет сильный ветер. Каждое существо, оказавшееся под облаком (на расстоянии не более 5 000 футов под ним), при его появлении должно пройти испытание Выносливости. При провале существо получает [/r 2d6]] урона громом и &amp;reference[deafened]{глохнет } на 5 минут.</p></div><div class=\"rd__spc-inline-post\"><p>Каждый раунд, пока вы сохраняете концентрацию на заклинании, буря производит определённые эффекты в ваш ход.</p><p><strong>Раунд 2.</strong> Из облака льёт кислотный дождь. Каждое существо и каждый объект под облаком получают [[/r 1d6]] </p><p><strong>Раунд 3.</strong> Вы призываете из облака шесть молний, и они бьют в шесть существ или объектов на ваш выбор, находящихся под облаком. Каждую цель можно поразить не более чем одной молнией. Поражённое существо должно пройти испытание Ловкости. Существо получает [[/r 10d6]] урона молнией при провале или половину этого урона при успехе.</p><p><strong>Раунд 4</strong>. Из облака обрушивается град. Каждое существо под облаком получает [[/r 2d6]] дробящего урона.</p><p><strong>Раунды 5-10.</strong> На область под облаком обрушиваются порывы ветра и дождя со снегом. Область становится пересечённой местностью, а видимость в ней крайне затруднена. Каждое существо, находящееся здесь, получает [[/r 1d6]]  урона холодом. Дистанционные атаки оружием в области становятся невозможны. Ветер и дождь сильно отвлекают при попытках сконцентрироваться на заклинании. Наконец, порывы сильного ветра (от 20 до 50 миль вчас) автоматически рассеивают туман, дымку и тому подобные явления в области, как обычные, так и магические.</p></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "radius",
+        "size": "360",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "0",
+      "units": "spec"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 9,
+    "school": "con",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "thunder"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "con",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "burya-vozmezdiya--storm-of-vengeance"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028216464,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!PsMYWgx7KOqV8pzu"
+}

@@ -1,0 +1,173 @@
+{
+  "_id": "HuhGsxNcxhZB2Kia",
+  "name": "Озорство Натайра / Nathair's Mischief",
+  "type": "spell",
+  "img": "icons/creatures/magical/spirit-fire-yellow.webp",
+  "effects": [],
+  "folder": "1laDscZ7Bn7NoviD",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "FTD",
+      "hash": "nathair's%20mischief_ftd"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "autoFailFriendly": false,
+      "autoSaveFriendly": false,
+      "offHandWeapon": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Nathair's Mischief",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы заполняете 20-футовый куб, который видите в пределах дистанции, магией Фей и Драконов. Совершите бросок по таблице «Озорной порыв» для определения создаваемого магического эффекта, и совершайте новый бросок в начале каждого вашего хода, пока заклинание не закончится. Вы можете переместить куб на 10 футов, прежде чем совершить бросок.</p>\n<table class=\"w-100 rd__table  stripe-odd-table\"><caption>Озорной порыв</caption>\n<thead>\n<tr>\n<th class=\"col-2 text-center\" data-rd-isroller=\"true\">[[/r d4]]</th>\n<th class=\"col-10\" data-rd-isroller=\"false\">Эффект</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td class=\"col-2 text-center\" data-roll-min=\"1\" data-roll-max=\"1\">1</td>\n<td class=\"col-10\">Запах яблочного пирога наполняет воздух и каждое существо в кубе должно преуспеть в испытании Мудрости, иначе станет &amp;reference[charmed]{обворожённым} вами до начала вашего следующего хода.</td>\n</tr>\n<tr>\n<td class=\"col-2 text-center\" data-roll-min=\"2\" data-roll-max=\"2\">2</td>\n<td class=\"col-10\">Букеты цветов появляются повсюду и каждое существо в кубе должно преуспеть в испытании Ловкости, иначе станет &amp;reference[blinded]{ослеплённым} до начала вашего следующего хода, так как цветы брызгают водой им в лица.</td>\n</tr>\n<tr>\n<td class=\"col-2 text-center\" data-roll-min=\"3\" data-roll-max=\"3\">3</td>\n<td class=\"col-10\">Каждое существо в кубе должно преуспеть в испытании Мудрости, иначе оно будет смеяться до начала вашего следующего хода. Смеющееся существо &amp;reference[incapacitated]{выведено из строя} и использует всё своё передвижение, чтобы переместиться в случайном направлении.</td>\n</tr>\n<tr>\n<td class=\"col-2 text-center\" data-roll-min=\"4\" data-roll-max=\"4\">4</td>\n<td class=\"col-10\">Капли патоки начинают парить в кубе, превращая его в &amp;reference[difficultterrain]{пересечённую местность} до начала вашего следующего хода.</td>\n</tr>\n</tbody>\n</table>\n\n<div id=\"gtx-trans\" style=\"position:absolute;left:289px;top:453.5px\">\n<div class=\"gtx-trans-icon\"> </div>\n</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "FTD",
+      "book": "FTD",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 2,
+    "school": "ill",
+    "materials": {
+      "value": "кусочек корочки яблочного пирога",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "ozorstvo-natajra--nathairs-mischief"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028211353,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!HuhGsxNcxhZB2Kia"
+}

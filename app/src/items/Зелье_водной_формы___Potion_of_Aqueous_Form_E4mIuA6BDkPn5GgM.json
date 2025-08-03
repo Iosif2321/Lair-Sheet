@@ -1,0 +1,233 @@
+{
+  "name": "Зелье водной формы / Potion of Aqueous Form",
+  "type": "consumable",
+  "system": {
+    "description": {
+      "value": "<p>Выпивая это зелье, вы превращаетесь в живой сгусток воды. Вы возвращаетесь к своей истинной форме через 10 минут, а также если вы &amp;reference[incapacitated]{выведены из строя} или умираете.</p><p>Находясь в этой форме, вы получаете следующие преимущества:</p><ul><li><p><em><strong>Движение жидкости</strong></em>. Вы получаете скорость плавания 30 футов. Вы можете перемещаться по другим жидкостям или через них, а так же может входить в пространство других существ и останавливаться там. Вы получаете способность вырастать до своего нормального роста и можете проходить через @UUID[Compendium.laaru-dnd5-hw.actions.sDPntYBdmN7jMZc6]{маленькие} отверстия. Вы гасите немагическое пламя в любом пространстве, в которое входите.</p></li><li><p><em><strong>Водная устойчивость</strong></em>. Вы получаете устойчивость к немагическому урону. Также вы проходите с преимуществом испытания Силы, Ловкости и Выносливости.</p></li><li><p><em><strong>Ограничения</strong></em>. Вы не можете говорить, атаковать, творить заклинания или активировать магические предметы. Любые предметы, которые вы несли или носили, сливаются с вами в вашей новой форме и становятся недоступными, хоть на вас продолжает влиять всё, что вы носите, например, доспех.</p></li></ul>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "MOT",
+      "revision": 1,
+      "book": "MOT",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "equipped": false,
+    "rarity": "rare",
+    "identified": true,
+    "uses": {
+      "max": "1",
+      "autoDestroy": false,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": "<p>Зелье похоже на морскую воду, постоянно пребывающую в движении.</p>"
+    },
+    "type": {
+      "value": "potion",
+      "subtype": ""
+    },
+    "container": null,
+    "properties": [
+      "mgc"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "TQxQ19Ro6jNfFKsa"
+          }
+        ],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "zele-vodnoj-formy--potion-of-aqueous-form",
+    "attuned": false,
+    "magicalBonus": null
+  },
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Potion%20of%20Aqueous%20Form.webp",
+  "flags": {
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Potion of Aqueous Form",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 1
+    }
+  },
+  "effects": [
+    {
+      "changes": [
+        {
+          "key": "system.attributes.movement.swim",
+          "mode": 4,
+          "value": "30",
+          "priority": 4
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": 600,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": [],
+          "dontApply": false,
+          "showIcon": false
+        },
+        "core": {
+          "statusId": ""
+        }
+      },
+      "_id": "TQxQ19Ro6jNfFKsa",
+      "name": "Скорость плавания",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "modules/laaru-dnd5-hw/assets/images/pic/Potion%20of%20Aqueous%20Form.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!E4mIuA6BDkPn5GgM.TQxQ19Ro6jNfFKsa"
+    }
+  ],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "E4mIuA6BDkPn5GgM",
+  "folder": "Vn8lmCnqSTHO64uN",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!E4mIuA6BDkPn5GgM"
+}

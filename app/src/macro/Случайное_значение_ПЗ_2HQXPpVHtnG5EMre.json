@@ -1,0 +1,31 @@
+{
+  "name": "Случайное значение ПЗ",
+  "type": "script",
+  "scope": "global",
+  "author": "N5s4uI6OpcSYQoF8",
+  "img": "icons/magic/life/heart-hand-gold-green.webp",
+  "command": "/**\n * Активирует случайное значение ПЗ добавляемых на сцену NPC и монстров. Запускать один раз в начале игры.\n * Author: Phenomen\n */\nif (game.user.isGM) {\n  ui.notifications.notify(\"Для новых токенов активирован бросок ПЗ по формуле\");\n}\n\nHooks.on(\"createToken\", async function (token) {\n  if (token.actor.type === \"npc\") {\n    const hpFormula = token.actor.system.attributes.hp.formula;\n    const rollHp = await new Roll(hpFormula).evaluate();\n    const rolledHp = rollHp._total;\n    rolledHp < 1 ? (rolledHp = 1) : null;\n    token.actor.update({\n      \"system.attributes.hp.value\": rolledHp,\n      \"system.attributes.hp.max\": rolledHp,\n    });\n\n    const messageContent = `<h3>${token.name}</h3><p><b>Формула:</b> ${hpFormula}<br /><b>Результат:</b> ${rolledHp}</p>`;\n    const messageData = {\n      content: messageContent,\n      whisper: game.users.filter((u) => u.isGM).map((u) => u.id),\n    };\n    ChatMessage.create(messageData);\n  }\n});",
+  "ownership": {
+    "default": 0,
+    "N5s4uI6OpcSYQoF8": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Macro.lQCHg57XWvQzjIAh"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1686762041070,
+    "modifiedTime": 1699263585772,
+    "lastModifiedBy": "H9WsizrOeJscXSvG",
+    "compendiumSource": "Macro.lQCHg57XWvQzjIAh",
+    "duplicateSource": null
+  },
+  "folder": "vwcXHRDEDhe74QLA",
+  "sort": 200000,
+  "_id": "2HQXPpVHtnG5EMre",
+  "_key": "!macros!2HQXPpVHtnG5EMre"
+}

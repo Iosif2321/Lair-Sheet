@@ -1,0 +1,180 @@
+{
+  "name": "Жезл зимы / Wand of Winter",
+  "type": "consumable",
+  "system": {
+    "description": {
+      "value": "<p>Жезл выглядит и на ощупь как сосулька.</p><p>У жезла есть 7 зарядов, которые можно использовать, чтобы творить заклинания с её помощью. С жезлом в руке, вы можете использовать ваше действие чтобы сотворить одно из следующих заклинаний, даже если вы не способны творить заклинания:</p><ul><li><p>@Compendium[laaru-dnd5-hw.spells.1v8IS0xgyMTbSFYV]{Ледяной луч} (без траты зарядов, или 1 заряд, чтобы сотворить его как заклинание 5 круга; +5 к попаданию дистанционной атакой заклинанием)</p></li><li><p>@Compendium[laaru-dnd5-hw.spells.vYBEe4zO5taVPW3f]{Пурга} (3 заряда; СЛ 15).</p></li><li><p>@Compendium[laaru-dnd5-hw.spells.RYG0oYTpaqFgTKh3]{Ледяная буря} (4 заряда; СЛ 15).</p></li></ul><p>Никаких реагентов для этого не требуется.</p><p>Жезл восполняет [[/r 1d6+1]] потраченных зарядов каждый день на рассвете. Если вы потратите последний заряд жезла, бросьте [[/r d20]]. При результате 20, жезл плавится у вас в руках — она разрушена навсегда.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "HotDQ",
+      "revision": 1,
+      "book": "HotDQ",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": false,
+    "rarity": "rare",
+    "identified": true,
+    "uses": {
+      "max": "7",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d6 + 1"
+        }
+      ],
+      "autoDestroy": true,
+      "spent": 0
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "wand",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "d20",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "volshebnaya-palochka-zimy--wand-of-winter",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": [
+      "mgc"
+    ]
+  },
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Wand%20of%20Winter.webp",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.laaru-dnd5-hw.items.13RRGiFNNabBxgID"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Wand of Winter",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 7
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "compendiumSource": "Compendium.laaru-dnd5-hw.items.13RRGiFNNabBxgID",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739363662463,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "13RRGiFNNabBxgID",
+  "folder": "dRBK3J27k3uNqFqe",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!13RRGiFNNabBxgID"
+}

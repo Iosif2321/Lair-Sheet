@@ -1,0 +1,228 @@
+{
+  "_id": "brdtpYq1uPGaaQkW",
+  "name": "Призыв духа аберрации / Summon Aberration",
+  "type": "spell",
+  "img": "icons/creatures/eyes/slime-stalks-yellow-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы призываете дух аберрации. Существо появляется в незанятом пространстве, которое вы можете видеть в пределах дистанции. Воплощённая форма духа использует блок параметров @Compendium[laaru-dnd5-hw.monsters.BYJq4VNLrGeJPp6k]{Духа аберрации}. Когда вы сотворяете заклинание, выберите тип духа: @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.U5sXGT8XSpI7z9ch], @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.7as5ibwaYD1Qq82X] или @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.3lf1u4kKm0lULoLJ]. Дух принимает форму выбранной аберрации и имеет соответствующие признаки, описанные в блоке параметров. Существо исчезает, когда его ПЗ опускаются до 0 или когда заклинание заканчивается.</p><p>Это существо дружелюбно к вам и вашим спутникам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие @Compendium[laaru-dnd5-hw.actions.UMuz44p8fXeLCZn7]{Уклонение} и перемещается, избегая опасностей.</p><p><strong>На высоких кругах</strong>. Когда вы сотворяете это заклинание, используя ячейку 5-го круга или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке параметров.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "",
+      "custom": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "type": "space",
+        "count": "1",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "90",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 4,
+    "school": "con",
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration",
+      "mgc"
+    ],
+    "materials": {
+      "value": "заспиртованные щупальце и глазное яблоко в сосуде с платиновой инкрустацией стоимостью не менее 400 зм",
+      "consumed": false,
+      "cost": 400,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "summon",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "bonuses": {
+          "ac": "@item.level",
+          "hp": "(@item.level - 4) * 10",
+          "attackDamage": "@item.level",
+          "saveDamage": "",
+          "healing": "",
+          "hd": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "proficiency": true,
+          "attacks": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "count": "",
+            "name": "Бехолдер",
+            "_id": "rOFjc0LmbC8g3dMh",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.U5sXGT8XSpI7z9ch",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Звёздное порождение",
+            "_id": "77AsdNkePadRQoXu",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.3lf1u4kKm0lULoLJ",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Слаад",
+            "_id": "Rt91u5PU3cCUczkd",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.7as5ibwaYD1Qq82X",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          }
+        ],
+        "summon": {
+          "identifier": "",
+          "mode": "",
+          "prompt": true
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "prizyv-duha-aberracii--summon-aberration"
+  },
+  "effects": [],
+  "folder": "5iZ8qMTOt7ODg7B1",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TCE",
+      "hash": "summon%20aberration_tce"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "autoFailFriendly": false,
+      "autoSaveFriendly": false,
+      "offHandWeapon": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Summon Aberration",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028224373,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!brdtpYq1uPGaaQkW"
+}

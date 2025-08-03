@@ -1,0 +1,304 @@
+{
+  "_id": "wbBoLMEaiBQj8Hss",
+  "name": "Громовой клинок / Booming Blade",
+  "type": "spell",
+  "img": "icons/skills/melee/strike-sword-slashing-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы взмахиваете оружием, выбранным в качестве реагента, и совершаете атаку оружием в ближнем бою против одного существа в пределах 5 футов от вас. При попадании цель подвергается обычному эффекту от атаки этим оружием и покрывается бушующей энергией до начала вашего следующего хода. Если цель добровольно перемещается на 5 футов или более до окончания действия заклинания, она получает [[/r 1d8]] урона громом, и действие заклинания заканчивается.</p><p>Урон этого заклинания увеличивается, когда вы достигаете определённых уровней. На 5-м уровне атака оружием в ближнем бою наносит дополнительно [[/r 1d8]] урона громом при попадании, а урон, получаемый при перемещении, увеличивается до [[/r 2d8]]. Оба броска урона снова увеличиваются на [[/r 1d8]] на 11-м уровне ([[/r 2d8]] и [[/r 3d8]]) и на 17-м уровне ([[/r 3d8]] и [[/r 4d8]]).</p><section class=\"secret\" id=\"secret-7pOq15bRrzGHoa8M\"><p><strong>Примечание</strong></p><p>В этой особенности автоматически выполняется масштабирование урона. Кнопка \"Урон\" учитывает урон от энергии удара, а формула \"Другое\" учитывает дополнительный урон от удара громом, наносимый вашим оружием.</p><p>Эта особенность также включает дополнительный активный эффект \"Энергия удара\" для облегчения отслеживания. Однако он не отключается автоматически в начале вашего следующего хода.</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "115",
+      "custom": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "round"
+    },
+    "target": {
+      "affects": {
+        "type": "creature",
+        "count": "1",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "5",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 0,
+    "school": "evo",
+    "properties": [
+      "somatic",
+      "material"
+    ],
+    "materials": {
+      "value": "оружие ближнего боя стоимостью не менее 1 см",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "damage",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "OgjPuMVhMBzVcwR9"
+          }
+        ],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "number": 1,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "thunder"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "sort": 0
+      },
+      "dnd5eactivity300": {
+        "_id": "dnd5eactivity300",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "OgjPuMVhMBzVcwR9"
+          }
+        ],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "ceil((@details.level+1)/6)d8[thunder]",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "gromovoj-klinok--booming-blade"
+  },
+  "effects": [
+    {
+      "name": "Энергия удара",
+      "origin": "Item.wbBoLMEaiBQj8Hss",
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": 1,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "flags": {
+        "srd5e": {
+          "page": "",
+          "source": "TCE",
+          "hash": "booming%20blade_tce"
+        },
+        "midi-qol": {
+          "fumbleThreshold": null,
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "autoFailFriendly": false,
+          "autoSaveFriendly": false,
+          "rollOther": false,
+          "critOther": false,
+          "offHandWeapon": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false,
+          "ignoreTotalCover": false
+        },
+        "babele": {
+          "hasTranslation": true,
+          "originalName": "Booming Blade",
+          "translated": true
+        },
+        "dnd5e": {},
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "dontApply": false,
+          "stackable": "noneName",
+          "showIcon": false,
+          "durationExpression": "",
+          "specialDuration": []
+        }
+      },
+      "_id": "OgjPuMVhMBzVcwR9",
+      "changes": [],
+      "description": "<p>Если это существо добровольно перемещается на 5 футов или более до начала следующего хода заклинателя, то оно получает [[/damage 1d8 type=thunder]].</p>",
+      "transfer": false,
+      "statuses": [],
+      "tint": "#ffffff",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": null,
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!wbBoLMEaiBQj8Hss.OgjPuMVhMBzVcwR9"
+    }
+  ],
+  "folder": "lBXxCIps7HPa9Q2o",
+  "flags": {
+    "core": {},
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028237887,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!wbBoLMEaiBQj8Hss"
+}

@@ -1,0 +1,286 @@
+{
+  "_id": "HVpxwwZJ0pYNO02b",
+  "name": "Двуручный меч остроты / Greatsword of Sharpness",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Sword_of_sharpness.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "greatsword%20of%20sharpness_dmg"
+    },
+    "core": {
+      "sourceId": "Compendium.world.dmg-items.0V6og2ML44ccVM0q"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Greatsword of Sharpness",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p><span style=\"font-family:var(--font-primary)\"><em style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\">Оружие (меч, наносящий режущий урон), (требует настроенности)</em></span></p><p>Когда вы атакуете объект этим магическим мечом, при попадании считайте, что на костях урона оружия, нанесённого этой цели, выпали максимальные значения.</p><p>Когда вы атакуете существо этим оружием и выбрасываете 20 при броске атаки, цель дополнительно получает 14 режущего урона. Затем бросьте ещё один [[/r d20]]. Если выпало 20, вы отрубаете одну из конечностей цели, последствия такой потери определяет мастер. Если у цели нет конечностей, вы вместо этого отрубаете другую часть её тела.</p><p>Кроме того, вы можете произнести командное слово меча и заставить клинок испустить &amp;reference[brightlight]{Яркий свет} в радиусе 10 футов и &amp;reference[dimlight]{Тусклый} — ещё на 10 футов. Если снова произнести командное слово или убрать меч в ножны, свет гаснет.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 6,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "veryRare",
+    "identified": true,
+    "cover": null,
+    "range": {
+      "value": null,
+      "long": 20,
+      "units": "ft",
+      "reach": 10
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": 2,
+        "denomination": 6,
+        "bonus": "",
+        "types": [
+          "slashing"
+        ],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      }
+    },
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "hvy",
+      "two",
+      "mgc"
+    ],
+    "proficient": 1,
+    "crewed": false,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "martialM",
+      "baseItem": "greatsword"
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "Командное слово.",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        },
+        "sort": 0
+      },
+      "dnd5eactivity300": {
+        "_id": "dnd5eactivity300",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "Командное слово.",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "4d6",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "dvuruchnyj-mech-ostroty--greatsword-of-sharpness",
+    "container": null,
+    "attuned": false,
+    "ammunition": {},
+    "magicalBonus": null
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.world.dmg-items.0V6og2ML44ccVM0q",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!HVpxwwZJ0pYNO02b"
+}

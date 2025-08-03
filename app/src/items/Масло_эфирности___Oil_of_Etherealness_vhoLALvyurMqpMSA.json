@@ -1,0 +1,193 @@
+{
+  "_id": "vhoLALvyurMqpMSA",
+  "name": "Масло эфирности / Oil of Etherealness",
+  "type": "consumable",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Oil%20of%20Etherealness.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "oil%20of%20etherealness_dmg"
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Oil of Etherealness",
+      "translated": true
+    },
+    "midiProperties": {
+      "confirmTargets": "default",
+      "autoFailFriendly": false,
+      "autoSaveFriendly": false,
+      "critOther": false,
+      "offHandWeapon": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "noConcentrationCheck": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "midi-qol": {
+      "rollAttackPerTarget": "default",
+      "itemCondition": "",
+      "effectCondition": ""
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 1
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Капли этого дымно-серого масла образуются на его сосуде снаружи и быстро испаряются. </p><p>Маслом можно покрыть существо среднего или меньшего размера вместе со всем снаряжением, которое оно носит или держит (для каждой категории размера больше среднего требуется по одному дополнительному пузырьку). Нанесение масла занимает 10 минут. После этого обработанное существо получает эффект заклинания @Compendium[laaru-dnd5-hw.spells.2Gencdc4uikxDXGy]{Выход в эфир} на 1 час.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "equipped": false,
+    "rarity": "rare",
+    "identified": true,
+    "uses": {
+      "max": "1",
+      "autoDestroy": true,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": "<p>Капли этого дымно-серого масла образуются на его сосуде снаружи и быстро испаряются.</p>"
+    },
+    "type": {
+      "value": "potion",
+      "subtype": ""
+    },
+    "container": null,
+    "magicalBonus": null,
+    "properties": [],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "Существо среднего или меньшего размера, время нанесения 10 минут",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "1",
+          "units": "hour",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "touch",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "maslo-efirnosti--oil-of-etherealness",
+    "attuned": false
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!vhoLALvyurMqpMSA"
+}

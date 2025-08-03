@@ -1,0 +1,293 @@
+{
+  "_id": "yh8IcuTzzGmEbRdI",
+  "name": "Призыв лесных созданий / Conjure Woodland Beings",
+  "type": "spell",
+  "img": "icons/creatures/mammals/deer-movement-leap-green.webp",
+  "effects": [],
+  "folder": "5iZ8qMTOt7ODg7B1",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "conjure%20woodland%20beings_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [],
+        "altValue": [],
+        "context": []
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Conjure Woodland Beings",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы призываете фей. Они появляются в незанятых местах, которые вы видите в пределах дистанции. Выберите один из вариантов того, что появится: </p><ul><li class=\"rd__spc-inline-post\">Одна фея с классом опасности не выше 2 </li><li class=\"rd__spc-inline-post\">Две феи с классом опасности не выше 1 </li><li class=\"rd__spc-inline-post\">Четыре феи с классом опасности не выше 1/2</li><li class=\"rd__spc-inline-post\">Восемь фей с классом опасности не выше 1/4</li></ul><p>Призванное существо исчезает, когда его ПЗ снижаются до 0 или когда заклинание прекращает действовать.</p><p>Призванные существа дружественны вам и вашим спутникам. Сделайте бросок инициативы для призванных существ как для группы, которая совершает собственные ходы. Они подчиняются вашим устным приказам (действие от вас не требуется). Если вы не отдаёте приказов, они защищаются от враждебных существ, но других действий не совершают.</p><p>Параметры существ есть у мастера. </p><p><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку определённого более высокого круга, то можете выбрать один из перечисленных выше вариантов, но фей появляется больше: вдвое больше для ячейки 6-го круга и втрое - для ячейки 8-го круга.</p><section class=\"secret\" id=\"secret-0JEEG1G0XT7Gizdi\"><p><em>Примечание. Для работоспособности Призыва, мастеру нужно в настройках прав игроков разрешить создавать Токены и Актёров.</em></p><p><em>Для призыва прописаны популярные феи, других можно добавить в настройках этого заклинания</em>.</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "type": "space",
+        "count": "0",
+        "choice": false
+      },
+      "template": {
+        "units": "any",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 4,
+    "school": "con",
+    "materials": {
+      "value": "по ягодке падуба за каждое призываемое существо",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "summon",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "bonuses": {
+          "ac": "",
+          "hd": "",
+          "hp": "",
+          "attackDamage": "",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [
+          "fey"
+        ],
+        "match": {
+          "proficiency": false,
+          "attacks": false,
+          "saves": false
+        },
+        "profiles": [
+          {
+            "count": "4",
+            "name": "Гигантская рысь КО 1/2",
+            "_id": "K3lOlO1C2ssa39IH",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters2.Actor.bi4mYbUhLzVdbFue",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "2",
+            "name": "Дриада КО 1",
+            "_id": "tUy9gpZcPF1DV8xh",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.6F7QYvvi3Ogg6uKN",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "1",
+            "name": "Морская карга КО 2",
+            "_id": "qLdWATot8OxmG5du",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.xLhRNNokALdaGzNJ",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "8",
+            "name": "Пикси КО 1/4",
+            "_id": "zWzUVtb7IZolM2BT",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.TzUWGKXsuAeOje3b",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          }
+        ],
+        "summon": {
+          "identifier": "",
+          "mode": "",
+          "prompt": true
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "prizyv-lesnyh-sozdanij--conjure-woodland-beings"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028239173,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!yh8IcuTzzGmEbRdI"
+}

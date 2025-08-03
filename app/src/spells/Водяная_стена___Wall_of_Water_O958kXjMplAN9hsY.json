@@ -1,0 +1,175 @@
+{
+  "_id": "O958kXjMplAN9hsY",
+  "name": "Водяная стена / Wall of Water",
+  "type": "spell",
+  "img": "icons/magic/water/waves-water-blue.webp",
+  "effects": [],
+  "folder": "V8qhuGxP5pE0yKU2",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "wall%20of%20water_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "autoFailFriendly": false,
+      "offHandWeapon": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Wall of Water",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы создаёте стену воды в видимой точке на горизонтальной поверхности в пределах дистанции заклинания. Точка должна располагаться на поверхности.</p>\n<p>Стена может быть длиной до 30 футов, высотой до 10 футов и толщиной до 1 фута. Или вы можете создать кольцо диаметром 20 футов, высотой 20 футов и толщиной 1 фут.</p>\n<p>Стена существует, пока действует заклинание. Стена считается &amp;reference[difficultterrain]{пересечённой местностью}.</p>\n<p>Все атаки дистанционным оружием, траектория которых проходит через пространство стены, совершаются с помехой.</p>\n<p>Огненный урон от эффектов, которые прошли через стену, уменьшается вдвое.</p>\n<p>Заклинания, которые причиняют урон холодом, при прохождении через стену замораживают ту область стены, сквозь которую прошли (минимум клетка 5×5 футов). Каждая замёрзшая секция площадью 5×5 футов имеет КБ 5 и 15 ПЗ.</p>\n<p>Если ПЗ секции уменьшаются до 0, она разрушается. Разрушенные секции стены не заполняются водой повторно.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "10",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "wall",
+        "size": "30",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 3,
+    "school": "evo",
+    "materials": {
+      "value": "капля воды",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "vodyanaya-stena--wall-of-water"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028215562,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!O958kXjMplAN9hsY"
+}

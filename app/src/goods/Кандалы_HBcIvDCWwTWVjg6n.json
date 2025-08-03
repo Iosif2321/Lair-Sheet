@@ -1,0 +1,251 @@
+{
+  "_id": "HBcIvDCWwTWVjg6n",
+  "name": "Кандалы",
+  "type": "consumable",
+  "img": "icons/sundries/survival/cuffs-shackles-steel.webp",
+  "effects": [],
+  "flags": {
+    "babele": {
+      "translated": true,
+      "hasTranslation": true,
+      "originalName": "Manacles"
+    },
+    "core": {
+      "sourceId": "Compendium.dnd5e.items.tWJLHIL6ZIZUez9k"
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 1
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Сделаны из металла. Ими можно сковать &amp;reference[size]{небольшое или среднее} существо. Чтобы освободиться от кандалов, нужно успешно пройти проверку Ловкости со СЛ 20. Чтобы их сломать, надо успешно пройти проверку Силы со СЛ 20. К кандалам прилагается один ключ. Без ключа существо, умелое в обращении с @Compendium[laaru-dnd5-hw.items.9puye1cmnzZ4x2rM]{инструментами вора}, может взломать замок кандалов, успешно пройдя проверку Ловкости со СЛ 15. У кандалов 15 ПЗ.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "revision": 1,
+      "book": "LOOT",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 6,
+      "units": "lb"
+    },
+    "price": {
+      "value": 2,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "equipped": false,
+    "rarity": "common",
+    "identified": true,
+    "uses": {
+      "max": "1",
+      "autoDestroy": false,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "check",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "Creature must be Small or Medium.",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "touch",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "check": {
+          "ability": "",
+          "associated": [],
+          "dc": {}
+        },
+        "sort": 0
+      },
+      "dnd5eactivity100": {
+        "_id": "dnd5eactivity100",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "Creature must be Small or Medium.",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "touch",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": "dex",
+          "dc": {
+            "calculation": "",
+            "formula": "20"
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "kandaly",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": []
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dnd5e.items.tWJLHIL6ZIZUez9k",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.1",
+    "createdTime": 1726661592018,
+    "modifiedTime": 1739365447583,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": "9dVZiANjI8QjL1Z1",
+  "sort": 3000000,
+  "ownership": {
+    "default": 0,
+    "UkvoHT2ggFpbOAml": 3
+  },
+  "_key": "!items!HBcIvDCWwTWVjg6n"
+}

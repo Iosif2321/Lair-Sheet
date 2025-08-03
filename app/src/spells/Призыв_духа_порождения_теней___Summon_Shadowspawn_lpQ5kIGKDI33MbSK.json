@@ -1,0 +1,222 @@
+{
+  "_id": "lpQ5kIGKDI33MbSK",
+  "name": "Призыв духа порождения теней / Summon Shadowspawn",
+  "type": "spell",
+  "img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы призываете дух тени. Существо появляется в незанятом пространстве, которое вы можете видеть вокруг себя. Эта телесная форма использует блок параметров @Compendium[laaru-dnd5-hw.monsters.PNyleGa6GBOKTNeH]{Духа тени}</p><p>Когда вы творите заклинание, выберите эмоцию: @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.KGzfCgpa7cDsycYk]{Ярость}, @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.7Vkx640G20Dxsa85]{Отчаяние} или @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.nRzrfbKtgJJFjYVz]{Страх}.</p><p>Существо напоминает двуногое деформированное тело, отмеченного выбранной эмоцией, которая определяет черты в его блоке параметров. Существо исчезает, когда его ПЗ упадут до 0 или когда заклинание закончится.</p><p>Это существо дружественно вам и вашим спутникам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие @Compendium[laaru-dnd5-hw.actions.UMuz44p8fXeLCZn7]{Уклонение} и перемещается, избегая опасностей.</p><p><strong>На высоких кругах</strong>. Когда вы сотворяете заклинание с помощью ячейки заклинания 4-го круга или выше, используйте более высокий круг везде, где круг заклинания появляется в блоке параметров.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "113",
+      "custom": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "90",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 3,
+    "school": "con",
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "materials": {
+      "value": "слезы внутри драгоценного камня стоимостью не менее 300 зм",
+      "consumed": false,
+      "cost": 300,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "summon",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "bonuses": {
+          "ac": "@item.level",
+          "hd": "",
+          "hp": "(@item.level - 3) * 15",
+          "attackDamage": "@item.level",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "proficiency": false,
+          "attacks": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "count": "1",
+            "name": "Отчаяние",
+            "_id": "jvcp3cYuLlFzsyFf",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.7Vkx640G20Dxsa85",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "1",
+            "name": "Страх",
+            "_id": "oA0ENoU3dWBRobcH",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.nRzrfbKtgJJFjYVz",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "1",
+            "name": "Ярость",
+            "_id": "g1qjBDSuS4qOlr4E",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.KGzfCgpa7cDsycYk",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          }
+        ],
+        "summon": {
+          "identifier": "",
+          "mode": "",
+          "prompt": true
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "prizyv-duha-porozhdeniya-tenej--summon-shadowspawn"
+  },
+  "effects": [],
+  "folder": "V8qhuGxP5pE0yKU2",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TCE",
+      "hash": "summon%20shadowspawn_tce"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Summon Shadowspawn",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028231178,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!lpQ5kIGKDI33MbSK"
+}

@@ -1,0 +1,181 @@
+{
+  "_id": "MjfvQjoIAAtJlXdF",
+  "name": "Рассвет / Dawn",
+  "type": "spell",
+  "img": "icons/magic/nature/symbol-sun-yellow.webp",
+  "effects": [],
+  "folder": "3zIZihf4NL02gtMG",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "dawn_xge"
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Dawn",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Рассветные лучи освещают место, которое вы указали в пределах дистанции. Пока заклинание активно, в этом месте &amp;reference[brightlight]{ярким светом} мерцает цилиндр с радиусом 30 футов и высотой 40 футов. Этот свет считается солнечным.</p>\n<p>Когда цилиндр появляется, каждое существо в нём должно испытание Выносливости, получая [[/r 4d10]] лучистого урона  при провале или половину этого урона при успехе.</p>\n<p>Существо также должно проходить испытание, каждый раз, когда заканчивает свой ход в границах цилиндра.</p>\n<p>Если вы находитесь в пределах 60 футов от цилиндра, в свой ход вы можете бонусным действием переместить его на расстояние до 60 футов.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "cylinder",
+        "size": "30",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 5,
+    "school": "evo",
+    "materials": {
+      "value": "кулон солнечных лучей, стоимостью не менее 100 зм",
+      "consumed": false,
+      "cost": 100,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 4,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "radiant"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "con",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "rassvet--dawn"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028214178,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!MjfvQjoIAAtJlXdF"
+}

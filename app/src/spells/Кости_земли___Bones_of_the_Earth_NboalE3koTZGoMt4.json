@@ -1,0 +1,194 @@
+{
+  "_id": "NboalE3koTZGoMt4",
+  "name": "Кости земли / Bones of the Earth",
+  "type": "spell",
+  "img": "icons/magic/earth/barrier-stone-explosion-red.webp",
+  "effects": [],
+  "folder": "YqnZK1fMA9x394B5",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "bones%20of%20the%20earth_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Bones of the Earth",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\">\n<div class=\"rd__spc-inline-post\">Вы вызываете до шести каменных столбов, вырывающихся из земли в тех местах, которые вы можете видеть в пределах дистанции. Каждый столб представляет собой цилиндр диаметром 5 футов и высотой до 30 футов. Земля, на которой появляется столб, должна быть достаточно широкой для этого диаметра, и вы можете сделать целью землю под существом, если это существо Среднего размера или меньше.</div>\n<div class=\"rd__spc-inline-post\">У каждого столба КБ 5 и 30 ПЗ. При уменьшении ПЗ до 0 столб крошится на камни, что создает &amp;reference[difficultterrain]{пересечённую местность} в радиусе 10 футов. Местность остается пересечённой, пока камни не будут убраны. Для очистки вручную области диаметром 5 футов требуется не менее 1 минуты.</div>\n<div class=\"rd__spc-inline-post\">Если столб создан под существом, то это существо должно пройти испытание Ловкости, или будет поднято столбом. Существо может добровольно провалить испытание.</div>\n<div class=\"rd__spc-inline-post\">Если столбу не удается достичь полной высоты из-за потолка или другого препятствия, существо на столбе получает [[/r 6d6]] дробящего урона и становится &amp;reference[restrained]{обездвиженным}, будучи зажатым между столбом и препятствием. Обездвиженное существо может использовать действие, чтобы сделать проверку силы или ловкости (на свой выбор) против СЛ испытания от ваших заклинаний. При успехе существо перестаёт быть обездвиженным и должно либо слезть со столба, либо упасть с него.</div>\n<div class=\"rd__spc-inline-post\"><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание с помощью ячейки 7 круга или выше, вы можете создать два дополнительных столба за каждый круг ячейки выше 6.</div>\n</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "radius",
+        "size": "3",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "120",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 6,
+    "school": "trs",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 6,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "dex",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "kosti-zemli--bones-of-the-earth"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028214794,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!NboalE3koTZGoMt4"
+}

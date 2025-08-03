@@ -1,0 +1,246 @@
+{
+  "_id": "1XSJGqT8m6RZ8xMi",
+  "name": "Клинок зелёного пламени / Green-Flame Blade",
+  "type": "spell",
+  "img": "icons/weapons/swords/greatsword-evil-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы взмахиваете оружием, выбранным в качестве материального компонента, и совершаете атаку оружием в ближнем бою против одного существа в пределах 5 футов от вас. При попадании цель подвергается обычному эффекту атаки этим оружием, и вы можете заставить зелёный огонь перекинуться от цели к другому существу по вашему выбору, которое вы можете видеть в пределах 5 футов от цели. Второе существо получает урон огнём, равный вашему модификатору базовой характеристики.</p><p>Урон этого заклинания увеличивается, когда вы достигаете определённых уровней. На 5-м уровне атака оружием в ближнем бою наносит дополнительно [[/r 1d8]] урона огнём, а урон, получаемый вторым существом, увеличивается до [[/r 1d8]] + ваш модификатор базовой характеристики. Оба этих урона увеличиваются на [[/r 1d8]] на 11-м уровне ([[/r 2d8]] и [[/r 2d8]]) и 17-м уровне ([[/r 3d8]] и [[/r 3d8]])</p><section class=\"secret\" id=\"secret-ndYEaxe32apL6sty\"><p><strong>Примечание</strong></p><p>В этой особенности автоматически реализовано масштабирование урона. Кнопка \"Урон\" включает урон огнем, который переходит к другому существу, а формула \"Другое\" включиает дополнительный урон огнем, наносимый вашим оружием.</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "115",
+      "custom": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "5",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 0,
+    "school": "evo",
+    "properties": [
+      "somatic",
+      "material"
+    ],
+    "materials": {
+      "value": "оружие ближнего боя стоимостью не менее 1 см",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "damage",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [
+                "fire"
+              ],
+              "custom": {
+                "enabled": true,
+                "formula": "@attributes.spellmod"
+              },
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "sort": 0
+      },
+      "dnd5eactivity300": {
+        "_id": "dnd5eactivity300",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "ceil((@details.level+1)/6)d8[fire]",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "klinok-zelyonogo-plameni--green-flame-blade"
+  },
+  "effects": [],
+  "folder": "lBXxCIps7HPa9Q2o",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TCE",
+      "hash": "green-flame%20blade_tce"
+    },
+    "midi-qol": {
+      "fumbleThreshold": null,
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "autoFailFriendly": false,
+      "autoSaveFriendly": false,
+      "rollOther": false,
+      "critOther": false,
+      "offHandWeapon": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Green-Flame Blade",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028201160,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!1XSJGqT8m6RZ8xMi"
+}

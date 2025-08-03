@@ -1,0 +1,179 @@
+{
+  "_id": "G3bBbrxdHW7KhHaK",
+  "name": "Власть над ветрами / Control Winds",
+  "type": "spell",
+  "img": "icons/magic/air/wind-weather-sailing-ship.webp",
+  "effects": [],
+  "folder": "3zIZihf4NL02gtMG",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "control%20winds_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "autoFailFriendly": false,
+      "offHandWeapon": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Control Winds",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\"><div class=\"rd__spc-inline-post\"><p>Вы можете контролировать ветер в 100-футовом кубе, который вы можете видеть в пределах дистанции. Выберите в момент произнесения заклинания один из нижеперечисленных эффектов. Этот эффект продолжается до тех пор, пока действует заклинание, если вы действием не переключитесь на другой эффект. Вы также можете действием временно отменить эффект или вновь возобновить его.</p><ul><li><p><strong>Шквал</strong>. Ветер усиливается, постоянно дуя горизонтально в направлении, которое вы выбрали. Вы можете выбрать интенсивность ветра: спокойный, умеренный или сильный. Если ветер умеренный или сильный, то дистанционные атаки оружием, траектория которых входит в куб, выходит из куба или проходит через него, совершаются с помехой. Все существа, идущие против сильного ветра, расходуют дополнительный фут передвижения за каждый пройдённый фут.</p></li><li><p><strong>Нисходящий поток</strong>. Вы создаёте постоянный поток сильного ветра, который дует вниз от верхней части куба. Атаки дистанционным оружием совершаются с помехой, если их траектория проходит через область действия заклинания или целью является существо в кубе. Если летающее существо впервые за ход оказывается в этой области или начинает свой ход в ней, оно должно испытание Силы, сбиваясь с ног при провале.</p></li><li><p><strong>Восходящий поток</strong>. Вы создаёте постоянный поток ветра, который дует от низа куба вверх. Существа, которые падают на землю внутри куба, получают лишь половину урона от падения. Если существо в кубе совершает вертикальный прыжок, высота прыжка увеличивается на 10 футов.</p></li></ul></div></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "cube",
+        "size": "100",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "300",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 5,
+    "school": "trs",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": "str",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "vlast-nad-vetrami--control-winds"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028209648,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!G3bBbrxdHW7KhHaK"
+}

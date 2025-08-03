@@ -1,0 +1,178 @@
+{
+  "_id": "QyMAsg205Oo9jq0v",
+  "name": "Отпирающий звонок / Chime of Opening",
+  "type": "consumable",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Chime%20of%20Opening.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "chime%20of%20opening_dmg"
+    },
+    "core": {
+      "sourceId": "Compendium.world.dmg-items.QyMAsg205Oo9jq0v"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Chime of Opening",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 10
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div><p><em>Чудесный предмет</em></p><p>Это полая металлическая трубка примерно 1 фут длиной и весом в 1 фунт. Вы можете в качестве действия ударить по ней и указать ею на объект в пределах 120 футов от вас, который можно открыть, вроде двери, крышки или замка. Звонок издаёт характерную ноту, и один замок или защёлка на объекте открывается, если звук может достичь объекта. Если не осталось замков и защёлок, объект открывается.</p><p>Звонок можно использовать десять раз. После десятого раза он раскалывается и становится бесполезен.</p></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "equipped": true,
+    "rarity": "rare",
+    "identified": true,
+    "uses": {
+      "max": "10",
+      "autoDestroy": false,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "Звук должен достичь цели.",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "120",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "otpirayushij-zvonok--chime-of-opening",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": []
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.world.dmg-items.QyMAsg205Oo9jq0v",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!QyMAsg205Oo9jq0v"
+}

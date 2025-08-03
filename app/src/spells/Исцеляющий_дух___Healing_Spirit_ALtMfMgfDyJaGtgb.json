@@ -1,0 +1,183 @@
+{
+  "_id": "ALtMfMgfDyJaGtgb",
+  "name": "Исцеляющий дух / Healing Spirit",
+  "type": "spell",
+  "img": "icons/creatures/mammals/spirit-deer-herd-blue.webp",
+  "effects": [],
+  "folder": "1laDscZ7Bn7NoviD",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "healing%20spirit_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Healing Spirit",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\">\n<div class=\"rd__spc-inline-post\">Вы вызываете дух природы, чтобы унять боль раненых. Нематериальный дух появляется в пространстве, представляющее собой 5-футовый куб, которое вы видите в радиусе действия.</div>\n<div class=\"rd__spc-inline-post\">Дух выглядит как прозрачный зверь или фея (на ваш выбор).</div>\n<div class=\"rd__spc-inline-post\">Пока заклинание активно, всякий раз, когда вы или существо, которое вы видите, впервые за ход попадают в пространство духа или начинают в нем свой ход, вы можете заставить духа восстановить [[/r 1d6]] ПЗ этому существу (никаких действий не требуется).</div>\n<div class=\"rd__spc-inline-post\">Дух может лечить количество число раз, равное 1 + ваш модификатор характеристики заклинателя (минимум два раза). После того, как дух исцеляет доступное количество раз, он исчезает.</div>\n<div class=\"rd__spc-inline-post\">Дух не может исцелять конструкции или нежить.</div>\n<div class=\"rd__spc-inline-post\">Бонусным действием в ваш ход вы можете перемещать дух до 30 футов в пространство, которое вы можете видеть.</div>\n<div class=\"rd__spc-inline-post\"><strong>На высоких кругах</strong>.  Если вы сотворяете это заклинание, используя ячейку заклинания 3 круга или выше, исцеление увеличивается на [[/r 1d6]] для каждого круга  ячейки выше 2.</div>\n</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "bonus",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "cube",
+        "size": "5",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 2,
+    "school": "con",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "heal",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "healing": {
+          "number": 1,
+          "denomination": 6,
+          "bonus": "",
+          "types": [
+            "healing"
+          ],
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "scaling": {
+            "mode": "whole",
+            "number": 1,
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "iscelyayushij-duh--healing-spirit"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028206485,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!ALtMfMgfDyJaGtgb"
+}

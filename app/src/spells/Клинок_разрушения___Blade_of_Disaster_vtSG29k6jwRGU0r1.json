@@ -1,0 +1,209 @@
+{
+  "_id": "vtSG29k6jwRGU0r1",
+  "name": "Клинок разрушения / Blade of Disaster",
+  "type": "spell",
+  "img": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы создаёте пространственный разлом в форме клинка длиной около 3 футов в свободном пространстве, которое вы можете видеть в пределах дистанции заклинания. Клинок существует до окончания действия заклинания. Когда вы сотворяете это заклинание, то можете совершить до двух атак в ближнем бою заклинанием с помощью этого клинка, против существа, неудерживаемого предмета или постройки в пределах 5 футов от клинка. При попадании цель получает [[/r 4d12]] силового урона. Эта атака считается критическим попаданием при выпадении на [[/r d20]] значений «18–20». При критическом попадании клинок дополнительно наносит [[/r 8d12]] силового урона (в общей сложности [[/r 12d12]] силового урона).</p><p>Вы можете бонусным действием в свой ход переместить клинок на расстояние до 30 футов в незанятое пространство, которое вы можете видеть, а затем снова совершить до двух атак в ближнем бою заклинанием с помощью клинка.</p><p>Клинок может беспрепятственно перемещаться через любой барьер, в том числе созданный заклинанием @Compendium[laaru-dnd5-hw.spells.2rqlJgNTKzBvGGWk]{Силовая стена}.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "114",
+      "custom": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "bonus",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "cube",
+        "size": "3",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 9,
+    "school": "con",
+    "properties": [
+      "vocal",
+      "somatic",
+      "concentration"
+    ],
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "",
+          "bonus": "",
+          "critical": {
+            "threshold": 18
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "spell"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": "4d12[force]"
+          },
+          "includeBase": true,
+          "parts": [
+            {
+              "number": 4,
+              "denomination": 12,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "klinok-razrusheniya--blade-of-disaster"
+  },
+  "effects": [],
+  "folder": "z7i87cnf1CWurr7r",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TCE",
+      "hash": "blade%20of%20disaster_tce"
+    },
+    "midi-qol": {
+      "fumbleThreshold": null,
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "autoFailFriendly": false,
+      "autoSaveFriendly": false,
+      "rollOther": false,
+      "critOther": false,
+      "offHandWeapon": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Blade of Disaster",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028237449,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!vtSG29k6jwRGU0r1"
+}

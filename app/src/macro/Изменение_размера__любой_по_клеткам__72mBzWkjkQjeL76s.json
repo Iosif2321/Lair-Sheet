@@ -1,0 +1,44 @@
+{
+  "name": "Изменение размера (любой по клеткам)",
+  "type": "script",
+  "img": "icons/magic/control/silhouette-grow-shrink-blue.webp",
+  "command": "/**\n * Позволяет изменить размер токена по клеткам, поддерживает дробные значения.\n * Author: Salamander\n */\n// Запросить у пользователя новый размер\nnew Dialog({\n  title: \"Введите новый размер\",\n  content: `\n    <form>\n      <div class=\"form-group\">\n        <label>Новый размер:</label>\n        <input type=\"text\" name=\"newSize\" placeholder=\"Введите размер\">\n      </div>\n    </form>\n  `,\n  buttons: {\n    ok: {\n      label: \"Применить\",\n      callback: (html) => {\n        let newSizeInput = html.find('[name=\"newSize\"]');\n        let newSizeString = newSizeInput.val();\n\n        // Заменить запятую на точку для обработки дробных чисел\n        newSizeString = newSizeString.replace(\",\", \".\");\n\n        let newSize = parseFloat(newSizeString);\n\n        if (!isNaN(newSize) && newSize > 0) {\n          // Создать массив обновлений для всех выделенных токенов\n          const updates = [];\n          for (let token of canvas.tokens.controlled) {\n            updates.push({\n              _id: token.id,\n              height: newSize,\n              width: newSize,\n            });\n          }\n\n          // Обновить токены\n          canvas.scene.updateEmbeddedDocuments(\"Token\", updates);\n        } else {\n          ui.notifications.error(\"Неправильное значение размера.\");\n        }\n      },\n    },\n    cancel: {\n      label: \"Отмена\",\n    },\n  },\n  default: \"ok\",\n}).render(true);",
+  "author": "N5s4uI6OpcSYQoF8",
+  "scope": "global",
+  "ownership": {
+    "default": 0,
+    "N5s4uI6OpcSYQoF8": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "ccf7a7fc2ded34931c928b8c2f9aa0f87ea6786e",
+      "sourceId": "Macro.2y73pAw57uOl0Mgz"
+    },
+    "advanced-macros": {
+      "runForSpecificUser": ""
+    },
+    "exportSource": {
+      "world": "put-palomnikov",
+      "system": "dnd5e",
+      "coreVersion": "11.305",
+      "systemVersion": "2.3.1"
+    },
+    "core": {
+      "sourceId": "Macro.wNKbIMrgBFJbs9dU"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1696761878096,
+    "modifiedTime": 1699263550790,
+    "lastModifiedBy": "H9WsizrOeJscXSvG",
+    "compendiumSource": "Macro.wNKbIMrgBFJbs9dU",
+    "duplicateSource": null
+  },
+  "folder": "vwyjREHxtAnaLnqX",
+  "sort": 200000,
+  "_id": "72mBzWkjkQjeL76s",
+  "_key": "!macros!72mBzWkjkQjeL76s"
+}

@@ -1,0 +1,293 @@
+{
+  "_id": "yvv0OXaLIKDfAqp1",
+  "name": "Посох призыва насекомых / Staff of Swarming Insects",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Staff%20of%20Swarming%20Insects.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "staff%20of%20swarming%20insects_dmg"
+    },
+    "core": {
+      "sourceId": "Compendium.world.dmg-items.yvv0OXaLIKDfAqp1"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Staff of Swarming Insects",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 10
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div><p><em>Требует настроенности барда, волшебника, друида, жреца, колдуна или чародея</em></p><p>У посоха 10 зарядов, ежедневно на рассвете он восстанавливает [[/r 1d6 + 4]] потраченных зарядов. Потратив последний заряд, бросьте [[/r d20]]. Если выпало 1, стая насекомых пожирает и уничтожает посох, а затем рассеивается.</p><p><strong>Заклинания</strong>. Пока вы держите посох, вы можете использовать действие, чтобы потратить часть его зарядов и сотворить из него одно из следующих заклинаний, используя CЛ испытаний против ваших заклинаний:</p><ul><li><p>@Compendium[laaru-dnd5-hw.spells.pAbbE1eC7QRWsap3]{Гигантское насекомое} (4 заряда)</p></li><li><p>@Compendium[laaru-dnd5-hw.spells.3vXqVsHj7YmBQ1SI]{Рой саранчи} (5 зарядов).</p></li></ul><p><strong>Облако насекомых</strong>. Пока вы держите посох, вы можете использовать действие, чтобы потратить 1 заряд и призвать стаю безвредных летучих насекомых, разлетающуюся в радиусе 30 футов от вас. Насекомые существуют 10 минут, и из-за них видимость в этой области &amp;reference[heavilyobscured]{крайне затруднена} для всех существ, кроме вас. Стая перемещается вместе с вами, вы остаетесь в её центре. Ветер не слабее 10 миль в час рассеивает стаю и прекращает эффект.</p></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 4,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "rare",
+    "identified": true,
+    "cover": null,
+    "range": {
+      "value": null,
+      "long": 0,
+      "units": "ft",
+      "reach": 30
+    },
+    "uses": {
+      "max": "10",
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      }
+    },
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "proficient": 1,
+    "crewed": false,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "simpleM",
+      "baseItem": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "1d6 +4",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      },
+      "dnd5eactivity100": {
+        "_id": "dnd5eactivity100",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "posoh-prizyva-nasekomyh--staff-of-swarming-insects",
+    "container": null,
+    "attuned": false,
+    "ammunition": {},
+    "magicalBonus": null
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.world.dmg-items.yvv0OXaLIKDfAqp1",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!yvv0OXaLIKDfAqp1"
+}

@@ -1,0 +1,184 @@
+{
+  "_id": "rSY1fw2rafeVMObH",
+  "name": "Зелье дружбы с животными / Potion of Animal Friendship",
+  "type": "consumable",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Potion%20of%20Animal%20Friendship.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "potion%20of%20animal%20friendship_dmg"
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Potion of Animal Friendship",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 1
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Выпив это зелье, вы можете неограниченно творить заклинание @Compendium[laaru-dnd5-hw.spells.jHhUMJwiYk1bNVJ7]{Дружба с животными} (СЛ испытаний 13) в течение 1 часа.</p>\n<p>Если встряхнуть эту мутную жидкость, всплывут частицы: рыбья чешуя, язычок пересмешника, кошачий коготь или шерсть белки.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 2000,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "equipped": false,
+    "rarity": "uncommon",
+    "identified": true,
+    "uses": {
+      "max": "1",
+      "autoDestroy": false,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": "<p>Если встряхнуть эту мутную жидкость, всплывут частицы: рыбья чешуя, язычок пересмешника, кошачий коготь или шерсть белки.</p>"
+    },
+    "type": {
+      "value": "potion",
+      "subtype": ""
+    },
+    "container": null,
+    "properties": [
+      "mgc"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "животные должны иметь Интеллект 3 или ниже.",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "1",
+          "units": "hour",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "touch",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "wis"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "13"
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "zele-druzhby-s-zhivotnymi--potion-of-animal-friendship",
+    "attuned": false,
+    "magicalBonus": null
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": "Vn8lmCnqSTHO64uN",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!rSY1fw2rafeVMObH"
+}

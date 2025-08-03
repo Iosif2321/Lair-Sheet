@@ -1,0 +1,207 @@
+{
+  "_id": "CcJk1rVIVVBpeIEb",
+  "name": "Мгновенная крепость Дэйрн / Daern's Instant Fortress",
+  "type": "consumable",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Daern%27s%20Instant%20Fortress.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "daern's%20instant%20fortress_dmg"
+    },
+    "core": {
+      "sourceId": "Compendium.world.dmg-items.CcJk1rVIVVBpeIEb"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false
+    },
+    "magicitems": {
+      "enabled": false,
+      "equipped": false,
+      "attuned": false,
+      "charges": "0",
+      "chargeType": "c1",
+      "destroy": false,
+      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
+      "rechargeable": false,
+      "recharge": "0",
+      "rechargeType": "t1",
+      "rechargeUnit": "r1",
+      "sorting": "l"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Daern's Instant Fortress",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div><p><em>Чудесный предмет</em></p><p>Вы можете использовать действие, чтобы поставить этот дюймовый металлический кубик на землю и произнести его командное слово. Куб быстро вырастет в крепость, которая существует, пока вы не используете действие, чтобы произнести командное слово, которое вернёт её в исходный вид (это сработает, только если крепость пуста).</p><p>Крепость — квадратная башня со стороной 20 футов и высотой 30 футов с бойницами на всех сторонах и зубцами наверху. Внутри она делится на два этажа, соединённых лестницей вдоль одной из стен. Наверху лестница кончается люком, ведущим на крышу. При активации башня появляется небольшой дверью к вам. Дверь открывается только по вашему устному приказу, который вы можете отдать в качестве бонусного действия. Она невосприимчива к заклинанию <em>@UUID[Compendium.laaru-dnd5-hw.spells.PJIQYRUNqG5PODUx]{Стук}</em> и подобной магии, такой как <em>@UUID[Compendium.laaru-dnd5-hw.items.QyMAsg205Oo9jq0v]{Отпирающий звонок}</em>. Каждое существо в области, где появляется крепость, должно пройти испытание Ловкости со СЛ 15 и получить [[/r 10d10]] дробящего урона при провале или половину этого урона при успехе. В любом случае существо будет вытолкнуто в свободное пространство вне крепости, но рядом с ней. Объекты в области, кроме тех, что носят или держат, получают этот урон и автоматически выталкиваются.</p><p>Башня сделана из адамантина, магия не даёт ей опрокинуться. У крыши, двери и каждой стены по 100 ПЗ, невосприимчивость к урону немагического оружия, кроме осадного, и устойчивость ко всему прочему урону. Починить крепость можно только заклинанием <em>@Compendium[laaru-dnd5-hw.spells.3DmrqW87SyWdaa8T]{Желание}</em> (подобное применение считается дублированием заклинания 8-го круга или ниже). Каждое сотворение заклинания <em>Желание</em> восстанавливает 50 ПЗ двери, крыше или одной из стен.</p></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "equipped": true,
+    "rarity": "rare",
+    "identified": true,
+    "uses": {
+      "max": "",
+      "autoDestroy": false,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": 10,
+        "denomination": 10,
+        "bonus": "",
+        "types": [
+          "bludgeoning"
+        ],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "Командное слово.",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "touch",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "square",
+            "size": "20",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "mgnovennaya-krepost-dejrn--daerns-instant-fortress",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": []
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.world.dmg-items.CcJk1rVIVVBpeIEb",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!CcJk1rVIVVBpeIEb"
+}

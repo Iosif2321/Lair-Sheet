@@ -1,0 +1,232 @@
+{
+  "name": "Мистический посох / Eldritch Staff",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "system": {
+    "description": {
+      "value": "<p><em>Требуется настроенность</em></p><p>Этот посох можно использовать как магический боевой посох, предоставляющий бонус +1 к броскам атаки и урона им.</p><p>У посоха есть 10 зарядов для описанных ниже свойств. Он ежедневно восстанавливает [[/r 1d6 + 4]] заряда на рассвете. Если вы истратили последний заряд, бросьте [[/r d20]]. Если выпадет «1», посох уничтожается в безобидной вспышке потусторонней энергии.</p><p><em><strong>Мистическая атака</strong></em>. Когда вы попадаете атакой в ближнем бою с помощью посоха, вы можете израсходовать до 3-х его зарядов. За каждый расходуемый вами заряд цель дополнительно получает [[/r 1d8]] урона молнией.</p><p><em><strong>Мистический побег</strong></em>. Если вы получаете урон, держа посох, вы можете @UUID[Compendium.laaru-dnd5-hw.actions.mMwkUE20bEfKeetq]{ответным действием} израсходовать 3 заряда посоха, после чего вы становитесь @UUID[Compendium.laaru-dnd5-hw.actions.z03U5lNQtd71dWJT]{невидимым} и телепортируетесь вместе с любым снаряжением, которое вы несёте или держите, на расстояние до 60 футов в свободное пространство, которое вы можете видеть. Вы остаетесь невидимым до начала вашего следующего хода или до тех пор, пока не совершите атаку, не сотворите заклинание или не нанесёте урон.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "WBtW",
+      "book": "WBtW",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 4,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "veryRare",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "range": {
+      "value": null,
+      "long": 0,
+      "units": "ft",
+      "reach": null
+    },
+    "uses": {
+      "max": "10",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d6 + 4"
+        }
+      ],
+      "spent": 0
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": true,
+          "formula": "1d8+1+@mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [
+          "bludgeoning"
+        ],
+        "custom": {
+          "enabled": true,
+          "formula": "1d6+1+@mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      }
+    },
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "ver",
+      "mgc"
+    ],
+    "proficient": 1,
+    "unidentified": {
+      "description": "<p>Этот посох можно использовать как боевой посох.</p>"
+    },
+    "type": {
+      "value": "simpleM",
+      "baseItem": ""
+    },
+    "container": null,
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "0",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "str",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "misticheskij-posoh--eldritch-staff",
+    "attuned": false,
+    "ammunition": {},
+    "magicalBonus": null
+  },
+  "img": "icons/weapons/staves/staff-ornate-banded-purple.webp",
+  "flags": {
+    "plutonium": {
+      "page": "",
+      "source": "WBtW",
+      "hash": "eldritch%20staff_wbtw"
+    },
+    "core": {},
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 10
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "CEe5EmtAQsnXQNwV",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!CEe5EmtAQsnXQNwV"
+}

@@ -1,0 +1,230 @@
+{
+  "_id": "2XdKCUwn3xKaUt0o",
+  "name": "Программируемая иллюзия / Programmed Illusion",
+  "type": "spell",
+  "img": "icons/skills/trades/academics-book-study-purple.webp",
+  "effects": [],
+  "folder": "YqnZK1fMA9x394B5",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "programmed%20illusion_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [],
+        "altValue": [],
+        "context": []
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Programmed Illusion",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы создаёте иллюзию объекта, существа или иного видимого явления в пределах дистанции. Иллюзия активируется при определенных условиях, а до тех пор незаметна. Она не может быть больше 30-футового куба, Вы сами решаете при сотворении, как иллюзия будет себя вести и какие звуки издавать. Запрограммированное воспроизведение иллюзии длится не более 5 минут.</p>\n<p>При наступлении указанных условий иллюзия появляется и ведёт себя так, как вы её запрограммировали. Закончив воспроизведение, она исчезает и переходит в спящий режим на 10 минут. По истечении этого времени иллюзию можно снова активировать.</p>\n<p>Условие, запускающее иллюзию, может быть примерным или конкретным на ваш выбор, но оно должно быть основано на видимых или слышимых обстоятельствах, происходящих в пределах 30 футов от области. К примеру, вы можете заставить свой иллюзорный образ появиться и предупредить пришельцев, чтобы они не открывали дверь, или можете настроить иллюзию на появление только при условии, что существо произнесет конкретное слово или фразу.</p>\n<p>Физическое взаимодействие с образом выдаёт, что это иллюзия, потому что предметы проходят сквозь неё. Существо, которое использует действие, чтобы изучить образ, сможет понять, что это иллюзия, успешно пройдя проверку Интеллекта (Расследование). СЛ проверки равна СЛ испытаний против ваших заклинаний. Если существа распознаёт иллюзию, оно может видеть сквозь образ, а звуки образа становятся для него едва различимыми.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "",
+      "units": "perm"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "cube",
+        "size": "30",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "120",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 6,
+    "school": "ill",
+    "materials": {
+      "value": "клочок овечьей шерсти и нефритовый порошок стоимостью не менее 25 зм",
+      "consumed": false,
+      "cost": 25,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "programmiruemaya-illyuziya--programmed-illusion"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028201875,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!2XdKCUwn3xKaUt0o"
+}

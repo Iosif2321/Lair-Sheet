@@ -1,0 +1,210 @@
+{
+  "_id": "gtJIzFtbXhu8GrEL",
+  "name": "Призыв духа феи / Summon Fey",
+  "type": "spell",
+  "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы призываете дух феи. Существо появляется в незанятом пространстве, которое вы можете видеть в пределах досягаемости. Эта телесная форма использует блок параметров @Compendium[laaru-dnd5-hw.monsters.XsP5pf6kbETG4w3J]{Духа феи}.</p><p>Когда вы творите это заклинание, выберите настроение: @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.mjX4E1NxVgoOH0cq]{Сердитое}, @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.4yq3ypLGnmU7wXA6]{Довольное} или @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.Vyz8gKKkfnw5x4g5]{Лукавое}.</p><p>Существо похоже на выбранное вами тип фей, отмеченное выбранным настроением, которое определяет одну из черт в его блоке параметров. Существо исчезает, когда его ПЗ опускаются до 0 или когда заклинание заканчивается.</p><p>Это существо дружественно вам и вашим спутникам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие @Compendium[laaru-dnd5-hw.actions.UMuz44p8fXeLCZn7]{Уклонение} и перемещается, избегая опасностей.</p><p><strong>На высоких кругах</strong>. Если вы сотворяете  это заклинание с помощью ячейки заклинания 4-го круга или выше, используйте более высокий круг везде, где круг заклинания появляется в блоке параметров.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "",
+      "custom": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "type": "space",
+        "count": "1",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "90",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 3,
+    "school": "con",
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration",
+      "mgc"
+    ],
+    "materials": {
+      "value": "позолоченный цветок стоимостью не менее 300 зм",
+      "consumed": false,
+      "cost": 300,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "summon",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "bonuses": {
+          "ac": "@item.level",
+          "hp": "(@item.level - 3) * 10",
+          "attackDamage": "@item.level",
+          "saveDamage": "",
+          "healing": "",
+          "hd": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "proficiency": true,
+          "attacks": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "count": "",
+            "name": "Довольное",
+            "_id": "J97kst8MFDgb3NRQ",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.4yq3ypLGnmU7wXA6",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Лукавое",
+            "_id": "QZ3pimOLUkXHyTgS",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.Vyz8gKKkfnw5x4g5",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Сердитое",
+            "_id": "rv0YOaEuGgGu7vzn",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.mjX4E1NxVgoOH0cq",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          }
+        ],
+        "summon": {
+          "identifier": "",
+          "mode": "",
+          "prompt": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "prizyv-duha-fei--summon-fey"
+  },
+  "effects": [],
+  "folder": "V8qhuGxP5pE0yKU2",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TCE",
+      "hash": "summon%20fey_tce"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Summon Fey",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028227187,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!gtJIzFtbXhu8GrEL"
+}

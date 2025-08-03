@@ -1,0 +1,176 @@
+{
+  "_id": "ZTzRoUHXCLY8bQ1W",
+  "name": "Временной сдвиг / Temporal Shunt",
+  "type": "spell",
+  "img": "icons/magic/time/hourglass-tilted-gray.webp",
+  "effects": [],
+  "folder": "3zIZihf4NL02gtMG",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "EGW",
+      "hash": "temporal%20shunt_egw"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "autoFailFriendly": false,
+      "rollOther": false,
+      "critOther": false,
+      "offHandWeapon": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Temporal Shunt",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "value": "<div>Вы указываете на существо, совершающее атаку или творящее заклинание, и оно должно преуспеть в испытании Мудрости, иначе оно исчезает, оказываясь в ином временном промежутке, в котором его атака промахивается, а заклинание не оказывает никакого эффекта. В начале своего следующего хода цель появляется в том же месте или ближайшем к нему незанятом пространстве. Цель не помнит как вы творили заклинание и как она была подвержена эффекту этого заклинания. </div>\n<div>\n<p><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку 6-го круга или выше, вы можете выбрать в качестве цели одно дополнительное существо за каждый круг выше пятого. Все цели должны быть в пределах 30 футов друг от друга.</p>\n</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "EGW",
+      "book": "EGW",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "reaction",
+      "condition": "когда существо, которое вы видите, делает бросок атаки или начинает творить заклинание",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "round"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "120",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 5,
+    "school": "trs",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": "wis",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "vremennoj-sdvig--temporal-shunt"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028222800,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!ZTzRoUHXCLY8bQ1W"
+}

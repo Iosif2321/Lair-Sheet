@@ -1,0 +1,178 @@
+{
+  "_id": "ycGcViEmhGpZrO2N",
+  "name": "Инфузирование предмета",
+  "type": "feat",
+  "img": "icons/commodities/tech/tube-chamber-lightning.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете способность вливать в обычные предметы определённую магию и превращать их в магические.</p>\n<div class=\"rd__b  rd__b--2\" data-source=\"TCE\"><span class=\"rd__h rd__h--2\" data-title-index=\"42\"><strong><span class=\"entry-title-inner\">Известные инфузии</span></strong><span class=\"ve-flex-vh-center\"> </span></span>\n<p>Получив эту особенность, выберите четыре @Compendium[laaru-dnd5-hw.classfeatures.o6SM3lncYgCL5Avs]{Инфузии изобретателя}. При достижении определённых уровней вы изучаете дополнительные инфузии на ваш выбор, как показано в столбце «Известные инфузии» таблицы «Изобретатель». Всякий раз, когда вы получаете уровень в этом классе, можете заменить одну из уже изученных инфузий на новую.</p>\n</div>\n<div class=\"rd__b-special rd__b-inset \"><strong><span class=\"rd__h rd__h--2-inset\" data-title-index=\"43\"><span class=\"entry-title-inner\">Инфузии изобретателя</span></span></strong>\n<p>Магические инфузии — это удивительный процесс, быстро превращающий обычный предмет в волшебный. В описании каждой из перечисленных далее инфузий указывается тип объекта, который можно подвергнуть процессу, а также то, требует ли полученный магический предмет настройки. Некоторые из инфузий требуют определённого минимального уровня изобретателя. Вы не можете изучить такую инфузию, пока не достигнете этого уровня. Вы не можете изучить инфузию более одного раза, если её описание не говорит об обратном.</p>\n<div class=\"float-clear\"> </div>\n</div>\n<strong><span class=\"rd__h rd__h--2\" data-title-index=\"44\"><span class=\"entry-title-inner\">Насыщение предмета магией</span></span></strong>\n<p>Заканчивая долгий отдых, вы можете дотронуться до немагического объекта и наполнить его магией с помощью инфузии. Инфузия действует только на те виды объектов, которые указаны в её описании. Если созданный предмет требует настройки, вы можете настроиться на него сразу же. Если вы решили настроиться на предмет позже, то должны будете сделать это, используя обычный процесс настройки (см. раздел «Настройка» в «Руководстве Мастера»). Ваша инфузия остается в предмете бесконечно долго, но когда вы умираете, она исчезает через количество дней, равное вашему модификатору <strong>Интеллекта </strong>(минимум 1 день). Исчезает она также, если вы отказываетесь от знания этой инфузии, чтобы изучить другую. Заканчивая долгий отдых, вы можете наполнить магией более одного немагического объекта. Максимальное их количество отображено в столбце «Инфузии предметов» таблицы «Изобретатель». Вы должны касаться предмета, и каждая из ваших инфузий может быть применена только к одному объекту единовременно. Более того, ни один предмет не выдержит попытки наполнения его более чем одной инфузией. Если вы попытаетесь превысить максимальное количество инфузий, самая старая из них немедленно заканчивается, а затем применяется новая. Если на предмете, в котором содержатся другие вещи, например, сумке хранения, заканчивается действие инфузии, его содержимое просто появляется вокруг него.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "",
+      "custom": "",
+      "license": "",
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "none",
+      "cost": null,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": ""
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": "1",
+      "width": null,
+      "units": "",
+      "type": "object",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "touch"
+    },
+    "uses": {
+      "value": 0,
+      "max": "@scale.artificer.infused",
+      "per": "charges",
+      "recovery": "",
+      "prompt": true
+    },
+    "consume": {
+      "type": "charges",
+      "target": "Compendium.laaru-dnd5-hw.classfeatures.Item.ycGcViEmhGpZrO2N",
+      "amount": 1,
+      "scale": false
+    },
+    "ability": "",
+    "actionType": "",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "type": {
+      "value": "class",
+      "subtype": "artificerInfusion"
+    },
+    "properties": [],
+    "requirements": "Artificer 2",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "prerequisites": {
+      "level": 2
+    },
+    "enchantment": {
+      "restrictions": {
+        "allowMagical": false,
+        "type": ""
+      },
+      "items": {
+        "max": "@scale.artificer.infused",
+        "period": "lr"
+      },
+      "classIdentifier": ""
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "summons": null
+  },
+  "effects": [
+    {
+      "name": "Tracking Infusion",
+      "flags": {
+        "dnd5e": {
+          "type": "enchantment",
+          "enchantment": {
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "effect": []
+            }
+          }
+        }
+      },
+      "_id": "Js08VoOT5gwYeeQz",
+      "changes": [
+        {
+          "key": "system.description.value",
+          "mode": 2,
+          "value": "<p>Этот предмет отслеживается как инфузия.</p>",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": false,
+      "statuses": [],
+      "tint": "#ffffff",
+      "img": null,
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "12.343",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!items.effects!ycGcViEmhGpZrO2N.Js08VoOT5gwYeeQz"
+    }
+  ],
+  "folder": "qEaXoATtu3oAU2sK",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ycGcViEmhGpZrO2N"
+}

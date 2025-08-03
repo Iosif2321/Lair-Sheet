@@ -1,0 +1,169 @@
+{
+  "_id": "Nk7UAhCuteUhdCNO",
+  "name": "Роща друида / Druid Grove",
+  "type": "spell",
+  "img": "icons/magic/nature/plant-sproutdirt-green.webp",
+  "effects": [],
+  "folder": "YqnZK1fMA9x394B5",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "druid%20grove_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Druid Grove",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы призываете духов природы для защиты области на открытом воздухе или под землей. Эта область может быть кубом с длиной ребра от 30 до 90 футов. Здания и другие сооружения исключаются из этой области.</p><p>Если вы сотворяете это заклинание в одном и том же месте каждый день в течение года, заклинание длится до тех пор, пока не будет рассеяно. Заклинание создает следующие эффекты в пределах области. Когда вы сотворяете это заклинание, вы можете указать существ как друзей, которые будут невосприимчивы к эффектам заклинания. Вы также можете указать кодовое слово, которое, при произношении, делает говорящего невосприимчивым к этим эффектам. Вся защищённая область источает магию.</p><p>@Compendium[laaru-dnd5-hw.spells.ZdDJVUlzYudd4nHO]{Рассеивание магии}, наложенная на область, при успехе удаляет только один из нижеследующих эффектов, а не всю область. Заклинатель выбирает, какой эффект окончить. Только когда все эффекты окончены, заклинание рассеивается.</p><ul><li><p><strong>Непроглядный туман.</strong> Вы можете заполнить любое количество 5-футовых квадратов на земле густым туманом, делая их местностью с &amp;reference[heavilyobscured]{крайне затруднённой видимостью}. Туман достигает 10 футов в высоту. Кроме того, каждый фут движения через туман стоит 2 дополнительных фута. Для существа, невосприимчивого к данному эффекту, туман ничего не скрывает и выглядит как лёгкая дымка с песчинками зеленого света, плавающими в воздухе.</p></li><li><p><strong>Цепкий подлесок</strong>. Вы можете заполнить любое количество 5-футовых квадратов на земле, которые не заполнены туманом, цепкими сорняками и лозой, как если бы они были созданы заклинанием @Compendium[laaru-dnd5-hw.spells.dG8ddfpg5fOIkJ4h]{Опутывание}. Для существа, невосприимчивого к данному эффекту, сорняки и лоза ощущаются мягкими и меняют свою форму, чтобы служить временными сидениями или постелями.</p></li><li><p><strong>Хранители рощи.</strong> Вы можете оживить до четырех деревьев в этой области, заставляя их выкорчевать себя из земли. Эти деревья имеют ту же статистику, что и @Compendium[laaru-dnd5-hw.monsters.LB82goq5hZ36yfff]{Пробуждённое дерево} за исключением того, что они не могут говорить, и их кора покрыта друидическими символами.</p></li></ul><p>Если любое существо, невосприимчивое к этому эффекту, заходит в защищаемую область, хранители рощи сражаются, пока не прогонят или не убьют вторженцев. Хранители рощи также подчиняются вашим устным командам (действие не требуется), которые вы произносите в этой области.</p><p>Если вы не даёте им команд, и в области нет незваных гостей, хранители рощи бездействуют. Хранители рощи не могут покинуть охраняемую область.</p><p>Когда заклинание заканчивается, магия, оживляющая их, исчезает, и деревья снова укореняются, если это возможно.</p><p>Дополнительный эффект от заклинания. Вы можете выбрать один из следующих магических эффектов в защищенной области:</p><ul><li> Постоянный @Compendium[laaru-dnd5-hw.spells.4TFtW7zG8mAENjQb]{Порыв ветра} в двух местах по вашему выбору</li><li>@Compendium[laaru-dnd5-hw.spells.akj1JPqDHE1LVDv5]{Шипастая поросль} в одном месте по вашему выбору</li><li>@Compendium[laaru-dnd5-hw.spells.hHHSDCZFsZF29DRe]{Стена ветра} в двух местах по вашему выбору</li></ul><p>Для существа, невосприимчивого к данному эффекту, ветры – это приятный легкий бриз, а шипы безвредны.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "minute",
+      "condition": "",
+      "value": 10
+    },
+    "duration": {
+      "value": "24",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "touch",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "units": "touch"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 6,
+    "school": "abj",
+    "materials": {
+      "value": "омела, расходуемая заклинанием, которая была собрана золотым серпом под светом полной луны",
+      "consumed": true,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "rosha-druida--druid-grove"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028214870,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!Nk7UAhCuteUhdCNO"
+}

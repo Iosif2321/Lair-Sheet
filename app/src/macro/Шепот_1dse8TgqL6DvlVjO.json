@@ -1,0 +1,40 @@
+{
+  "name": "Шепот",
+  "type": "script",
+  "author": "ekSJaSkR4p1sowmM",
+  "img": "https://cdn-icons-png.flaticon.com/512/2755/2755344.png",
+  "scope": "global",
+  "command": "/** \n * Предоставляет диалог для шепота определенным игрокам. Если у вас выбраны токены, по умолчанию они автоматически попытаются прошептать этим игрокам.\n * @Author: Nelson#3570\n */\n\nlet applyChanges = false;\n\nlet users = game.users.filter(user => user.active);\nlet checkOptions = \"\"\nlet playerTokenIds = users.map(u => u.character?.id).filter(id => id !== undefined);\nlet selectedPlayerIds = canvas.tokens.controlled.map(token => {\n  if (playerTokenIds.includes(token.actor.id)) return token.actor.id;\n});\n\n// Build checkbox list for all active players\nusers.forEach(user => {\n  let checked = !!user.character && selectedPlayerIds.includes(user.character.id) && 'checked';\n  checkOptions+=`\n    <br>\n    <input type=\"checkbox\" name=\"${user.id}\" id=\"${user.id}\" value=\"${user.name}\" ${checked}>\\n\n    <label for=\"${user.id}\">${user.name}</label>\n  `\n});\n\nnew Dialog({\n  title:\"Шёпот\",\n  content:`Шептать: ${checkOptions} <br>\n    <label for=\"message\">Сообщение:</label>\n    <textarea id=\"message\" name=\"message\" rows=\"4\" cols=\"50\"></textarea><br>`,\n  buttons:{\n    whisper:{   \n      label:\"Whisper\",\n      callback: (html) => createMessage(html)\n    }\n  }\n}).render(true);\n\nfunction createMessage(html) {\n  var targets = [];\n  // build list of selected players ids for whispers target\n  for ( let user of users ) {\n    if (html.find('[name=\"'+user.id+'\"]')[0].checked){\n      applyChanges=true;\n      targets.push(user.id);\n    }\n    var messageText = html.find('[name=\"message\"]')[0].value\n  }\nif(!applyChanges)return;\n  ChatMessage.create({\n    content: messageText,\n    whisper: targets\n  });\n}",
+  "flags": {
+    "advanced-macros": {
+      "runAsGM": false
+    },
+    "exportSource": {
+      "world": "demo-mad-mage",
+      "system": "dnd5e",
+      "coreVersion": "10.288",
+      "systemVersion": "2.0.3"
+    },
+    "core": {
+      "sourceId": "Macro.yri0AA1nqi7s8xMu"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1672485830656,
+    "modifiedTime": 1699263523406,
+    "lastModifiedBy": "H9WsizrOeJscXSvG",
+    "compendiumSource": "Macro.yri0AA1nqi7s8xMu",
+    "duplicateSource": null
+  },
+  "folder": "zM3lWtEgwdtFJ9Xy",
+  "sort": 350000,
+  "ownership": {
+    "default": 0,
+    "ekSJaSkR4p1sowmM": 3
+  },
+  "_id": "1dse8TgqL6DvlVjO",
+  "_key": "!macros!1dse8TgqL6DvlVjO"
+}

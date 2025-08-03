@@ -1,0 +1,3018 @@
+{
+  "_id": "3Cw1rPObZ5CY5p3o",
+  "name": "Демилич / Demilich",
+  "type": "npc",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Demilich.jpg",
+  "items": [
+    {
+      "_id": "E5RvoN9ldLAsn21m",
+      "name": "Вой",
+      "type": "feat",
+      "img": "icons/magic/sonic/scream-wail-shout-teal.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "charge": true
+            },
+            "altValue": {
+              "charge": true
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true,
+          "migratedUses": 0
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<div class=\"rd__spc-inline-post\"><strong>(перезарядка 5-6)</strong></div>\n<div class=\"rd__spc-inline-post\">Демилич испускает леденящий кровь вой. Все существа в пределах <strong>30 футов</strong> от демилича, которые слышат вой, должны пройти испытание <strong>Выносливости со СЛ 15</strong>. При провале ПЗ существа уменьшаются до<strong> 0</strong>. При успехе существо &amp;reference[frightened]{испугано} до конца своего следующего хода. </div>\n</section>\n<div class=\"rd__spc-inline-post\">Демилич испускает леденящий кровь вой. Все существа в пределах <strong>30 футов</strong> от демилича, которые слышат вой, должны пройти испытание <strong>Выносливости.</strong></div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "recharge",
+              "formula": "5",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "target": "",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "30",
+                "type": "enemy",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "con",
+              "dc": {
+                "calculation": "",
+                "formula": "15"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.E5RvoN9ldLAsn21m"
+    },
+    {
+      "_id": "O3cM4LjSjRKPosVe",
+      "name": "Вытягивание жизни",
+      "type": "feat",
+      "img": "icons/magic/unholy/strike-hand-glow-pink.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            }
+          },
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<div class=\"rd__spc-inline-post\">Демилич выбирает <strong>до трёх</strong> существ, которых видит в пределах <strong>10 футов</strong> от себя. Каждая цель должна пройти испытание <strong>Выносливости со СЛ 19</strong>, при провале она получит <strong>21</strong> ([[/r 6d6]]) <strong>некротического</strong> урона, а демилич восстановит ПЗ в количестве, равном сумме урона, нанесённого всем целям.</div>\n</section>\n<div class=\"rd__spc-inline-post\">Демилич выбирает существ, которых видит. Каждая цель должна пройти испытание <strong>Выносливости.</strong></div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "number": 6,
+                  "denomination": 6,
+                  "bonus": "",
+                  "types": [
+                    "necrotic"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "mode": "whole",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": "con",
+              "dc": {
+                "calculation": "",
+                "formula": "19"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.O3cM4LjSjRKPosVe"
+    },
+    {
+      "_id": "Fxi5hJNmbqHB0sjG",
+      "name": "Избегание",
+      "type": "feat",
+      "img": "icons/skills/social/intimidation-impressing.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<div class=\"rd__spc-inline-post\">Если на демилича воздействует эффект, требующий успешно пройти испытание, чтобы получить только половину урона, он получает половину урона при провале, а при успехе не получает урона совсем. </div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.Fxi5hJNmbqHB0sjG"
+    },
+    {
+      "_id": "DsOyKHy2bFAsHTzZ",
+      "name": "Легендарная устойчивость",
+      "type": "feat",
+      "img": "icons/equipment/shield/kite-wooden-oak-glow.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "resource": true
+            },
+            "altValue": {
+              "resource": true
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<div class=\"rd__spc-inline-post\">(3 в день)</div>\n</section>\n<div class=\"rd__spc-inline-post\">Если демилич проваливает испытание, он может вместо этого сделать его успешным. </div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "special",
+              "value": 0,
+              "condition": "If the demilich fails a saving throw, it can choose to succeed instead.",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "resources.legres.value",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.DsOyKHy2bFAsHTzZ"
+    },
+    {
+      "_id": "6ieHIjkUOOYbQnIb",
+      "name": "Невосприимчивость к изгнанию",
+      "type": "feat",
+      "img": "icons/magic/fire/flame-burning-creature-skeleton.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<div class=\"rd__spc-inline-post\">Демилич невосприимчив к эффектам, изгоняющим нежить. </div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.6ieHIjkUOOYbQnIb"
+    },
+    {
+      "_id": "Z8sF3wbfty7DIV70",
+      "name": "Полёт",
+      "type": "feat",
+      "img": "icons/creatures/birds/raptor-hawk-flying.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "resource": true
+            },
+            "altValue": {
+              "resource": true
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<ul>\n<li> Демилич пролетает расстояние вплоть до половины его скорости полёта.</li>\n</ul>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "legendary",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "resources.legact.value",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.Z8sF3wbfty7DIV70"
+    },
+    {
+      "_id": "4d4Trm1OLkhtnwz4",
+      "name": "Облако пыли",
+      "type": "feat",
+      "img": "icons/magic/air/wind-tornado-funnel-green.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "resource": true
+            },
+            "altValue": {
+              "resource": true
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<ul>\n<li>\n<section class=\"secret\">Демилич магически поднимает вихрь праха. Все существа в пределах 10 футов от демилича, включая тех, что стоят за углом, должны пройти испытание <strong>Выносливости со СЛ 15</strong>. При провале они &amp;reference[blinded]{ослеплены} до конца следующего хода демилича. При успехе существо получает невосприимчивость к этому эффекту до конца следующего хода демилича.</section>\n</li>\n</ul>\n<p>Демилич магически поднимает вихрь праха. Все существа в пределах 10 футов от демилича, включая тех, что стоят за углом, должны пройти испытание <strong>Выносливости.</strong></p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "legendary",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "resources.legact.value",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "con",
+              "dc": {
+                "calculation": "",
+                "formula": "15"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.4d4Trm1OLkhtnwz4"
+    },
+    {
+      "_id": "D3Og6Noc8dzRYwun",
+      "name": "Вытягивание энергии",
+      "type": "feat",
+      "img": "icons/magic/unholy/energy-smoke-pink.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "resource": true
+            },
+            "altValue": {
+              "resource": true
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section>\n<section class=\"secret\">\n<p><strong>(стоит 2 действия)</strong></p>\n<p>Все существа в пределах <strong>30 футов</strong> от демилича должны пройти испытание <strong>Выносливости со СЛ 15</strong>. При провале максимум ПЗ существа магически уменьшается на <strong>10 </strong>([[/r 3d6]]). Если максимум ПЗ из-за этого уменьшился до 0, существо умирает. Максимум ПЗ можно восстановить заклинанием @Compendium[laaru-dnd5-hw.spells.lFqzcFBz3F0u96i1]{Высшее восстановление} и подобной магией.</p>\n</section>\n</section>\n<div class=\"rd__spc-inline-post\">Все существа в пределах <strong>30 футов</strong> от демилича должны пройти испытание <strong>Выносливости.</strong></div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "legendary",
+              "value": 2,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "resources.legact.value",
+                  "value": "2",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "con",
+              "dc": {
+                "calculation": "",
+                "formula": "15"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.D3Og6Noc8dzRYwun"
+    },
+    {
+      "_id": "Ik6uqQE0YZGKB0fa",
+      "name": "Подлое проклятие",
+      "type": "feat",
+      "img": "icons/magic/unholy/hand-fire-skeleton-pink.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "resource": true
+            },
+            "altValue": {
+              "resource": true
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<ul>\n<li>\n<section class=\"secret\"><strong>(стоит 3 действия)</strong><br />Демилич выбирает целью одно существо, которое видит в пределах <strong>30 футов</strong> от себя. Цель должна пройти испытание <strong>Мудрости со СЛ 15</strong>, при провале она станет магически проклятой. Пока проклятие действует, цель получает <strong>помеху </strong>к броскам <strong>атаки и испытаниям</strong>. Цель может повторять это испытание в конце каждого своего хода, при успехе проклятие прекращается.</section>\n</li>\n</ul>\n<p>Демилич выбирает целью одно существо, которое видит. Цель должна пройти испытание <strong>Мудрости. </strong>Цель может повторять это испытание в конце каждого своего хода.</p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "legendary",
+              "value": 3,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "resources.legact.value",
+                  "value": "3",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "wis",
+              "dc": {
+                "calculation": "",
+                "formula": "15"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.Ik6uqQE0YZGKB0fa"
+    },
+    {
+      "_id": "CzvBe6jjqPct4HHZ",
+      "name": "Легендарные действия",
+      "type": "feat",
+      "img": "icons/magic/light/hand-sparks-glow-yellow.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>Демилич может совершить 3 легендарных действия, выбирая из представленных ниже вариантов. За один раз можно использовать только одно легендарное действие и только в конце хода другого существа. Демилич восстанавливает использованные легендарные действия в начале своего хода.</p>\n<ul>\n<li><strong>Полёт</strong>. Демилич пролетает расстояние вплоть до половины его скорости полёта.</li>\n<li><strong>Облако пыли</strong>. Демилич магически поднимает вихрь праха. Все существа в пределах 10 футов от демилича, включая тех, что стоят за углом, должны пройти испытание Выносливости со СЛ 15. При провале они &amp;reference[blinded]{ослеплены} до конца следующего хода демилича. При успехе существо получает невосприимчивость к этому эффекту до конца следующего хода демилича.</li>\n<li><strong>Вытягивание энергии</strong> (стоит 2 действия). Все существа в пределах 30 футов от демилича должны пройти испытание Выносливости со СЛ 15. При провале максимум ПЗ существа магически уменьшается на 10 ([[/r 3d6]]). Если максимум ПЗ из-за этого уменьшился до 0, существо умирает. Максимум ПЗ можно восстановить заклинанием @Compendium[laaru-dnd5-hw.spells.lFqzcFBz3F0u96i1]{Высшее восстановление} и подобной магией.</li>\n<li><strong>Подлое проклятие </strong>(стоит 3 действия). Демилич выбирает целью одно существо, которое видит в пределах 30 футов от себя. Цель должна пройти испытание Мудрости со СЛ 15, при провале она станет магически проклятой. Пока проклятие действует, цель получает помеху к броскам атаки и испытаниям. Цель может повторять это испытание в конце каждого своего хода, при успехе проклятие прекращается.</li>\n</ul>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.CzvBe6jjqPct4HHZ"
+    },
+    {
+      "_id": "vaYtveog22PnpPRc",
+      "name": "Логово: сотрясение",
+      "type": "feat",
+      "img": "icons/magic/nature/stealth-hide-eyes-green.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<p>На мгновение гробница сотрясается. Все существа, стоящие на полу гробницы, должны пройти испытание <strong>Ловкости со СЛ 19</strong>, при провале они &amp;reference[prone]{распластываются}.</p>\n</section>\n<p>На мгновение гробница сотрясается. Все существа, стоящие на полу гробницы, должны пройти испытание <strong>Ловкости</strong>.</p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "lair",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "dex",
+              "dc": {
+                "calculation": "",
+                "formula": "19"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.vaYtveog22PnpPRc"
+    },
+    {
+      "_id": "5tVbRsgQw4D2csll",
+      "name": "Логово: поле антимагии",
+      "type": "feat",
+      "img": "icons/magic/nature/stealth-hide-eyes-green.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<p>Демилич выбирает целью одно существо, которое видит в пределах <strong>60 футов</strong> от себя. Пространство цели заполняет @Compendium[laaru-dnd5-hw.spells.T9luUO2r6OCYunlU]{поле антимагии}, перемещаясь вместе с ней до значения инициативы <strong>20 </strong>в следующем раунде.</p>\n</section>\n<div class=\"rd__spc-inline-post\">Демилич выбирает целью одно существо, которое видит. Пространство цели заполняет @Compendium[laaru-dnd5-hw.spells.T9luUO2r6OCYunlU]{поле антимагии}, перемещаясь вместе с ней</div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "lair",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.5tVbRsgQw4D2csll"
+    },
+    {
+      "_id": "AMNGBKG0qHpxHDmc",
+      "name": "Логово: запрет восстановления ПЗ",
+      "type": "feat",
+      "img": "icons/magic/nature/stealth-hide-eyes-green.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<p>Демилич выбирает целями любое количество существ, которых видит в пределах <strong>30 футов</strong> от себя. Все эти цели не могут восстанавливать ПЗ до значения инициативы <strong>20</strong> в следующем раунде. </p>\n</section>\n<p>Демилич выбирает целями любое количество существ, которых. Все эти цели не могут восстанавливать ПЗ</p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "lair",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.AMNGBKG0qHpxHDmc"
+    },
+    {
+      "_id": "FyUL0t5cXzKXbdQi",
+      "name": "Особенности логова",
+      "type": "feat",
+      "img": "icons/environment/wilderness/cave-entrance-mountain-blue.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "core": {
+          "sourceId": "Item.BIiRZOZQhQ53z1UE"
+        },
+        "betterRolls5e": {
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": [],
+            "altValue": [],
+            "context": []
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            },
+            "altValue": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<p>Гробница демилича может обладать одним или несколькими из следующих эффектов:</p>\n<ul>\n<li>Когда незлое существо впервые входит в гробницу, оно получает 16 ([[/r 3d10]]) некротического урона.</li>\n<li>У чудовищ в гробнице преимущество к испытаниям против &amp;reference[charmed]{обворожения}, &amp;reference[frightened]{испуга} и эффектов, изгоняющих нежить.</li>\n<li>Гробница защищена от магических перемещений всех существ, кроме тех, которым это разрешил демилич. Такие существа не могут телепортироваться в логово и из него, а также входить в него или покидать его с помощью межпланарного путешествия. Эффекты, позволяющие телепортацию или межпланарные путешествия, работают в гробнице, только если не используются для того, чтобы покинуть гробницу или войти в неё извне.</li>\n</ul>\n<p>Если демилич уничтожен, эти эффекты исчезают через 10 дней.</p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.BIiRZOZQhQ53z1UE",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.FyUL0t5cXzKXbdQi"
+    },
+    {
+      "_id": "yvI18TssYzVofDng",
+      "name": "Ловля душ",
+      "type": "feat",
+      "img": "icons/magic/death/undead-ghost-strike-white.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<section class=\"secret\">\n<div style=\"font-style:italic\"><em><strong>Опционально</strong></em></div>\n<div style=\"font-style:italic\"><span style=\"font-style:normal\">Демилич выбирает целью одно существо, которое видит в пределах 30 футов от себя. Цель должна пройти испытание Харизмы со СЛ 19. При провале душа цели магически будет заточена в одном из самоцветов демилича. Пока душа заточена, тело цели и все её снаряжение не существуют. При успехе цель получает 24 ([[/r 7d6]]) некротического урона, и если этот урон уменьшает ПЗ цели до 0, её душа попадает в заточение, как если бы она провалила испытание. Душа, заточённая в камне 24 часа, сожрана и перестает существовать.</span></div>\n<div style=\"font-style:italic\"> </div>\n<div style=\"font-style:italic\"><span style=\"font-style:normal\">Если ПЗ демилича уменьшаются до 0 он уничтожается и рассыпается в пыль, оставляя после себя самоцветы. Расколов камень, можно выпустить душу, заточенную внем, после чего тело цели заново появляется в свободном пространстве рядом с камнем, в том же состоянии, что и перед заточением души. </span></div>\n</section>\n<div style=\"font-style:italic\"><span style=\"font-style:normal\">Демилич выбирает целью одно существо, которое видит в пределах 30 футов от себя. Цель должна пройти испытание Харизмы</span></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "30",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "cha",
+              "dc": {
+                "calculation": "",
+                "formula": "19"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "IeWkJBl8Fyz8nrq3": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!3Cw1rPObZ5CY5p3o.yvI18TssYzVofDng"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {},
+    "midi-qol": {
+      "concentration-damage": 0
+    }
+  },
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 1,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 20,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 10,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 20,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 17,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 20,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 20,
+        "calc": "natural",
+        "formula": "@attributes.ac.armor + @abilities.dex.mod +5"
+      },
+      "hp": {
+        "value": 80,
+        "max": 80,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "32d4"
+      },
+      "init": {
+        "ability": "",
+        "bonus": "0",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 30,
+        "swim": 0,
+        "walk": 0,
+        "units": "ft",
+        "hover": true
+      },
+      "attunement": {
+        "max": 3
+      },
+      "senses": {
+        "darkvision": 0,
+        "blindsight": 0,
+        "tremorsense": 0,
+        "truesight": 120,
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "",
+      "exhaustion": 0,
+      "concentration": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "bonuses": {
+          "save": ""
+        },
+        "limit": 1
+      },
+      "death": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "success": 0,
+        "failure": 0
+      },
+      "hd": {
+        "spent": 0
+      }
+    },
+    "details": {
+      "biography": {
+        "value": "<div class=\"rd__b  rd__b--1\">\n<div class=\"rd__b  rd__b--2\">\n<blockquote>\n<p>«Я Ацерерак Вечный, ваша погибель. Придите, глупцы, возьмите мои сокровища, если смеете! Другие пытались, но никому не удалось. Из вашей кожи будут сотканы мои гобелены, ваши кости будут устилать мою могилу. Только я недосягаем для Смерти, только я знаю тайну истинного бессмертия!»</p>\n<p style=\"text-align:right\"><em>— эпитафия демилича</em></p>\n</blockquote>\n<h2>Демилич</h2>\n<p>Бессмертие, дарованное личу, длится, только пока он скармливает своей филактерии души смертных. Если он не справляется с этой задачей, его кости становятся прахом и остаётся только череп. Так появляется демилич. Он хранит лишь часть злобной жизненной силы лича этой части как раз достаточно, чтобы останки, если их побеспокоят, могли подняться в воздух и принять ужасный облик. Затем череп испускает жуткий вой, способный убить слабых духом, а тех, что покрепче, заставить содрогаться от ужаса. Оставшись один, он вновь оседает и возвращается к спокойному созерцанию.</p>\n<p>Мало кто из личей стремится стать демиличем — ведь это конец тому существованию, которое они стремились сохранить, становясь нежитью. Однако время может подточить рассудок и память лича, и он уйдёт в древний склеп, забыв кормиться душами. Ранее известные заклинания уходят из его головы, и он уже не может обращаться к магии. Впрочем, даже будучи всего лишь черепом, он остается опасным врагом.</p>\n<p><strong>Долгое существование</strong>. Даже после превращения лича в демилича его филактерия остаётся целой. Пока она нетронута, демилича нельзя окончательно уничтожить, Его череп формируется заново через [[/r 1d10]] дней, возвращая это существо к жалкому существованию. Если у демилича еще остался рассудок, он может вернуть себе силы, скормив филактерии всего одну душу. Это делает из демилича полноценного лича, восстанавливая его тело.</p>\n<p><strong>Природа нежити</strong>. Демилич не нуждается в воздухе, еде, питье и сне. Воля к существованию демилича так сильна, что у него всегда максимальные значения ПЗ для каждой кости здоровья, а не средние.</p>\n<h3><strong>Логово демилича</strong></h3>\n<p>Демилич прячет свои останки и сокровища в похожей на лабиринт гробнице, охраняемой чудовищами и ловушками. В сердце этого лабиринта находится череп демилича и прах остальных его костей.</p>\n<p>В гробнице у демилича есть доступ к действиям логова. Само его логово тоже обладает уникальными особенностями. У демилича, встреченного влогове, класс опасности 20 (24500 ПО).</p>\n<p><strong>Действия логова</strong></p>\n<p>При значении инициативы 20 (в случае ничьей действуя после конкурентов) демилич бросает [[/r d20]]. При результате 11 или выше он совершает действие логова, создавая один из описанных ниже эффектов. Он не может использовать один эффект два раунда подряд:</p>\n<ul>\n<li>На мгновение гробница сотрясается. Все существа, стоящие на полу гробницы, должны пройти испытание Ловкости со СЛ 19, при провале они &amp;reference[prone]{распластываются}.</li>\n<li>Демилич выбирает целью одно существо, которое видит в пределах 60 футов от себя. Пространство цели заполняет поле антимагии, перемещаясь вместе с ней до значения инициативы 20 в следующем раунде.</li>\n<li>Демилич выбирает целями любое количество существ, которых видит в пределах 30 футов от себя. Все эти цели не могут восстанавливать ПЗ до значения инициативы 20 в следующем раунде. </li>\n</ul>\n<p><strong>Особенности логова</strong></p>\n<p>Гробница демилича может обладать одним или несколькими из следующих эффектов:</p>\n<ul>\n<li>Когда незлое существо впервые входит в гробницу, оно получает 16 ([[/r 3d10]]) некротического урона.</li>\n<li>У чудовищ в гробнице преимущество к испытаниям против &amp;reference[charmed]{обворожения}, &amp;reference[frightened]{испуга} и эффектов, изгоняющих нежить.</li>\n<li>Гробница защищена от магических перемещений всех существ, кроме тех, которым это разрешил демилич. Такие существа не могут телепортироваться в логово и из него, а также входить в него или покидать его с помощью межпланарного путешествия. Эффекты, позволяющие телепортацию или межпланарные путешествия, работают в гробнице, только если не используются для того, чтобы покинуть гробницу или войти в неё извне.</li>\n</ul>\n<p>Если демилич уничтожен, эти эффекты исчезают через 10 дней.</p>\n<div style=\"font-style:italic\">\n<div class=\"rd__b-inset \" style=\"font-style:normal\">\n<div style=\"font-style:italic\"><span style=\"font-style:normal\"><strong>Ацерерак и его последователи</strong></span></div>\n<div style=\"font-style:italic\"><span style=\"font-style:normal\">Превращение в демилича — это не приговор. Если сделать сознательный выбор, то существование в облике демилича может стать следующим шагом в тёмной эволюции. Лич Ацерерак — могущественный волшебник, демонолог и прославленный создатель Гробницы Ужасов — предвидел свою трансформацию и приготовился к ней, встроив зачарованные самоцветы в свои глазницы и зубы. Каждый из этих самоцветов может захватывать души, которыми будет кормиться его филактерия.</span></div>\n<div style=\"font-style:italic\"><span style=\"font-style:normal\">Ацерерак отказался от физического тела, смирившись с тем, что оно будет гнить и рассыпаться в прах, пока он путешествует по другим планам бестелесным сознанием. Если же череп — единственное физическое проявление лича — когда-либо потревожат, камни захватят души тех, кто пришёл в гробницу, и перенесут их в филактерию.</span></div>\n<div style=\"font-style:italic\"><span style=\"font-style:normal\">Личи, последовавшие по пути Ацерерака, считают, что, освободившись от тел, они могут продолжить свои изыскания за пределами мира смертных. Так же как и их учитель, они спрятали свои останки в хорошо охраняемых гробницах и с помощью камней душ поддерживают свои филактерии и уничтожают искателей приключени пришедших к ним в логово.</span></div>\n<div style=\"font-style:italic\"><span style=\"font-style:normal\">У Ацерерака или похожего на него демилича класс опасности 21 (33 000 ПО) или 23 (50000 ПО), если он в своём логове, и есть следующий дополнительный вариант действия:</span></div>\n<div style=\"font-style:italic\"><span style=\"font-style:normal\"><strong>Ловля душ.</strong> Демилич выбирает целью одно существо, которое видит в пределах 30 футов от себя. Цель должна пройти испытание Харизмы со СЛ 19. При провале душа цели магически будет заточена в одном из самоцветов демилича. Пока душа заточена, тело цели и все её снаряжение не существуют. При успехе цель получает 24 ([[/r 7d6]]) некротического урона, и если этот урон уменьшает ПЗ цели до 0, её душа попадает в заточение, как если бы она провалила испытание. Душа, заточённая в камне 24 часа, сожрана и перестает существовать.</span></div>\n<div style=\"font-style:italic\"><span style=\"font-style:normal\">Если ПЗ демилича уменьшаются до 0 он уничтожается и рассыпается в пыль, оставляя после себя самоцветы. Расколов камень, можно выпустить душу, заточенную внем, после чего тело цели заново появляется в свободном пространстве рядом с камнем, в том же состоянии, что и перед заточением души.  </span></div>\n<div class=\"float-clear\"> </div>\n</div>\n</div>\n</div>\n</div>",
+        "public": ""
+      },
+      "alignment": "нейтральная злая",
+      "race": null,
+      "type": {
+        "value": "undead",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "environment": "",
+      "cr": 18,
+      "spellLevel": 0,
+      "ideal": "",
+      "bond": "",
+      "flaw": ""
+    },
+    "traits": {
+      "size": "tiny",
+      "di": {
+        "value": [
+          "necrotic",
+          "poison",
+          "psychic",
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "bypasses": [
+          "mgc"
+        ],
+        "custom": ""
+      },
+      "dr": {
+        "value": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "bypasses": [],
+        "custom": "дробящий, колющий и режущий от немагического оружия"
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [
+          "charmed",
+          "deafened",
+          "exhaustion",
+          "frightened",
+          "paralyzed",
+          "petrified",
+          "poisoned",
+          "prone",
+          "stunned"
+        ],
+        "custom": ""
+      },
+      "languages": {
+        "value": [],
+        "custom": ""
+      },
+      "dm": {
+        "amount": {},
+        "bypasses": []
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "skills": {
+      "acr": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ani": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "arc": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ath": {
+        "value": 0,
+        "ability": "str",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "dec": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "his": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ins": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "itm": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "inv": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "med": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "nat": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prc": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prf": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "per": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "rel": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "slt": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ste": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "sur": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      }
+    },
+    "tools": {},
+    "spells": {
+      "spell1": {
+        "value": 0,
+        "override": null
+      },
+      "spell2": {
+        "value": 0,
+        "override": null
+      },
+      "spell3": {
+        "value": 0,
+        "override": null
+      },
+      "spell4": {
+        "value": 0,
+        "override": null
+      },
+      "spell5": {
+        "value": 0,
+        "override": null
+      },
+      "spell6": {
+        "value": 0,
+        "override": null
+      },
+      "spell7": {
+        "value": 0,
+        "override": null
+      },
+      "spell8": {
+        "value": 0,
+        "override": null
+      },
+      "spell9": {
+        "value": 0,
+        "override": null
+      },
+      "pact": {
+        "value": 0,
+        "override": null
+      },
+      "spell0": {
+        "value": 0,
+        "override": null
+      }
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "resources": {
+      "legact": {
+        "value": 3,
+        "max": 3
+      },
+      "legres": {
+        "value": 3,
+        "max": 3
+      },
+      "lair": {
+        "value": true,
+        "initiative": 20
+      }
+    },
+    "source": {
+      "page": "",
+      "license": "",
+      "rules": "2014",
+      "book": "MM"
+    }
+  },
+  "prototypeToken": {
+    "name": "Демилич",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 0.5,
+    "height": 0.5,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "flags": {},
+    "randomImg": false,
+    "light": {
+      "alpha": 0.25,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "type": null,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5,
+      "negative": false,
+      "priority": 0
+    },
+    "texture": {
+      "src": "modules/laaru-dnd5-hw/assets/images/MM/Demilich.png",
+      "tint": "#ffffff",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": true,
+      "range": 120,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "appendNumber": false,
+    "prependAdjective": false,
+    "hexagonalShape": 0,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.1",
+    "createdTime": 1726582948342,
+    "modifiedTime": 1726582948342,
+    "lastModifiedBy": "UkvoHT2ggFpbOAml"
+  },
+  "folder": "26lyqwqMIFeyX8fs",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "UkvoHT2ggFpbOAml": 3
+  },
+  "_key": "!actors!3Cw1rPObZ5CY5p3o"
+}

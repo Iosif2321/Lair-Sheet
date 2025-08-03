@@ -1,0 +1,177 @@
+{
+  "_id": "muEyPDSXVjIYiVNI",
+  "name": "Скипетр поглощения / Rod of Absorption",
+  "type": "consumable",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Rod%20of%20Absorption.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "rod%20of%20absorption_dmg"
+    },
+    "core": {
+      "sourceId": "Compendium.world.dmg-items.muEyPDSXVjIYiVNI"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Rod of Absorption",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 10
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p><em>Скипетр, крайне редкий (требует настроенности)</em></p>\n<p>Пока вы держите этот скипетр, вы можете использовать @Compendium[laaru-dnd5-hw.actions.mMwkUE20bEfKeetq]{Ответное действие}, чтобы поглотить заклинание, нацеленное только на вас и без области действия. Эффект поглощенного заклинания отменяется, а его энергия — но не само заклинание — сохраняется в скипетре. У энергии тот же круг, что и у заклинания при сотворении. Скипетр может поглотить и сохранить не более 50 кругов энергии за всё время своего существования. Поглотив энергии на 50 кругов, скипетр не может поглощать больше.</p>\n<p>Если на вас нацелено заклинание, которое скипетр вместить не может, он не действует на это заклинание.</p>\n<p>Настроившись на скипетр, вы узнаёте, сколько кругов энергии скипетр уже поглотил и сколько в нём сейчас хранится. Если вы заклинатель и держите скипетр, можете превратить хранящуюся в нём энергию в свои ячейки заклинаний, чтобы творить подготовленные или известные вам заклинания. Вы можете создавать ячейки заклинаний кругом не выше ваших собственных ячеек и не выше 5-го круга. Вы используете сохранённые круги вместо своих ячеек, но в остальном творите заклинание как обычно. К примеру, вы можете использовать 3 круга энергии скипетра как ячейку 3-го круга.</p>\n<p>В только что найденном скипетре уже хранится [[/r 1d10]] кругов энергии. Скипетр, неспособный больше поглощать энергию и не хранящий её, становится немагическим.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": false,
+    "rarity": "veryRare",
+    "identified": true,
+    "uses": {
+      "max": "50",
+      "autoDestroy": false,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "rod",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "создавать ячейки заклинаний кругом не выше 5-го круга",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "skipetr-poglosheniya--rod-of-absorption",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": []
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.world.dmg-items.muEyPDSXVjIYiVNI",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": "07KZOpNY7CeS23fI",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!muEyPDSXVjIYiVNI"
+}

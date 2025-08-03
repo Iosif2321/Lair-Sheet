@@ -1,0 +1,227 @@
+{
+  "name": "Молот рунного фокуса / Hammer of Runic Focus",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "system": {
+    "description": {
+      "value": "<p><em>Требуется настроенность</em></p><p>Этот магический молот имеет 3 заряда.</p><p>Бонусным действием вы можете потратить 1 заряд и ударить этим молотом по земле, создав круг светящихся рун радиусом 15 футов с центром в точке удара. Пока вы находитесь внутри этой области, ваш молот светится соответствующими рунами, и вы получаете бонус +3 к броскам атаки и урона, совершённым этим молотом. Рунический круг исчезает через 1 минуту, когда вы создаете другой рунический круг или когда вы оканчиваете рунический круг бонусным действием.</p><p>Этот молот восстанавливает [[/r 1d3]] израсходованных зарядов ежедневно на рассвете.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "BMT",
+      "book": "BMT",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "veryRare",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "range": {
+      "value": null,
+      "long": 0,
+      "units": "ft",
+      "reach": null
+    },
+    "uses": {
+      "max": "3",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d3"
+        }
+      ],
+      "spent": 0
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": true,
+          "formula": "1d10+3+@mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [
+          "bludgeoning"
+        ],
+        "custom": {
+          "enabled": true,
+          "formula": "1d8+3+@mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      }
+    },
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "mgc",
+      "ver"
+    ],
+    "proficient": null,
+    "unidentified": {
+      "description": "<p>Молот имеет слегка необычную форму для данного вида оружия.</p>"
+    },
+    "type": {
+      "value": "martialM",
+      "baseItem": "warhammer"
+    },
+    "container": null,
+    "magicalBonus": null,
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "0",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "str",
+          "bonus": "+3",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "molot-runnogo-fokusa--hammer-of-runic-focus",
+    "attuned": false,
+    "ammunition": {}
+  },
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Hammer%20of%20Runic%20Focus.webp",
+  "flags": {
+    "core": {},
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 3
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "HKM6Mw7XCzZvxBSG",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!HKM6Mw7XCzZvxBSG"
+}

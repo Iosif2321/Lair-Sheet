@@ -1,0 +1,188 @@
+{
+  "_id": "97oWPGbMmu4AmZNa",
+  "name": "Сотворение гомункула / Create Homunculus",
+  "type": "spell",
+  "img": "icons/commodities/treasure/statuette-gargoyle-green-gold.webp",
+  "effects": [],
+  "folder": "YqnZK1fMA9x394B5",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "create%20homunculus_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Create Homunculus",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Произнося сложное заклинание, вы режете себя кинжалом, украшенным драгоценными камнями, и получаете [[/r 2d4]] колющего урона, который никоим образом не может быть уменьшен.</p>\n<p>Затем вы капаете свою кровь на другие компоненты заклинания и прикасаетесь к ним, превращая их в особую конструкцию, называемого @Compendium[laaru-dnd5-hw.monsters.Lbl80kRWOaD4AadV]{гомункулом}.</p>\n<p>Это ваш преданный спутник, и он умирает, если умираете вы. Всякий раз, когда вы заканчиваете долгий отдых, вы можете потратить до половины своих Костей Здоровья, если гомункул находится на том же плане существования, что и вы. Когда вы это делаете, бросьте каждую Кость Здоровья и добавьте к ней свой модификатор Выносливости.</p>\n<p>Максимум ваших ПЗ понижается на получившуюся сумму, а максимум ПЗ гомункула вместе с текущим количеством ПЗ увеличивается на это же значение. Этот процесс не может понизить ваши ПЗ ниже 1, и этот обмен ПЗ между вами и гомункулом заканчивается после того как вы завершите следующий долгий отдых. До этого момента понижение максимума ваших ПЗ не может быть отменено никаким другим образом, кроме смерти гомункула.</p>\n<p>Вы можете иметь только одного @Compendium[laaru-dnd5-hw.monsters.Lbl80kRWOaD4AadV]{гомункула} в каждый момент времени. Если вы произносите это заклинание, пока ваш гомункул жив, заклинание терпит неудачу.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "hour",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "units": "touch"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 6,
+    "school": "trs",
+    "materials": {
+      "value": "Глина, пепел и корень мандрагоры, расходуемые заклинанием, и кинжал с инкрустированными драгоценными камнями стоимостью не менее 1000 зм",
+      "consumed": true,
+      "cost": 1000,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "damage",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "number": 2,
+              "denomination": 4,
+              "bonus": "",
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "sotvorenie-gomunkula--create-homunculus"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028205621,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!97oWPGbMmu4AmZNa"
+}

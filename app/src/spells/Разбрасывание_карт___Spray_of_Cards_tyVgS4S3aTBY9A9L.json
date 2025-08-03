@@ -1,0 +1,172 @@
+{
+  "name": "Разбрасывание карт / Spray of Cards",
+  "type": "spell",
+  "system": {
+    "description": {
+      "value": "<p>Вы высыпаете спектральные карты 15-футовым конусом. Каждое существо в этой области должно пройти испытание Ловкости. При провале получая [[/r 2d10]] урона силой и становясь @UUID[Compendium.laaru-dnd5-hw.actions.apswG1jicwhlWT5R]{ослеплённым} до конца своего следующего хода. В случае успеха существо получает только половину этого урона.</p><p><strong>На высоких кругах</strong>: Когда вы творите это заклинание, используя ячейку заклинаний 3-го круга или выше, урон увеличивается на [[/r 1d10]] за каждый круг ячейки выше 2-го.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "BMT",
+      "book": "BMT",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "cone",
+        "size": "15",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "0",
+      "units": ""
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 2,
+    "school": "con",
+    "materials": {
+      "value": "колода карт",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 2,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "dex",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "razbrasyvanie-kart--spray-of-cards"
+  },
+  "img": "icons/magic/nature/leaf-arrowheads-glow-green.webp",
+  "flags": {
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "effects": [],
+  "folder": "1laDscZ7Bn7NoviD",
+  "_id": "tyVgS4S3aTBY9A9L",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028235814,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!tyVgS4S3aTBY9A9L"
+}

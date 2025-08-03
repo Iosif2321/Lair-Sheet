@@ -1,0 +1,220 @@
+{
+  "name": "Тиара кружащихся комет / Crown of Whirling Comets",
+  "type": "equipment",
+  "system": {
+    "description": {
+      "value": "<p><em>Чудесный предмет (требуется настроенность)</em></p><p>Эта нежная серебряная тиара украшена звездной иконографией. Пока вы носите тиару, драгоценные камни на кончиках тиары отделяются и вращаются вокруг вашей головы.</p><p>Тиара имеет 6 зарядов для следующих свойств, которые можно использовать, пока вы носите эту тиару:</p><ul><li><p><em><strong>Звездный полет</strong></em>. Бонусным действием вы можете потратить 1 заряд, чтобы получить силу полета на 10 минут. На время действия вы получаете скорость полета, равную скорости ходьбы и вы можете парить. Во время полета вы слабо светитесь звездным светом.</p></li><li><p><em><strong>Звездный удар</strong></em>. Действием вы можете потратить любое количество зарядов, чтобы запустить снаряды из холодного звездного света. Вы запускаете количество снарядов, равное количеству потраченных зарядов, и можете направить их на одно или несколько существ, при условии, что все существа находятся в пределах 120 футов от вас и вы можете их видеть. Снаряды автоматически попадают по цели, и каждый снаряд наносит [[/r 2d4]] урона холодом.</p></li><li><p><em><strong>Кружащийся град</strong></em>. Вы можете действием потратить 3 заряда, и сотворить заклинание @Compendium[laaru-dnd5-hw.spells.RYG0oYTpaqFgTKh3]{Ледяная буря} (СЛ испытания 16).</p></li></ul><p>Тиара восстанавливает<span class=\"rd__p-cont-indent\"> [[/r 1d6]] израсходованных зарядов ежедневно на рассвете.</span></p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "BMT",
+      "book": "BMT",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "veryRare",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "uses": {
+      "max": "6",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d6"
+        }
+      ],
+      "spent": 0
+    },
+    "armor": {
+      "value": null,
+      "dex": null,
+      "magicalBonus": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "speed": {
+      "value": null,
+      "conditions": ""
+    },
+    "strength": null,
+    "proficient": null,
+    "unidentified": {
+      "description": "<p>Эта нежная серебряная тиара украшена звездной иконографией. </p>"
+    },
+    "type": {
+      "value": "trinket",
+      "baseItem": ""
+    },
+    "container": null,
+    "properties": [],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "special",
+          "value": 0,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "tiara-kruzhashihsya-komet--crown-of-whirling-comets",
+    "attuned": false
+  },
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Crown%20of%20Whirling%20Comets.webp",
+  "flags": {
+    "core": {},
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 6
+    }
+  },
+  "effects": [
+    {
+      "changes": [
+        {
+          "key": "system.attributes.movement.fly",
+          "mode": 4,
+          "value": "@attributes.movement.walk",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_id": "HG94lbiYr3q3p28q",
+      "name": "Скорость полёта",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "modules/laaru-dnd5-hw/assets/images/pic/Crown%20of%20Whirling%20Comets.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!FjUUaxBSWjRfTb7d.HG94lbiYr3q3p28q"
+    }
+  ],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "FjUUaxBSWjRfTb7d",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!FjUUaxBSWjRfTb7d"
+}

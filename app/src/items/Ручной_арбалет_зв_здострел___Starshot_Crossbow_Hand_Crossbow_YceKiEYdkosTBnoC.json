@@ -1,0 +1,230 @@
+{
+  "name": "Ручной арбалет звёздострел / Starshot Crossbow Hand Crossbow",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "system": {
+    "description": {
+      "value": "<p><em>Требуется настроенность</em></p><p>Этот арбалет изготовлен из почерневшего дерева, а его плечи украшены перламутровыми вставками с изображением созвездий.</p><p>Вы игнорируете свойство <em>перезарядка</em> данного арбалета. Если вы не заряжаете оружие боеприпасами, оно создаёт свои собственные, автоматически создавая один магический боеприпас, когда вы совершаете им дистанционную атаку. Боеприпасы, создаваемые оружием, исчезают в тот момент, когда они попадают в цель или промахивается мимо неё. Арбалет имеет 3 заряда и восстанавливает [[/r 1d3]] израсходованных зарядов ежедневно на рассвете.</p><p><strong>Созвездия</strong>. Арбалет украшен тремя созвездиями. Бонусным действием вы можете нажать на одно из созвездий, чтобы активируя его, расходуя 1 заряд и создавая один из следующих эффектов:</p><ul><li><p><em><strong>Баланс</strong></em>. В следующий раз, когда вы попадаете по существу броском дистанционной атаки, совершённой с помощью этого арбалета, до конца вашего следующего хода, вы или другое существо по вашему выбору, находящееся в пределах 30 футов от вас можете восстановить количество ПЗ, равное [[/r 1d8]] плюс ваш бонус умения.</p></li><li><p><em><strong>Пламя</strong></em>. До конца вашего следующего хода, когда вы попадаете по существу броском дистанционной атаки, совершённой с помощью этого арбалета, атака дополнительно наносит [[/r 2d8]] урона огнём.</p></li><li><p><em><strong>Плут</strong></em>. До конца вашего следующего хода вы становитесь @UUID[Compendium.laaru-dnd5-hw.actions.z03U5lNQtd71dWJT]{невидимым}, и все, что вы носите или держите, также становится невидимым.</p></li></ul><p>Лёгкий арбалет, предназначенный для использования в одной руке или пристегнутым к запястью для стрельбы лёгкими болтами.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "BMT",
+      "book": "BMT",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 3,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "rare",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "range": {
+      "value": 30,
+      "long": 120,
+      "units": "ft",
+      "reach": null
+    },
+    "uses": {
+      "max": "3",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d3"
+        }
+      ],
+      "spent": 0
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": 1,
+        "denomination": 6,
+        "bonus": "",
+        "types": [
+          "piercing"
+        ],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      }
+    },
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "amm",
+      "lgt",
+      "lod",
+      "mgc"
+    ],
+    "proficient": null,
+    "unidentified": {
+      "description": "<p>Этот ручной арбалет изготовлен из почерневшего дерева, а его плечи украшены перламутровыми вставками с изображением созвездий.</p>"
+    },
+    "type": {
+      "value": "martialR",
+      "baseItem": "handcrossbow"
+    },
+    "container": null,
+    "magicalBonus": null,
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "0",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "dex",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "ranged",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "ruchnoj-arbalet-zvyozdostrel--starshot-crossbow-hand-crossbow",
+    "attuned": false,
+    "ammunition": {}
+  },
+  "img": "icons/weapons/crossbows/crossbow-ornamental-black.webp",
+  "flags": {
+    "core": {},
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 3
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "YceKiEYdkosTBnoC",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!YceKiEYdkosTBnoC"
+}

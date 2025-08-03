@@ -1,0 +1,37 @@
+{
+  "name": "Случайные броски характеристик",
+  "type": "script",
+  "author": "ekSJaSkR4p1sowmM",
+  "img": "icons/sundries/gaming/dice-pair-white-green.webp",
+  "scope": "global",
+  "command": "/**\n * Генерирует характеристики персонажа и выводит результат в виде таблицы.\n * Author: @Kekilla#7036 & KrishMero1792\n */\n \n// Formula for rolling \nconst statString = '4d6kh3';\n\n// times to roll those stats\nconst numRolls = 6;\n\n\n//////////////////////////////////////////\n// Don't touch anything below this line //\n//////////////////////////////////////////\nconst stats = Array(numRolls).fill(0).map(e=>new Roll(statString));\nawait Promise.all(stats.map(e=>e.evaluate()));\n\nconst rollData = stats[0].dice[0];\nconst {faces, values: keptRolls, results: rolls} = rollData;\nconst totalAverage = (faces/2 + 1) * keptRolls.length;\nconst totalDeviation = faces/2;\nconst totalLow = Math.ceil(totalAverage - totalDeviation);\nconst totalHigh = Math.ceil(totalAverage + totalDeviation);\n\nconst header = rolls.map((roll, index) => `<th>D${index + 1}</th>`).join('');\n\nlet tableRows = '';\nlet finalSum = 0;\nfor(let {terms, total} of stats) {\n  tableRows += `<tr style=\"text-align:center\">`;\n  tableRows += terms[0].results.map(({result, discarded}) => `<td style=\"${colorSetter(result, 1, faces, discarded)}\">${result}</td>`).join('');\n  tableRows += `<td style=\"border-left:1px solid #000; ${colorSetter(total, totalLow, totalHigh)}\">${total}</td></tr>`;\n  finalSum += total;\n}\n\nconst colspan = `colspan=\"${rolls.length + 1}\"`;\nconst center = `text-align:center;`;\n\nlet content = `\n  <table>\n    <tr>\n      <td ${colspan}><h2 style=\"margin-bottom:0; ${center}\">Значения характеристик</h2>\n      <div style=\"margin-bottom: 0.5rem; ${center}\">${statString} были проброшены ${numRolls} раз.</div></td>\n    </tr>\n    <tr style=\"${center} border-bottom:1px solid #000\">\n      ${header}\n      <th style=\"border-left:1px solid #000\">Итог</th>\n    </tr>\n    ${tableRows}\n    <tr style=\"border-top: 1px solid #000\">\n      <th colspan=\"${rolls.length}\" style=\"${center}\">Финальная сумма:</th>\n      <th style=\"${center}\">${finalSum}</th>\n    </tr>\n  </table>\n`;\n\n\nChatMessage.create({content});\n\nfunction colorSetter(number,low,high, discarded)\n{\n  if(discarded === true) return 'text-decoration:line-through;color:gray';\n  if(number <= low) return 'color:red';\n  if(number >= high) return 'color:green';\n  return '';\n}",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.foundry_community_macros.community-macros-roll.cj0Sm0kWnHx11nFR"
+    },
+    "exportSource": {
+      "world": "novaya-sistema",
+      "system": "dnd5e",
+      "coreVersion": "9.269",
+      "systemVersion": "1.6.3"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "3.2.1",
+    "coreVersion": "12.331",
+    "createdTime": 1672485699440,
+    "modifiedTime": 1718966217438,
+    "lastModifiedBy": "IXqDQLPKvtc129vT",
+    "compendiumSource": "Compendium.foundry_community_macros.community-macros-roll.cj0Sm0kWnHx11nFR",
+    "duplicateSource": null
+  },
+  "folder": "vwcXHRDEDhe74QLA",
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "ekSJaSkR4p1sowmM": 3
+  },
+  "_id": "QxcWcSLTaaJxn6Jl",
+  "_key": "!macros!QxcWcSLTaaJxn6Jl"
+}

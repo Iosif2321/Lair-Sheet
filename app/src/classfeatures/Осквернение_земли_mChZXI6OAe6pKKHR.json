@@ -1,0 +1,127 @@
+{
+  "_id": "mChZXI6OAe6pKKHR",
+  "name": "Осквернение земли",
+  "type": "feat",
+  "img": "icons/magic/acid/dissolve-pool-bubbles.webp",
+  "effects": [],
+  "folder": "oQGJtw1J8AfwECr2",
+  "flags": {
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "value": "<p>Начиная со 2-го уровня, когда вы выбираете этот круг, вы можете использовать бонусное действие, чтобы осквернить участок земли или область воды в пределах 60 футов от вас в радиусе 10 футов с центром в точке. Эта порча длится 1 минуту. Оскверненная область — является &amp;reference[difficultterrain]{Пересечённой местностью} для враждебно настроенных к вам существ. Кроме того, когда существо в этой области впервые за ход получает урон от атаки или заклинания, оно получает дополнительный некротический урон [[/r 1d4]].</p>\n<p>Бонусным действием вы можете переместить этот участок порчи на расстояние до 30 футов. Порча не затрагивает летающих существ.</p>\n<p>Начиная с 10-го уровня, площадь вашей оскверненной земли увеличивается до 20-футового радиуса. Кроме того, дополнительный урон, наносимый вашей оскверненной землей, увеличивается до  [[/r 1d6]], когда вы достигаете 10-го уровня в этом классе, и [[/r 1d8]] на 14-м уровне.</p>\n<p>После того, как вы воспользуетесь этой способностью, вы не сможете использовать ее снова, пока не закончите короткий или долгий отдых.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "TDCSR",
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "bonus",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": ""
+    },
+    "target": {
+      "value": "10",
+      "width": null,
+      "units": "ft",
+      "type": "radius",
+      "prompt": true
+    },
+    "range": {
+      "value": 60,
+      "long": null,
+      "units": "ft"
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": "",
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": "",
+    "actionType": "util",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        [
+          "@scale.blighted.defile",
+          "necrotic"
+        ]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "requirements": "Druid 2 (Blighted)",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "cover": null,
+    "crewed": false,
+    "enchantment": null,
+    "summons": null,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": null
+    },
+    "properties": []
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mChZXI6OAe6pKKHR"
+}

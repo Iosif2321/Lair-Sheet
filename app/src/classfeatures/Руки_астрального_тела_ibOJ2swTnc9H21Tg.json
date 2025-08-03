@@ -1,0 +1,224 @@
+{
+  "_id": "ibOJ2swTnc9H21Tg",
+  "name": "Руки астрального тела",
+  "type": "feat",
+  "img": "icons/magic/unholy/strike-hand-glow-pink.webp",
+  "effects": [],
+  "folder": "kTao1TIOpNE0eMFF",
+  "flags": {
+    "core": {},
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Ваше мастерство во владении ци позволяет вам призвать частичку вашего астрального тела. Бонусным действием вы можете потратить <strong>1 очко ци</strong>, чтобы призвать руки астрального тела. Когда вы используете эту способность, каждое существо по вашему выбору, которое вы можете видеть в пределах <strong>10 футов</strong>, должно преуспеть в испытании <strong>Ловкости</strong>, иначе получит урон силой, равный двум броскам ваших костей боевых искусств.</p>\n<p>В течение <strong>10 минут</strong> эти призрачные руки парят на уровне ваших плеч или окружают ваши руки (по вашему выбору). Вы сами определяете внешний вид рук. Астральные руки исчезают раньше, если вы &amp;reference[incapacitated]{выходите из строя} или умираете.</p>\n<p>Во время действия этого умения вы получаете следующие преимущества:</p>\n<ul>\n<li>Вы можете использовать ваш модификатор <strong>Мудрости </strong>вместо модификатора <strong>Силы</strong>, когда совершаете проверки <strong>Силы </strong>или испытания <strong>Силы</strong>.</li>\n<li>Вы можете использовать эти призрачные руки для совершения безоружных атак.</li>\n<li>Если вы совершаете безоружные атаки этими руками, ваша досягаемость у этих атак на <strong>5 футов</strong> больше, чем обычно.</li>\n<li>Когда вы атакуете этими руками, вы можете использовать ваш модификатор <strong>Мудрости </strong>вместо модификатора <strong>Силы </strong>или <strong>Ловкости </strong>для бросков атаки и урона, а наносимый этими атаками урон — урон силовой.</li>\n</ul>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "TCE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "bonus",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": ""
+    },
+    "target": {
+      "value": "",
+      "width": null,
+      "units": "",
+      "type": "",
+      "prompt": true
+    },
+    "range": {
+      "value": 10,
+      "long": null,
+      "units": "ft"
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": [],
+      "prompt": true,
+      "spent": 0
+    },
+    "consume": {
+      "type": "charges",
+      "target": "Compendium.laaru-dnd5-hw.classfeatures.Item.10b6z2W1txNkrGP7",
+      "amount": 1,
+      "scale": false
+    },
+    "ability": "",
+    "actionType": "save",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        [
+          "2@scale.monk.die + @mod",
+          "force"
+        ]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "dex",
+      "dc": null,
+      "scaling": "wis"
+    },
+    "requirements": "Monk 3 (Astral Self)",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "cover": null,
+    "crewed": false,
+    "enchantment": null,
+    "summons": null,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": null
+    },
+    "properties": [],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "Compendium.laaru-dnd5-hw.classfeatures.Item.10b6z2W1txNkrGP7",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "10",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": true,
+                "formula": "2@scale.monk.die + @mod"
+              },
+              "scaling": {
+                "mode": "whole",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "dex",
+          "dc": {
+            "calculation": "wis",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "ruki-astralnogo-tela",
+    "enchant": {}
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ibOJ2swTnc9H21Tg"
+}

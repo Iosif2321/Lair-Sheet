@@ -1,0 +1,200 @@
+{
+  "_id": "gSUL6aVACwK7Tx3z",
+  "name": "Зеркало захвата жизни / Mirror of Life Trapping",
+  "type": "consumable",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Mirror%20of%20Life%20Trapping.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "mirror%20of%20life%20trapping_dmg"
+    },
+    "core": {
+      "sourceId": "Compendium.world.dmg-items.VOjMB6OTDcX0Q9GF"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Mirror of Life Trapping",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 12
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div><p><em>Чудесный предмет</em></p><p>Если смотреть в это зеркало высотой 4 фута не напрямую, его поверхность показывает бледные образы существ. Зеркало весит 50 фунтов, у него КБ 11, 10 ПЗ и уязвимость к дробящему урону. Если его ПЗ снизятся до 0, оно разобьётся и будет уничтожено.</p><p>Если зеркало висит на вертикальной поверхности и вы в пределах 5 футов от него, вы можете использовать действие, чтобы произнести командное слово и активировать его. Зеркало остаётся активированным, пока вы не используете действие, чтобы снова произнести командное слово. </p><p>Любое существо, кроме вас, находящееся в пределах 30 футов от активированного зеркала, увидев свое отражение в нём, должно пройти испытание Харизмы со СЛ 15. При провале оно будет заточено в одной из двенадцати межпространственных камер зеркала вместе со всем, что носит или держит. У существа преимущество к испытанию, если оно знает о природе зеркала, а конструкции автоматически успешно проходят испытание. </p><p>Межпространственные камеры — это бесконечное пространство, заполненное густым туманом, который снижает видимость до 10 футов. Существа, запертые в камерах зеркала, не стареют, им не нужно есть, пить или спать. Пленник может сбежать, используя магию планарного путешествия. В остальных случаях существо остаётся в зеркале, пока его не освободят. </p><p>Если зеркало захватывает существо, когда его двенадцать камер уже заняты, оно освобождает одно случайно выбранное существо, чтобы заточить нового пленника. Освобождённый появляется в свободном пространстве в пределах видимости от зеркала, но лицом в сторону от него. Если зеркало разбить, все его пленники освобождаются и появляются в свободном пространстве рядом с ним. Пока вы в пределах 5 футов от зеркала, вы можете использовать действие, чтобы назвать имя одного существа, запертого в нём, или номер его камеры. Названное существо или пленник названной камеры появится как образ на поверхности зеркала. После этого вы можете свободно общаться с этим существом.</p><p>Аналогичным образом вы можете использовать действие, чтобы произнести второе командное слово и освободить одного пленника зеркала. Освобождённый появится со всем своим имуществом в ближайшем к зеркалу свободном пространстве, но лицом в сторону от него.</p></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 50,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "equipped": true,
+    "rarity": "veryRare",
+    "identified": true,
+    "uses": {
+      "max": "12",
+      "autoDestroy": false,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "Командное слово. Цель должна иметь возможность видеть свое отражение.",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "cha"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "zerkalo-zahvata-zhizni--mirror-of-life-trapping",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": []
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.world.dmg-items.VOjMB6OTDcX0Q9GF",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!gSUL6aVACwK7Tx3z"
+}

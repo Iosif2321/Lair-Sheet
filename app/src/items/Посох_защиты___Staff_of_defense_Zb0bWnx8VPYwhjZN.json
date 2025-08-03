@@ -1,0 +1,225 @@
+{
+  "name": "Посох защиты / Staff of defense",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "img": "icons/weapons/staves/staff-ornate-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Требуется настроенности барда, чародея, колдуна или волшебника</em></p><p>Этот тонкий полый посох сделан из стекла, но прочен, как дубовый. Он весит 3 фунта. Нужно настроиться на посох, чтобы использовать его свойства и заклинания.</p><p>Пока вы держите этот посох, вы получаете бонус +1 к КБ.</p><p>У посоха 10 зарядов, которые тратятся на сотворение его заклинаний. Пока вы его держите, можете использовать действие, чтобы сотворить из посоха одно из следующих заклинаний вашего класса:</p><ul><li><p>@UUID[Compendium.laaru-dnd5-hw.spells.AlrdagOVZJvYJjv7]{Магический доспех} (1 заряд)</p></li><li><p>@Compendium[laaru-dnd5-hw.spells.tEmEo2XrdBVhIlfr]{Щит} (2 заряда). Компоненты не требуются.</p></li></ul><p>Ежедневно на рассвете посох восстанавливает [[/r 1d6 + 4]] потраченных зарядов. Потратив последний заряд посоха, бросьте [[/r 1d20]]. Если выпало 1, посох уничтожен и рассыпается на осколки.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "LMoP",
+      "book": "LMoP",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": false,
+    "rarity": "rare",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "",
+      "reach": null
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      }
+    },
+    "armor": {
+      "value": 10
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [],
+    "proficient": 1,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "simpleM",
+      "baseItem": "quarterstaff"
+    },
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "activities": {
+      "AGPt21DCuTc3uf9P": {
+        "_id": "AGPt21DCuTc3uf9P",
+        "type": "attack",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {},
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false,
+          "prompt": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": []
+        },
+        "attack": {
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {}
+        },
+        "damage": {
+          "critical": {},
+          "includeBase": true,
+          "parts": []
+        }
+      }
+    },
+    "identifier": "posoh-zashity--staff-of-defense",
+    "ammunition": {}
+  },
+  "effects": [
+    {
+      "origin": "Item.Zb0bWnx8VPYwhjZN",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "9xf8B9VrAYcsM1a0",
+      "changes": [
+        {
+          "key": "system.attributes.ac.bonus",
+          "mode": 2,
+          "value": "+1",
+          "priority": 20
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "dae": {
+          "stackable": "noneName",
+          "showIcon": false,
+          "durationExpression": "",
+          "specialDuration": []
+        }
+      },
+      "name": "Бонус к КБ",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/weapons/staves/staff-ornate-blue.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!Zb0bWnx8VPYwhjZN.9xf8B9VrAYcsM1a0"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "Zb0bWnx8VPYwhjZN",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!Zb0bWnx8VPYwhjZN"
+}

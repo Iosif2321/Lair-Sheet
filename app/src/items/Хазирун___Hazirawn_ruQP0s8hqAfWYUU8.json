@@ -1,0 +1,233 @@
+{
+  "name": "Хазирун / Hazirawn",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "system": {
+    "description": {
+      "value": "<p>Разумный (нейтральный злой) двуручный меч, <em>Хазирун</em>, способен говорить на Всеобщем и Нетерильском языках. Даже если у вас нет настроенности на меч, вы получаете бонус +1 к броскам атаки и урона, проводимыми этим оружием. Если у вас есть настроенность на <em>Хазирун</em>, вы наносите дополнительные [[/r 1d6]] некротического урона попадая этим оружием.</p><p><em><strong>Повышенное усиление</strong></em>. Пока вы настроены на это оружие, его бонус к броскам атаки и урона увеличивается до +2 и попадание наносит дополнительные [[/r 2d6]] некротического урона (вместо 1d6).</p><p><em><strong>Заклинания</strong></em>. Хазирун имеет 4 заряда для сотворения заклинаний. Пока вы настроены на меч и вы держите его в руках, вы можете творить @Compendium[laaru-dnd5-hw.spells.O5tFJkuBe4IhqKEw]{Обнаружение магии} (1 заряд), @Compendium[laaru-dnd5-hw.spells.1TO8Seox4AGcnJDq]{Обнаружение зла и добра} (1 заряд) или @Compendium[laaru-dnd5-hw.spells.MSM1XtWei12DFoLN]{Обнаружение мыслей} (2 заряда). Каждую полночь, <em>Хазирун</em> восполняет [[/r 1d4]] потраченных зарядов.</p><p><em><strong>Ранящий</strong></em>. Пока вы настроены на это оружие, любое существо, по которому вы попали <em>Хазируном</em> не может восполнять пункты здоровья в течение 1 минуты. Цель может проходить испытание Выносливости со СЛ 15 в конце каждого своего хода, при успехе завершая этот эффект раньше времени.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "HotDQ",
+      "revision": 1,
+      "book": "HotDQ",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 6,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "legendary",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "range": {
+      "value": null,
+      "long": 0,
+      "units": "ft",
+      "reach": null
+    },
+    "uses": {
+      "max": "4",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d4"
+        }
+      ],
+      "spent": 0
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [
+          "slashing"
+        ],
+        "custom": {
+          "enabled": true,
+          "formula": "2d6+1+@mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      }
+    },
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "hvy",
+      "two",
+      "mgc"
+    ],
+    "proficient": 1,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "martialM",
+      "baseItem": "greatsword"
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "str",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "hazirun--hazirawn",
+    "container": null,
+    "attuned": false,
+    "ammunition": {},
+    "magicalBonus": null
+  },
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Hazirawn.webp",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.laaru-dnd5-hw.items.ruQP0s8hqAfWYUU8"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Hazirawn",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 4
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "compendiumSource": "Compendium.laaru-dnd5-hw.items.ruQP0s8hqAfWYUU8",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "ruQP0s8hqAfWYUU8",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!ruQP0s8hqAfWYUU8"
+}

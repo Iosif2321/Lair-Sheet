@@ -1,0 +1,228 @@
+{
+  "_id": "NaGDkSWMqEuQuPsm",
+  "name": "Запрет / Forbiddance",
+  "type": "spell",
+  "img": "icons/magic/water/strike-ice-blades.webp",
+  "effects": [],
+  "folder": "YqnZK1fMA9x394B5",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "forbiddance_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [],
+        "altValue": [],
+        "context": []
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Forbiddance",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы создаёте оберег против магического перемещения, который покрывает до 40 000 квадратных футов площади и пространство до 30 футов в высоту над землёй. Пока длится заклинание, существа не могут телепортироваться в эту область и входить в неё через порталы вроде тех, что создаёт заклинание @Compendium[laaru-dnd5-hw.spells.vStdomjAhcRaeA3x]{Врата}. Заклинание защищает область и от планарного путешествия, не позволяя существам попасть в область при помощи Астрального плана, Эфирного плана, Страны Фей, Царства Теней или заклинания @Compendium[laaru-dnd5-hw.spells.gxAncMbwLb3QJayh]{Планарный переход}.</p>\n<p>Кроме того, заклинание наносит урон тем типам существ, которые вы выберете при сотворении. Выберите один или несколько типов существ: бестии, небожители, нежить, феи, элементали. Когда существо выбранного типа впервые за ход входит в область заклинания или начинает в ней свой ход, это существо получает [[/r 5d10]] лучистого или некротического урона (тип урона вы выбираете при сотворении).</p>\n<p>Когда вы сотворяете это заклинание, вы можете указать пароль. Существо, которое произнесёт пароль, входя в область заклинания, не получит урона.</p>\n<p>Область заклинания не может пересекаться с ещё одной областью заклинания запрет. Если творить запрет каждый день в течение 30 дней в одном и том же месте, то заклинание будет действовать, пока не рассеяно, а реагенты при последнем сотворении исчезают.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "minute",
+      "condition": "",
+      "value": 10
+    },
+    "duration": {
+      "value": "1",
+      "units": "day"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "units": "touch"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 6,
+    "school": "abj",
+    "materials": {
+      "value": "брызги святой воды, редкие благовония и толчёный рубин стоимостью не менее 1 000 зм",
+      "consumed": false,
+      "cost": 1000,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "ritual"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "zapret--forbiddance"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028214720,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!NaGDkSWMqEuQuPsm"
+}

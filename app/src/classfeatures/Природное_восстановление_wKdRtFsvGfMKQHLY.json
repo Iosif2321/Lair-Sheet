@@ -1,0 +1,136 @@
+{
+  "_id": "wKdRtFsvGfMKQHLY",
+  "name": "Природное восстановление",
+  "type": "feat",
+  "img": "icons/magic/control/sihouette-hold-beam-green.webp",
+  "effects": [],
+  "folder": "oQGJtw1J8AfwECr2",
+  "flags": {
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false
+    },
+    "magicitems": {
+      "enabled": false,
+      "equipped": false,
+      "attuned": false,
+      "charges": "0",
+      "chargeType": "c1",
+      "destroy": false,
+      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
+      "rechargeable": false,
+      "recharge": "0",
+      "rechargeType": "t1",
+      "rechargeUnit": "r1",
+      "sorting": "l"
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "value": "<p>Со 2-го уровня вы можете восстановить часть магической энергии, медитируя и сливаясь с природой. Во время короткого отдыха выберите использованные ячейки заклинаний, которые хотите восстановить. Их суммарный круг должен быть не более половины вашего уровня друида (округлённой в большую сторону), и ни одна из ячеек не может быть 6-го круга или выше. Прежде чем вы сможете использовать эту особенность снова, вы должны завершить долгий отдых.</p>\n<p>К примеру, если вы друид 4-го уровня, можете восстановить два круга ячеек, то есть или одну ячейку 2-го круга, или две 1-го.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB pg. 68",
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "special",
+      "cost": null,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": ""
+    },
+    "target": {
+      "value": "",
+      "width": null,
+      "units": "",
+      "type": "self",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "self"
+    },
+    "uses": {
+      "value": 1,
+      "max": "1",
+      "per": "lr",
+      "recovery": "",
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": "",
+    "actionType": "util",
+    "chatFlavor": "Друид может восстановить количество ячеек заклинаний (5-го круга или ниже):",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "ceil(@classes.druid.levels/2)",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "requirements": "Circle of the Land 2",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "cover": null,
+    "crewed": false,
+    "enchantment": null,
+    "summons": null,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": null
+    },
+    "properties": []
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wKdRtFsvGfMKQHLY"
+}

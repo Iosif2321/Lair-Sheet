@@ -1,0 +1,254 @@
+{
+  "_id": "6o1f2wjpSeOo8RRX",
+  "name": "Ученик дракона",
+  "type": "feat",
+  "img": "icons/sundries/books/book-reye-reptile-brown.webp",
+  "effects": [
+    {
+      "_id": "gvsH3ZKbymEJMDM6",
+      "changes": [
+        {
+          "key": "system.traits.languages.value",
+          "mode": 2,
+          "value": "draconic",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": "Item.6o1f2wjpSeOo8RRX",
+      "transfer": true,
+      "flags": {
+        "core": {
+          "statusId": ""
+        },
+        "dae": {
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": [],
+          "transfer": true
+        }
+      },
+      "tint": "#ffffff",
+      "name": "Драконий язык",
+      "description": "",
+      "statuses": [],
+      "img": "icons/sundries/books/book-reye-reptile-brown.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "12.343",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!items.effects!6o1f2wjpSeOo8RRX.gvsH3ZKbymEJMDM6"
+    }
+  ],
+  "folder": "kTao1TIOpNE0eMFF",
+  "flags": {
+    "core": {},
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы можете направить силу дракона, на усиление ваших безоружных ударов эссенцией драконьего дыхания, а также для усиления своего внешнего вида. Вы получаете следующие преимущества:</p>\n<ul>\n<li><em><strong>Присутствие дракона</strong></em>. Если вы проваливаете проверку <strong>Харизмы </strong>(Запугивание или Убеждение), вы можете использовать @Compendium[laaru-dnd5-hw.actions.mMwkUE20bEfKeetq]{Ответное действие}, чтобы совершить повторную проверку, используя могущественное влияние драконов. После того как вы превратите провал в успех с помощью данной способности, вы не сможете использовать его повторно, пока не закончите долгий отдых.</li>\n<li><em><strong>Удар дракона</strong></em>. Когда вы наносите урон цели безоружным ударом, вы можете изменить тип урона на <strong>кислоту</strong>, <strong>огонь</strong>, <strong>холод</strong>, <strong>электричество</strong> или <strong>яд</strong>.</li>\n<li><em><strong>Язык драконов</strong></em>. Вы можете говорить, читать и писать на Драконьем языке или на одном другом языке по вашему выбору.</li>\n</ul>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "FTD",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "reaction",
+      "cost": 1,
+      "condition": "Если вы проваливаете проверку Харизмы"
+    },
+    "duration": {
+      "value": "",
+      "units": ""
+    },
+    "target": {
+      "value": "",
+      "width": null,
+      "units": "",
+      "type": "",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": ""
+    },
+    "uses": {
+      "value": 1,
+      "max": "1",
+      "per": "lr",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ],
+      "prompt": true,
+      "spent": 0
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": null,
+    "actionType": "",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "requirements": "Monk 3 (Ascendant Dragon)",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "cover": null,
+    "crewed": false,
+    "enchantment": null,
+    "summons": null,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": null
+    },
+    "properties": [],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "Если вы проваливаете проверку Харизмы",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "uchenik-drakona",
+    "enchant": {}
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!6o1f2wjpSeOo8RRX"
+}

@@ -1,0 +1,271 @@
+{
+  "_id": "b33yzLRWRd1iKVHO",
+  "name": "Радужные брызги / Prismatic Spray",
+  "type": "spell",
+  "img": "icons/magic/control/buff-luck-fortune-rainbow.webp",
+  "effects": [],
+  "folder": "j0as9Trr663mrAHf",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "prismatic%20spray_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [
+          true
+        ],
+        "altValue": [
+          true
+        ],
+        "context": {
+          "0": ""
+        }
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Prismatic Spray",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\"><p>Восемь разноцветных лучей исходят из вашей руки. У каждого луча свой цвет и своя магическая сила. Каждое существо в пределах 60-футового конуса должно пройти испытание Ловкости. Бросьте по [[/r d8]] за каждую цель, чтобы определить, какого цвета луч подействовал на нее.</p><ol><li><p><strong>Красный. </strong>Цель получает [[/r 10d6]] урона огнём при провале или половину этого урона при успехе.</p></li><li><p><strong>Оранжевый.</strong> Цель получает [[/r 10d6]] урона кислотой при провале или половину этого урона при успехе.</p></li><li><p><strong>Жёлтый.</strong> Цель получает [[/r 10d6]] урона молнией при провале или половину этого урона при успехе.</p></li><li><p><strong>Зелёный. </strong>Цель получает [[/r 10d6]] урона ядом при провале или половину этого урона при успехе.</p></li><li><p><strong>Голубой.</strong> Цель получает [[/r 10d6]] урона холодом при провале или половину этого урона при успехе.</p></li><li><p><strong>Синий. </strong>При провале цель &amp;reference[restrained]{обездвижена}. Она должна проходить испытание Выносливости в конце каждого своего хода. Если цель успешно пройдёт его трижды, ваклинание прекращает действовать. Если цель провалит испытание трижды, она окончательно превратится в камень и получит состояние &amp;reference[petrified]{окаменения}. Успехи и провалы необязательно должны быть подряд: подсчитывайте их, пока чего-то не наберётся три.</p></li><li><p><strong>Фиолетовый. </strong>При провале цель &amp;reference[blinded]{ослеплена}. Она должна пройти испытание Мудрости в начале вашего следующего хода. При успехе слепота прекращается. При провале существо перемещается на другой план бытия по выбору мастера, слепота при этом прекращается. Как правило, если существо не на том плане, с которого родом, оно возвращается на родной план, остальные существа обычно попадают на Астральный или Эфирный планы.</p></li><li><p><strong>Особый.</strong> Цель поразили два луча. Бросьте кость ещё два раза, результат 8 перебрасывайте.</p></li></ol></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "cone",
+        "size": "60",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "0",
+      "units": ""
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 7,
+    "school": "evo",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 10,
+              "denomination": 6,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "dex",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "raduzhnye-bryzgi--prismatic-spray"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028223541,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!b33yzLRWRd1iKVHO"
+}

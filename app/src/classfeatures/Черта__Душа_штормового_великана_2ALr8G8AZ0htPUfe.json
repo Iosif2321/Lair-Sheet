@@ -1,0 +1,251 @@
+{
+  "name": "Черта: Душа штормового великана",
+  "type": "feat",
+  "system": {
+    "description": {
+      "value": "<p><em><strong>Требование</strong>: 4 уровень, черта «@UUID[Compendium.laaru-dnd5-hw.classfeatures.Item.unbQQwlHxrDhNtcz]{Удар Великанов} (Штормовой удар)»</em></p><p>Вы проявили магию бури, характерную для штормовых великанов, что дает вам следующие преимущества:</p><p><strong>Повышение характеристик</strong>. Увеличьте значение Силы, Мудрости или Харизмы на 1 при максимуме 20.</p><p><strong>Аура водоворота</strong>. Бонусным действием вы окружаете себя аурой магического ветра и молнии, которая простирается на 10 футов от вас во всех направлениях, но не через полное @UUID[Compendium.laaru-dnd5-hw.actions.xNd8TVxm9NpiJsw1]{укрытие}. Аура длится до начала вашего следующего хода или до тех пор, пока вы не будете &amp;reference[incapacitated]{выведены из строя}. Пока аура активна, вы получаете устойчивость к урону громом и молнии. Так же броски атаки против вас совершаются с помехой, и всякий раз, когда существо начинает свой ход в пределах ауры, вы можете заставить его пройти испытание Силы (СЛ равна 8 + ваш бонус умения + модификатор характеристики, увеличенной этой чертой). При провале скорость существа уменьшается вдвое до начала его следующего хода. Вы можете использовать это бонусное действие количество раз, равное вашему бонусу умения, и вы восстанавливаете все потраченные использования, когда заканчиваете долгий отдых.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "BGG",
+      "page": "",
+      "license": "",
+      "rules": "2014",
+      "custom": "BGG"
+    },
+    "activation": {
+      "type": "bonus",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": ""
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": "",
+      "width": null,
+      "units": "",
+      "type": "",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": ""
+    },
+    "uses": {
+      "value": null,
+      "max": "@prof",
+      "per": "lr",
+      "recovery": "",
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": null,
+      "amount": null,
+      "scale": false
+    },
+    "ability": "",
+    "actionType": "save",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "str",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "type": {
+      "value": "feat",
+      "subtype": "general"
+    },
+    "requirements": "4 уровень, черта «Удар Великанов (Штормовой удар)»",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "enchantment": null,
+    "summons": null,
+    "prerequisites": {
+      "level": 4
+    },
+    "properties": [],
+    "activities": {
+      "5BR6ciSmpwE0umhX": {
+        "type": "utility",
+        "_id": "5BR6ciSmpwE0umhX",
+        "sort": 0,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "xMqoVfp7bOm5OO5f"
+          }
+        ],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": "",
+          "value": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": "radius",
+            "size": "10",
+            "count": ""
+          },
+          "affects": {
+            "choice": false,
+            "type": ""
+          },
+          "override": false,
+          "prompt": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "roll": {
+          "prompt": false,
+          "visible": false,
+          "name": "",
+          "formula": ""
+        },
+        "name": "Аура для устойчивости",
+        "img": "",
+        "appliedEffects": []
+      }
+    }
+  },
+  "img": "icons/magic/water/wave-water-blue.webp",
+  "effects": [
+    {
+      "name": "Черта: Душа штормового великана",
+      "img": "icons/magic/water/wave-water-blue.webp",
+      "origin": "Compendium.laaru-dnd5-hw.classfeatures.Item.2ALr8G8AZ0htPUfe",
+      "transfer": false,
+      "_id": "xMqoVfp7bOm5OO5f",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "thunder",
+          "priority": 20
+        },
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "lightning",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "dae": {
+          "enableCondition": "",
+          "disableCondition": "",
+          "stackable": "multi",
+          "showIcon": false,
+          "durationExpression": "",
+          "specialDuration": []
+        },
+        "dnd5e": {
+          "riders": {
+            "statuses": []
+          }
+        },
+        "core": {
+          "overlay": false
+        }
+      },
+      "_stats": {
+        "coreVersion": "12.343",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!items.effects!2ALr8G8AZ0htPUfe.xMqoVfp7bOm5OO5f"
+    }
+  ],
+  "folder": "d7ePvPozSx60pD1K",
+  "_id": "2ALr8G8AZ0htPUfe",
+  "flags": {
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2ALr8G8AZ0htPUfe"
+}

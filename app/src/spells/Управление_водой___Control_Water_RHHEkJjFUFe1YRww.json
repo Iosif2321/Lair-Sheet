@@ -1,0 +1,275 @@
+{
+  "_id": "RHHEkJjFUFe1YRww",
+  "name": "Управление водой / Control Water",
+  "type": "spell",
+  "img": "icons/magic/symbols/rune-sigil-horned-blue.webp",
+  "effects": [],
+  "folder": "5iZ8qMTOt7ODg7B1",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "control%20water_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [
+          true
+        ],
+        "altValue": [
+          true
+        ],
+        "context": {
+          "0": ""
+        }
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Control Water",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Пока длится заклинание, вы управляете любой свободной водой в выбранной вами области (куб с ребром до 100 футов). При сотворении вы можете выбрать один из перечисленных эффектов заклинания. В качестве действия в свой ход вы можете повторить тот же эффект или выбрать другой.</p><ul><li><p><strong>Водоворот.</strong> Для этого эффекта требуется водоём площадью не менее 50 на 50 футов и глубиной не менее 25 футов. Водоворот образует воронку 5 футов в ширину у основания, 50 футов в ширину наверху и 25 футов в высоту в центре области. Любое существо или объект в воде в пределах 25 футов от воронки будет притянуто на 10 футов в её сторону. Существо может отплыть от воронки, успешно пройдя проверку Силы (Атлетика). СЛ равна СЛ испытаний против ваших заклинаний.</p><p>Когда существо впервые за ход попадает в воронку или начинает в ней свой ход, оно должно пройти испытание Силы. При провале существо получает [[/r 2d8]] дробящего урона и остаётся затянутым в воронку, пока длится заклинание. При успехе существо получает половину этого урона и не затянуто в воронку. Существо, затянутое в воронку, может использовать действие, чтобы попытаться выплыть из нее, как описано выше, но у него помеха к этой проверке Силы (Атлетика).</p><p>Когда объект впервые за ход оказывается в воронке, он получает [[/r 2d8]] дробящего урона. Этот урон повторяется каждый раунд, пока он остаётся в воронке.</p></li><li><p><strong>Перенаправление потока.</strong> Вы заставляете текущую воду в области течь в другом направлении на ваш выбор, даже если воде придется перетекать через препятствия,  вверх по стенам или в других необычных направлениях. Вода в области двигается туда, куда вы её направите, но, выйдя за пределы области, она снова течёт в обычном направлении. Вода продолжает течь в указанном вами направлении, пока длится заклинание или пока вы не выберете иной эффект.</p></li><li><p><strong>Потоп.</strong> Вы заставляете уровень всей стоячей воды в области подняться на 20 футов. Если в область входит берег, вода выплескивается на него.</p><p>Если вы выбрали область внутри большего водоёма, вместо этого вы создаёте 20-футовую волну, которая проносится с одной стороны области на другую, а затем обрушивается. Любой транспорт огромного размера или меньше на пути волны будет перенесён на другой конец области. Любой транспорт огромного размера или меньше, попавший под удар волны, переворачивается с шансом [[/r 1d100]] 25%.</p><p>Уровень воды остаётся высоким, пока длится заклинание или пока вы не выберете иной эффект. Если эффект вызвал волну, она повторяется в начале вашего следующего хода, пока длится эффект потопа.</p></li><li><p><strong>Разделение вод.</strong> Вы заставляете воду в области расступиться, создав проход. Он тянется через всю область действия, а расступившаяся вода образует стены по бокам. Проход остаётся, пока длится заклинание или пока вы не выберете иной эффект. После этого воды плавно заполнят проход в течение следующего раунда, пока не восстановится обычный уровень воды.</p></li></ul>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "10",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "cube",
+        "size": "100",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "300",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 4,
+    "school": "trs",
+    "materials": {
+      "value": "капля воды и щепотка пыли",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 2,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "str",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "upravlenie-vodoj--control-water"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028217586,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!RHHEkJjFUFe1YRww"
+}

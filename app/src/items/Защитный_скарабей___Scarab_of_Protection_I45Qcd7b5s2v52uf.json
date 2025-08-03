@@ -1,0 +1,177 @@
+{
+  "_id": "I45Qcd7b5s2v52uf",
+  "name": "Защитный скарабей / Scarab of Protection",
+  "type": "consumable",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Scarab%20of%20Protection.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "scarab%20of%20protection_dmg"
+    },
+    "core": {
+      "sourceId": "Compendium.world.dmg-items.y7va1IWjD5rgxwYA"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Scarab of Protection",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 12
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div><p> <em>Чудесный предмет, (требует настроенности)</em> </p><p>Если вы держите этот медальон в форме жука в руке 1 раунд, на его поверхности появляется надпись, раскрывающая его магическую природу. Он даёт следующую пользу, пока он при вас:</p><ul><li>У вас преимущество к испытаниям против заклинаний.</li><li>У скарабея 12 зарядов. Если вы проваливаете испытание против заклинания некромантии или вредоносного эффекта, исходящего от нежити, вы можете использовать @Compendium[laaru-dnd5-hw.actions.mMwkUE20bEfKeetq]{Ответное действие}, чтобы потратить 1 заряд и вместо этого сделать испытание успешным. Если потратить последний заряд, скарабей обращается в прах и уничтожается.</li></ul></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "legendary",
+    "identified": true,
+    "uses": {
+      "max": "12",
+      "autoDestroy": true,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "Если вы проваливаете испытание против заклинания некромантии или вредоносного эффекта, исходящего от нежити",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "zashitnyj-skarabej--scarab-of-protection",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": []
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.world.dmg-items.y7va1IWjD5rgxwYA",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!I45Qcd7b5s2v52uf"
+}

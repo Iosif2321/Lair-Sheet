@@ -1,0 +1,42 @@
+{
+  "name": "Изменение Размера (по стандартам)",
+  "type": "script",
+  "author": "N5s4uI6OpcSYQoF8",
+  "img": "icons/magic/control/silhouette-grow-shrink-tan.webp",
+  "scope": "global",
+  "command": "/**\n * Позволяет изменить размер токена.\n * Author: Elfrey (https://boosty.to/elfrey)\n */\nlet tokens = canvas.tokens.controlled;\nif (!tokens.length == 0) {\n  const transformations = {\n    tiny: { label: \"Маленький\", scale: 0.25 },\n    small: { label: \"Небольшой\", scale: 0.5 },\n    medium: { label: \"Средний\", scale: 1 },\n    large: { label: \"Крупный\", scale: 2 },\n    huge: { label: \"Огромный\", scale: 3 },\n    gargantuan: { label: \"Исполинский\", scale: 4 },\n  };\n\n  new Dialog({\n    title: \"Token size\",\n    content: `\n            <form>\n                <div style=\"display: flex; align-content: center;\">\n                </div>\n            </form>`,\n    buttons: getTransformations(transformations),\n    default: \"Close\",\n    close: () => {},\n  }).render(true);\n}\n\nfunction getTransformations(transformations) {\n  let transformButtons = {};\n  Object.entries(transformations).forEach(([key, transform]) => {\n    transformButtons[key] = {\n      label: transform.label,\n      callback: (html) => {\n        redimToken(transform.scale);\n      },\n    };\n  });\n  return transformButtons;\n}\n\nasync function redimToken(facteur)  {\n  let tokens = canvas.tokens.controlled;\n  const updates = [];\n  tokens.forEach((t) => {\n    updates.push({\n        _id: t.data._id,\n        width: facteur,\n        height: facteur,\n      })\n  });\n  if (updates.length) {\n    await canvas.scene.updateEmbeddedDocuments(\n        \"Token\", updates)\n  }\n}",
+  "flags": {
+    "advanced-macros": {
+      "runAsGM": false
+    },
+    "exportSource": {
+      "world": "avernus",
+      "system": "dnd5e",
+      "coreVersion": "9.269",
+      "systemVersion": "1.6.3"
+    },
+    "core": {
+      "sourceId": "Macro.fSyGEAXUVN12sTo1"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1672486954303,
+    "modifiedTime": 1699263551899,
+    "lastModifiedBy": "H9WsizrOeJscXSvG",
+    "compendiumSource": "Macro.fSyGEAXUVN12sTo1",
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0,
+    "ekSJaSkR4p1sowmM": 3,
+    "p6KRA0YNTMnkqj7v": 3,
+    "N5s4uI6OpcSYQoF8": 3
+  },
+  "folder": "vwyjREHxtAnaLnqX",
+  "sort": 150000,
+  "_id": "PbsokcPJs6YZZ44T",
+  "_key": "!macros!PbsokcPJs6YZZ44T"
+}

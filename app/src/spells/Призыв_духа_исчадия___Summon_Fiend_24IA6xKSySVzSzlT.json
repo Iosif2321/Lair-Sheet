@@ -1,0 +1,225 @@
+{
+  "_id": "24IA6xKSySVzSzlT",
+  "name": "Призыв духа исчадия / Summon Fiend",
+  "type": "spell",
+  "img": "icons/creatures/unholy/demon-fire-horned-winged-roar.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы призываете дух бестии. Существо появляется в незанятом пространстве, которое вы можете видеть в пределах досягаемости. Эта телесная форма использует блок параметров @Compendium[laaru-dnd5-hw.monsters.nJHyFxZoZq0OTG0y]{Духа исчадия}</p><p>Когда вы творите заклинание, выберите: @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.eB0oxbqRCNN6IVUf]{Демона}, @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.zlhWMcoErDBsJBDb]{Дьявола} или @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.t5ByY7PjjMLV95TU]{Юголота}.</p><p>Существо напоминает бестию выбранного типа, что определяет определенные черты в его блоке параметров. Существо исчезает, когда его ПЗ опускаются до 0 или когда заклинание заканчивается.</p><p>Это существо дружественно вам и вашим спутникам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие @Compendium[laaru-dnd5-hw.actions.UMuz44p8fXeLCZn7]{Уклонение} и перемещается, избегая опасностей.</p><p><strong>На высоких кругах. </strong>Когда вы сотворяете это заклинание, используя ячейку заклинания 7-го круга или выше, используйте более высокий круг везде, где круг заклинания появляется в блоке параметров.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "",
+      "custom": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "type": "space",
+        "count": "1",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "90",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 6,
+    "school": "con",
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration",
+      "mgc"
+    ],
+    "materials": {
+      "value": "кровь гуманоида внутри рубинового флакона стоимостью не менее 600 зм",
+      "consumed": false,
+      "cost": 600,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "summon",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "bonuses": {
+          "ac": "@item.level",
+          "hp": "15 * @item.level",
+          "attackDamage": "@item.level",
+          "saveDamage": "@item.level",
+          "healing": "",
+          "hd": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "attacks": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "count": "",
+            "name": "Демон",
+            "_id": "N6w3YPNWadyyktJ5",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.eB0oxbqRCNN6IVUf",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Дьявол",
+            "_id": "cPo0WFg2GzHv2RdL",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.zlhWMcoErDBsJBDb",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Юголот",
+            "_id": "TsuLIJcCWzCMCbNG",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.t5ByY7PjjMLV95TU",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          }
+        ],
+        "summon": {
+          "identifier": "",
+          "mode": "",
+          "prompt": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "prizyv-duha-ischadiya--summon-fiend"
+  },
+  "effects": [],
+  "folder": "YqnZK1fMA9x394B5",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TCE",
+      "hash": "summon%20fiend_tce"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Summon Fiend",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028201548,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!24IA6xKSySVzSzlT"
+}

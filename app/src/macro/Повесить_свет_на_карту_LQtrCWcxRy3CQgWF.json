@@ -1,0 +1,44 @@
+{
+  "name": "Повесить свет на карту",
+  "type": "script",
+  "scope": "global",
+  "author": "pCP1vpmxw8iemq57",
+  "img": "icons/magic/light/torch-fire-orange.webp",
+  "command": "// Глобальная функция для обработки клика. Требуется установленные модули Monk's Active Tile Trigger для работы выключателя. Авторы Kikimor, Allecks. Версия от 29.08.24\n// data {icon, audio, dim, bright, color}\n\nasync function getCursorCoordinates(onClickEvent) {\n    const [x, y] = [onClickEvent.clientX, onClickEvent.clientY];\n    const t = canvas.stage.worldTransform;\n\n\n    return {\n        x: (x - t.tx) / canvas.stage.scale.x,\n        y: (y - t.ty) / canvas.stage.scale.y\n    };\n}\n\nasync function createCrosshair(callback, data) {\n\n    canvas.app.stage.once('mousemove', (event) => {\n        const pos = event.data.getLocalPosition(app.stage);\n        console.log(\"pos\", pos)\n    });\n\n    canvas.app.stage.once('pointerdown', async (event) => {\n        if (event.data.originalEvent.button === 0) {\n            const cursorCoordinates = await getCursorCoordinates(event.data.originalEvent);\n            console.log(`Координаты: ${cursorCoordinates.x}, ${cursorCoordinates.y}`);\n            return callback({x:cursorCoordinates.x, y:cursorCoordinates.y, cancelled: false}, data);\n            \n        }\n\n        if (event.data.originalEvent.button === 2) {\n            return callback({x:0, y:0, cancelled: true}, data);\n        }\n    });\n\n};\n\n\nlet torchData = {\n    \"dim\": 40, \n    \"bright\": 20, \n    \"icon\": \"icons/sundries/lights/torch-brown-lit.webp\",                     // путь до иконки\n    \"audio\": \"https://raw.githubusercontent.com/laaruk/journal/main/torch_allecks.ogg\",        // путь до звука\n    \"color\": \"#5f3f11\"                                                        // путь до цвет\n}\n\nlet candleData = {\n    \"dim\": 5, \n    \"bright\": 0,\n    \"icon\": \"icons/sundries/lights/candle-lit-yellow.webp\", \n    \"audio\": \"https://raw.githubusercontent.com/laaruk/journal/main/candle_allecks.ogg\", \n    \"color\": \"#705405\"\n}\n\nasync function backCoordinates(position, data){\n    console.log(position)\n    if (position.cancelled === false) {\n\n        let audioPath = data.audio\n        let soundData = {\n            type: \"audio\",\n            x: position.x,\n            y: position.y,\n            radius: data.bright || data.dim,\n            path: audioPath,\n            repeat: false,\n            volume: 0.2,\n        };\n\n        let lightData = {\n            t: \"l\",\n            x: position.x,\n            y: position.y,\n            rotation: 0,\n            \"config.dim\": data.dim,\n            \"config.bright\": data.bright,\n            angle: 360,\n            tintColor: data.color,\n            lightAlpha: 0.3,\n            coloration: 1,\n            attenuation: 0.3,\n            luminosity: 0.3,\n            saturation: 0,\n            contrast: 0,\n            shadows: 0,\n            darkness: {\n            min: 0,\n            max: 1\n            },\n            lightAnimation: {\n                type: \"flame\",\n                speed: 3,\n                intensity: 3,\n                reverse: false\n                }\n        };\n            \n        let scene = game.scenes.viewed;\n        let light = await scene.createEmbeddedDocuments(\"AmbientLight\", [lightData]);\n        console.log(\"light\", light);\n        let sound = await canvas.scene.createEmbeddedDocuments(\"AmbientSound\", [soundData]);\n        let newTileData = {\n        texture: {\n        src: data.icon,\n        scaleX: 1,\n        scaleY: 1,\n        offsetX: 0,\n        offsetY: 0,\n        rotation: 0,\n        tint: null\n        },\n        x: position.x,\n        y: position.y,\n        width: 40,\n        height: 40,\n        overhead: false,\n        z: 100,\n        rotation: 0,\n        alpha: 1,\n        hidden: true,\n        locked: false,\n        roof: false,\n        occlusion: {\n        mode: 1,\n        alpha: 0,\n        radius: null\n        },\n        video: {\n        loop: true,\n        autoplay: true,\n        volume: 0\n        },\n        flags: {\n        tagger: {},\n        \"monks-active-tiles\": {\n            active: true,\n            record: false,\n            restriction: \"all\",\n            controlled: \"all\",\n            trigger: [\"\", \"click\"],\n            allowpaused: true,\n            usealpha: false,\n            pointer: true,\n            pertoken: false,\n            minrequired: 0,\n            chance: 50,\n            fileindex: 0,\n            actions: [\n            {\n                action: \"activate\",\n                data: {\n                entity: {\n                    id: `Scene.${scene._id}.AmbientLight.${light[0]._id}`,\n                    name: `AmbientLight: ${light[0]._id}`\n                },\n                collection: \"tiles\",\n                activate: \"toggle\"\n                },\n                id: `${light[0]._id}`\n            },\n            {\n                action: \"activate\",\n                data: {\n                entity: {\n                    id: `Scene.${scene._id}.AmbientSound.${sound[0]._id}`,\n                    name: `AmbientSound: ${sound[0]._id}`\n                },\n                collection: \"tiles\",\n                activate: \"toggle\"\n                },\n                id: `${sound[0]._id}`\n            }\n            ],\n            files: []\n        }\n        }\n        };\n        await scene.createEmbeddedDocuments(\"Tile\", [newTileData]);\n    }\n}\n\nasync function set_light(data){\n    let position = await createCrosshair(backCoordinates, data);   \n};\n\nlet dialogEditor = new Dialog({\n    title: `Светильник для карты.`,\n    content: `Выберите источник света.`,\n    buttons: {\n      none: {\n        label: `Факел`,\n        callback: () => {\n            set_light(torchData);\n          dialogEditor.render(true);\n        }\n      },\n      \n      torch: {\n        label: `Свеча`,\n        callback: () => {\n            set_light(candleData);\n          dialogEditor.render(true);\n        }\n      },\n\n    },\n    default: \"close\",\n    close: () => {}\n  });\n  \n  dialogEditor.render(true)",
+  "folder": "vwyjREHxtAnaLnqX",
+  "flags": {
+    "combat-utility-belt": {
+      "macroTrigger": ""
+    },
+    "exportSource": {
+      "world": "forbidden-adventure",
+      "system": "pf2e",
+      "coreVersion": "11.315",
+      "systemVersion": "5.12.2"
+    },
+    "core": {},
+    "scene-packer": {
+      "hash": "8ed8407e74488315a81938d34568eebd4a1aeb1c"
+    },
+    "condition-lab-triggler": {
+      "macroTrigger": ""
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "3.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1684312648455,
+    "modifiedTime": 1724925692084,
+    "lastModifiedBy": "qOtQQXn0PijCSOuU",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_id": "LQtrCWcxRy3CQgWF",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "pCP1vpmxw8iemq57": 3
+  },
+  "_key": "!macros!LQtrCWcxRy3CQgWF"
+}

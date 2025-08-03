@@ -1,0 +1,304 @@
+{
+  "_id": "GkTCd40iGyQEsfSE",
+  "name": "Призыв скакуна / Find Steed",
+  "type": "spell",
+  "img": "icons/magic/control/buff-luck-fortune-gold.webp",
+  "effects": [],
+  "folder": "1laDscZ7Bn7NoviD",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "find%20steed_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [],
+        "altValue": [],
+        "context": []
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Find Steed",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы призываете духа, который принимает форму необычайно разумного, сильного и верного волшебного скакуна, связанного с вами сильными узами. Скакун появляется в незанятом пространстве в пределах дистанции и принимает форму на ваш выбор — @UUID[Compendium.laaru-dnd5-hw.monsters.fRYieFHWaVQJctGW]{боевой лошади}, @UUID[Compendium.laaru-dnd5-hw.monsters.OWaAUtjQFOD0GSsB]{верблюда}, @UUID[Compendium.laaru-dnd5-hw.monsters.dy0EsZ9AjDclnobu]{лося}, @UUID[Compendium.laaru-dnd5-hw.monsters.xGuwh46ubTwb66oI]{мастифа} или @UUID[Compendium.laaru-dnd5-hw.monsters.UgPzf6AScVoYZxni]{пони} (с разрешения мастера можете использовать и других животных). Скакун получает параметры выбранной формы, хотя на самом деле это бестия, небожитель или фея (на ваш выбор), а не животное. Кроме того, если у вашего скакуна Интеллект 5 или ниже, его Интеллект становится равным 6 и он получает способность понимать один язык, на котором вы говорите, на ваш выбор.</p><p>Вы можете ездить верхом на волшебном скакуне как в бою, так и вне его. Он связан с вами инстинктивными узами, которые позволяют вам действовать как единое целое. Пока вы верхом на своём скакуне, можете сделать так, чтобы любое сотворяемое вами заклинание, которое нацелено только на вас, также было нацелено на вашего скакуна.</p><p>Когда ПЗ скакуна снижаются до 0, он исчезает, не оставляя физического тела. В качестве действия вы также можете отпустить скакуна, после чего он исчезает. В обоих случаях, если вы сотворите заклинание повторно, появится тот же скакун, полностью восстановивший ПЗ.</p><p>Пока ваш скакун в пределах 1 мили от вас, вы можете общаться друг с другом телепатически.</p><p>С помощью этого заклинания нельзя получить больше одного волшебного скакуна одновременно. В качестве действия вы можете освободить скакуна от уз в любой момент, после чего он исчезнет.</p><section id=\"secret-hHcTXb9aDlTIy56A\" class=\"secret\"><p><em>Примечание. Для работоспособности Призыва, мастеру нужно в настройках прав игроков разрешить создавать Токены и Актёров.</em></p></section>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "minute",
+      "condition": "",
+      "value": 10
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "target": {
+      "affects": {
+        "type": "space",
+        "count": "0",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "30",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 2,
+    "school": "con",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "summon",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "bonuses": {
+          "ac": "",
+          "hd": "",
+          "hp": "",
+          "attackDamage": "",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [
+          "fiend",
+          "celestial",
+          "fey"
+        ],
+        "match": {
+          "proficiency": false,
+          "attacks": false,
+          "saves": false
+        },
+        "profiles": [
+          {
+            "count": "",
+            "name": "",
+            "_id": "Jv2WQ6wyVcksQuCp",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.fRYieFHWaVQJctGW",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "",
+            "_id": "VWxXLu6szQRfdhSg",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.OWaAUtjQFOD0GSsB",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "",
+            "_id": "oqiNOi4g3rJQCpQ0",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.dy0EsZ9AjDclnobu",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "",
+            "_id": "41YJbWkhUdrPsW3w",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.xGuwh46ubTwb66oI",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "",
+            "_id": "hzbOpM0ZwWl8sluV",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.UgPzf6AScVoYZxni",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          }
+        ],
+        "summon": {
+          "identifier": "",
+          "mode": "",
+          "prompt": true
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "prizyv-skakuna--find-steed"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028210258,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!GkTCd40iGyQEsfSE"
+}

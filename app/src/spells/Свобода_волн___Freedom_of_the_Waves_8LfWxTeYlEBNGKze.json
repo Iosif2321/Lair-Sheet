@@ -1,0 +1,192 @@
+{
+  "_id": "8LfWxTeYlEBNGKze",
+  "name": "Свобода волн / Freedom of the Waves",
+  "type": "spell",
+  "img": "icons/magic/water/vortex-water-whirlpool.webp",
+  "effects": [],
+  "folder": "V8qhuGxP5pE0yKU2",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TDCSR",
+      "hash": "freedom%20of%20the%20waves_tdcsr"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Freedom of the Waves",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы призываете поток морской воды в цилиндре радиусом 15 футов и высотой 10 футов с центром в точке в пределах дистанции. Эта вода принимает форму приливной волны, водоворота, водяного смерча или другой формы по вашему выбору.</p>\n<p>Каждое существо в этой области должно преуспеть в испытании Силы против вашей СЛ испытаний от заклинаний, иначе получит дробящий урон [[/r 2d8]] и &amp;reference[prone]{распластается}. Вы можете выбрать количество существ, равное вашему модификатору заклинателя (минимум 1),  которые автоматически преуспевают в этом испытании.</p>\n<p>Если вы находитесь в области действия заклинания, в рамках действия, которое вы используете для произнесения заклинания, вы можете исчезнуть в нахлынувшем потопе и телепортироваться в незанятое пространство, которое вы можете видеть в пределах области действия заклинания.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "TDCSR",
+      "book": "TDCSR",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "120",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 3,
+    "school": "con",
+    "materials": {
+      "value": "прядь мокрых волос",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 2,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "str",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "svoboda-voln--freedom-of-the-waves"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028205158,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!8LfWxTeYlEBNGKze"
+}

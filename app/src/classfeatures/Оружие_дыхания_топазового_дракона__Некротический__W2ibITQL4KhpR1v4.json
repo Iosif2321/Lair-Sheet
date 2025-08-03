@@ -1,0 +1,182 @@
+{
+  "name": "Оружие дыхания топазового дракона (Некротический)",
+  "type": "feat",
+  "img": "icons/magic/unholy/energy-smoke-pink.webp",
+  "effects": [
+    {
+      "_id": "WKeedtA8wmsGvsHO",
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "necrotic",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": "Item.o5RZenzVAopJcVAu",
+      "transfer": true,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": [],
+          "transfer": true
+        },
+        "core": {
+          "statusId": ""
+        }
+      },
+      "tint": "#ffffff",
+      "name": "Устойчивость",
+      "description": "",
+      "statuses": [],
+      "img": "icons/magic/unholy/energy-smoke-pink.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "12.343",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!items.effects!W2ibITQL4KhpR1v4.WKeedtA8wmsGvsHO"
+    }
+  ],
+  "folder": "n0t54oY5BTL4Pfvq",
+  "flags": {
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false
+    }
+  },
+  "_id": "W2ibITQL4KhpR1v4",
+  "system": {
+    "description": {
+      "value": "<p>Когда в свой ход вы совершаете действие Атака, вы можете заменить одну из ваших атак на выдыхание 15-футового конуса магической энергии. Все существа в области выдоха должны пройти испытание Ловкости (СЛ = 8 + ваш модификатор Выносливости + ваш бонус умения). При провале существа получают [[/r 1d10]] некротического урона.</p><p>При успешном испытании существо получает вдвое меньше урона. Урон повышается на [[/r 1d10]] когда вы достигаете 5-го уровня ([[/r 2d10]]), 11-го уровня ([[/r 3d10]]) и 17-го уровня ([[/r 4d10]]).</p><p>Вы можете использовать это Оружие дыхания количество раз, равное вашему бонусу умения, и вы восстанавливаете все израсходованные применения после окончания долгого отдыха.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "",
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": "15",
+      "width": null,
+      "units": "ft",
+      "type": "cone",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": ""
+    },
+    "uses": {
+      "value": null,
+      "max": "@prof",
+      "per": "lr",
+      "recovery": "",
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": "con",
+    "actionType": "save",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        [
+          "@scale.drakonorozhdyonnyj-samocvetnyj.dice-damage",
+          "necrotic"
+        ]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "dex",
+      "dc": null,
+      "scaling": "con"
+    },
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "requirements": "Драконорождённый",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "enchantment": null,
+    "summons": null,
+    "prerequisites": {
+      "level": null
+    },
+    "properties": []
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!W2ibITQL4KhpR1v4"
+}

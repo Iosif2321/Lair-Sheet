@@ -1,0 +1,31 @@
+{
+  "name": "Конец хода",
+  "type": "script",
+  "scope": "global",
+  "author": "ekSJaSkR4p1sowmM",
+  "img": "icons/skills/melee/weapons-crossed-daggers-orange.webp",
+  "command": "/*\nAuthor: willisrocks\nDescription: \n\nЗавершает текущий ход актеров боевым столкновением. Полезно, когда вы не используете свой боевой трекер. и хотите закончить ход с панели быстрого доступа. Если пользователь является гейм-мастером, он всегда будет завершать текущий ход. \nДля игроков это только закончится ход, когда текущий актер в порядке хода принадлежит вам. На основе работы пользователя Reddit serrag97: https://www.reddit.com/r/FoundryVTT/comments/j1b8gs/next_turn_shortcut/\n*/\n\n// check if the user is a GM\nconst isGM = game.user.isGM;\n// check if the user owns the combatant whose turn it is\nconst isOwner = game.combat.combatant.isOwner;\n\nif (isGM || isOwner) {\n  game.combat.nextTurn();\n} else {\n  ui.notifications.info(\"Как игрок вы можете только продвигать свой ход\");\n}",
+  "flags": {
+    "core": {
+      "sourceId": "Macro.2hjDVnk5dbuCSuH6"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1672482529405,
+    "modifiedTime": 1699263443014,
+    "lastModifiedBy": "H9WsizrOeJscXSvG",
+    "compendiumSource": "Macro.2hjDVnk5dbuCSuH6",
+    "duplicateSource": null
+  },
+  "folder": "9jJwjbjUc9r6snop",
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "ekSJaSkR4p1sowmM": 3
+  },
+  "_id": "I1InAaaZYL0dWxSi",
+  "_key": "!macros!I1InAaaZYL0dWxSi"
+}

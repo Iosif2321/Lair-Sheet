@@ -1,0 +1,177 @@
+{
+  "name": "Жезл неудачного эксперимента / Failed Experiment Wand",
+  "type": "consumable",
+  "system": {
+    "description": {
+      "value": "<div><p><em>Требуется настроенность</em></p></div><p>Этот магический жезл имеет 2 заряда. Держа её, вы можете действием израсходовать 1 или более зарядов и выпустить из неё либо зеленый @Compendium[laaru-dnd5-hw.spells.j2cNLHZYnbKl46gZ]{Огненный шар}, либо синий @Compendium[laaru-dnd5-hw.spells.u7CxcAjfversxKAl]{Удар молнии}, случайно определяя заклинание (СЛ испытания 15).</p><p>За 1 заряд вы используете заклинание 3-го круга. Вы можете увеличить круг заклинания на один, потратив дополнительный заряд.</p><p>Жезл ежедневно восстанавливает [[/r 1d6 + 1]] зарядов на рассвете. Если вы истратили последний заряд палочки, бросьте [[/r d20]]. Если выпадет «1», жезл рассыплется в пыль и уничтожится.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "AI",
+      "book": "AI",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": false,
+    "rarity": "rare",
+    "identified": true,
+    "uses": {
+      "max": "2",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d6 + 1"
+        }
+      ],
+      "autoDestroy": true,
+      "spent": 0
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "properties": [
+      "mgc"
+    ],
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "wand",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "d20",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "zhezl-neudachnogo-eksperimenta--failed-experiment-wand",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null
+  },
+  "img": "icons/weapons/wands/wand-carved-stone-shard.webp",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.world.ai-items.1Hbs3BwUZwsz5UN5"
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 2
+    }
+  },
+  "effects": [],
+  "_id": "1Hbs3BwUZwsz5UN5",
+  "_stats": {
+    "compendiumSource": "Compendium.world.ai-items.1Hbs3BwUZwsz5UN5",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739363648686,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": "dRBK3J27k3uNqFqe",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!1Hbs3BwUZwsz5UN5"
+}

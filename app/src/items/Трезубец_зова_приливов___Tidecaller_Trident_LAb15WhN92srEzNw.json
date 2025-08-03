@@ -1,0 +1,229 @@
+{
+  "name": "Трезубец зова приливов / Tidecaller Trident",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "system": {
+    "description": {
+      "value": "<p><em>Требуется настроенность</em></p><p>Вы получаете бонус +2 к броскам атаки и урона, совершённым этим магическим оружием. Вы также совершаете с преимуществом броски атаки этим оружием, находясь под водой.</p><p>Этот магический трезубец имеет 3 заряда.</p><p>Вы можете потратить 1 заряд чтобы сотворить заклинание @Compendium[laaru-dnd5-hw.spells.G3bBbrxdHW7KhHaK]{Власть над ветрами} (СЛ 15) из этого трезубца, или 3 заряда, чтобы сотворить заклинание @Compendium[laaru-dnd5-hw.spells.KHwgIR2pY1s18dOK]{Цунами} (СЛ 15) из этого трезубца.</p><p>Трезубец восстанавливает [[/r 1d3]] израсходованных зарядов ежедневно на рассвете.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "BMT",
+      "book": "BMT",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 4,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "veryRare",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "range": {
+      "value": 20,
+      "long": 60,
+      "units": "ft",
+      "reach": null
+    },
+    "uses": {
+      "max": "3",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d3"
+        }
+      ],
+      "spent": 0
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": true,
+          "formula": "1d8+2+@mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [
+          "piercing"
+        ],
+        "custom": {
+          "enabled": true,
+          "formula": "1d6+2+@mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      }
+    },
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "thr",
+      "ver",
+      "mgc"
+    ],
+    "proficient": null,
+    "unidentified": {
+      "description": "<p>Многозубчатое копье, предназначенное для пронзания цели в нескольких местах, пригвождая ее к поверхности. Часто используется в сочетании с сетью для опутывания и изведения противников.</p>"
+    },
+    "type": {
+      "value": "martialM",
+      "baseItem": "trident"
+    },
+    "container": null,
+    "magicalBonus": null,
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "20",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "0",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "str",
+          "bonus": "+2",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "trezubec-zova-prilivov--tidecaller-trident",
+    "attuned": false,
+    "ammunition": {}
+  },
+  "img": "icons/weapons/polearms/trident-silver-blue.webp",
+  "flags": {
+    "core": {},
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 3
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "LAb15WhN92srEzNw",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!LAb15WhN92srEzNw"
+}

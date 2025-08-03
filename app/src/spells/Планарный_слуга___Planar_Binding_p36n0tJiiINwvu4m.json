@@ -1,0 +1,249 @@
+{
+  "_id": "p36n0tJiiINwvu4m",
+  "name": "Планарный слуга / Planar Binding",
+  "type": "spell",
+  "img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
+  "effects": [],
+  "folder": "3zIZihf4NL02gtMG",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "planar%20binding_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [],
+        "altValue": [],
+        "context": []
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Planar Binding",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Этим заклинанием вы пытаетесь заставить бестию, небожителя, фею или элементаля служить вам. Существо должно оставаться в пределах дистанции все время, пока вы творите заклинание. Как правило, существо призывают в центр вывернутого @Compendium[laaru-dnd5-hw.spells.9EdFCD8XJNdmJmrn]{магического круга}, чтобы удерживать его там, пока творится заклинание. Когда заклинание завершено, цель должна пройти испытание Харизмы. При провале она обязана служить вам, пока длится заклинание. Если существо было призвано или создано иным заклинанием, длительность того заклина- ния продлевается так, чтобы соответствовать длительности вашего заклинания.</p>\n<p>Подчинённое существо выполняет ваши приказы так хорошо, как только может. Вы можете приказать существу сопровождать вас в приключениях, охранять какое-то место или доставить сообщение. Существо буквально выполнит ваши инструкции, но, если существо вам враждебно, оно попытается извратить ваши слова, чтобы достичь своих целей. Если существо выполнит ваши приказы полностью до того, как заклинание прекратит действовать, оно вернётся к вам и доложит об этом, если вы на том же плане бытия. Если вы на другом плане, оно вернется туда, где вы его подчинили, и будет оставаться там, пока заклинание не прекратит действовать.</p>\n<p><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку более высокого круга, его длительность увеличивается до 10 дней при использовании ячейки 6-го круга, до 30 дней для 7-го круга, до 180 дней для 8-го круга и до года и одного дня для 9-го круга.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "hour",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "24",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "type": "creature",
+        "count": "1",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 5,
+    "school": "abj",
+    "materials": {
+      "value": "драгоценность стоимостью не менее 1 000 зм, исчезает при сотворении",
+      "consumed": true,
+      "cost": 1000,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": "cha",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "planarnyj-sluga--planar-binding"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028233023,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!p36n0tJiiINwvu4m"
+}

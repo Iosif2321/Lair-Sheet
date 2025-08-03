@@ -1,0 +1,250 @@
+{
+  "_id": "HNsw7f01aOBdgqbN",
+  "name": "Землетрясение / Earthquake",
+  "type": "spell",
+  "img": "icons/magic/earth/barrier-stone-explosion-spiked.webp",
+  "effects": [],
+  "folder": "SX2gQSbiLHQTHmt7",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "earthquake_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [],
+        "altValue": [],
+        "context": []
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Earthquake",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\">Вы создаёте сейсмические колебания в точке поверхности, которую видите в пределах дистанции. Пока длится заклинание, сильные толчки сотрясают землю в круге радиусом 100 футов вокруг этой точки, заставляя содрогаться существа и строения, соприкасающиеся с землей в этой области.</div>\n<div class=\"rd__spc-inline-post\">Земля в области становится пересечённой местностью. Каждое существо, стоящее на земле и концентрирующееся, должно пройти испытание Выносливости. При провале концентрация нарушается.</div>\n<div class=\"rd__spc-inline-post\">Когда вы творите это заклинание и в конце каждого хода, в котором вы нём концентрируетесь, каждое существо на земле в пределах области должно пройти испытание Ловкости. При провале это существо &amp;reference[prone]{распластывается}.</div>\n<div class=\"rd__spc-inline-post\">У этого заклинания могут быть дополнительные эффекты, зависящие от поверхности земли в области по усмотрению мастера.</div>\n<div class=\"rd__spc-inline-post\"><strong>Расселины. </strong>После того как вы сотворили заклинание, в начале вашего следующего хода по всей области его действия образуется [[/r 1d6]] расселин. Их местоположение выбирает мастер. Каждая расселина имеет [[/r 1d10 * 10]] <span style=\"color:#191813;font-family:Roboto, Arial, 'Helvetica Neue', sans-serif;font-size:13px\">(1d10 × 10)</span> футов в глубину, 10 футов в ширину и тянется с одного края области до противоположного. Существо, стоящее в точке, где открылась расселина, должно пройти испытание Ловкости, при провале оно падает в расселину. При успехе существо перемещается вместе с краем расселины при ее раскрытии. Если расселина открывается под строением, оно автоматически рушится (см. далее).</div>\n<div class=\"rd__spc-inline-post\"><strong>Строения</strong>. Когда вы творите это заклинание и в начале каждого вашего хода, пока длится заклинание, толчки наносят 50 дробящего урона любому строению, соприкасающемуся с землей в области заклинания. Если ПЗ строения доходят до 0, оно обрушивается и может повредить существам по соседству. Существо, находящееся в пределах расстояния, равного половине высоты строения, должно пройти испытание Ловкости. При провале существо получает [[/r 5d6]] дробящего урона, &amp;reference[prone]{распластывается}и оказывается погребено под обломками. Чтобы освободиться из-под них, требуется в качестве действия пройти проверку Силы (Атлетика) со СЛ 20. Мастер может повысить или понизить СЛ в зависимости от природы обломков. При успехе испытания существо получает половину урона, не распластывается и не погребено под обломками.</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "radius",
+        "size": "100",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "500",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 8,
+    "school": "evo",
+    "materials": {
+      "value": "щепотка земли, кусочек камня и комок глины",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": "con",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "zemletryasenie--earthquake"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028210806,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!HNsw7f01aOBdgqbN"
+}

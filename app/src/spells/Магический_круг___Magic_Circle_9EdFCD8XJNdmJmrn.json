@@ -1,0 +1,235 @@
+{
+  "_id": "9EdFCD8XJNdmJmrn",
+  "name": "Магический круг / Magic Circle",
+  "type": "spell",
+  "img": "icons/magic/symbols/star-yellow.webp",
+  "effects": [],
+  "folder": "V8qhuGxP5pE0yKU2",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "magic%20circle_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [],
+        "altValue": [],
+        "context": []
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Magic Circle",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\"><p>Вы создаёте цилиндр магической энергии радиусом 10 футов и высотой 20 футов с центром в точке на земле, которую видите в пределах дистанции. Там, где цилиндр пересекается с полом или иной поверхностью, загораются светящиеся руны, образуя круг.</p></div><div class=\"rd__spc-inline-post\"><p>Выберите один или несколько типов существ: бестии, небожители, нежить, феи или элементали. Круг воздействует на существ выбранных типов следующим образом:</p></div><ul><li class=\"rd__spc-inline-post\">Существо не может по своей воле войти в цилиндр немагическим способом. Если существо пытается использовать для этого телепортацию или межпланарное путешествие, ему нужно успешно пройти испытание Харизмы.</li><li class=\"rd__spc-inline-post\">Существо получает помеху к броскам атак по целям, находящимся в цилиндре.</li><li class=\"rd__spc-inline-post\">Цели в пределах цилиндра не могут быть &amp;reference[charmed]{обворожены} или &amp;reference[frightened]{испуганы} этим существом, оно не может в них вселиться.</li></ul><p>Когда вы творите это заклинание, вы можете настроить его магию так, чтобы она действовала в обратном направлении: не позволяла существу определённого типа покидать цилиндр и защищала цели за его пределами.</p><p><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку 4-го круга или выше, его длительность увеличивается на 1 час за каждый круг ячейки выше 3-го.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "minute",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "cylinder",
+        "size": "10",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "10",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 3,
+    "school": "abj",
+    "materials": {
+      "value": "святая вода или порошок из серебра и железа стоимостью не менее 100 зм, исчезает при сотворении",
+      "consumed": true,
+      "cost": 100,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": "cha",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "magicheskij-krug--magic-circle"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028205777,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!9EdFCD8XJNdmJmrn"
+}

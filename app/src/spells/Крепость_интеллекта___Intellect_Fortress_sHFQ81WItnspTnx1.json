@@ -1,0 +1,232 @@
+{
+  "_id": "sHFQ81WItnspTnx1",
+  "name": "Крепость интеллекта / Intellect Fortress",
+  "type": "spell",
+  "img": "icons/magic/symbols/cog-shield-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>В течение длительности заклинания вы или одно согласное существо, которое вы можете видеть в пределах дистанции, имеете @UUID[Compendium.laaru-dnd5-hw.actions.w7WKEM8had6v4vy8]{устойчивость} к психическому урону, а также совершаете и проходите с преимуществом испытания Интеллекта, Мудрости и Харизмы.</p><p><strong>На высоких кругах</strong>. Когда вы сотворяете это заклинание, используя ячейку 4-го круга или выше, вы можете сделать целью заклинания дополнительных существ, по одному за каждый круг ячейки выше третьего. Все цели заклинания должны находиться в пределах 30 футов друг от друга во время сотворения заклинания.</p><p><strong>Максимум целей для круга [[lookup @item.level]]: [[max(1, @item.level - 2)]]</strong></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "",
+      "custom": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "type": "willing",
+        "count": "",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "30",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 3,
+    "school": "abj",
+    "properties": [
+      "vocal",
+      "concentration",
+      "mgc"
+    ],
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "2qO9EuhTsHo6xXht"
+          }
+        ],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "krepost-intellekta--intellect-fortress"
+  },
+  "effects": [
+    {
+      "name": "Укрепленный интеллект",
+      "origin": "@UUID[Compendium.laaru-dnd5-hw.spells.Item.sHFQ81WItnspTnx1",
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": 3600,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "2qO9EuhTsHo6xXht",
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "psychic",
+          "priority": 20
+        }
+      ],
+      "description": "<p>У вас устойчивость к психическому урону, а также преимущество при испытаниях Интеллекта, Мудрости и Харизмы.</p>",
+      "transfer": false,
+      "statuses": [],
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "dontApply": false,
+          "stackable": "noneName",
+          "showIcon": false,
+          "durationExpression": "",
+          "specialDuration": []
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": null,
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!sHFQ81WItnspTnx1.2qO9EuhTsHo6xXht"
+    }
+  ],
+  "folder": "V8qhuGxP5pE0yKU2",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TCE",
+      "hash": "intellect%20fortress_tce"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Intellect Fortress",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028234966,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!sHFQ81WItnspTnx1"
+}

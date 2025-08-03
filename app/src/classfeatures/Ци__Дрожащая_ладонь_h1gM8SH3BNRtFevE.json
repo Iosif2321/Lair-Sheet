@@ -1,0 +1,223 @@
+{
+  "_id": "h1gM8SH3BNRtFevE",
+  "name": "Ци: Дрожащая ладонь",
+  "type": "feat",
+  "img": "icons/magic/symbols/rune-sigil-black-pink.webp",
+  "effects": [],
+  "folder": "kTao1TIOpNE0eMFF",
+  "flags": {
+    "core": {},
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>С 17-го уровня вы можете передавать смертоносные вибрации чужим телам. Когда вы попадаете по существу безоружным ударом, вы можете потратить<strong> 3 очка ци</strong>, чтобы начать эти неощутимые вибрации, которые продляться количество дней, равное вашему уровню монаха. Вибрации безвредны, пока вы не используете действие, чтобы прекратить их. Для этого вы и ваша цель должны быть на одном плане бытия. Когда вы совершаете это действие, существо должно пройти испытание <strong>Выносливости</strong>. При провале его ПЗ снижается до <strong>0</strong>. При успехе оно получает [[/r 10d10]] <strong>некротического </strong>урона.</p>\n<p>Вы можете одновременно держать только одно существо под влиянием этой особенности. Вы можете досрочно прекратить вибрации без вреда для цели, действие для этого не требуется.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB pg. 80",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": "Вибрации безвредны, пока вы не используете действие, чтобы прекратить их"
+    },
+    "duration": {
+      "value": "",
+      "units": ""
+    },
+    "target": {
+      "value": "",
+      "width": null,
+      "units": "",
+      "type": "",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": ""
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": [],
+      "prompt": true,
+      "spent": 0
+    },
+    "consume": {
+      "type": "charges",
+      "target": "Compendium.laaru-dnd5-hw.classfeatures.Item.10b6z2W1txNkrGP7",
+      "amount": 3,
+      "scale": false
+    },
+    "ability": "",
+    "actionType": "save",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        [
+          "10d10",
+          "necrotic"
+        ]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "con",
+      "dc": null,
+      "scaling": "wis"
+    },
+    "requirements": "Way of the Open Hand 17",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "cover": null,
+    "crewed": false,
+    "enchantment": null,
+    "summons": null,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": null
+    },
+    "properties": [],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "Вибрации безвредны, пока вы не используете действие, чтобы прекратить их",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "Compendium.laaru-dnd5-hw.classfeatures.Item.10b6z2W1txNkrGP7",
+              "value": "3",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 10,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "necrotic"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "whole",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "con",
+          "dc": {
+            "calculation": "wis",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "ci-drozhashaya-ladon",
+    "enchant": {}
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!h1gM8SH3BNRtFevE"
+}

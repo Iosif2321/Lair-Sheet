@@ -1,0 +1,27 @@
+{
+  "name": "Изображение токена",
+  "type": "script",
+  "scope": "global",
+  "_id": "JySJlp2WFSSQU5fu",
+  "author": "wIK3LzFoWNm1tl8G",
+  "img": "icons/magic/holy/saint-glass-portrait-halo.webp",
+  "command": "// Макрос для Foundry, который позволяет показать игрокам изображение выделенного токена. \ncanvas.tokens.updateAll(\n  token => ({ displayName : CONST.TOKEN_DISPLAY_MODES.HOVER }),\n  token => token._controlled,\n);\nconst popout = new \nImagePopout(token.document.texture.src).render(true);\npopout.shareImage();",
+  "folder": "zM3lWtEgwdtFJ9Xy",
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1729169051285,
+    "modifiedTime": 1729169051285,
+    "lastModifiedBy": "wIK3LzFoWNm1tl8G"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIK3LzFoWNm1tl8G": 3
+  },
+  "_key": "!macros!JySJlp2WFSSQU5fu"
+}

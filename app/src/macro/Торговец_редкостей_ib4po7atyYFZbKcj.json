@@ -1,0 +1,47 @@
+{
+  "name": "Торговец редкостей",
+  "type": "script",
+  "author": "ekSJaSkR4p1sowmM",
+  "img": "icons/sundries/flags/banner-symbol-eye-purple.webp",
+  "scope": "global",
+  "command": "// Макрос для генерации товаров для вашего торговца. Спасибо большое за макрос Elfrey https://boosty.to/elfrey\nlet applyChanges = false;\nconst tableCompendium = 'laaru-dnd5-hw.tables-extra';\nconst itemsCompendium = 'laaru-dnd5-hw.items';\nconst tableIds = {\n  common: 'qPouW0h2zXtFo62a',\n  uncommon: '6wcTUmhT2Hny9vNf',\n  rare: 'WNZghiAhzqWMqkB4',\n  veryrare: '587UR1kqHq9vw0gf',\n  legenrady: 'jHMMeaB95As4WxLu',\n  artifact: 'Smv2hyvMQh02YOrg',\n};\nconst priceByType = {\n  common: '(1d6) * 10',\n  uncommon: '(1d6+1) * 100',\n  rare: '2d10 * 1000',\n  veryrare: '(1d4+1) * 10000',\n  legenrady: '2d6 * 25000',\n  artifact: '2d6 * 250000',\n};\n\nconst textHeader = `\n<div class=\"table-draw\" data-table-id=\"LMrqEBBn3L1eegpc\">\n<ol class=\"table-results\">\n`;\nconst textFooter = `\n</ol>\n</div>\n`;\nconst itemTextHtml = ({ text, price, img, documentId, documentCollection }) => {\n  return img != null && documentId != null\n    ? `\n      <li class=\"table-result flexrow\" data-result-id=\"${documentId}\" style=\"border-top: 1px solid var(--color-border-dark-tertiary); border-bottom: 0; position: relative; width: 100%; padding: 10px 0 0 10px; overflow: hidden\">\n        <img class=\"result-image\" src=\"${img}\">\n        <div class=\"result-text\" style=\"max-width: calc(100% - 44px)\">\n            <span>@UUID[Compendium.${documentCollection}.${documentId}]{${text}}</span>\n        </div>\n      </li>\n      <li style=\"padding: 0 0 4px 0;\">\n        <div class=\"flavor-text\" style=\"padding-left: 40px;\"> за <strong>${price}</strong></div>\n      </li>\n`\n    : '';\n};\n\nnew Dialog({\n  title: `Генератор торговца`,\n  content: `\n    <form>\n      <div class=\"form-group\">\n        <label for=\"count\">Количество предметов(число и формула броска):</label>\n        <input type=\"text\" id=\"shop-gen-count\" name=\"shop-gen-count\" value=\"1d6\" />   \n      </div>\n      <div class=\"form-group\">\n        <label>Редкость предмета:</label>\n        <select id=\"shop-gen-item-rarity\" name=\"shop-gen-item-rarity\">\n          <option value=\"common\">Обычный</option>\n          <option value=\"uncommon\">Необычный</option>\n          <option value=\"rare\">Редкий</option>\n          <option value=\"veryrare\">Крайне редкий</option>\n          <option value=\"legenrady\">Легендарный</option>\n          <option value=\"artifact\">Артефакт</option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label>Шепот себе:</label>\n        <input type=\"checkbox\" id=\"shop-gen-whisper\" name=\"shop-gen-whisper\" checked >\n      </div>\n    </form>\n    `,\n  buttons: {\n    yes: {\n      icon: \"<i class='fas fa-check'></i>\",\n      label: `Сгенерировать`,\n      callback: () => (applyChanges = true),\n    },\n    no: {\n      icon: \"<i class='fas fa-times'></i>\",\n      label: `Отмена`,\n    },\n  },\n  default: 'yes',\n  close: async (html) => {\n    let priceDice = '';\n    let rollTable = null;\n    let rollPrice = null;\n    let textAr = [];\n\n    if (applyChanges) {\n      const tablePack = game.packs.get(tableCompendium);\n      if (!tablePack.index.length) await tablePack.getIndex();\n\n      const count = html.find('[name=\"shop-gen-count\"]')[0].value || '1';\n      const type =\n        html.find('[name=\"shop-gen-item-rarity\"]')[0].value || 'common';\n      const whisper =\n        html.find('[name=\"shop-gen-whisper\"]')[0].checked || false;\n      priceDice = priceByType[type];\n      rollTable = new Roll(count.toString());\n\n      await rollTable.evaluate();\n      let table = await tablePack.getDocument(tableIds[type]);\n      if (!table) {\n        table = game.tables.get(tableIds[type]);\n      }\n\n      let draw = await table.drawMany(rollTable.total, { displayChat: false });\n      console.log(draw);\n\n      textAr = await Promise.all(\n        draw.results.map(async (item) => {\n          rollPrice = new Roll(priceDice);\n          const result = await rollPrice.evaluate();\n\n          let price = result.total;\n          console.debug('price', price);\n          const textData = {\n            ...item,\n            price: `${price} ЗМ`,\n          };\n\n          console.debug('textData', textData);\n          return itemTextHtml(textData);\n        })\n      );\n\n      textAr = textAr.join(''); // Join the resolved array of strings into a single string\n      console.debug('textAr', textAr);\n\n      let chatData = {\n        user: game.user._id,\n        speaker: ChatMessage.getSpeaker(),\n        content: textHeader + textAr + textFooter,\n      };\n      if (whisper) {\n        chatData.whisper = ChatMessage.getWhisperRecipients('GM');\n      }\n\n      ChatMessage.create(chatData, {});\n    }\n  },\n}).render(true);",
+  "flags": {
+    "scene-packer": {
+      "hash": "ae031b26bec696850c882d05540f6177e6fd5aaa",
+      "sourceId": "Macro.e00zRTa1QkfFgvot"
+    },
+    "combat-utility-belt": {
+      "macroTrigger": ""
+    },
+    "advanced-macros": {
+      "runAsGM": false
+    },
+    "exportSource": {
+      "world": "tyranny-dev",
+      "system": "dnd5e",
+      "coreVersion": "10.291",
+      "systemVersion": "2.0.3"
+    },
+    "core": {
+      "sourceId": "Macro.zTQcAR35R2r30R50"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "ekSJaSkR4p1sowmM": 3
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1674748075638,
+    "modifiedTime": 1730456240497,
+    "lastModifiedBy": "0sDJykO8Qqs2fR3N",
+    "compendiumSource": "Macro.zTQcAR35R2r30R50",
+    "duplicateSource": null
+  },
+  "folder": "vwcXHRDEDhe74QLA",
+  "sort": 106250,
+  "_id": "ib4po7atyYFZbKcj",
+  "_key": "!macros!ib4po7atyYFZbKcj"
+}

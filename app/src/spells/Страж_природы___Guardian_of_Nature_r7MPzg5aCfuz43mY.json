@@ -1,0 +1,193 @@
+{
+  "_id": "r7MPzg5aCfuz43mY",
+  "name": "Страж природы / Guardian of Nature",
+  "type": "spell",
+  "img": "icons/magic/nature/root-vines-face-glow-green.webp",
+  "effects": [],
+  "folder": "5iZ8qMTOt7ODg7B1",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "guardian%20of%20nature_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Guardian of Nature",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Дух природы отвечает на ваш призыв и превращает вас в могущественного стража. Превращение длится до тех пор, пока заклинание не закончится. Вы выбираете одну из следующих форм: Первобытный зверь или Великое древо.</p><p><strong>Первобытный зверь</strong>. Мягкий мех покрывает ваше тело, ваши черты лица становятся дикими, и вы получаете следующие преимущества:</p><ul class=\"rd__list\"><li class=\"rd__li \">Скорость ходьбы увеличивается на 10 футов.</li><li class=\"rd__li \">Вы получаете &amp;reference[darkvision]{ночное зрение} в радиусе 120 футов.</li><li class=\"rd__li \">Вы совершаете броски атаки, основанные на Силе, с преимуществом.</li><li class=\"rd__li \">атаки в ближнем бою оружием наносят дополнительный урон Силой [[/r 1d6]].</li></ul><p><strong>Великое древо</strong>. Ваша кожа покрывается корой, листья прорастают из ваших волос, и вы получаете следующие преимущества:</p><ul class=\"rd__list\"><li class=\"rd__li \">Вы получаете 10 временных ПЗ.</li><li class=\"rd__li \">Вы проходите с преимуществом испытания Выносливости.</li><li class=\"rd__li \">Вы совершаете броски атаки, основанные на Ловкости и Мудрости, с преимуществом.</li><li class=\"rd__li \">Когда вы находитесь на земле, земля в радиусе 15 футов от вас становится &amp;reference[difficultterrain]{пересечённой местностью} для врагов.</li></ul>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "bonus",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "type": "self",
+        "count": "",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "units": "self"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 4,
+    "school": "trs",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 1,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "con",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "strazh-prirody--guardian-of-nature"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028234395,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!r7MPzg5aCfuz43mY"
+}

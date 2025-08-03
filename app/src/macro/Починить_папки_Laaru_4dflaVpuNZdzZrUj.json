@@ -1,0 +1,34 @@
+{
+  "_id": "4dflaVpuNZdzZrUj",
+  "name": "Починить папки Laaru",
+  "type": "script",
+  "author": "acfNOAcZsZNb9kQO",
+  "img": "icons/sundries/books/book-stack.webp",
+  "scope": "global",
+  "command": "/**\n * Возвращает папки и их содержимое обратно, если сбились. Только в модуле от Laaru\n * Author: Allecks https://boosty.to/allecks\n * ver 06.03.2025\n **/\n\nconst moduleData = game.modules.get(\"laaru-dnd5-hw\");\n\nasync function restorePacks(packs, subfolder = null) {\n  for (const pack of packs){\n    let existingPack = game.packs.get(`laaru-dnd5-hw.${pack}`);\n    if (!existingPack) {\n      console.log(pack, \"Не найден\");\n      return\n    }\n    if (subfolder){\n        existingPack.setFolder(subfolder.id);\n    }\n  }\n}\n\nasync function restore(folders, subfolder = null) {\n  for (const folder of folders){\n    let existingFolder = game.folders.find(f => f.name === folder.name && f.type == \"Compendium\");\n    if (!existingFolder) {\n      existingFolder = await Folder.create({\n        name: folder.name,\n        type: \"Compendium\",\n        color: folder.color\n      });\n    }\n    if (subfolder){\n        existingFolder.update({folder:subfolder.id});\n    }\n    if (folder.folders.size> 0) {\n      restore(folder.folders, existingFolder);\n    }\n    if (folder.packs.size> 0) {\n      restorePacks(folder.packs, existingFolder);\n    }\n  }\n}\n\n\nawait restore(moduleData.packFolders);",
+  "folder": "zM3lWtEgwdtFJ9Xy",
+  "flags": {
+    "exportSource": {
+      "world": "test",
+      "system": "dnd5e",
+      "coreVersion": "12.331",
+      "systemVersion": "3.3.1"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.3.6",
+    "createdTime": 1741356378658,
+    "modifiedTime": 1741356378658,
+    "lastModifiedBy": "acfNOAcZsZNb9kQO"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "acfNOAcZsZNb9kQO": 3
+  },
+  "_key": "!macros!4dflaVpuNZdzZrUj"
+}

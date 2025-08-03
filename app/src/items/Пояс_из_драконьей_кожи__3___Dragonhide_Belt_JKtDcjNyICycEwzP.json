@@ -1,0 +1,245 @@
+{
+  "name": "Пояс из драконьей кожи +3 / Dragonhide Belt",
+  "type": "equipment",
+  "system": {
+    "description": {
+      "value": "<div><p><em>(требуется настройка монахом)</em></p></div><p>Этот изящный пояс с мелкими деталями изготовлен из драконьей кожи.</p><p>Пока вы носите этот пояс, вы получаете бонус к СЛ испытания Ци. Бонус определяется редкостью пояса.</p><p>Кроме того, вы можете действием восстановить очки Ци, равные результату броска вашей кости Боевых искусств. Вы не можете повторно использовать это свойство пояса до следующего рассвета.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "FTD",
+      "revision": 1,
+      "book": "FTD",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "veryRare",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "uses": {
+      "max": "1",
+      "recovery": [
+        {
+          "period": "day",
+          "type": "recoverAll"
+        }
+      ],
+      "spent": 0
+    },
+    "armor": {
+      "value": null,
+      "dex": null,
+      "magicalBonus": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "speed": {
+      "value": null,
+      "conditions": ""
+    },
+    "strength": null,
+    "proficient": 1,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "baseItem": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "special",
+          "value": 0,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "@scale.monk.die",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "poyas-iz-drakonej-kozhi-3--dragonhide-belt",
+    "container": null,
+    "attuned": true,
+    "properties": [
+      "mgc"
+    ]
+  },
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/belt_result.webp",
+  "flags": {
+    "core": {
+      "sourceId": "Item.KppBkG5RT6mGOz2p"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Dragonhide Belt",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 1
+    }
+  },
+  "effects": [
+    {
+      "origin": "Item.KppBkG5RT6mGOz2p",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "N5VUdSFG9QI2XS9m",
+      "changes": [
+        {
+          "key": "system.abilities.wis.dc",
+          "mode": 2,
+          "value": "3",
+          "priority": 20
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "times-up": {},
+        "dfreds-convenient-effects": {
+          "description": ""
+        },
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "macroRepeat": "none",
+          "specialDuration": []
+        },
+        "core": {
+          "statusId": ""
+        }
+      },
+      "name": "Бонус к испытаниям Ци",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "modules/laaru-dnd5-hw/assets/images/pic/belt_result.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!JKtDcjNyICycEwzP.N5VUdSFG9QI2XS9m"
+    }
+  ],
+  "_stats": {
+    "compendiumSource": "Item.KppBkG5RT6mGOz2p",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "JKtDcjNyICycEwzP",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!JKtDcjNyICycEwzP"
+}

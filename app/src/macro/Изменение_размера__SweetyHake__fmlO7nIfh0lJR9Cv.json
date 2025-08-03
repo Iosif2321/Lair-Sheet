@@ -1,0 +1,34 @@
+{
+  "name": "Изменение размера (SweetyHake)",
+  "type": "script",
+  "command": "// Макрос для Foundry v12, который изменяет размер токенов на сцене и в их бланке.\n\n// Author: SweetyHake (https://boosty.to/sweetyhake)\n\nif (!canvas.tokens.controlled.length) {\n  ui.notifications.warn(\"Не выбраны токены!\");\n  return;\n}\n\nlet sizeData = {};\n\nasync function tokenUpdate(sizeData) {\n  canvas.tokens.controlled.map((token) => {\n    if (token.actor) {\n      token.actor.update({\n        \"system.traits.size\": sizeData.trait,\n      });\n    }\n    token.document.update({\n      width: sizeData.size,\n      height: sizeData.size,\n    });\n  });\n}\n\nconst prompt = await foundry.applications.api.DialogV2.wait({\n  window: {\n    title: \"Изменение размера токенов и существ\",\n    icon: \"fa-solid fa-expand-arrows-alt\",\n  },\n  content: `\n    <div style=\"text-align:center; display: flex; flex-wrap: wrap; justify-content: center;\">\n      <button class=\"size-btn\" data-size=\"tiny\" style=\"width: 100px; height: 120px; margin: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;\">\n        <i class=\"fa-solid fa-virus\" style=\"font-size: 36px;\"></i>\n        <div>${game.i18n.localize(\"DND5E.SizeTiny\")}</div>\n      </button>\n      <button class=\"size-btn\" data-size=\"small\" style=\"width: 100px; height: 120px; margin: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;\">\n        <i class=\"fa-solid fa-paw\" style=\"font-size: 36px;\"></i>\n        <div>${game.i18n.localize(\"DND5E.SizeSmall\")}</div>\n      </button>\n      <button class=\"size-btn\" data-size=\"medium\" style=\"width: 100px; height: 120px; margin: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;\">\n        <i class=\"fa-solid fa-person\" style=\"font-size: 36px;\"></i>\n        <div>${game.i18n.localize(\"DND5E.SizeMedium\")}</div>\n      </button>\n      <button class=\"size-btn\" data-size=\"large\" style=\"width: 100px; height: 120px; margin: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;\">\n        <i class=\"fa-solid fa-horse\" style=\"font-size: 36px;\"></i>\n        <div>${game.i18n.localize(\"DND5E.SizeLarge\")}</div>\n      </button>\n      <button class=\"size-btn\" data-size=\"huge\" style=\"width: 100px; height: 120px; margin: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;\">\n        <i class=\"fa-solid fa-dragon\" style=\"font-size: 36px;\"></i>\n        <div>${game.i18n.localize(\"DND5E.SizeHuge\")}</div>\n      </button>\n      <button class=\"size-btn\" data-size=\"gargantuan\" style=\"width: 100px; height: 120px; margin: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;\">\n        <i class=\"fa-solid fa-archway\" style=\"font-size: 36px;\"></i>\n        <div>${game.i18n.localize(\"DND5E.SizeGargantuan\")}</div>\n      </button>\n    </div>\n  `,\n  modal: true,\n  rejectClose: false,\n  buttons: [\n    {\n      label: \"Закрыть\",\n      action: \"close\",\n      callback: () => {}\n    }\n  ],\n  render: (event, html) => {\n    html.querySelectorAll(\".size-btn\").forEach((button) => {\n      button.addEventListener(\"click\", (event) => {\n        const size = event.currentTarget.dataset.size;\n        switch (size) {\n          case \"tiny\":\n            sizeData = { size: 0.5, trait: \"tiny\" };\n            break;\n          case \"small\":\n            sizeData = { size: 0.8, trait: \"sm\" };\n            break;\n          case \"medium\":\n            sizeData = { size: 1, trait: \"med\" };\n            break;\n          case \"large\":\n            sizeData = { size: 2, trait: \"lg\" };\n            break;\n          case \"huge\":\n            sizeData = { size: 3, trait: \"huge\" };\n            break;\n          case \"gargantuan\":\n            sizeData = { size: 4, trait: \"grg\" };\n            break;\n          default:\n            return; // Выход, если не выбран ни один вариант\n        }\n        tokenUpdate(sizeData);\n        event.currentTarget.closest(\".dialog\").close();\n      });\n    });\n  }\n});",
+  "img": "icons/svg/ice-aura.svg",
+  "_id": "fmlO7nIfh0lJR9Cv",
+  "author": "acfNOAcZsZNb9kQO",
+  "scope": "global",
+  "folder": "vwyjREHxtAnaLnqX",
+  "flags": {
+    "exportSource": {
+      "world": "sgteh",
+      "system": "dnd5e",
+      "coreVersion": "12.331",
+      "systemVersion": "4.3.8"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.3.8",
+    "createdTime": 1745072597226,
+    "modifiedTime": 1745072597226,
+    "lastModifiedBy": "acfNOAcZsZNb9kQO"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "acfNOAcZsZNb9kQO": 3
+  },
+  "_key": "!macros!fmlO7nIfh0lJR9Cv"
+}

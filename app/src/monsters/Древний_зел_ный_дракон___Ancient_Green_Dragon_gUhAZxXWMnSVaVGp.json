@@ -1,0 +1,3490 @@
+{
+  "_id": "gUhAZxXWMnSVaVGp",
+  "name": "Древний зелёный дракон / Ancient Green Dragon",
+  "type": "npc",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Green%20Dragon.jpg",
+  "items": [
+    {
+      "_id": "G4HAvYJJxAPDF8vE",
+      "name": "Мультиатака",
+      "type": "feat",
+      "img": "icons/skills/melee/blade-tips-triple-steel.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<p>Дракон может использовать Пугающее присутствие. Затем он совершает <strong>три</strong> атаки: Одну укусом и две когтями. </p>\n</section>\n<p>У дракона есть мультиатака.</p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.G4HAvYJJxAPDF8vE"
+    },
+    {
+      "_id": "H0pjg4KjFBn4Iw3n",
+      "name": "Укус",
+      "type": "weapon",
+      "img": "icons/creatures/abilities/mouth-teeth-long-red.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDamage": {
+            "context": {
+              "0": "",
+              "1": ""
+            },
+            "value": {
+              "0": true,
+              "1": true
+            },
+            "altValue": {
+              "0": true,
+              "1": true
+            }
+          },
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": false,
+            "altValue": false
+          },
+          "quickAttack": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickVersatile": {
+            "value": false,
+            "altValue": false
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false
+            },
+            "altValue": {
+              "quantity": false
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\"><section id=\"secret-dyOmrwszSZdL0yUY\" class=\"secret\"><div class=\"rd__spc-inline-post\"><p><em>Атака оружием в ближнем бою</em>: [[/r 1d20+15]] (+15) к броску, зона досягаемости 15 футов, одна цель.</p></div><div><p><em>Попадание</em>: 19 ([[/r 2d10 + 8]]) колющего урона плюс 10 ([[/r 3d6]]) урона ядом. </p></div></section><div><p>Дракон кусает! Цель получает колющий, ядовитый урон.</p></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "attunement": "",
+        "equipped": true,
+        "rarity": "",
+        "identified": true,
+        "cover": null,
+        "crewed": false,
+        "range": {
+          "value": 15,
+          "long": 0,
+          "units": "ft",
+          "reach": null
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "damage": {
+          "versatile": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "base": {
+            "number": 2,
+            "denomination": 10,
+            "bonus": "",
+            "types": [
+              "piercing"
+            ],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "properties": [],
+        "proficient": 1,
+        "unidentified": {
+          "description": ""
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "container": null,
+        "magicalBonus": null,
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "15",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "attuned": false,
+        "ammunition": {}
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.H0pjg4KjFBn4Iw3n"
+    },
+    {
+      "_id": "JQm3xP8RuoCDCBh4",
+      "name": "Коготь",
+      "type": "weapon",
+      "img": "icons/skills/melee/blood-slash-foam-red.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            }
+          },
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": false,
+            "altValue": false
+          },
+          "quickAttack": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickVersatile": {
+            "value": false,
+            "altValue": false
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false
+            },
+            "altValue": {
+              "quantity": false
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\"><section id=\"secret-BDbSgwCZN7xaIJKi\" class=\"secret\"><div class=\"rd__spc-inline-post\"><p><em>Атака оружием в ближнем бою</em>: [[/r 1d20+15]] (+15) к броску, зона досягаемости 10 футов, одна цель.</p></div><div><p><em>Попадание</em>: 22 ([[/r 4d6 + 8]]) режущего урона. </p></div></section><div><p>Дракон атакует когтями!</p></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "attunement": "",
+        "equipped": true,
+        "rarity": "",
+        "identified": true,
+        "cover": null,
+        "crewed": false,
+        "range": {
+          "value": 10,
+          "long": 0,
+          "units": "ft",
+          "reach": null
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "damage": {
+          "versatile": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "base": {
+            "number": 4,
+            "denomination": 6,
+            "bonus": "",
+            "types": [
+              "slashing"
+            ],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "properties": [],
+        "proficient": 1,
+        "unidentified": {
+          "description": ""
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "container": null,
+        "magicalBonus": null,
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "10",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "attuned": false,
+        "ammunition": {}
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.JQm3xP8RuoCDCBh4"
+    },
+    {
+      "_id": "iTcRycC9JBT8VwOI",
+      "name": "Хвост",
+      "type": "weapon",
+      "img": "icons/skills/wounds/injury-pain-impaled-hand-blood.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            }
+          },
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": false,
+            "altValue": false
+          },
+          "quickAttack": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickVersatile": {
+            "value": false,
+            "altValue": false
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false
+            },
+            "altValue": {
+              "quantity": false
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\"><section id=\"secret-EB6E0UTwWm0dVUgw\" class=\"secret\"><div class=\"rd__spc-inline-post\"><p><em>Атака оружием в ближнем бою</em>: [[/r 1d20+15]] (+15) к броску, зона досягаемости 20 футов, одна цель.</p></div><div><p><em>Попадание</em>: 17 ([[/r 2d8 + 8]]) дробящего урона. </p></div></section><div><p>Дракон бьёт хвостом!</p></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "attunement": "",
+        "equipped": true,
+        "rarity": "",
+        "identified": true,
+        "cover": null,
+        "crewed": false,
+        "range": {
+          "value": 20,
+          "long": 0,
+          "units": "ft",
+          "reach": null
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "damage": {
+          "versatile": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "base": {
+            "number": 2,
+            "denomination": 8,
+            "bonus": "",
+            "types": [
+              "bludgeoning"
+            ],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "properties": [],
+        "proficient": 1,
+        "unidentified": {
+          "description": ""
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "container": null,
+        "magicalBonus": null,
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "20",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "attuned": false,
+        "ammunition": {}
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.iTcRycC9JBT8VwOI"
+    },
+    {
+      "_id": "YxfoVSCLK2ptRD6a",
+      "name": "Пугающее присутствие",
+      "type": "feat",
+      "img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div><section id=\"secret-u56J6fhJTcpO9Q8f\" class=\"secret\"><div><p>Все существа по выбору дракона, находящиеся в пределах 120 футов от него и знающие о его присутствии, должны пройти испытание Мудрости со СЛ 19, при провале они &amp;reference[frightened]{испуганы} на 1 минуту. Существо может повторять это испытание в конце каждого своего хода, при успехе эффект для него прекращается. При успехе испытания или если эффект для существа прекратился, оно получает невосприимчивость к Пугающему присутствию этого дракона на следующие 24 часа. </p></div></section><div><p>Все существа по выбору дракона, находящиеся в пределах 120 футов от него и знающие о его присутствии, должны пройти испытание Мудрости.</p></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "wis",
+              "dc": {
+                "calculation": "cha",
+                "formula": "19"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.YxfoVSCLK2ptRD6a"
+    },
+    {
+      "_id": "TTZ09vOFcDSOxBLj",
+      "name": "Ядовитое дыхание",
+      "type": "feat",
+      "img": "icons/magic/acid/projectile-smoke-glowing.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            }
+          },
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickTemplate": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "charge": true
+            },
+            "altValue": {
+              "charge": true
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true,
+          "migratedUses": 0
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\"><section id=\"secret-ugjgIoVx4xod3x0H\" class=\"secret\"><div class=\"rd__spc-inline-post\"><p><strong>(перезарядка 5-6)</strong></p></div><div><p>Дракон выдыхает ядовитый газ в 90-футовом конусе. Все существа в этой области должны пройти испытание Выносливости со СЛ 22, получая 77 ([[/r 22d6]]) урона ядом при провале или половину этого урона при успехе. </p></div></section><div><p>Дракон выдыхает ядовитый газ в 90-футовом конусе. Все существа в этой области должны пройти испытание Выносливости.</p></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "recharge",
+              "formula": "5",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "target": "",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "cone",
+                "size": "90",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "number": 22,
+                  "denomination": 6,
+                  "bonus": "",
+                  "types": [
+                    "poison"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "mode": "whole",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": "con",
+              "dc": {
+                "calculation": "con",
+                "formula": "22"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.TTZ09vOFcDSOxBLj"
+    },
+    {
+      "_id": "N0327ETud4HJuUhK",
+      "name": "Амфибия",
+      "type": "feat",
+      "img": "icons/environment/creatures/frog-spotted-green.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<p>Дракон может дышать как в воздухе, так и в воде. </p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.N0327ETud4HJuUhK"
+    },
+    {
+      "_id": "mlYGMOClxW6OXdtr",
+      "name": "Легендарная устойчивость",
+      "type": "feat",
+      "img": "icons/equipment/shield/kite-wooden-oak-glow.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "resource": true
+            },
+            "altValue": {
+              "resource": true
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<div class=\"rd__spc-inline-post\"><strong>(3 в день)</strong></div>\n</section>\n<div class=\"rd__spc-inline-post\">Если дракон проваливает испытание, он может вместо этого сделать его успешным. </div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "special",
+              "value": 0,
+              "condition": "Если дракон проваливает испытание",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "resources.legres.value",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.mlYGMOClxW6OXdtr"
+    },
+    {
+      "_id": "2Mv6vTnnhrKEKRHe",
+      "name": "Легендарное действие: Обнаружение",
+      "type": "feat",
+      "img": "icons/creatures/eyes/lizard-single-slit-blue.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "resource": true
+            },
+            "altValue": {
+              "resource": true
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>Дракон совершает проверку Мудрости (Внимание). </p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "legendary",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "resources.legact.value",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.2Mv6vTnnhrKEKRHe"
+    },
+    {
+      "_id": "s9DQCuIDVBQeWDYI",
+      "name": "Легендарное действие: Атака хвостом",
+      "type": "feat",
+      "img": "icons/skills/wounds/injury-pain-impaled-hand-blood.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "resource": true
+            },
+            "altValue": {
+              "resource": true
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>Дракон совершает атаку хвостом.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "legendary",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "resources.legact.value",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.s9DQCuIDVBQeWDYI"
+    },
+    {
+      "_id": "XXWfk1WkrlxV8FsP",
+      "name": "Легендарное действие: Атака крыльями",
+      "type": "feat",
+      "img": "icons/creatures/abilities/wing-batlike-white-blue.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "resource": true
+            },
+            "altValue": {
+              "resource": true
+            }
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div><div><section id=\"secret-FP7vl3bYkCjXL7mg\" class=\"secret\"><p>Дракон бьёт крыльями. Все существа в пределах 15 футов от дракона должны пройти испытание Ловкости со СЛ 23, при провале они получают 15 ([[/r 2d6 + 8]]) дробящего урона и &amp;reference[prone]{распластываются}. После этого дракон может пролететь расстояние вплоть до половины его скорости полёта.</p></section><p>Дракон бьёт крыльями. Все существа в пределах 15 футов от дракона должны пройти испытание Ловкости. После этого дракон может пролететь.</p></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "legendary",
+              "value": 2,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "resources.legact.value",
+                  "value": "2",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "dex",
+              "dc": {
+                "calculation": "str",
+                "formula": "23"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.XXWfk1WkrlxV8FsP"
+    },
+    {
+      "_id": "nDUV0M9H3i1eZxpk",
+      "name": "Легендарные действия",
+      "type": "feat",
+      "img": "icons/magic/light/hand-sparks-glow-yellow.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div><div><p>Дракон может совершить 3 легендарных действия, выбирая из представленных ниже вариантов. За один раз можно использовать только одно легендарное действие и только в конце хода другого существа. Дракон восстанавливает использованные легендарные действия в начале своего хода.</p><ul><li><strong>Обнаружение. </strong></li><li><strong>Атака хвостом. </strong></li><li><strong>Атака крыльями. </strong></li></ul></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.nDUV0M9H3i1eZxpk"
+    },
+    {
+      "_id": "lGwx1dDmvXjkwRrA",
+      "name": "Логово: Корни и лианы",
+      "type": "feat",
+      "img": "icons/magic/nature/stealth-hide-eyes-green.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickTemplate": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div><div><section id=\"secret-jALojnJQGF3E6cxS\" class=\"secret\"><p>Цепкие корни и лианы появляются в пределах 20-футового радиуса с центром в точке на земле, которую дракон видит в пределах 120 футов от себя. Эта область становится &amp;reference[difficultterrain]{пересеченной местностью}, и все находящиеся там существа должны пройти испытание Силы со СЛ 15, при провале они будут &amp;reference[restrained]{обездвижены} корнями и лианами. Существо освободится, если оно или другое существо использует действие и успешно пройдёт проверку Силы со СЛ 15. Корни и лианы завянут, если дракон использует это действие логова еще раз или умрет.</p></section><p>Цепкие корни и лианы появляются в пределах 20-футового радиуса с центром в точке на земле, которую дракон видит в пределах 120 футов от себя. Эта область становится &amp;reference[difficultterrain]{пересеченной местностью}, и все находящиеся там существа должны пройти испытание Силы.</p></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "lair",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "radius",
+                "size": "20",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "str",
+              "dc": {
+                "calculation": "",
+                "formula": "15"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.lGwx1dDmvXjkwRrA"
+    },
+    {
+      "_id": "3vY1PaN1MjK0pXDW",
+      "name": "Логово: Стена из кустов",
+      "type": "feat",
+      "img": "icons/magic/nature/stealth-hide-eyes-green.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDamage": {
+            "context": {
+              "0": "",
+              "1": ""
+            },
+            "value": {
+              "0": true,
+              "1": true
+            },
+            "altValue": {
+              "0": true,
+              "1": true
+            }
+          },
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div><section id=\"secret-MHF8bzE4PC5gglqQ\" class=\"secret\"><p>На твёрдой поверхности в пределах 120 футов от дракона возникает стена из переплетённых кустарников, ощетинившихся шипами. Стена может быть до 60 футов в длину, 10 футов в высоту и 5 футов толщиной, она блокирует линию видимости. Когда стена появляется, каждое существо в пределах её области должно пройти испытание Ловкости со СЛ15. При провале существо получает 18 ([[/r 4d8]]) колющего урона, и его выталкивает на 5 футов из пространства стены, при этом оно само выбирает, по какую сторону стены оказаться. Существо может пройти сквозь стену, но это долго и больно. За каждый фут перемещения через стену существо тратит 4 фута скорости. Кроме того, существо в пространстве стены должно один раз в каждый раунд, в котором оно контактировало со стеной, проходить испытание Ловкости со СЛ 15, получая 18 ([[/r 4d8]]) колющего урона при провале или половину этого урона при успехе. У каждого 10-футового участка стены КБ 5, 15 ПЗ, уязвимость к урону огнём, устойчивость к дробящему и колющему урону и невосприимчивость к психическому урону. Эта стена погружается обратно в землю, если дракон использует это действие логова ещё раз или умрет. </p></section><p>На твёрдой поверхности в пределах 120 футов от дракона возникает стена из переплетённых кустарников, ощетинившихся шипами. Стена  блокирует линию видимости. Когда стена появляется, каждое существо в пределах её области должно пройти испытание Ловкости. Существо может пройти сквозь стену, но это долго и больно. За каждый фут перемещения через стену существо тратит 4 фута скорости. Кроме того, существо в пространстве стены должно один раз в каждый раунд, в котором оно контактировало со стеной, проходить испытание Ловкости.</p></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "lair",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "number": 4,
+                  "denomination": 8,
+                  "bonus": "",
+                  "types": [
+                    "piercing"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "mode": "whole",
+                    "number": null,
+                    "formula": ""
+                  }
+                },
+                {
+                  "number": 4,
+                  "denomination": 8,
+                  "bonus": "",
+                  "types": [
+                    "piercing"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "mode": "whole",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": "dex",
+              "dc": {
+                "calculation": "",
+                "formula": "15"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.3vY1PaN1MjK0pXDW"
+    },
+    {
+      "_id": "J7thridmz60IMs9h",
+      "name": "Логово: Магический туман",
+      "type": "feat",
+      "img": "icons/magic/nature/stealth-hide-eyes-green.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div><div><section id=\"secret-HYbeRKn8iKw5grTM\" class=\"secret\"><p>Магический туман окутывает одно существо, которое дракон видит в пределах 120 футов от себя. Это существо должно пройти испытание Мудрости со СЛ 15, при провале оно будет &amp;reference[charmed]{обворожено} драконом до значения инициативы 20 в следующем раунде.</p></section><p>Магический туман окутывает одно существо, которое дракон видит в пределах 120 футов от себя. Это существо должно пройти испытание Мудрости.</p></div></div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "lair",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "wis",
+              "dc": {
+                "calculation": "",
+                "formula": "15"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.J7thridmz60IMs9h"
+    },
+    {
+      "_id": "HAybS2kNjyXortiv",
+      "name": "Эффекты местности",
+      "type": "feat",
+      "img": "icons/environment/wilderness/cave-entrance-mountain-blue.webp",
+      "effects": [],
+      "folder": "26lyqwqMIFeyX8fs",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickTemplate": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<p>Местность, в которой находится логово легендарного зеленого дракона, искажается из-за его магии, что создаёт один или несколько из следующих эффектов:</p>\n<ul>\n<li>Заросли формируют лабиринтообразные проходы в пределах 1 мили от логова дракона. Эти заросли образуют стены высотой и толщиной 10 футов, блокирующие линию видимости. Существа могут перемещаться через эти заросли, но за каждый 1 фут перемещения придется потратить 4 фута скорости. Находящееся в зарослях существо должно один раз в каждый раунд, в котором оно контактировало с зарослями, проходить испытание Ловкости со СЛ 15, при провале получая 3 ([[/r 1d6]]) колющего урона от шипов. У каждого 10-футового куба зарослей КБ 5, 30 ПЗ, устойчивость к дробящему и колющему урону, уязвимость к урону огнём и невосприимчивость к урону громом и психическому урону. </li>\n<li>В пределах 1 мили от логова дракон не оставляет физических следов своего присутствия, если только сам не пожелает обратного. Выследить его там можно только при помощи магии. Кроме того, он игнорирует в этой местности ограничение перемещения и урон от растений, если те не магические и не существа, включая заросли, описанные выше. Растения сами расступаются перед драконом. Грызуны и птицы в пределах 1 мили от логова служат дракону глазами и ушами. Олени и прочая крупная дичь странным образом отсутствуют, что наводит на мысли о наличии невероятно прожорливого хищника. Если дракон умирает, грызуны и птицы теряют сверхъестественную связь с ним. Заросли остаются, но через [[/r 1d10]] дней они станут простыми растениями и обычной пересечённой местностью, потеряв шипы. </li>\n</ul>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "cube",
+                "size": "10",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "dex",
+              "dc": {
+                "calculation": "",
+                "formula": "15"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {},
+        "prerequisites": {
+          "level": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gUhAZxXWMnSVaVGp.HAybS2kNjyXortiv"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {},
+    "midi-qol": {
+      "concentration-damage": 0
+    }
+  },
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 27,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 12,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 25,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 20,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 17,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 19,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 21,
+        "calc": "natural",
+        "formula": "@attributes.ac.armor + @abilities.dex.mod +10"
+      },
+      "hp": {
+        "value": 385,
+        "max": 385,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "22d20 + 154"
+      },
+      "init": {
+        "ability": "",
+        "bonus": "0",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 80,
+        "swim": 40,
+        "walk": 40,
+        "units": "ft",
+        "hover": false
+      },
+      "attunement": {
+        "max": 3
+      },
+      "senses": {
+        "darkvision": 120,
+        "blindsight": 60,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "",
+      "exhaustion": 0,
+      "concentration": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "bonuses": {
+          "save": ""
+        },
+        "limit": 1
+      },
+      "death": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "success": 0,
+        "failure": 0
+      },
+      "hd": {
+        "spent": 0
+      }
+    },
+    "details": {
+      "biography": {
+        "value": "<div class=\"rd__b  rd__b--1\">\n<div class=\"rd__b  rd__b--2\">\n<blockquote>\n<p> «Вижу древнего эльфийского короля, величие которого давным-давно угасло, сгорбленного и дремлющего на троне. Зелёный дракон нашёртывает в уши короля, искажая его сны. Имя этому дракону Циан Кровавый Губитель, и он собирается уничтожить нас всех».</p>\n<p>- Пелиос из Эргота, провидец, Сильванести.</p>\n</blockquote>\n<p><strong>Зелёные драконы,</strong> самые хитрые и коварные из всех истинных драконов, используют для победы над врагами обман. У них своенравный характер, они чрезвычайно злы, и им очень нравится низвергать и совращать с пути истинного тех, кто добр душой. В древних лесах, в которых они живут, зелёные драконы проявляют агрессию, которая связана не с защитой территории, а с получением власти и богатства с наименьшими усилиями.</p>\n<p>Зелёного дракона можно узнать по изогнутой нижней челюсти и гребню, который начинается у глаз и идёт по хребту, достигая полной высоты сразу за головой. У зелёного дракона нет внешних ушных раковин, а вдоль шей идут кожистые пластины с шипами.</p>\n<p>Тонкие чешуйки змеёныша зелёного дракона такого тёмного оттенка зелёного, что кажутся практически чёрными. С возрастом его чешуйки становятся крупнее и светлее, приобретая оттенки изумрудного и оливкового, и ему становится проще сливаться с лесным окружением. Крылья его покрыты пятнистым узором, темнее у переднего края и светлее ближе к хвосту.</p>\n<p>Длина ног зелёного дракона по отношению к длине тела больше, чем у других драконов, что позволяет ему с лёгкостью перешагивать подлесок и лесные завалы. Благодаря длинной шее взрослый зелёный дракон может выглядывать из-за верхушек деревьев, не вставая на задние лапы.</p>\n<p><strong>Хитрые охотники. </strong>Зелёный дракон охотится, патрулируя свою лесную территорию с воздуха и земли. Он пожирает всех увиденных существ и, если голоден, будет питаться кустарниками и небольшими деревьями, но его любимая добыча эльфы.</p>\n<p>Зелёные драконы умелые лжецы и мастера демагогии. Они предпочитают запугивать тех, кто слабее их, а с другими драконами действуют более утончённо. Зелёный дракон нападает на животных и чудовищ без повода, особенно если имеет дело с потенциальной угрозой своей территории. При общении с разумными существами зелёный дракон проявляет жажду власти, которая может потягаться лишь с его жаждой сокровищ, присущей всем драконам. Он всегда ищет существ, которые могут помочь ему в продвижении его замыслов.</p>\n<p>Зелёный дракон преследует жертв, на которых собирается напасть, иногда по несколько дней. Если цель слаба, дракон будет рад ужасу, который вызовет его появление перед атакой. Он никогда не убивает всех врагов, предпочитая подчинить выживших с помощью запугивания. После он узнает о деятельности других существ рядом с его территорией, а также о сокровищах, которые можно найти неподалёку. Зелёные драконы иногда отпускают пленников, за которых могут получить выкуп. Прочие существа должны ежедневно доказывать свою ценность, иначе погибнут.</p>\n<p><strong>Манипулирующие интриганы. </strong>Зелёный дракон, хитрое и утончённое существо, подчиняет других существ своей воле, играя на их сокровенных желаниях. Существо, достаточно глупое, чтобы попытаться подчинить зелёного дракона, в итоге понимает, что дракон лишь притворялся покорным, оценивая при этом своего так называемого повелителя.</p>\n<p>Когда зелёные драконы манипулируют другими существами, они сладкоречивы, льстивы и утончённы. Среди своих же собратьев они громкоголосы и грубы, особенно если имеют дело с драконами равного возраста и статуса.</p>\n<p><strong>Конфликтные и порочные.</strong> Зеленые драконы иногда вступают в схватки с другими драконами за территорию, если владения тех пересекаются с лесом. Обычно при этом зелёный дракон отступает, но начинает ждать (иногда несколько десятков лет) удобного случая, чтобы убить конкурента и захватить его логово и сокровища.</p>\n<p>Зелёные драконы принимают на службу разумных существ, таких как гоблиноиды, кобольды, орки, эттеркапы, эттины и юань-ти. Им также нравится развращать эльфов и подчинять их своей воле. Иногда зелёный дракон страхом ломает сознание своих прислужников до состояния безумия, и туман, распространяющийся по лесу, разносит их мучительный бред.</p>\n<p><strong>Живые сокровища</strong>. Любимые сокровища зелёных драконов разумные существа, подчинённые их воле, включая выдающихся личностей, таких как народные герои, известные мудрецы и прославленные барды. Из материальных сокровищ зелёные драконы больше всего ценят изумруды, деревянные статуэтки, музыкальные инструменты и скульптуры гуманоидов.</p>\n<p><strong>Логово зелёного дракона</strong></p>\n<p>Обожающие леса зелёные драконы иногда соперничают за территорию с чёрными драконами в заболоченных лесах или белыми драконами в приполярной тайге. Однако то, что лес контролируется зелёным драконом, очень легко понять. В лесу легендарного зелёного дракона в воздухе постоянно висит туман, разносящий едкий запах его дыхания. Покрытые мхом деревья растут тесно друг к другу, оставляя при этом извилистые тропы, похожие на лабиринт в чаще леса. Свет, с трудом достигающий земли, несёт зеленоватый оттенок, и все звуки кажутся приглушёнными. </p>\n<p>В центре леса зелёный дракон выбирает пещеру в отвесной скале или склоне горы и устраивает там логово, предпочитая, чтобы вход был скрыт от посторонних глаз. Некоторые выбирают пещеры, скрытые за водопадами, или частично затопленные каверны, попасть в которые можно через озеро или ручей. Другие скрывают вход в логово растительностью.</p>\n<h2>Цветные драконы</h2>\n<p>Белые, зелёные, красные, синие и чёрные драконы представляют злую сторону драконьего рода. Агрессивные, прожорливые и тщеславные цветные драконы — это тёмные мудрецы и могучие тираны, которых боятся все существа — даже другие драконы.</p>\n<div class=\"rd__b  rd__b--1\">\n<div class=\"rd__b  rd__b--2\">\n<div class=\"rd__b  rd__b--1\">\n<div class=\"rd__b  rd__b--2\"><strong>Ведомые алчностью</strong>. Цветные драконы жаждут сокровищ, и эта алчность видна во всех их заговорах и планах, Они считают, что все богатства мира принадлежат им по праву, а потому захватывают эти сокровища, не считаясь с гуманоидами и другими существами, «обокравшими» их. Сокровища драконов, состоящие из груд монет, сверкающих самоцветов и магических предметов, достойны легенд. Однако цветные драконы нисколько не заинтересованы в торговле и копят богатства лишь ради них самих.</div>\n<div class=\"rd__b  rd__b--2\"><strong>Эгоистичные создания. </strong>Всех цветных драконов объединяет чувство превосходства, ведь себя они считают самыми сильными и достойными из всех смертных существ. С другими существами они взаимодействуют только ради собственных интересов. Они искренне верят, что рождены править другими, и эта вера — краеугольный камень личности дракона и его взглядов на мир. Пытаться усмирить цветного дракона — все равно что убеждать ветер перестать дуть. Для этих существ гуманоиды — животные, пригодные лишь в качестве пищи или рабов и совершенно недостойные уважения.</div>\n<div class=\"rd__b  rd__b--2\"><strong>Опасные логова</strong>. Логово дракона его тронный зал и хранилище сокровищ. Драконы устойчивы к эффектам окружающей среды, так что выбирают или строят логово не как укрытие, а как крепость, предпочитая многочисленные входы и выходы и безопасное место для сокровищ.</div>\n<div class=\"rd__b  rd__b--2\">Большая часть логовищ цветных драконов скрывается в опасных и далеких местах, отчего только самые отважные смертные могут туда попасть. Черный дракон может создать логово в сердце обширного болота, а красный дракон может захватить жерло действующего вулкана. К естественной защите своего логова мощные цветные драконы добавляют магических стражей, ловушки и рабов, защищающих сокровища.</div>\n<div class=\"rd__b  rd__b--2\"><strong>Королева Злых Драконов.</strong> Тиамат, Королева Драконов, — главное божество злых драконов. Она обитает на Авернусе, первом круге Девяти Преисподних. Будучи низшим божеством, Тиамат может даровать своим последователям заклинания, хоть ей и претит делиться силой. Она воплощает в себе алчность всех злых драконов, так как считает, что вся мультивселенная и все сокровища когда-нибудь станут её и только её.</div>\n<div class=\"rd__b  rd__b--2\">Тиамат — это гигантская драконица с пятью головами цветов тех драконов, что поклоняются ей, белой, зелёной, красной, синей и чёрной. На поле боя она воплощение ужаса и может уничтожать целые армии пятью своими дыханиями, мощными заклинаниями и громадными когтями.</div>\n<div class=\"rd__b  rd__b--2\">Самый ненавистный враг Тиамат — Бахамут, Платиновый Дракон, с которым ей приходится делить власть над верой всех драконов. Она также затаила злобу на Асмодея, который давно забрал у неё власть над Авернусом и продолжает сдерживать силу Королевы Драконов. </div>\n</div>\n<p><strong>Истинные драконы</strong> это крылатые рептилии древнего происхождения, обладающие ужасающей силой. Они славятся хищным коварством и алчностью, а самые старые драконы считаются сильнейшими существами в мире. Драконы — это ещё и магические создания, чьи врождённые силы подпитывают их губительное дыхание и прочие сверхъестественные способности.</p>\n<p>Драконья кровь течёт во многих существах, в том числе в вивернах и драконовых черепахах, но истинные драконы делятся на две обширные категории: Цветных и металлических драконов. Белые, зелёные, красные, синие и черные драконы эгоистичны, злы, и все их боятся. Бронзовые, золотые, латунные, медные и серебряные драконы добры и благородны, их уважают все те, кто мудры.</p>\n<p>Цели и идеалы драконов очень разнятся, но все истинные драконы жаждут богатств, копят груды монет и собирают драгоценные камни, ювелирные украшения и магические предметы. Драконы, накопившие много сокровищ, не любят оставлять их надолго и покидают логово, только чтобы присмотреть за своими владениями или для пропитания.</p>\n<p>Истинные драконы проходят в течение жизни через четыре стадии: от слабого змеёныша до древнего дракона, возраст которого может перевалить за тысячу лет. За такое время мощь дракона может стать несравненной, а стоимость сокровищ достигнет баснословных размеров.</p>\n<div class=\"rd__b-inset \">\n<p><strong>Вариант: драконы и врождённые заклинания</strong></p>\n<p>Драконы — изначально магические существа, которые при помощи этого необязательного правила способны с возрастом овладеть несколькими заклинаниями.</p>\n<p>Дракон молодого возраста или старше может сотворять заклинания в количестве, равном его модификатору Харизмы. Каждое заклинание может быть сотворено только один ра3 в день, оно не требует реагентов, а круг заклинания не может превышать треть класса опасности дракона (округляя в меньшую сторону). Бонус дракона к броску атаки заклинанием равен его бонусу умения + его бонусу Харизмы. СЛ испытаний против заклинаний дракона равна 8+ его бонус умения + его модификатор Харизмы</p>\n</div>\n<p><strong>Возраст драконов</strong></p>\n<table class=\"rd__table  stripe-odd-table\" style=\"width:556.063px;height:85px\">\n<thead>\n<tr style=\"height:17px\">\n<th class=\"col-4\" style=\"width:139.469px;height:17px\" data-rd-isroller=\"false\">Категория возраста</th>\n<th class=\"col-4\" style=\"width:164.906px;height:17px\" data-rd-isroller=\"false\">Размер</th>\n<th class=\"col-4\" style=\"width:247.688px;height:17px\" data-rd-isroller=\"false\">Возраст</th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"height:17px\">\n<td class=\"col-4\" style=\"width:137.469px;height:17px\">Змеёныш</td>\n<td class=\"col-4\" style=\"width:164.906px;height:17px\">Средний</td>\n<td class=\"col-4\" style=\"width:247.688px;height:17px\">5 лет или меньше</td>\n</tr>\n<tr style=\"height:17px\">\n<td class=\"col-4\" style=\"width:137.469px;height:17px\">Молодой</td>\n<td class=\"col-4\" style=\"width:164.906px;height:17px\">Крупный</td>\n<td class=\"col-4\" style=\"width:247.688px;height:17px\">6–100 лет</td>\n</tr>\n<tr style=\"height:17px\">\n<td class=\"col-4\" style=\"width:137.469px;height:17px\">Взрослый</td>\n<td class=\"col-4\" style=\"width:164.906px;height:17px\">Огромный</td>\n<td class=\"col-4\" style=\"width:247.688px;height:17px\">101–800 лет</td>\n</tr>\n<tr style=\"height:17px\">\n<td class=\"col-4\" style=\"width:137.469px;height:17px\">Древний</td>\n<td class=\"col-4\" style=\"width:164.906px;height:17px\">Исполинский</td>\n<td class=\"col-4\" style=\"width:247.688px;height:17px\">801 год или больше</td>\n</tr>\n</tbody>\n</table>\n<div class=\"rd__b  rd__b--1\">\n<h3><strong>Действия логова</strong></h3>\n<p>При значении инициативы 20 (в случае ничьей действуя после конкурентов) дракон совершает действие логова, создавая один из описанных ниже эффектов; дракон не может использовать один эффект два раунда подряд. </p>\n<ul>\n<li>Цепкие корни и лианы появляются в пределах 20-футового радиуса с центром в точке на земле, которую дракон видит в пределах 120 футов от себя. Эта область становится пересеченной местностью, и все находящиеся там существа должны пройти испытание Силы со СЛ 15, при провале они будут &amp;reference[restrained]{обездвижены} корнями и лианами. Существо освободится, если оно или другое существо использует действие и успешно пройдёт проверку Силы со СЛ 15. Корни и лианы завянут, если дракон использует это действие логова еще раз или умрет.</li>\n<li>На твёрдой поверхности в пределах 120 футов от дракона возникает стена из переплетённых кустарников, ощетинившихся шипами. Стена может быть до 60 футов в длину, 10 футов в высоту и 5 футов толщиной, она блокирует линию видимости. Когда стена появляется, каждое существо в пределах её области должно пройти испытание Ловкости со СЛ15. При провале существо получает 18 ([[/r 4d8]]) колющего урона, и его выталкивает на 5 футов из пространства стены, при этом оно само выбирает, по какую сторону стены оказаться. Существо может пройти сквозь стену, но это долго и больно. За каждый фут перемещения через стену существо тратит 4 фута скорости. Кроме того, существо в пространстве стены должно один раз в каждый раунд, в котором оно контактировало со стеной, проходить испытание Ловкости со СЛ 15, получая 18 ([[/r 4d8]]) колющего урона при провале или половину этого урона при успехе. У каждого 10-футового участка стены КБ 5, 15 ПЗ, уязвимость к урону огнём, устойчивость к дробящему и колющему урону и невосприимчивость к психическому урону. Эта стена погружается обратно в землю, если дракон использует это действие логова ещё раз или умрет. </li>\n<li>Магический туман окутывает одно существо, которое дракон видит в пределах 120 футов от себя. Это существо должно пройти испытание Мудрости со СЛ 15, при провале оно будет обворожено драконом до значения инициативы 20 в следующем раунде.</li>\n</ul>\n<strong>Эффекты местности</strong>\n<p>Местность, в которой находится логово легендарного зеленого дракона, искажается из-за его магии, что создаёт один или несколько из следующих эффектов:</p>\n<ul>\n<li>Заросли формируют лабиринтообразные проходы в пределах 1 мили от логова дракона. Эти заросли образуют стены высотой и толщиной 10 футов, блокирующие линию видимости. Существа могут перемещаться через эти заросли, но за каждый 1 фут перемещения придется потратить 4 фута скорости. Находящееся в зарослях существо должно один раз в каждый раунд, в котором оно контактировало с зарослями, проходить испытание Ловкости со СЛ 15, при провале получая 3 ([[/r 1d6]]) колющего урона от шипов. У каждого 10-футового куба зарослей КБ 5, 30 ПЗ, устойчивость к дробящему и колющему урону, уязвимость к урону огнём и невосприимчивость к урону громом и психическому урону. </li>\n<li>В пределах 1 мили от логова дракон не оставляет физических следов своего присутствия, если только сам не пожелает обратного. Выследить его там можно только при помощи магии. Кроме того, он игнорирует в этой местности ограничение перемещения и урон от растений, если те не магические и не существа, включая заросли, описанные выше. Растения сами расступаются перед драконом. Грызуны и птицы в пределах 1 мили от логова служат дракону глазами и ушами. Олени и прочая крупная дичь странным образом отсутствуют, что наводит на мысли о наличии невероятно прожорливого хищника. Если дракон умирает, грызуны и птицы теряют сверхъестественную связь с ним. Заросли остаются, но через [[/r 1d10]] дней они станут простыми растениями и обычной пересечённой местностью, потеряв шипы. </li>\n</ul>\n</div>\n</div>\n</div>\n</div>\n</div>",
+        "public": ""
+      },
+      "alignment": "принципиальный злой",
+      "race": null,
+      "type": {
+        "value": "dragon",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "environment": "Forest",
+      "cr": 22,
+      "spellLevel": 0,
+      "ideal": "",
+      "bond": "",
+      "flaw": ""
+    },
+    "traits": {
+      "size": "grg",
+      "di": {
+        "value": [
+          "poison"
+        ],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [
+          "poisoned"
+        ],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "draconic"
+        ],
+        "custom": ""
+      },
+      "dm": {
+        "amount": {},
+        "bypasses": []
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "skills": {
+      "acr": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ani": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "arc": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ath": {
+        "value": 0,
+        "ability": "str",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "dec": {
+        "value": 1,
+        "ability": "cha",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "his": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ins": {
+        "value": 1,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "itm": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "inv": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "med": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "nat": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prc": {
+        "value": 2,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prf": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "per": {
+        "value": 1,
+        "ability": "cha",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "rel": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "slt": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ste": {
+        "value": 1,
+        "ability": "dex",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "sur": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      }
+    },
+    "tools": {},
+    "spells": {
+      "spell1": {
+        "value": 0,
+        "override": null
+      },
+      "spell2": {
+        "value": 0,
+        "override": null
+      },
+      "spell3": {
+        "value": 0,
+        "override": null
+      },
+      "spell4": {
+        "value": 0,
+        "override": null
+      },
+      "spell5": {
+        "value": 0,
+        "override": null
+      },
+      "spell6": {
+        "value": 0,
+        "override": null
+      },
+      "spell7": {
+        "value": 0,
+        "override": null
+      },
+      "spell8": {
+        "value": 0,
+        "override": null
+      },
+      "spell9": {
+        "value": 0,
+        "override": null
+      },
+      "pact": {
+        "value": 0,
+        "override": null
+      },
+      "spell0": {
+        "value": 0,
+        "override": null
+      }
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "resources": {
+      "legact": {
+        "value": 3,
+        "max": 3
+      },
+      "legres": {
+        "value": 3,
+        "max": 3
+      },
+      "lair": {
+        "value": true,
+        "initiative": 20
+      }
+    },
+    "source": {
+      "page": "",
+      "license": "",
+      "rules": "2014",
+      "book": "MM"
+    }
+  },
+  "prototypeToken": {
+    "name": "Древний зелёный дракон",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 4,
+    "height": 4,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "flags": {},
+    "randomImg": false,
+    "light": {
+      "alpha": 0.25,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "type": null,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5,
+      "negative": false,
+      "priority": 0
+    },
+    "texture": {
+      "src": "modules/laaru-dnd5-hw/assets/images/MM/Ancient Green Dragon.png",
+      "tint": "#ffffff",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": true,
+      "range": 120,
+      "brightness": 0,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "appendNumber": false,
+    "prependAdjective": false,
+    "hexagonalShape": 0,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.1",
+    "createdTime": 1726582948342,
+    "modifiedTime": 1726582948342,
+    "lastModifiedBy": "UkvoHT2ggFpbOAml"
+  },
+  "folder": "26lyqwqMIFeyX8fs",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "UkvoHT2ggFpbOAml": 3
+  },
+  "_key": "!actors!gUhAZxXWMnSVaVGp"
+}

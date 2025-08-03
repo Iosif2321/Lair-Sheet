@@ -1,0 +1,181 @@
+{
+  "_id": "h9t1ULs5hJWajTQZ",
+  "name": "Клетка душ / Soul Cage",
+  "type": "spell",
+  "img": "icons/magic/death/skull-flames-white-blue.webp",
+  "effects": [],
+  "folder": "YqnZK1fMA9x394B5",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "soul%20cage_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Soul Cage",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div><p>Это заклинание захватывает душу гуманоида, когда он умирает, и запирает её внутри крошечной клетки, которую вы используете в качестве реагента.</p><p>Украденная душа остается внутри клетки до тех пор, пока заклинание не закончится или пока вы не уничтожите клетку, что также окончит заклинание. Пока у вас есть душа внутри клетки, вы можете использовать ее любым из способов, описанных ниже.</p><p>Вы можете использовать захваченную душу до шести раз. Как только вы используете душу в шестой раз, она высвобождается, и заклинание заканчивается.</p><p>Пока душа находится в клетке, мёртвый гуманоид, которому она принадлежит, не может быть возрождён.</p><ul><li><p><strong>Кража жизни</strong>. Бонусным действием вы можете впитать жизненную силу души и восстановить себе [[/r 2d8]] ПЗ.</p></li><li><p><strong>Вопрос душе</strong>. Вы задаете душе вопрос (действие не требуется) и получаете короткий телепатический ответ, который вы можете понять независимо от используемого языка. Душа знает только то, что она знала при жизни, но она должна отвечать вам максимально правдиво, ничего не скрывая. Ответ должен состоять не более чем из одного-двух предложений и может звучать загадочно.</p></li><li><p><strong>Заимствование опыта</strong>. Бонусным действием вы можете усилить себя жизненным опытом души, чтобы совершить свой следующий бросок атаки, проверку способности или испытания с преимуществом. Если вы не используете это преимущество до начала своего следующего хода, оно будет потеряно.</p></li><li><p><strong>Глаза мертвеца</strong>. Вы можете использовать действие, чтобы назвать место, которое гуманоид видел при жизни, что создаст в этом месте невидимый сенсор, если оно находится на одном плане существования с вами. Сенсор остаётся до тех пор, пока вы держите концентрацию, вплоть до 10 минут (как если бы вы концентрировались на заклинании). Вы можете видеть и слышать с помощью этого сенсора, как будто бы вы сами находитесь в том месте и используете свои собственные органы чувств. Существо, которое может видеть сенсор (например, если оно использует видение невидимого @Compendium[laaru-dnd5-hw.spells.tVkOKnYPKNHRlHdH]{Видение невидимого} или &amp;reference[truesight]{истинное зрение}), видит полупрозрачный образ истерзанного гуманоида, чью душу вы заперли в клетке. </p></li></ul></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "reaction",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "8",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 6,
+    "school": "nec",
+    "materials": {
+      "value": "крошечная серебряная клетка стоимостью 100 зм",
+      "consumed": false,
+      "cost": 100,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "heal",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "healing": {
+          "number": 2,
+          "denomination": 8,
+          "bonus": "",
+          "types": [
+            "healing"
+          ],
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "kletka-dush--soul-cage"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028227412,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!h9t1ULs5hJWajTQZ"
+}

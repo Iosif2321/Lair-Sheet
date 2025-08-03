@@ -1,0 +1,237 @@
+{
+  "name": "Алая плеть (оружие) / Crimson Lash (weapon)",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "img": "icons/magic/fire/beam-strike-whip-red.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TDCSR",
+      "hash": "inescapable%20lash_tdcsr"
+    },
+    "core": {
+      "sourceId": "Compendium.world.taldorei.7pVGOFwhvr3hgLtS"
+    },
+    "midi-qol": {
+      "fumbleThreshold": null,
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Crimson Lash (weapon)",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div><p>Плеть из свернувшейся крови появляется из вашей руки, после сотворения @UUID[Compendium.laaru-dnd5-hw.spells.PdxgA6n0aT710drX]{заклинания}.</p><section id=\"secret-msDZhTFEDHPwZzgw\" class=\"secret\"><p>Это магическое оружие существует до тех пор, пока заклинание активно. Оно считается простым оружием ближнего боя, в котором вы умелы и обладает свойствами Лёгкое, Фехтовальное и Дистанция.</p><p>Также, вы можете решить использовать свою базовую характеристику, вместо Ловкости и Силы<strong>*</strong> для определения бросков атаки и урона. Кость урона этого оружия равна кости здоровья<strong>**</strong>, потраченной для сотворения этого заклинания, и урон оружия становится некротическим уроном.</p><p><strong>*</strong>Поменяйте при необходимости в <em>Подробности</em>.<br /><strong>**</strong>Установите самостоятельно в <em>Подробности, </em>в строке Урон (формула).</p></section><p>Каждый раз, когда существо получает урон от атак этим оружием, максимум его ПЗ уменьшается на количество, равное полученному урону.</p></div><div id=\"gtx-trans\" style=\"position:absolute;left:27px;top:302.136px\"><div class=\"gtx-trans-icon\"><p> </p></div></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "GH:PG",
+      "revision": 1,
+      "book": "GH:PG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 3,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "equipped": true,
+    "rarity": "common",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "range": {
+      "value": null,
+      "long": 0,
+      "units": "ft",
+      "reach": null
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [
+          "necrotic"
+        ],
+        "custom": {
+          "enabled": true,
+          "formula": "+ @mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      }
+    },
+    "armor": {
+      "value": 10
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "fin",
+      "mgc",
+      "rch",
+      "lgt"
+    ],
+    "proficient": 1,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "simpleM",
+      "baseItem": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "dex",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "alaya-plet-oruzhie--crimson-lash-weapon",
+    "container": null,
+    "attuned": false,
+    "ammunition": {},
+    "magicalBonus": null
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.world.taldorei.7pVGOFwhvr3hgLtS",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "zJpbxQoTE1nYoMZf",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!zJpbxQoTE1nYoMZf"
+}

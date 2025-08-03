@@ -1,0 +1,27 @@
+{
+  "name": "Расстояние до цели",
+  "type": "script",
+  "scope": "global",
+  "_id": "zVZjSa98pydqCY47",
+  "author": "wIK3LzFoWNm1tl8G",
+  "img": "icons/tools/navigation/map-chart-tan.webp",
+  "command": "//Выберите один токен целью (выделите и нажмите на клавиатуре латинскую Т)\n//Дистанция считается по системе сетки 5х5.\n\nlet message = \"\";\nlet position = \"\";\n\nfor (let target of game.user.targets) {\n\n    const ray = new Ray(token.center, target.center);\n    const segments = [{ ray }];\n    let groundDistance = canvas.grid.measureDistances(segments, { gridSpaces: true })[0];\n\n    // Get elevations\n    let actorElevation = token.document.elevation || token.actor.system.elevation || 0;\n    let targetElevation = target.document.elevation || target.actor.system.elevation || 0;\n\n    // Everything is relative\n    let relativeElevation = actorElevation - targetElevation;\n    if (relativeElevation > 0) {\n        position = \"above\";\n    } else if (relativeElevation < 0) {\n        position = \"below\";\n    } else {\n        position = \"Расстояние\";\n    }\n\n    relativeElevation = Math.abs(relativeElevation);\n    let realDistance = Math.sqrt(Math.pow(groundDistance, 2) + Math.pow(relativeElevation, 2));\n\n    message += `🎯${position} до цели <b>${target.name}</b> составляет <b>${realDistance.toFixed(2)} футов.</b><br>`;\n}\n\nif (message) {\n    ChatMessage.create({\n        content: message,\n        whisper: ChatMessage.getWhisperRecipients(token.actor.name)\n    });\n}",
+  "folder": "zM3lWtEgwdtFJ9Xy",
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1729169051285,
+    "modifiedTime": 1729169051285,
+    "lastModifiedBy": "wIK3LzFoWNm1tl8G"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wIK3LzFoWNm1tl8G": 3
+  },
+  "_key": "!macros!zVZjSa98pydqCY47"
+}

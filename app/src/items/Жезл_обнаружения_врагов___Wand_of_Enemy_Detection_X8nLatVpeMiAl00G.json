@@ -1,0 +1,263 @@
+{
+  "_id": "X8nLatVpeMiAl00G",
+  "name": "Жезл обнаружения врагов / Wand of Enemy Detection",
+  "type": "consumable",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Wand%20of%20Enemy%20Detection.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "wand%20of%20enemy%20detection_dmg"
+    },
+    "core": {
+      "sourceId": "Compendium.world.dmgitems.x6pRCjFWZcHShmQa"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Wand of Enemy Detection",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 7
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div><p><em>Требуется настроенность</em></p><p>У этого жезла 7 зарядов. Пока вы держите его, вы можете использовать действие и потратить 1 заряд, чтобы произнести командное слово. Всю следующую минуту вы знаете, в каком направлении есть ближайшее враждебное вам существо в пределах 60 футов, но не на каком расстоянии. Жезл чувствует присутствие враждебных существ, даже если они эфирные, &amp;reference[invisible]{невидимые}, замаскированные или прячутся, а также если они видны. Эффект прекращается, если вы перестанете держать жезл.</p><p>Ежедневно на рассвете жезл восстанавливает [[/r 1d6 + 1]] потраченных зарядов. Потратив последний заряд жезла, бросьте [[/r d20]]. Если выпало 1, жезл рассыпается в пепел и уничтожается.</p></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": false,
+    "rarity": "rare",
+    "identified": true,
+    "uses": {
+      "max": "7",
+      "autoDestroy": false,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "wand",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "Командное слово",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "1d6 +1",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      },
+      "dnd5eactivity100": {
+        "_id": "dnd5eactivity100",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "Командное слово",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "wis"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "zhezl-obnaruzheniya-vragov--wand-of-enemy-detection",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": [
+      "mgc"
+    ]
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.world.dmgitems.x6pRCjFWZcHShmQa",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739363643401,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": "dRBK3J27k3uNqFqe",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!X8nLatVpeMiAl00G"
+}

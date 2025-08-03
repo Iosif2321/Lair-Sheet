@@ -1,0 +1,180 @@
+{
+  "_id": "Zdd6V9Ms2wsStyLv",
+  "name": "Трансформация Тензера / Tenser's Transformation",
+  "type": "spell",
+  "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+  "effects": [],
+  "folder": "YqnZK1fMA9x394B5",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "tenser's%20transformation_xge"
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Tenser's Transformation",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы наделяете себя выносливостью и воинской доблестью, подпитываемыми магией. Пока заклинание не закончится, вы не можете творить заклинания, но получаете следующие преимущества:</p>\n<ul>\n<li>Вы получаете 50 временных ПЗ. Если какое-либо их количество остаётся, когда заклинание заканчивается, они теряются.</li>\n<li>Вы совершаете с преимуществом все броски атаки, которые вы делаете простым или воинским оружием.</li>\n<li>Когда вы попадаете по цели атакой оружием, она получает дополнительный урон силой [[/r 2d12]].</li>\n<li>Вы получаете владение всеми видами доспехов, щитов, простого и воинского оружия.</li>\n<li>Вы получаете владение испытаниями Силы и Выносливости.</li>\n<li>Если вы в свой ход совершаете действие @Compendium[laaru-dnd5-hw.actions.Y0O7jQKh7vGMSTBu]{Атака}, вы можете совершить две атаки вместо одной. Вы игнорируете это преимущество, если у вас уже есть подобное умение, которое даёт вам дополнительные атаки (например, Дополнительная атака).</li>\n</ul>\n<p>Сразу после того, как заклинание заканчивается, вы должны преуспеть в испытании Выносливости со СЛ 15 или получаете один уровень &amp;reference[exhaustion]{Утомления}.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "10",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "type": "self",
+        "count": "",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "units": "self"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 6,
+    "school": "trs",
+    "materials": {
+      "value": "несколько волосков быка",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 2,
+              "denomination": 12,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "con",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "transformaciya-tenzera--tensers-transformation"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028223019,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!Zdd6V9Ms2wsStyLv"
+}

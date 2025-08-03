@@ -1,0 +1,210 @@
+{
+  "_id": "niAor8tMV2uAOIEH",
+  "name": "Призыв духа зверя / Summon Beast",
+  "type": "spell",
+  "img": "icons/creatures/abilities/cougar-roar-rush-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы призываете дух зверя. Существо появляется в незанятом пространстве, которое вы можете видеть в пределах дистанции. Воплощённая форма духа использует блок параметров @Compendium[laaru-dnd5-hw.monsters.wUcmQ55NCb2UTIbd]{Духа Зверя}.</p><p>Когда вы сотворяете заклинание, выберите среду обитания: @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.r6WLgBa928apf3gR]{Воздух}, @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.or49lS91IZNtaGp3]{Земля} или @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.w6zFbCUkZ5ZGvYUG]{Вода}. Дух принимает форму животного по вашему выбору, для которого выбранная среда обитания является родной и имеет соответствующие признаки, описанные в блоке параметров. Существо исчезает, когда его ПЗ опускаются до 0 или когда заклинание заканчивается.</p><p>Это существо дружественно вам и вашим спутникам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие @Compendium[laaru-dnd5-hw.actions.UMuz44p8fXeLCZn7]{Уклонение} и перемещается, избегая опасностей.</p><p><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку 3-го круга или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке параметров.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "",
+      "custom": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "type": "space",
+        "count": "1",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "90",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 2,
+    "school": "con",
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration",
+      "mgc"
+    ],
+    "materials": {
+      "value": "перо, пучок меха и рыбий хвост внутри позолоченного жёлудя стоимостью не менее 200 зм",
+      "consumed": false,
+      "cost": 200,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "summon",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "bonuses": {
+          "ac": "@item.level",
+          "hp": "(@item.level - 2) * 5",
+          "attackDamage": "@item.level",
+          "saveDamage": "",
+          "healing": "",
+          "hd": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "proficiency": true,
+          "attacks": true,
+          "saves": false
+        },
+        "profiles": [
+          {
+            "count": "",
+            "name": "Вода",
+            "_id": "Nfo8BV7EebXLoIoQ",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.w6zFbCUkZ5ZGvYUG",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Воздух",
+            "_id": "f37Egp6vbW6ObEWy",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.r6WLgBa928apf3gR",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Земля",
+            "_id": "2vmHKKPiPChrnZZr",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.or49lS91IZNtaGp3",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          }
+        ],
+        "summon": {
+          "identifier": "",
+          "mode": "",
+          "prompt": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "prizyv-duha-zverya--summon-beast"
+  },
+  "effects": [],
+  "folder": "1laDscZ7Bn7NoviD",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TCE",
+      "hash": "summon%20beast_tce"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Summon Beast",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028232243,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!niAor8tMV2uAOIEH"
+}

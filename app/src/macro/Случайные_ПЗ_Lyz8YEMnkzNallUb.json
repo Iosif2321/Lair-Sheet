@@ -1,0 +1,37 @@
+{
+  "name": "Случайные ПЗ",
+  "type": "script",
+  "author": "ekSJaSkR4p1sowmM",
+  "img": "icons/magic/life/heart-area-circle-red-green.webp",
+  "scope": "global",
+  "command": "/**\n * Бросок/переброс со случайных значений Пунктов здоровья (по формулам) для выделенных токенов.\n * Author: Tielc#7191, исправление для FVTT12 - Elfrey: https://boosty.to/elfrey\n */\n\nconst tokens = canvas.tokens.controlled;\nlet choice = 0;\n\nif (tokens.length > 0){\n    tokens.forEach(rollHP);\n} else {\n    printMessage(\"No Tokens were selected\");\n}\n\nasync function rollHP(token, index){\n    let actor = token.actor;\n    let formula = actor.system.attributes.hp.formula;\n        \n    if (actor.type != \"npc\" || !formula) return;\n    \n    \nlet hp = (await new Roll(formula).roll()).total;\n    \n    await actor.update({\"system.attributes.hp.value\": hp, \"system.attributes.hp.max\": hp});\n    \n    printMessage('<h2>' + actor.name + '</h2><strong>HP:</strong> ' + actor.system.attributes.hp.value + '/' + actor.system.attributes.hp.max + '<span style=\"float:right\"><em>(' + token._id + ')</em></span>');\n}\n\nfunction printMessage(message){\n    let chatData = {\n        user : game.user._id,\n        content : message,\n        blind: true,\n        whisper : ChatMessage.getWhisperRecipients(\"GM\").map(u => u._id)\n    };\n\n    ChatMessage.create(chatData,{});    \n}",
+  "flags": {
+    "exportSource": {
+      "world": "avernus",
+      "system": "dnd5e",
+      "coreVersion": "9.269",
+      "systemVersion": "1.6.3"
+    },
+    "core": {
+      "sourceId": "Macro.fSyGEAXUVN12sTo1"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "3.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1672487142137,
+    "modifiedTime": 1726118113763,
+    "lastModifiedBy": "Ap3u2NndQnPP92Ld",
+    "compendiumSource": "Macro.fSyGEAXUVN12sTo1",
+    "duplicateSource": null
+  },
+  "folder": "vwcXHRDEDhe74QLA",
+  "sort": 125000,
+  "ownership": {
+    "default": 0,
+    "ekSJaSkR4p1sowmM": 3
+  },
+  "_id": "Lyz8YEMnkzNallUb",
+  "_key": "!macros!Lyz8YEMnkzNallUb"
+}

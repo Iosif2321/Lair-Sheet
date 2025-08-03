@@ -1,0 +1,320 @@
+{
+  "name": "Черта: Пылкость огненного великана",
+  "type": "feat",
+  "system": {
+    "description": {
+      "value": "<p><em><strong>Требование</strong>: 4 уровень, черта «@UUID[Compendium.laaru-dnd5-hw.classfeatures.Item.unbQQwlHxrDhNtcz]{Удар Великанов} (Огненный удар)»</em></p><p>Вы проявляете ярость битвы, характерную для огненных великанов, что даёт вам следующие преимущества:</p><p><strong>Повышение характеристик</strong>. Увеличьте значение Силы, Выносливости или Мудрости на 1 при максимуме 20.</p><p><strong>Рождённый пламенем</strong>. Вы получаете устойчивость к урону огнём.</p><p><strong>Пылающее воспламенение</strong>. Когда вы совершаете действие @UUID[Compendium.laaru-dnd5-hw.actions.Y0O7jQKh7vGMSTBu]{Атака} в свой ход, вы можете заменить одну атаку магическим взрывом пламени. Каждое существо по вашему выбору в пределах сферы радиусом 15 футов с центром на вас должно пройти испытание Ловкости (СЛ равна 8 + ваш бонус умения + модификатор характеристики, увеличенной этой чертой). При провале существо получает [[/r 1d8]] + ваш бонус умения урона огнём и @UUID[Compendium.laaru-dnd5-hw.actions.apswG1jicwhlWT5R]{ослепляется} до начала вашего следующего хода. При успехе существо получает только половину урона. Вы можете использовать «Пылающее воспламенение» количество раз, равное вашему бонусу умения (но не больше раза в ход), и вы восстанавливаете все израсходованные использования, когда заканчиваете долгий отдых.</p><section class=\"secret\" id=\"secret-6CM8Wntw0RjZujdG\"><p><strong>Примечание</strong></p><p> В настройках испытания выставлена ваша Сила, при необходимости, смените характеристику.</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "book": "BGG",
+      "page": "",
+      "license": "",
+      "rules": "2014",
+      "custom": "BGG"
+    },
+    "activation": {
+      "type": "special",
+      "cost": null,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": ""
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": "",
+      "width": null,
+      "units": "",
+      "type": "",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": ""
+    },
+    "uses": {
+      "value": null,
+      "max": "@prof",
+      "per": "lr",
+      "recovery": "",
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": null,
+      "amount": null,
+      "scale": false
+    },
+    "ability": "",
+    "actionType": "save",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "dex",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "type": {
+      "value": "feat",
+      "subtype": "general"
+    },
+    "requirements": "4 уровень, черта «Удар Великанов (Огненный удар)»",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "enchantment": null,
+    "summons": null,
+    "prerequisites": {
+      "level": 4
+    },
+    "properties": [],
+    "activities": {
+      "MHbOX7yYYoXxPgOt": {
+        "type": "save",
+        "_id": "MHbOX7yYYoXxPgOt",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "gD14FTNZvegsXxMM"
+          }
+        ],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": "sphere",
+            "size": "15",
+            "count": ""
+          },
+          "affects": {
+            "choice": false,
+            "type": "enemy",
+            "count": "",
+            "special": ""
+          },
+          "override": false,
+          "prompt": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "damage": {
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 1,
+              "denomination": "8",
+              "bonus": "@prof",
+              "types": [
+                "fire"
+              ]
+            }
+          ],
+          "onSave": "none"
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "str",
+            "formula": ""
+          }
+        },
+        "name": "Пылающее возмездие",
+        "img": "",
+        "appliedEffects": []
+      }
+    }
+  },
+  "img": "icons/magic/fire/elemental-fire-flying.webp",
+  "effects": [
+    {
+      "name": "Устойчивость",
+      "img": "icons/magic/fire/elemental-fire-flying.webp",
+      "origin": "Compendium.laaru-dnd5-hw.classfeatures.Item.fVQTmnTN2PpLRTf9",
+      "_id": "CUqlCLWpWiFXgvMC",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "fire",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "dae": {
+          "disableCondition": "",
+          "stackable": "multi",
+          "showIcon": false,
+          "durationExpression": "",
+          "specialDuration": []
+        },
+        "dnd5e": {
+          "riders": {
+            "statuses": []
+          }
+        },
+        "core": {
+          "overlay": false
+        }
+      },
+      "_stats": {
+        "coreVersion": "12.343",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!items.effects!fVQTmnTN2PpLRTf9.CUqlCLWpWiFXgvMC"
+    },
+    {
+      "name": "Черта: Пылкость огненного великана",
+      "img": "icons/magic/fire/elemental-fire-flying.webp",
+      "origin": "Compendium.laaru-dnd5-hw.classfeatures.Item.fVQTmnTN2PpLRTf9",
+      "transfer": false,
+      "_id": "gD14FTNZvegsXxMM",
+      "type": "base",
+      "system": {},
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [
+        "blinded"
+      ],
+      "sort": 0,
+      "flags": {
+        "dae": {
+          "enableCondition": "",
+          "disableCondition": "",
+          "stackable": "multi",
+          "showIcon": false,
+          "durationExpression": "",
+          "specialDuration": []
+        },
+        "dnd5e": {
+          "riders": {
+            "statuses": []
+          }
+        },
+        "core": {
+          "overlay": false
+        }
+      },
+      "_stats": {
+        "coreVersion": "12.343",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!items.effects!fVQTmnTN2PpLRTf9.gD14FTNZvegsXxMM"
+    }
+  ],
+  "folder": "d7ePvPozSx60pD1K",
+  "_id": "fVQTmnTN2PpLRTf9",
+  "flags": {
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fVQTmnTN2PpLRTf9"
+}

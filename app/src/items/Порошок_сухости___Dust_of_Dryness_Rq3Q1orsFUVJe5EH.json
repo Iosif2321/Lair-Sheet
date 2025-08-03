@@ -1,0 +1,191 @@
+{
+  "_id": "Rq3Q1orsFUVJe5EH",
+  "name": "Порошок сухости / Dust of Dryness",
+  "type": "consumable",
+  "img": "icons/containers/bags/coinpouch-leather-red.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "dust%20of%20dryness_dmg"
+    },
+    "core": {
+      "sourceId": "Compendium.world.dmg-items.Rq3Q1orsFUVJe5EH"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Dust of Dryness",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 10
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div><p><em>Чудесный предмет</em></p><p>Этот небольшой пакет содержит [[/r 1d6 + 4]] щепоток порошка. Вы можете использовать действие, чтобы рассыпать щепотку порошка над водой.</p><p>Порошок превращает 15-футовый куб воды в маленькую гранулу, которая плавает или лежит там, где был рассыпан порошок. Вес гранулы пренебрежимо мал. Любой, кто использует действие, чтобы разбить гранулу о твёрдую поверхность, высвободит поглощённую порошком воду. После этого магия гранулы перестает действовать.</p><p>Элементаль, состоящий в основном из воды, попав под щепотку порошка, должен пройти испытание Выносливости со СЛ 13, получая [[/r 10d6]] некротического урона при провале или половину этого урона при успехе.</p></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "equipped": true,
+    "rarity": "uncommon",
+    "identified": true,
+    "uses": {
+      "max": "10",
+      "autoDestroy": true,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": 10,
+        "denomination": 6,
+        "bonus": "",
+        "types": [
+          "necrotic"
+        ],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "0",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "cube",
+            "size": "15",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "13"
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "poroshok-suhosti--dust-of-dryness",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": []
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.world.dmg-items.Rq3Q1orsFUVJe5EH",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!Rq3Q1orsFUVJe5EH"
+}

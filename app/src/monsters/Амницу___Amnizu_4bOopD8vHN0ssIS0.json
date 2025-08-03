@@ -1,0 +1,3175 @@
+{
+  "_id": "4bOopD8vHN0ssIS0",
+  "name": "Амницу / Amnizu",
+  "type": "npc",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Amnizu.jpg",
+  "items": [
+    {
+      "_id": "0maE5hQbDuN1wxg6",
+      "name": "Слабоумие",
+      "type": "spell",
+      "img": "modules/laaru-dnd5-hw/assets/icons/spell/phb-feeblemind.webp",
+      "effects": [],
+      "folder": "kXvy7NyGE6c44fa4",
+      "sort": 100000,
+      "flags": {
+        "srd5e": {
+          "page": "",
+          "source": "PHB",
+          "hash": "feeblemind_phb"
+        },
+        "betterRolls5e": {
+          "critRange": {
+            "type": "String",
+            "value": null
+          },
+          "critDamage": {
+            "type": "String",
+            "value": ""
+          },
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": [
+              true
+            ],
+            "altValue": [
+              true
+            ],
+            "context": {
+              "0": ""
+            }
+          },
+          "quickVersatile": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "use": true,
+              "resource": true
+            },
+            "altValue": {
+              "use": true,
+              "resource": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "core": {
+          "sourceId": "Item.NHWzcvRQUleWE0ij"
+        },
+        "enhancedcombathud": {
+          "set1p": false,
+          "set2p": false,
+          "set3p": false
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "exportSource": {
+          "world": "avernus",
+          "system": "dnd5e",
+          "coreVersion": "0.8.9",
+          "systemVersion": "1.5.5"
+        },
+        "dnd5e": {
+          "migratedProperties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "persistSourceMigration": true,
+          "migratedUses": 1
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>Вы взрываете рассудок существа, которое видите в пределах дистанции, пытаясь разрушить его интеллект и личность. Цель получает [[/r 4d6]] психического урона и должна пройти испытание Интеллекта.<br />  При провале Интеллект и Харизма существа становятся равны 1. Существо не может творить заклинания, активировать магические предметы, понимать язык или общаться разборчиво. Однако существо всё еще будет узнавать друзей, следовать за ними и даже защищать их.<br />  По истечении каждых 30 дней существо может повторить испытание против заклинания. При успехе заклинание прекращает действовать.<br />  Заклинание также можно прекратить заклинаниями @Compendium[laaru-dnd5-hw.spells.lFqzcFBz3F0u96i1]{Высшее восстановление}, @Compendium[laaru-dnd5-hw.spells.Ppe5e5OG42FL2kEH]{Излечение} или @Compendium[laaru-dnd5-hw.spells.3DmrqW87SyWdaa8T]{Желание}.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "PHB",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "activation": {
+          "type": "action",
+          "condition": "",
+          "value": 1
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "target": {
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "units": "",
+            "contiguous": false
+          }
+        },
+        "range": {
+          "value": "150",
+          "units": "ft"
+        },
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "ability": "",
+        "level": 8,
+        "school": "enc",
+        "materials": {
+          "value": "горсть глиняных, хрустальных, стеклянных или минеральных шариков",
+          "consumed": false,
+          "cost": null,
+          "supply": null
+        },
+        "preparation": {
+          "mode": "innate",
+          "prepared": true
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": null,
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "target": "",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "override": false
+            },
+            "target": {
+              "prompt": true,
+              "template": {
+                "contiguous": false,
+                "units": "ft"
+              },
+              "affects": {
+                "choice": false
+              },
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "number": 4,
+                  "denomination": 6,
+                  "bonus": "",
+                  "types": [
+                    "psychic"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": "int",
+              "dc": {
+                "calculation": "spellcasting",
+                "formula": ""
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": ""
+      },
+      "ownership": {
+        "default": 0,
+        "P9ekdYyqL8aLckqj": 3,
+        "g4H9tVSZO1YiYQWD": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.NHWzcvRQUleWE0ij",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!4bOopD8vHN0ssIS0.0maE5hQbDuN1wxg6"
+    },
+    {
+      "_id": "Ior6jntS9zqN1Tci",
+      "name": "Подчинение чудовища",
+      "type": "spell",
+      "img": "modules/laaru-dnd5-hw/assets/icons/spell/phb-dominate-monster.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 400000,
+      "flags": {
+        "srd5e": {
+          "page": "",
+          "source": "PHB",
+          "hash": "dominate%20monster_phb"
+        },
+        "betterRolls5e": {
+          "critRange": {
+            "type": "String",
+            "value": null
+          },
+          "critDamage": {
+            "type": "String",
+            "value": ""
+          },
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": [],
+            "altValue": [],
+            "context": []
+          },
+          "quickVersatile": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "use": true,
+              "resource": true
+            },
+            "altValue": {
+              "use": true,
+              "resource": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "core": {
+          "sourceId": "Item.YV3bU4esgfptRbJM"
+        },
+        "dnd5e": {
+          "migratedProperties": [
+            "vocal",
+            "somatic",
+            "concentration"
+          ],
+          "persistSourceMigration": true,
+          "migratedUses": 3
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<p>Вы пытаетесь подчинить существо, которое видите в пределах дистанции. Оно должно пройти испытание Мудрости, при провале оно @Compendium.laaru-dnd5-hw.actions.5vKRVm8wXReUJasS]{обворожено} вами, пока длится заклинание. Если вы или дружественные вам существа сражаетесь с этим существом, у него преимущество к испытанию.</p>\n</div>\n<div class=\"rd__b  rd__b--3\">\n<div class=\"rd__spc-inline-post\">Пока цель @Compendium.laaru-dnd5-hw.actions.5vKRVm8wXReUJasS]{обворожена}, у вас есть с ней телепатическая связь, если вы оба находитесь на одном плане бытия. Вы можете с помощью этой телепатической связи отдавать существу приказы, пока вы в сознании (действие не требуется), и оно будет выполнять их, насколько сможет. Можете отдавать простые приказы общего характера, например: «Атакуй это существо», «Беги туда», «Схвати этот предмет». Если существо выполняет приказ и больше не получает от вас новых указаний, оно бросает все силы на самозащиту.</div>\n<div class=\"rd__spc-inline-post\">Вы можете использовать действие, чтобы обрести полный и точный контроль над целью. До конца вашего следующего хода существо совершает только те действия, которые выбираете вы, и не делает ничего, что вы ему не разрешили. В это время вы можете заставить существо совершить ответное действие, но это также потратит ваше ответное действие.</div>\n<div class=\"rd__spc-inline-post\">Всякий раз, когда цель получает урон, она снова проходит испытание Мудрости против заклинания. При успехе заклинание прекращает действовать.</div>\n<div class=\"rd__spc-inline-post\"><strong> На высоких кругах.</strong></div>\n<div class=\"rd__spc-inline-post\">Если вы сотворяете это заклинание, используя ячейку 9-го круга, его длительность — концентрация, до 8 часов.</div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "PHB",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "activation": {
+          "type": "action",
+          "condition": "",
+          "value": 1
+        },
+        "duration": {
+          "value": "1",
+          "units": "hour"
+        },
+        "target": {
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "units": "",
+            "contiguous": false
+          }
+        },
+        "range": {
+          "value": "60",
+          "units": "ft"
+        },
+        "uses": {
+          "max": "3",
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "ability": "",
+        "level": 8,
+        "school": "enc",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "innate",
+          "prepared": true
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": null,
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "target": "",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "override": false
+            },
+            "target": {
+              "prompt": true,
+              "template": {
+                "contiguous": false,
+                "units": "ft"
+              },
+              "affects": {
+                "choice": false
+              },
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "wis",
+              "dc": {
+                "calculation": "spellcasting",
+                "formula": ""
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": ""
+      },
+      "ownership": {
+        "default": 0,
+        "Zs7yJru4DCapi5DP": 3,
+        "5xzZmOc0eskDU5fw": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.YV3bU4esgfptRbJM",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!4bOopD8vHN0ssIS0.Ior6jntS9zqN1Tci"
+    },
+    {
+      "_id": "63aP932UyF24LdPN",
+      "name": "Приказ",
+      "type": "spell",
+      "img": "modules/laaru-dnd5-hw/assets/icons/spell/phb-command.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "flags": {
+        "srd5e": {
+          "page": "",
+          "source": "PHB",
+          "hash": "command_phb"
+        },
+        "betterRolls5e": {
+          "critRange": {
+            "type": "String",
+            "value": null
+          },
+          "critDamage": {
+            "type": "String",
+            "value": ""
+          },
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": [],
+            "altValue": [],
+            "context": []
+          },
+          "quickVersatile": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "use": true,
+              "resource": true
+            },
+            "altValue": {
+              "use": true,
+              "resource": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "core": {
+          "sourceId": "Item.k6uRUXjfFHVDKlkP"
+        },
+        "dnd5e": {
+          "migratedProperties": [
+            "vocal"
+          ],
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<div class=\"rd__b  rd__b--3\">\n<p>ВЫ отдаете приказ из одного слова существу, которое вы видите впределах дистанции. Цель должна успешно пройти испытание Мудрости, иначе в следующий свой ход она исполнит ваш приказ. Заклинание не действует на нежить, на тех, кто не понимает ваш язык, и в случае, если приказ наносит цели прямой вред..</p>\n<p>Вот некоторые типичные приказы и их эффекты. Вы можете отдать другой приказ, не описанный тут. В таком случае мастер решает, как поведет себя цель. Если цель не может выполнить ваш приказ, заклинание прекращает действовать.</p>\n<div class=\"rd__b  rd__b--3\"><span class=\"rd__h rd__h--3\" data-title-index=\"1\">Подойди.</span>\n<p>Цель перемещается к вам по кратчайшему прямому пути. Оказавшись в пределах 5 футов от вас она заканчивает ход.</p>\n</div>\n<div class=\"rd__b  rd__b--3\"><span class=\"rd__h rd__h--3\" data-title-index=\"2\">Брось.</span>\n<p>Цель бросает то, что держит в руках, и заканчивает ход.</p>\n</div>\n<div class=\"rd__b  rd__b--3\"><span class=\"rd__h rd__h--3\" data-title-index=\"3\">Пади.</span>\n<p>Цель падает,  @Compendium.laaru-dnd5-hw.actions.eMFvAErGzA4N1CNW]{распластывается}</p>\n<p>и заканчивает ход.</p>\n</div>\n<div class=\"rd__b  rd__b--3\"><span class=\"rd__h rd__h--3\" data-title-index=\"4\">Беги.</span>\n<p>Цель тратит свой ход на перемещение прочь от вас самым быстрым способом.</p>\n</div>\n<div class=\"rd__b  rd__b--3\"><span class=\"rd__h rd__h--3\" data-title-index=\"5\">Стой.</span>\n<p>Цель не перемещается и не совершает действий. Летающее существо продолжает парить, если может. Если ему нужно перемещаться, чтобы держаться в воздухе, оно полетает минимальное необходимое расстояние.</p>\n</div>\n</div>\n<div class=\"rd__b  rd__b--3\">\n<div class=\"rd__b  rd__b--3\"><strong><span class=\"rd__h rd__h--3\" data-title-index=\"6\">На высоких кругах.</span></strong>\n<p>Если вы сотворяете это заклинание, используя ячейку 2-го круга или выше, то можете выбрать целью одно дополнительное существо за каждый круг ячейки выше 1-го. Эти существа должны быть в пределах 20 футов друг от друга в момент сотворения.</p>\n</div>\n</div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "PHB",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "activation": {
+          "type": "action",
+          "condition": "",
+          "value": 1
+        },
+        "duration": {
+          "value": "1",
+          "units": "round"
+        },
+        "target": {
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false
+          },
+          "template": {
+            "units": "",
+            "contiguous": false
+          }
+        },
+        "range": {
+          "value": "60",
+          "units": "ft"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "ability": "wis",
+        "level": 1,
+        "school": "enc",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "innate",
+          "prepared": true
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": null,
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "override": false
+            },
+            "target": {
+              "prompt": true,
+              "template": {
+                "contiguous": false,
+                "units": "ft"
+              },
+              "affects": {
+                "choice": false
+              },
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "wis",
+              "dc": {
+                "calculation": "wis",
+                "formula": ""
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": ""
+      },
+      "ownership": {
+        "default": 0,
+        "Zs7yJru4DCapi5DP": 3,
+        "5xzZmOc0eskDU5fw": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.k6uRUXjfFHVDKlkP",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!4bOopD8vHN0ssIS0.63aP932UyF24LdPN"
+    },
+    {
+      "_id": "Nd1sPZQtEP3RThcO",
+      "name": "Мультиатака",
+      "type": "feat",
+      "img": "icons/skills/melee/blade-tips-triple-steel.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "flags": {
+        "srd5e": {
+          "page": "monsterAction",
+          "source": "MPMM",
+          "hash": "multiattack_amnizu_mpmm_mpmm"
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\"><section id=\"secret-Z875fH90lCEutZVM\" class=\"secret\"><p>Амницу использует Отравление разума или Забывчивость, если это возможно. Он также совершает две атаки Кнутом надсмотрщика.</p></section></div><p>У существа есть мультиатака.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!4bOopD8vHN0ssIS0.Nd1sPZQtEP3RThcO"
+    },
+    {
+      "_id": "RIISoDTj8SVIDO2g",
+      "name": "Забывчивость",
+      "type": "feat",
+      "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "flags": {
+        "srd5e": {
+          "page": "monsterAction",
+          "source": "MPMM",
+          "hash": "forgetfulness%20%7b%40recharge%7d_amnizu_mpmm_mpmm"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "persistSourceMigration": true,
+          "migratedUses": null
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<section class=\"secret\">\n<p>Амницу выбирает целью одно существо, которое видит в пределах 60 футов от себя. Это существо должно пройти испытание Интеллекта со СЛ 18, при провале оно получает <span style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\">26 ([[/r 4d12]])</span><span style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\"> психического урона и </span><span style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\">оказывается в @Compendium.laaru-dnd5-hw.actions.OviWCQAGcXISdTbj]{шоке} на 1 минуту. Существо в шоке повторяет это испытание в конце каждого своего хода, при успехе эффект для него прекращается. Если существо оставалось в шоке всю минуту, оно забывает всё, что чувствовало, пережило и узнало за последние 5 часов. </span></p>\n</section>\n<p><span style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\">Амницу выбирает целью одно существо, которое видит в пределах 60 футов от себя. Это существо должно пройти испытание Интеллекта. (Существо может повторять это испытание в конце каждого своего хода.)</span></p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "recharge",
+              "formula": "6",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "target": "",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "number": 4,
+                  "denomination": 12,
+                  "bonus": "",
+                  "types": [
+                    "psychic"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "mode": "whole",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": "int",
+              "dc": {
+                "calculation": "cha",
+                "formula": "18"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!4bOopD8vHN0ssIS0.RIISoDTj8SVIDO2g"
+    },
+    {
+      "_id": "Nhz3Xo83eU56MAPZ",
+      "name": "Инстинктивное очарование",
+      "type": "feat",
+      "img": "icons/skills/social/diplomacy-unity-alliance.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 300000,
+      "flags": {
+        "adnd5e": {
+          "itemInfo": {
+            "type": "reaction"
+          }
+        },
+        "srd5e": {
+          "page": "monsterReaction",
+          "source": "MPMM",
+          "hash": "instinctive%20charm_amnizu_mpmm_mpmm"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<section class=\"secret\">\n<p>Когда существо в пределах 60 футов от амнизу совершает атаку по нему, и другое существо находится в пределах досягаемости атаки, атакующий должен пройти испытание Мудрости СЛ 19. При провале, атакующий должен сделать целью атаки ближайшее к нему существо, исключая его самого и амницу. Если ближайшими являются несколько существ сразу, атакующий выбирает, какую из них сделать целью. В случае успеха атакующий становится невосприимчив к <em>Инстинктивному Очарованию</em> амнизу на 24 часа.</p>\n</section>\n<p>Когда существо в пределах 60 футов от амнизу совершает атаку по нему, и другое существо находится в пределах досягаемости атаки, атакующий должен пройти испытание Мудрости. При провале, атакующий должен сделать целью атаки ближайшее к нему существо, исключая его самого и амницзу.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "reactionmanual",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": []
+            },
+            "save": {
+              "ability": "wis",
+              "dc": {
+                "calculation": "int",
+                "formula": "19"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!4bOopD8vHN0ssIS0.Nhz3Xo83eU56MAPZ"
+    },
+    {
+      "_id": "AGD7UfXAYFM9dmej",
+      "name": "Кнут надсмотрщика",
+      "type": "weapon",
+      "img": "icons/weapons/misc/whip-red-yellow.webp",
+      "effects": [],
+      "folder": "mQ6U4dzNZo6tlyLV",
+      "sort": 100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": {
+              "0": true,
+              "1": true
+            },
+            "altValue": {
+              "0": true,
+              "1": true
+            },
+            "context": {
+              "0": "",
+              "1": ""
+            }
+          },
+          "quickVersatile": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "quantity": false,
+              "use": false,
+              "resource": true
+            },
+            "altValue": {
+              "quantity": false,
+              "use": true,
+              "resource": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "core": {
+          "sourceId": "Item.9bfozoonHT9bd1Ns"
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<div class=\"rd__spc-inline-post\"><em>Атака оружием в ближнем бою: </em>[[/r 1d20+11]] (<strong>+11</strong>) <strong>к броску, зона досягаемости 10 футов</strong>, одна цель.</div>\n<div class=\"rd__spc-inline-post\"><em>Попадание</em>: <strong>10</strong> ([[/r 2d4 + 5]]) <strong>режущего урона плюс 33</strong>  ([[/r 6d10]])<strong> урона силой</strong>. </div>\n</section>\n<div class=\"rd__spc-inline-post\">Амницу совершает атаку кнутом!</div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MTF",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "attunement": "",
+        "equipped": true,
+        "rarity": "",
+        "identified": false,
+        "cover": null,
+        "range": {
+          "value": 10,
+          "long": 0,
+          "units": "ft",
+          "reach": null
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "damage": {
+          "versatile": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "base": {
+            "number": 2,
+            "denomination": 4,
+            "bonus": "",
+            "types": [
+              "slashing"
+            ],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "properties": [],
+        "proficient": 1,
+        "unidentified": {
+          "description": ""
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "container": null,
+        "attuned": false,
+        "crewed": false,
+        "magicalBonus": null,
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "10",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "attack": {
+              "ability": "int",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "ammunition": {}
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.9bfozoonHT9bd1Ns",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!4bOopD8vHN0ssIS0.AGD7UfXAYFM9dmej"
+    },
+    {
+      "_id": "2d8QIxky2EAvNcZ8",
+      "name": "Отравление разума",
+      "type": "feat",
+      "img": "icons/commodities/biological/pustules-red.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 500000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            },
+            "context": {
+              "0": ""
+            }
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            },
+            "altValue": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "core": {
+          "sourceId": "Item.UKSJcC6OT8Mhkppl"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<div class=\"rd__spc-inline-post\">Амницу выбирает целью одно или два существа, которых видит в пределах<strong> 60 футов</strong> от себя. Каждая цель должна пройти испытание <strong>Мудрости со СЛ 19</strong>, при провале она получит <strong>26</strong> ([[/r 4d12]])<strong> некротического урона</strong> и @Compendium.laaru-dnd5-hw.actions.apswG1jicwhlWT5R]{ослепнет} до начала следующего хода амницу. </div>\n</section>\n<div class=\"rd__spc-inline-post\">Амницу выбирает целью одно или два существа, которых видит в пределах 60 футов от себя. Каждая цель должна пройти испытание <strong>Мудрости</strong>.</div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "number": 4,
+                  "denomination": 12,
+                  "bonus": "",
+                  "types": [
+                    "necrotic"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "mode": "whole",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": "wis",
+              "dc": {
+                "calculation": "int",
+                "formula": "19"
+              }
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.UKSJcC6OT8Mhkppl",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!4bOopD8vHN0ssIS0.2d8QIxky2EAvNcZ8"
+    },
+    {
+      "_id": "1ChxRmEVXnb7Dzmt",
+      "name": "Дьявольское зрение",
+      "type": "feat",
+      "img": "icons/magic/perception/eye-slit-pink.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 600000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": [],
+            "altValue": [],
+            "context": []
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            },
+            "altValue": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "core": {
+          "sourceId": "Item.Mn3qXEKfJVPTUPPZ"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<div class=\"rd__spc-inline-post\">Магическая тьма не препятствует ночному зрению амницу. </div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.Mn3qXEKfJVPTUPPZ",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!4bOopD8vHN0ssIS0.1ChxRmEVXnb7Dzmt"
+    },
+    {
+      "_id": "XnnwgRMExpPW9G1L",
+      "name": "Устойчивость к магии",
+      "type": "feat",
+      "img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
+      "effects": [],
+      "folder": "Cv2iOibkWnP07cMI",
+      "sort": 800000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": [],
+            "altValue": [],
+            "context": []
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            },
+            "altValue": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "magicitems": {
+          "enabled": false,
+          "equipped": false,
+          "attuned": false,
+          "charges": "0",
+          "chargeType": "c1",
+          "destroy": false,
+          "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
+          "rechargeable": false,
+          "recharge": "0",
+          "rechargeType": "t1",
+          "rechargeUnit": "r1",
+          "sorting": "l"
+        },
+        "core": {
+          "sourceId": "Item.7UnIiVDcKzZGiFTH"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<p>У существа преимущество к испытаниям против заклинаний и других магических эффектов. </p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "Zs7yJru4DCapi5DP": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.7UnIiVDcKzZGiFTH",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!4bOopD8vHN0ssIS0.XnnwgRMExpPW9G1L"
+    },
+    {
+      "_id": "HZYraVtVOibIexra",
+      "name": "Призыв дьявола",
+      "type": "feat",
+      "img": "icons/creatures/unholy/demon-fire-horned-mask.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 700000,
+      "flags": {
+        "srd5e": {
+          "page": "monsterAction",
+          "source": "MPMM",
+          "hash": "summon%20devil%20(1%2fday)_amnizu%20(summoner)_mpmm_mpmm"
+        },
+        "core": {
+          "sourceId": "Item.15SNj2jyTtvExKjF"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "persistSourceMigration": true,
+          "migratedUses": 1
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<section class=\"secret\">\n<p><strong><span style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\">(опционально)</span></strong></p>\n<p><span style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\">У некоторых амницу есть действие, позволяющее призывать других дьяволов. Призыв дьявола </span></p>\n<ul>\n<li><span style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\"><strong>1 в день</strong>. Амницу призывает [[/r 2d4]] @Compendium[laaru-dnd5-hw.monsters.bwrvYGku6dZr43cW]{Бородатых дьявола} или [[/r 1d4]] @Compendium[laaru-dnd5-hw.monsters.dmBS6IZ9befD5mJk]{Шипастых дьявола}. </span></li>\n</ul>\n<p><span style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\">Призванный дьявол появляется в свободном пространстве в пределах 60 футов от амницу, действует как его союзник и не может призывать других дьяволов. Он остаётся на 1 минуту, либо пока амницу не умрёт, либо пока призвавший не отпустит его в качестве действия.</span></p>\n</section>\n<p><span style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\">Амницу призывает дьявола!</span></p>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "target": "",
+                  "value": "1",
+                  "scaling": {
+                    "mode": "",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.15SNj2jyTtvExKjF",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!4bOopD8vHN0ssIS0.HZYraVtVOibIexra"
+    },
+    {
+      "_id": "rh4aOg7RHTK2EwVH",
+      "name": "Врождённые заклинания",
+      "type": "feat",
+      "img": "icons/magic/light/projectiles-star-purple.webp",
+      "effects": [],
+      "folder": "k1PwcVwJtdjxDAwy",
+      "sort": 1200000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": [],
+            "altValue": [],
+            "context": []
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            },
+            "altValue": {
+              "use": true,
+              "resource": true,
+              "charge": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "core": {
+          "sourceId": "Item.vchIdFtLb0G0Niri"
+        },
+        "midi-qol": {
+          "effectActivation": false
+        },
+        "midiProperties": {
+          "nodam": false,
+          "fulldam": false,
+          "halfdam": false,
+          "rollOther": false,
+          "critOther": false,
+          "magicdam": false,
+          "magiceffect": false,
+          "concentration": false,
+          "toggleEffect": false
+        },
+        "dnd5e": {
+          "persistSourceMigration": true
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div class=\"rd__b  rd__b--3\">\n<div class=\"rd__spc-inline-post\">Заклинательная характеристика амницу для врождённых заклинаний — Интеллект (СЛ испытаний против заклинаний 19). У него есть следующие врождённые заклинания, ему не требуются для них реагенты:</div>\n<ul>\n<li class=\"rd__spc-inline-post\"><strong>Неограниченно:</strong><hr />@Compendium[laaru-dnd5-hw.spells.bM98WJMhzC5LjfrO]{Приказ}</li>\n<li class=\"rd__spc-inline-post\"><hr /><strong>3 в день</strong>:<hr />@Compendium[laaru-dnd5-hw.spells.N8fdjpdFRpncMCLg]{Подчинение чудовища}<br /><hr /><strong>1 в день:</strong><hr />@Compendium[laaru-dnd5-hw.spells.9hLFswTeQOQO0PpA]{Слабоумие}</li>\n</ul>\n</div>\n<div id=\"gtx-trans\" style=\"position:absolute;left:14px;top:248px\">\n<div class=\"gtx-trans-icon\"> </div>\n</div>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "MPMM",
+          "revision": 1,
+          "rules": "2014"
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "",
+              "value": 0,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "concentration": false,
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": ""
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "sort": 0
+          }
+        },
+        "identifier": "",
+        "enchant": {}
+      },
+      "ownership": {
+        "default": 0,
+        "5xzZmOc0eskDU5fw": 3,
+        "ekSJaSkR4p1sowmM": 3
+      },
+      "_stats": {
+        "compendiumSource": "Item.vchIdFtLb0G0Niri",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!4bOopD8vHN0ssIS0.rh4aOg7RHTK2EwVH"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "MPMM",
+      "hash": "amnizu_mpmm"
+    },
+    "core": {},
+    "midi-qol": {
+      "concentration-damage": 0
+    }
+  },
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 11,
+        "proficient": 0,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        },
+        "max": null
+      },
+      "dex": {
+        "value": 13,
+        "proficient": 1,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        },
+        "max": null
+      },
+      "con": {
+        "value": 16,
+        "proficient": 1,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        },
+        "max": null
+      },
+      "int": {
+        "value": 20,
+        "proficient": 0,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        },
+        "max": null
+      },
+      "wis": {
+        "value": 12,
+        "proficient": 1,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        },
+        "max": null
+      },
+      "cha": {
+        "value": 18,
+        "proficient": 1,
+        "bonuses": {
+          "check": "",
+          "save": "0"
+        },
+        "max": null
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 21,
+        "calc": "natural",
+        "formula": ""
+      },
+      "hp": {
+        "value": 202,
+        "max": 202,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "27d8 + 81"
+      },
+      "init": {
+        "ability": "",
+        "bonus": "0",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 40,
+        "swim": 0,
+        "walk": 30,
+        "units": "ft",
+        "hover": false
+      },
+      "attunement": {
+        "max": 3
+      },
+      "senses": {
+        "darkvision": 120,
+        "blindsight": 0,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "int",
+      "exhaustion": 0,
+      "concentration": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "bonuses": {
+          "save": ""
+        },
+        "limit": 1
+      },
+      "hd": {
+        "spent": 0
+      },
+      "death": {
+        "ability": "",
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        },
+        "success": 0,
+        "failure": 0
+      }
+    },
+    "details": {
+      "biography": {
+        "value": "<div class=\"rd__b  rd__b--1\">\n<div class=\"rd__b  rd__b--2\">\n<div class=\"rd__b  rd__b--3\">\n<p><strong>Амницу </strong></p>\n<p>Это высшие дьяволы, командующие легионами Преисподней в битвах и стражами врат в Девять Преисподних. Амницу самодовольны, жестоки и беспринципны, но при этом они хитроумны в тактике и беспрекословно верны — архидьяволы это ценят. Некоторые амницу выполняют важное задание — следят за рекой Стикс с башен и крепостей, стоящих вдоль отравленных берегов. За это амницу называют ещё дьяволами Стикса.</p>\n<p>Души, прибывающие в виде лемуров, не имеют никакой личности или воспоминаний; они движимы только желанием совершать зло. Амницу, который патрулирует здесь, внедряет правила Девяти Преисподних в жалкие мозги новоприбывших и размещает этих лемуров в легионы.</p>\n<blockquote>\n<p><strong>ВАРИАНТ: Призыв Дьяволов.</strong></p>\n<p>У некоторых амницу есть действие, позволяющее призывать других дьяволов. Призыв дьявола (1 в день). Амницу призывает [[/r 2d4]] @Compendium[laaru-dnd5-hw.monsters.bwrvYGku6dZr43cW]{Бородатых дьявола} или [[/r 1d4]] @Compendium[laaru-dnd5-hw.monsters.dmBS6IZ9befD5mJk]{Шипастых дьявола}. Призванный дьявол появляется в свободном пространстве в пределах 60 футов от амницу, действует как его союзник и не может призывать других дьяволов. Он остаётся на 1 минуту, либо пока амницу не умрёт, либо пока призвавший не отпустит его в качестве действия.</p>\n</blockquote>\n<h1>Дьяволы</h1>\n<p>Дьяволы — воплощения тирании и тоталитарного общества, подчиняющего себе жизни смертных. Тень Девяти Преисподних Баатора простирается далеко по мультивселенной, но Асмодей, тёмный владыка Нессуса, хочет подчинить себе абсолютно всё, чтобы утолить жажду власти. Для этого он должен постоянно пополять свои войска. Он отправляет слуг в царство смертных, чтобы развращать души, из которых потом появятся новые дьяволы.</p>\n<p><strong>Владыки тирании.</strong></p>\n<p>Дьяволы живут ради завоеваний, порабощения и угнетения других. Они получают извращённое удовольствие от власти над слабыми, а тех, кто не признают власть дьяволов, быстро и жестоко карают. Любое взаимодействие для дьяволов — это повод продемонстрировать свою силу. У всех дьяволов есть чёткое понимание, как использовать силу и как злоупотреблять ей. Дьяволы знают слабости разумных смертных и с помощью этого знания искушают их, уводя во тьму и делая рабами собственных пороков. Дьяволы на Материальном плане манипулируют правителями гуманоидов, нашептывают злые мысли, разжигают подозрения и подстрекают к деспотизму.</p>\n<p><strong>Подчинение и амбиции</strong>. В соответствии с принципиальным мировоззрением дьяволы подчиняются начальнику, даже если завидуют ему или недолюбливают. Они знают, что послушание будет вознаграждено. Иерархия Девяти Преисподних построена на этой непоколебимой верности, без которой план бестий скатился бы в такую же анархию, как в Бездне.<br />При этом дьяволы по природе обожают козни, и желание править у них сильнее желания подчиняться. Сильнее всего эти амбиции проявляются у архидьяволов, которым Асмодей поручил править девятью кругами Девяти Преисподних. Эти высокопоставленные бестии — единственные дьяволы, вкусившие истинной власти, которая для них на вкус как сладкая амброзия.</p>\n<p><strong>Тёмные дельцы и торговцы душами. </strong>Дьяволы заточены на Нижних планах, но могут путешествовать и по другим планам с помощью порталов и мощной магии призыва. Они любят заключать сделки со смертными, которые хотят получить какую-то выгоду или награду, но таким смертным стоит быть осторожными. Дьяволы — умелые дельцы, тщательно выполняющие все пункты соглашения. Более того, контракт даже с самым жалким дьяволом закрепляется волей Aсмодея, Смертный, нарушивший такой контракт, мгновенно расплачивается своей душой, которая улетает в Девять Преисподних.<br />Владение душой — это абсолютный контроль над существом. Большинство дьяволов не принимают никакой другой платы за предоставляемые силы и дары. Обычно душа передаётся, когда смертный умирает естественным путём, — благо дьяволы бессмертны и могут годами ждать исполнения договора. Если договор позволяет дьяволу заполучить душу смертного раньше, он тут же возвращается в Девять Преисподних вместе с душой. Только божественное вмешательство может освободить душу, после того как дьявол её забрал.</p>\n<h2>Иерархия Преисподних</h2>\n<p>В Девяти Преисподних царит жёсткая иерархия, определяющая все аспекты общества. Асмодей — верховный правитель всех дьяволов и единственное существо в Девяти Преисподних, обладающее силой низшего божества. Как божеству ему поклоняются и на Материальном плане, и Aсмодей поддерживает культы среди злых гуманоидов. Он повелевает множеством генералов, исчадий ада, которые в свою очередь командуют легионами подчинённых.<br />Асмодей — верховный тиран, великолепный обманщик и знаток коварства. Он защищает свой престол, держа друзей близко, а врагов ещё ближе. Он передал решение текущих вопросов исчадиям ада и низшим архидьяволам, составляющим чиновничий аппарат Девяти Преисподних, хотя знает, что эти влиятельные дьяволы планируют захватить Трон Баатора, на котором сейчас сидит он. Архидьяволов назначает Асмодей, и он же может с легкостью лишить любого в иерархии Преисподней звания и статуса. Если дьявол умирает за пределами Девяти Преисподних, он превращается в облачко серного дыма или растворяется лужей ихора и мгновенно возвращается на свой круг, где вновь обретает тело и все силы. Дьяволы, умирающие в Девяти Преисподних, гибнут навсегда — подобной участи боится и сам Aсмодей.</p>\n<p><strong>Архидьяволы.</strong> В число архидьяволов входят все правящие и свергнутые правители Девяти Преисподних (см. таблицу), а также герцоги и герцогини, которые состоят при их дворах, служат советниками и надеются сместить их. Каждый архидьявол - это уникальное создание с внешностью, отражающей особенности его злой натуры.</p>\n<p><strong>Высшие дьяволы.</strong> В число высших дьяволов входят @Compendium[laaru-dnd5-hw.monsters.c3b0tbqD9lOZyIQu]{исчадия ада}, @Compendium[laaru-dnd5-hw.monsters.4bOopD8vHN0ssIS0]{амницу}, @Compendium[laaru-dnd5-hw.monsters.dHo9YAUpvguTrox8]{эринии}, @Compendium[laaru-dnd5-hw.monsters.FzqbR1eEfSVixIx1]{рогатые дьяволы} и @Compendium[laaru-dnd5-hw.monsters.bfwiZ9ei4Fta1tMX]{ледяные дьяволы}, @Compendium[laaru-dnd5-hw.monsters.FWQmksmjlzNOxcgF]{ортоны} и @Compendium[laaru-dnd5-hw.monsters.rBE5Up4JBhemc5e9]{нарзугоны}. Они правят низшими дьяволами и служат архидьяволам.</p>\n<p><strong>Низшие дьяволы.</strong> В число низших дьяволов входят многие виды бестий, включая @Compendium[laaru-dnd5-hw.monsters.YeTA9VxMZh9Ms2FB]{бесов}, @Compendium[laaru-dnd5-hw.monsters.FwrIUaWwDtUUsT73]{цепных}, а также @Compendium[laaru-dnd5-hw.monsters.fkaCzjorYKUzJfD4]{игольчатых}, @Compendium[laaru-dnd5-hw.monsters.bwrvYGku6dZr43cW]{бородатых}, @Compendium[laaru-dnd5-hw.monsters.dmBS6IZ9befD5mJk]{шипастых} и @Compendium[laaru-dnd5-hw.monsters.n2fKVLA9ylbPRQ5F]{костяных} дьяволов, и @Compendium[laaru-dnd5-hw.monsters.9LgF5ZxhTuziToWE]{меррегонов}.</p>\n<p><strong>Нижайшие.</strong> Ничтожнейшая разновидность дьяволов, @Compendium[laaru-dnd5-hw.monsters.aPoExUsGKeKHxdgM]{лемур} — это уродливые и мучающиеся души злых и развращённых смертных. Лемур, убитый в Девяти Преисподних, уничтожается навсегда, только если его убить благословлённым оружием или если его бесформенный труп обрызгать святой водой до того, как он вернётся к жизни.<br />@Compendium[laaru-dnd5-hw.monsters.SmQ7TD8UMa8IiqMl]{Напперибо}. Смертные, чьи злодеяния при жизни были вызваны халатностью и ленью, обречены стать напперибо. Эти слепые жирные ничтожные дьяволы бесцельно бродят по Девяти Преисподним, стеная и хватая любые объедки зловонной плоти, какие смогут.</p>\n<p><strong>Повышение и понижение. </strong>Когда душа злого смертного попадает в Девять Преисподних, она принимает форму уродливого @Compendium[laaru-dnd5-hw.monsters.aPoExUsGKeKHxdgM]{лемура}. Архидьяволы и высшие дьяволы могут превращать лемуров в низших дьяволов. Архидьяволы могут повышать низших дьяволов до высших, но только Acмoдeй может повысить высшего дьявола до архидьявола. Это дьявольское повышение в звании вызывает быструю, но болезненную трансформацию. Воспоминания дьявола при переходе из одной формы в другую остаются при нём. Низкоуровневые повышения обычно осуществляются по необходимости, например когда исчадие ада превращает лемуров в бесов при нужде в невидимых шпионах. Высокоуровневые повышения практически всегда основаны на заслугах. Например, костяной дьявол, отличившийся в бою, может быть превращён архидьяволом, которому он служит, в рогатого дьявола. Дьяволов очень редко повышают в иерархии более чем на один шаг за раз.</p>\n<div class=\"rd__b  rd__b--1\">\n<div class=\"rd__b  rd__b--2\">\n<div class=\"rd__b  rd__b--3\">\n<table class=\"rd__table  stripe-odd-table\"><caption><strong>Иерархия Преисподней</strong></caption>\n<thead>\n<tr style=\"height:17px\">\n<th class=\"col-4\" style=\"width:265.5px;height:17px\" data-rd-isroller=\"false\">Ранг</th>\n<th class=\"col-8\" style=\"width:291.344px;height:17px\" data-rd-isroller=\"false\">Дьяволы</th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"height:68px\">\n<td class=\"col-4\" style=\"width:263.5px;height:68px\">1.</td>\n<td class=\"col-8\" style=\"width:291.344px;height:68px\">@Compendium[laaru-dnd5-hw.monsters.aPoExUsGKeKHxdgM]{лемур}, @Compendium[laaru-dnd5-hw.monsters.SmQ7TD8UMa8IiqMl]{напперибо}</td>\n</tr>\n<tr style=\"height:34px\">\n<td class=\"col-4\" style=\"width:263.5px;height:34px\">2. (<strong>Низшие дьяволы</strong>)</td>\n<td class=\"col-8\" style=\"width:291.344px;height:34px\">@Compendium[laaru-dnd5-hw.monsters.YeTA9VxMZh9Ms2FB]{бес}</td>\n</tr>\n<tr style=\"height:51px\">\n<td class=\"col-4\" style=\"width:263.5px;height:51px\">3.</td>\n<td class=\"col-8\" style=\"width:291.344px;height:51px\">@Compendium[laaru-dnd5-hw.monsters.fkaCzjorYKUzJfD4]{игольчатый дьявол}</td>\n</tr>\n<tr style=\"height:68px\">\n<td class=\"col-4\" style=\"width:263.5px;height:68px\">4.</td>\n<td class=\"col-8\" style=\"width:291.344px;height:68px\">@Compendium[laaru-dnd5-hw.monsters.bwrvYGku6dZr43cW]{бородатый дьявол}, @Compendium[laaru-dnd5-hw.monsters.9LgF5ZxhTuziToWE]{меррегон}</td>\n</tr>\n<tr style=\"height:51px\">\n<td class=\"col-4\" style=\"width:263.5px;height:51px\">5.</td>\n<td class=\"col-8\" style=\"width:291.344px;height:51px\">@Compendium[laaru-dnd5-hw.monsters.dmBS6IZ9befD5mJk]{шипастый дьявол}</td>\n</tr>\n<tr style=\"height:51px\">\n<td class=\"col-4\" style=\"width:263.5px;height:51px\">6.</td>\n<td class=\"col-8\" style=\"width:291.344px;height:51px\">@Compendium[laaru-dnd5-hw.monsters.FwrIUaWwDtUUsT73]{цепной дьявол}</td>\n</tr>\n<tr style=\"height:51px\">\n<td class=\"col-4\" style=\"width:263.5px;height:51px\">7.</td>\n<td class=\"col-8\" style=\"width:291.344px;height:51px\">@Compendium[laaru-dnd5-hw.monsters.n2fKVLA9ylbPRQ5F]{костяной дьявол}</td>\n</tr>\n<tr style=\"height:68px\">\n<td class=\"col-4\" style=\"width:263.5px;height:68px\">8. (<strong>Высшие дьяволы</strong>)</td>\n<td class=\"col-8\" style=\"width:291.344px;height:68px\">@Compendium[laaru-dnd5-hw.monsters.FzqbR1eEfSVixIx1]{рогатый дьявол}, @Compendium[laaru-dnd5-hw.monsters.FWQmksmjlzNOxcgF]{ортон}</td>\n</tr>\n<tr style=\"height:34px\">\n<td class=\"col-4\" style=\"width:263.5px;height:34px\">9.</td>\n<td class=\"col-8\" style=\"width:291.344px;height:34px\">@Compendium[laaru-dnd5-hw.monsters.dHo9YAUpvguTrox8]{эриния}</td>\n</tr>\n<tr style=\"height:68px\">\n<td class=\"col-4\" style=\"width:263.5px;height:68px\">10.</td>\n<td class=\"col-8\" style=\"width:291.344px;height:68px\">@Compendium[laaru-dnd5-hw.monsters.bfwiZ9ei4Fta1tMX]{ледяной дьявол}, @Compendium[laaru-dnd5-hw.monsters.rBE5Up4JBhemc5e9]{нарзугон}</td>\n</tr>\n<tr style=\"height:68px\">\n<td class=\"col-4\" style=\"width:263.5px;height:68px\">11.</td>\n<td class=\"col-8\" style=\"width:291.344px;height:68px\">@Compendium[laaru-dnd5-hw.monsters.c3b0tbqD9lOZyIQu]{исчадия ада}, @Compendium[laaru-dnd5-hw.monsters.4bOopD8vHN0ssIS0]{амницу}</td>\n</tr>\n<tr style=\"height:17px\">\n<td class=\"col-4\" style=\"width:263.5px;height:17px\">12. <strong>(Архидьяволы)</strong></td>\n<td class=\"col-8\" style=\"width:291.344px;height:17px\">герцог или герцогиня</td>\n</tr>\n<tr style=\"height:17px\">\n<td class=\"col-4\" style=\"width:263.5px;height:17px\">13.</td>\n<td class=\"col-8\" style=\"width:291.344px;height:17px\">эрцгерцог или эрцгерцогиня</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<div class=\"rd__b  rd__b--2\">Понижение в ранге у дьяволов — типичное наказание за провали непослушание. Архидьяволы и высшие дьяволы могут понизить низшего дьявола до лемура, который теряет при этом все воспоминания. Архидьявол может понизить высшего дьявола до низшего, но при этом тот сохраняет память — и может пытаться отомстить, если наказание было несоразмерно проступку. Ни один дьявол не может повышать или понижать дьяволов, которые не поклялись ему в верности. Это не позволяет конкурирующим архидьяволам лишать друг друга самых сильных слуг. Поскольку все дьяволы клянутся в верности Acмодею, он может понизить в ранге кого угодно, превратив в любую форму.</div>\n<div class=\"rd__b  rd__b--2\"><br />\n<h3><strong>Девять Преисподних</strong> </h3>\n<p>Девять Преисподних — единый план, состоящий из девяти отдельных кругов. Первые восемь кругов возглавляют архидьяволы, служащие величайшему архидьяволу из всех: Асмодею, эрцгерцогу Нессуса, девятого круга. Чтобы достичь глубочайшего круга Девяти Преисподних, нужно пройти все восемь предыдущих, один за другим. Самый быстрый способ сделать это — спуститься по реке Стикс, которая течёт с круга на круг, всё ниже и ниже. Но только самые храбрые искатели приключений смогут выдержать муки и кошмары такого путешествия</p>\n<table class=\"rd__table  stripe-odd-table\"><caption><strong>Круги и владыки Девяти Преисподних</strong></caption>\n<thead>\n<tr style=\"height:34px\">\n<th class=\"col-1\" style=\"width:63.8px;height:34px\" data-rd-isroller=\"false\">Круг</th>\n<th class=\"col-2\" style=\"width:114.8px;height:34px\" data-rd-isroller=\"false\">Название</th>\n<th class=\"col-3\" style=\"width:143.8px;height:34px\" data-rd-isroller=\"false\">Эрцгерог или эрцгерцогиня</th>\n<th class=\"col-3\" style=\"width:115.8px;height:34px\" data-rd-isroller=\"false\">Предыдущие правители</th>\n<th class=\"col-3\" style=\"width:266.8px;height:34px\" data-rd-isroller=\"false\">Основные обитатели</th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"height:102px\">\n<td class=\"col-1\" style=\"width:63.8px;height:102px\">1</td>\n<td class=\"col-2\" style=\"width:114.8px;height:102px\">Авернус</td>\n<td class=\"col-3\" style=\"width:143.8px;height:102px\">Зариэль</td>\n<td class=\"col-3\" style=\"width:115.8px;height:102px\">Бел, Тиамат</td>\n<td class=\"col-3\" style=\"width:266.8px;height:102px\">@Compendium[laaru-dnd5-hw.monsters.YeTA9VxMZh9Ms2FB]{бесы}, @Compendium[laaru-dnd5-hw.monsters.fkaCzjorYKUzJfD4]{игольчатые дьяволы}, @Compendium[laaru-dnd5-hw.monsters.dHo9YAUpvguTrox8]{эринии}</td>\n</tr>\n<tr style=\"height:119px\">\n<td class=\"col-1\" style=\"width:63.8px;height:119px\">2</td>\n<td class=\"col-2\" style=\"width:114.8px;height:119px\">Дис</td>\n<td class=\"col-3\" style=\"width:143.8px;height:119px\">Диспатер</td>\n<td class=\"col-3\" style=\"width:115.8px;height:119px\">—</td>\n<td class=\"col-3\" style=\"width:266.8px;height:119px\">@Compendium[laaru-dnd5-hw.monsters.YeTA9VxMZh9Ms2FB]{бесы}, @Compendium[laaru-dnd5-hw.monsters.bwrvYGku6dZr43cW]{бородатые дьяволы}, @Compendium[laaru-dnd5-hw.monsters.fkaCzjorYKUzJfD4]{игольчатые дьяволы}, @Compendium[laaru-dnd5-hw.monsters.dHo9YAUpvguTrox8]{эринии}</td>\n</tr>\n<tr style=\"height:136px\">\n<td class=\"col-1\" style=\"width:63.8px;height:136px\">3</td>\n<td class=\"col-2\" style=\"width:114.8px;height:136px\">Минаврос</td>\n<td class=\"col-3\" style=\"width:143.8px;height:136px\">Маммон</td>\n<td class=\"col-3\" style=\"width:115.8px;height:136px\">—</td>\n<td class=\"col-3\" style=\"width:266.8px;height:136px\">@Compendium[laaru-dnd5-hw.monsters.YeTA9VxMZh9Ms2FB]{бесы}, @Compendium[laaru-dnd5-hw.monsters.bwrvYGku6dZr43cW]{бородатые дьяволы}, @Compendium[laaru-dnd5-hw.monsters.fkaCzjorYKUzJfD4]{игольчатые дьяволы}, @Compendium[laaru-dnd5-hw.monsters.FwrIUaWwDtUUsT73]{цепные дьяволы}</td>\n</tr>\n<tr style=\"height:136px\">\n<td class=\"col-1\" style=\"width:63.8px;height:136px\">4</td>\n<td class=\"col-2\" style=\"width:114.8px;height:136px\">Флегетон</td>\n<td class=\"col-3\" style=\"width:143.8px;height:136px\">Белиал и Фьёрна</td>\n<td class=\"col-3\" style=\"width:115.8px;height:136px\">—</td>\n<td class=\"col-3\" style=\"width:266.8px;height:136px\">@Compendium[laaru-dnd5-hw.monsters.YeTA9VxMZh9Ms2FB]{бесы}, @Compendium[laaru-dnd5-hw.monsters.bwrvYGku6dZr43cW]{бородатые дьяволы}, @Compendium[laaru-dnd5-hw.monsters.n2fKVLA9ylbPRQ5F]{костяные дьяволы}, @Compendium[laaru-dnd5-hw.monsters.dmBS6IZ9befD5mJk]{шипастые дьяволы}</td>\n</tr>\n<tr style=\"height:119px\">\n<td class=\"col-1\" style=\"width:63.8px;height:119px\">5</td>\n<td class=\"col-2\" style=\"width:114.8px;height:119px\">Стигия</td>\n<td class=\"col-3\" style=\"width:143.8px;height:119px\">Левистус</td>\n<td class=\"col-3\" style=\"width:115.8px;height:119px\">Герион</td>\n<td class=\"col-3\" style=\"width:266.8px;height:119px\">@Compendium[laaru-dnd5-hw.monsters.YeTA9VxMZh9Ms2FB]{бесы}, @Compendium[laaru-dnd5-hw.monsters.n2fKVLA9ylbPRQ5F]{костяные дьяволы}, @Compendium[laaru-dnd5-hw.monsters.bfwiZ9ei4Fta1tMX]{ледяные дьяволы}, @Compendium[laaru-dnd5-hw.monsters.dHo9YAUpvguTrox8]{эринии}</td>\n</tr>\n<tr style=\"height:136px\">\n<td class=\"col-1\" style=\"width:63.8px;height:136px\">6</td>\n<td class=\"col-2\" style=\"width:114.8px;height:136px\">Малебольг</td>\n<td class=\"col-3\" style=\"width:143.8px;height:136px\">Гласия</td>\n<td class=\"col-3\" style=\"width:115.8px;height:136px\">Малагард, Молох</td>\n<td class=\"col-3\" style=\"width:266.8px;height:136px\">@Compendium[laaru-dnd5-hw.monsters.YeTA9VxMZh9Ms2FB]{бесы}, @Compendium[laaru-dnd5-hw.monsters.n2fKVLA9ylbPRQ5F]{костяные дьяволы}, @Compendium[laaru-dnd5-hw.monsters.FzqbR1eEfSVixIx1]{рогатые дьяволы}, @Compendium[laaru-dnd5-hw.monsters.dmBS6IZ9befD5mJk]{шипастые дьяволы}</td>\n</tr>\n<tr style=\"height:119px\">\n<td class=\"col-1\" style=\"width:63.8px;height:119px\">7</td>\n<td class=\"col-2\" style=\"width:114.8px;height:119px\">Маладомини</td>\n<td class=\"col-3\" style=\"width:143.8px;height:119px\">Вельзевул</td>\n<td class=\"col-3\" style=\"width:115.8px;height:119px\">—</td>\n<td class=\"col-3\" style=\"width:266.8px;height:119px\">@Compendium[laaru-dnd5-hw.monsters.YeTA9VxMZh9Ms2FB]{бесы}, @Compendium[laaru-dnd5-hw.monsters.n2fKVLA9ylbPRQ5F]{костяные дьяволы}, @Compendium[laaru-dnd5-hw.monsters.bfwiZ9ei4Fta1tMX]{ледяные дьяволы}, @Compendium[laaru-dnd5-hw.monsters.dHo9YAUpvguTrox8]{эринии}</td>\n</tr>\n<tr style=\"height:17px\">\n<td class=\"col-1\" style=\"width:63.8px;height:17px\">8</td>\n<td class=\"col-2\" style=\"width:114.8px;height:17px\">Кания</td>\n<td class=\"col-3\" style=\"width:143.8px;height:17px\">Мефистофель</td>\n<td class=\"col-3\" style=\"width:115.8px;height:17px\">—</td>\n<td class=\"col-3\" style=\"width:266.8px;height:17px\">@Compendium[laaru-dnd5-hw.monsters.YeTA9VxMZh9Ms2FB]{бесы}, @Compendium[laaru-dnd5-hw.monsters.c3b0tbqD9lOZyIQu]{исчадия}, @Compendium[laaru-dnd5-hw.monsters.bfwiZ9ei4Fta1tMX]{ледяные дьяволы}, @Compendium[laaru-dnd5-hw.monsters.FzqbR1eEfSVixIx1]{рогатые дьяволы}</td>\n</tr>\n<tr style=\"height:17px\">\n<td class=\"col-1\" style=\"width:63.8px;height:17px\">9</td>\n<td class=\"col-2\" style=\"width:114.8px;height:17px\">Нессус</td>\n<td class=\"col-3\" style=\"width:143.8px;height:17px\">Асмодей</td>\n<td class=\"col-3\" style=\"width:115.8px;height:17px\">—</td>\n<td class=\"col-3\" style=\"width:266.8px;height:17px\">Все дьяволы</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<div class=\"rd__b-inset \"><strong>Истинные имена и талисманы</strong> <strong>дьяволов<br /></strong>У всех дьяволов есть общеупотребительные имена, но у каждого дьявола рангом выше, чем лемур, есть и истинное имя, которое он держит в тайне. Дьявол может выдать своё истинное имя, если будет обворожён. К тому же говорят, что есть древние свитки и тома, где перечислены истинные имена самых сильных дьяволов.<br />Смертный, узнавший истинное имя дьявола, может использовать мощную магию призыва, чтобы вызвать этого дьявола из Девяти Преисподних себе в услужение. Также подчинить бестию можно с помощью талисмана дьявола. На каждой такой древней реликвии написано истинное имя дьявола, которого она контролирует. При создании талисман был омыт кровью достойной жертвы — обычно того, кого создатель любил.<br />Дьявол, призванный на Материальный план, обычно отказывается служить. Однако дьяволы пользуются любой возможностью совратить с пути истинного того, кто их призвал, чтобы его душа была обречена попасть в Девять Преисподних. Только бесы не возражают, чтобы их призывали. Их легко убедить служить фамильярами, но и они изо всех сил стараются совратить хозяина с пути истинного.<br />\n<div class=\"float-clear\"> </div>\n</div>\n<div class=\"rd__b-inset \">\n<p><strong>ВАРИАНТ: Призыв дьяволов</strong></p>\n<p>У некоторых дьяволов может быть вариант действия, позволяющий призывать других дьяволов.</p>\n<p><strong>Призыв дьявола (1 в день).</strong></p>\n<p>Дьявол выбирает, кого призвать с помощью магии, и пытается совершить призыв.</p>\n<ul>\n<li>У <strong>бородатого дьявола</strong> есть [[/r 1d100]] 30-процентный шанс призвать одного бородатого дьявола.</li>\n<li><strong>Исчадие ада</strong> призывает  [[/r 2d4]] бородатых дьявола, [[/r 1d4]] шипастых дьявола или одну эринию без шанса провала. </li>\n<li>У <strong>костяного дьявола</strong> есть [[/r 1d100]] 40-процентный шанс призвать [[/r 2d6]] игольчатых дьявола или одного костяного дьявола. </li>\n<li>У <strong>ледяного дьявола</strong> есть [[/r 1d100]] 60-процентный шанс призвать одного ледяного дьявола.</li>\n<li>У <strong>рогатого дьявола</strong> есть [[/r 1d100]] 30-процентный шанс призвать одного рогатого дьявола. .</li>\n<li>У <strong>шипастого дьявола</strong> есть [[/r 1d100]] 30-процентный шанс призвать одного шипастого дьявола.</li>\n<li>У <strong>эринии</strong> есть [[/r 1d100]] 50-процентный шанс призвать  [[/r 3d6]] игольчатых дьяволов,  [[/r 1d6]] бородатых дьяволов или одну эринию.</li>\n</ul>\n<p>Призванный дьявол появляется в свободном пространстве в пределах 60 футов от призвавшего, действует как его союзник и не может призывать других дьяволов. Он остаётся на 1 минуту, либо пока он или призвавший не умрут, либо пока призвавший не отпустит его в качестве действия.</p>\n<div class=\"float-clear\"> </div>\n</div>\n</div>\n</div>\n</div>",
+        "public": ""
+      },
+      "alignment": "приниципиальная злая",
+      "race": null,
+      "type": {
+        "value": "fiend",
+        "subtype": "дьявол",
+        "swarm": "",
+        "custom": ""
+      },
+      "environment": "",
+      "cr": 18,
+      "spellLevel": 0,
+      "ideal": "",
+      "bond": "",
+      "flaw": ""
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [
+          "fire",
+          "poison"
+        ],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [
+          "physical",
+          "cold",
+          "silver"
+        ],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [
+          "charmed",
+          "poisoned"
+        ],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "infernal"
+        ],
+        "custom": "телепатия 1,000 футов."
+      },
+      "dm": {
+        "amount": {},
+        "bypasses": []
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "skills": {
+      "acr": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ani": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "arc": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ath": {
+        "value": 0,
+        "ability": "str",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "dec": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "his": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ins": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "itm": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "inv": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "med": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "nat": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prc": {
+        "value": 1,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "prf": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "per": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "rel": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "slt": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "ste": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "sur": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "0",
+          "passive": ""
+        },
+        "roll": {
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      }
+    },
+    "spells": {
+      "spell1": {
+        "value": 0,
+        "override": null
+      },
+      "spell2": {
+        "value": 0,
+        "override": null
+      },
+      "spell3": {
+        "value": 0,
+        "override": null
+      },
+      "spell4": {
+        "value": 0,
+        "override": null
+      },
+      "spell5": {
+        "value": 0,
+        "override": null
+      },
+      "spell6": {
+        "value": 0,
+        "override": null
+      },
+      "spell7": {
+        "value": 0,
+        "override": null
+      },
+      "spell8": {
+        "value": 0,
+        "override": null
+      },
+      "spell9": {
+        "value": 0,
+        "override": null
+      },
+      "pact": {
+        "value": 0,
+        "override": null
+      },
+      "spell0": {
+        "value": 0,
+        "override": null
+      }
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "resources": {
+      "legact": {
+        "value": 0,
+        "max": 0
+      },
+      "legres": {
+        "value": 0,
+        "max": 0
+      },
+      "lair": {
+        "value": false,
+        "initiative": 20
+      }
+    },
+    "tools": {},
+    "source": {
+      "page": "",
+      "license": "",
+      "rules": "2014",
+      "book": "MPMM"
+    }
+  },
+  "prototypeToken": {
+    "name": "Амницу",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "flags": {},
+    "randomImg": false,
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "type": null,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5,
+      "negative": false,
+      "priority": 0
+    },
+    "texture": {
+      "src": "modules/laaru-dnd5-hw/assets/images/MM/Amnizu.png",
+      "tint": "#ffffff",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": true,
+      "range": 120,
+      "brightness": 0,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "appendNumber": false,
+    "prependAdjective": false,
+    "hexagonalShape": 0,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.1",
+    "createdTime": 1726582948342,
+    "modifiedTime": 1726582948342,
+    "lastModifiedBy": "UkvoHT2ggFpbOAml"
+  },
+  "folder": "l3uPp5S2He9H36lZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "UkvoHT2ggFpbOAml": 3
+  },
+  "_key": "!actors!4bOopD8vHN0ssIS0"
+}

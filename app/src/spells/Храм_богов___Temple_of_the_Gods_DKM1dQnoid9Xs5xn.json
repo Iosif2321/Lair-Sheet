@@ -1,0 +1,195 @@
+{
+  "_id": "DKM1dQnoid9Xs5xn",
+  "name": "Храм богов / Temple of the Gods",
+  "type": "spell",
+  "img": "icons/environment/settlement/columned-forum.webp",
+  "effects": [],
+  "folder": "j0as9Trr663mrAHf",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "temple%20of%20the%20gods_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Temple of the Gods",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы создаёте храм, появляющийся из мерцающего света на земле в том месте, которое вы можете видеть в пределах дистанции.</p>\n<p>Храм должен умещаться в незанятом кубе с длиной ребра до 120 футов. Храм остаётся до тех пор, пока заклинание не закончится. Он посвящен любому богу, пантеону или философии, которые представлены священным символом, используемым при сотворении заклинания.</p>\n<p>Вы сами решаете, как храм должен выглядеть. Внутреннее пространство храма ограничено полом, стенами и крышей. У храма одна входная дверь, но любое количество окон. Только вы и те существа, которых вы указываете, когда сотворяете заклинание, могут открыть или закрыть дверь. Интерьер храма – это открытое пространство с идолом или алтарём у одной из стен.</p>\n<p>Вы определяете, освещается ли храм, и является ли этот свет &amp;reference[brightlight]{ярким} или &amp;reference[dimlight]{тусклым}. Внутри воздух наполнен запахом горящих благовоний, а температура комфортная. Храм препятствует существам тех типов, которые вы выбираете, когда сотворяете это заклинание.</p>\n<p>Выберите один или несколько из следующих типов: небожители, элементали, феи, бестии или нежить. Если существо выбранного типа пытается войти в храм, оно должно пройти испытание Харизмы. При провале оно не может войти в храм в течение 24 часов. Даже если существо сумело войти в храм, магия этого места является для него помехой; всякий раз, когда оно совершает бросок атаки, проверку способности или испытания внутри храма, существо должно бросить [[/r d4]] и вычесть получившееся число из его броска [[/r d20]].</p>\n<p>Кроме того, сенсоры, созданные заклинаниями школы Прорицания, не могут появиться внутри храма, а существа внутри него не могут быть целями заклинаний этой школы.</p>\n<p>Наконец, всякий раз, когда какое-либо существо в храме восстанавливает ПЗ заклинанием 1 круга или выше, оно дополнительно восстанавливает ПЗ в количестве, равном вашему модификатору Мудрости (минимум 1 ПЗ).</p>\n<p>Храм сделан из светонепроницаемого магического поля, которое простирается на Эфирный План, тем самым блокируя межпланарное перемещение внутрь храма.</p>\n<p>Также ничто не может проникнуть в храм физическим путём. Он не может быть развеян @Compendium[laaru-dnd5-hw.spells.ZdDJVUlzYudd4nHO]{Рассеивание магии}, и @Compendium[laaru-dnd5-hw.spells.T9luUO2r6OCYunlU]{Поле антимагии} не оказывает на него никакого эффекта.</p>\n<p>Заклинание @Compendium[laaru-dnd5-hw.spells.KMGALOtvIkVjYggc]{Дезинтеграция} мгновенно разрушает храм.</p>\n<p>Сотворение этого заклинания на одно и то же место каждый день в течение года делает этот эффект постоянным.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "hour",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "24",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "cube",
+        "size": "120",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "120",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 7,
+    "school": "con",
+    "materials": {
+      "value": "святой символ, стоимостью не менее 5 зм",
+      "consumed": false,
+      "cost": 5,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [
+                "healing"
+              ],
+              "custom": {
+                "enabled": true,
+                "formula": "d4"
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "cha",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "hram-bogov--temple-of-the-gods"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028208412,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!DKM1dQnoid9Xs5xn"
+}

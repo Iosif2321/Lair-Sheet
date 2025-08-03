@@ -1,0 +1,259 @@
+{
+  "_id": "OdrvL3afwLOPeuYZ",
+  "name": "Возложение рук",
+  "type": "feat",
+  "img": "icons/magic/light/orbs-hand-gray.webp",
+  "effects": [],
+  "folder": "j2nOx3D2Ol0XnFtC",
+  "flags": {
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "autoFailFriendly": false,
+      "autoSaveFriendly": false,
+      "offHandWeapon": false,
+      "ignoreTotalCover": false
+    },
+    "core": {},
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "tidy5e-sheet": {
+      "section": "",
+      "actionSection": ""
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Ваше благословенное касание может исцелять раны. У вас есть запас исцеляющей силы, который восстанавливается после завершения долгого отдыха. Этим запасом вы можете восстановить ПЗ в количестве, равном вашему уровню паладина, умноженному на 5.</p>\n<p>В качестве действия вы можете коснуться существа и потратить исцеляющую силу из запаса, чтобы восстановить ПЗ этого существа в количестве вплоть до максимального оставшегося запаса.</p>\n<p>Как вариант, вы можете потратить 5 ПЗ из своего запаса, чтобы излечить цель от одной болезни или нейтрализовать один влияющий на ней яд. Можете исцелить несколько болезней и нейтрализовать несколько ядов одним <em>Возложением рук,</em> потратив ПЗ по отдельности на каждый.</p>\n<p>Эта особенность не действует на нежить и конструкции.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB pg. 84",
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": "особенность не действует на нежить и конструкции"
+    },
+    "duration": {
+      "value": "",
+      "units": ""
+    },
+    "cover": null,
+    "target": {
+      "value": "1",
+      "width": null,
+      "units": "",
+      "type": "creature",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "touch"
+    },
+    "uses": {
+      "value": 5,
+      "max": "5 * @classes.paladin.levels",
+      "per": "lr",
+      "recovery": "",
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": "",
+    "actionType": "heal",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Paladin 1",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "crewed": false,
+    "enchantment": null,
+    "summons": null,
+    "prerequisites": {
+      "level": null
+    },
+    "properties": [],
+    "activities": {
+      "dnd5eactivity000": {
+        "name": "",
+        "img": "",
+        "duration": {
+          "units": "inst"
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {
+                "mode": "amount",
+                "formula": "1"
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": true,
+            "max": "@item.uses.value"
+          }
+        },
+        "healing": {
+          "denomination": "",
+          "custom": {
+            "enabled": true,
+            "formula": "1"
+          },
+          "types": [
+            "healing"
+          ],
+          "scaling": {
+            "formula": "1"
+          }
+        },
+        "appliedEffects": []
+      },
+      "nzA5EkkDYpfPBx1R": {
+        "type": "heal",
+        "_id": "nzA5EkkDYpfPBx1R",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": true,
+            "max": "5 * @classes.paladin.levels\t"
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {
+                "mode": "amount",
+                "formula": "1"
+              }
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "touch",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "type": "creature",
+            "count": "1",
+            "special": ""
+          },
+          "override": false,
+          "prompt": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "healing": {
+          "number": null,
+          "denomination": "",
+          "types": [
+            "healing"
+          ],
+          "custom": {
+            "enabled": true,
+            "formula": "1"
+          },
+          "scaling": {
+            "number": null,
+            "mode": "whole",
+            "formula": "1"
+          },
+          "bonus": ""
+        },
+        "name": "",
+        "img": "",
+        "appliedEffects": []
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!OdrvL3afwLOPeuYZ"
+}

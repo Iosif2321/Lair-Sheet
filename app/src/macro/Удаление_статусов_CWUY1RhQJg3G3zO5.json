@@ -1,0 +1,31 @@
+{
+  "name": "Удаление статусов",
+  "type": "script",
+  "scope": "global",
+  "author": "N5s4uI6OpcSYQoF8",
+  "img": "icons/magic/movement/abstract-ribbons-red-orange.webp",
+  "command": "// Макрос для Foundry, который позволяет удалить все статусы с выбранного токена. \n(async () => {\n    for ( let token of canvas.tokens.controlled ) {\n        let effectsToDelete = token.actor.effects.filter(e => e.isTemporary)\n        .map(e => { return e.id });\n        await token.actor.deleteEmbeddedDocuments(\"ActiveEffect\", effectsToDelete);\n    }})();",
+  "ownership": {
+    "default": 0,
+    "N5s4uI6OpcSYQoF8": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Macro.RXIngbUEnnoIbCda"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1678702397200,
+    "modifiedTime": 1699263458678,
+    "lastModifiedBy": "H9WsizrOeJscXSvG",
+    "compendiumSource": "Macro.RXIngbUEnnoIbCda",
+    "duplicateSource": null
+  },
+  "folder": "9jJwjbjUc9r6snop",
+  "sort": 225000,
+  "_id": "CWUY1RhQJg3G3zO5",
+  "_key": "!macros!CWUY1RhQJg3G3zO5"
+}

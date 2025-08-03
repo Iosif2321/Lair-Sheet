@@ -1,0 +1,230 @@
+{
+  "_id": "1EOKBf7KgcAXcLbU",
+  "name": "Личное убежище Морденкайнена / Mordenkainen's Private Sanctum",
+  "type": "spell",
+  "img": "icons/commodities/treasure/puzzle-box-glowing-blue.webp",
+  "effects": [],
+  "folder": "5iZ8qMTOt7ODg7B1",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "mordenkainen's%20private%20sanctum_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [],
+        "altValue": [],
+        "context": []
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Mordenkainen's Private Sanctum",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\">Вы магически делаете безопасной область в пределах дистанции. Эта область куб, который может быть размером не менее 5 футов и не более 100 футов по каждой стороне. Вы можете прекратить заклинание до окончания длительности, потратив действие.</div>\n<div class=\"rd__spc-inline-post\">Творя это заклинание, вы сами решаете, какого рода защиту даёт заклинание, выбрав любые или даже все из этих вариантов:</div>\n<ul>\n<li class=\"rd__spc-inline-post\">Звук не может проходить через барьер по краям области.</li>\n<li class=\"rd__spc-inline-post\">Барьер вокруг области выглядит тёмным и мутным, не позволяя видеть сквозь него (даже с помощью &amp;reference[darkvision]{ночного зрения}).</li>\n<li class=\"rd__spc-inline-post\">Сенсоры, созданные заклинаниями прорицания, не могут появиться внутри защищённой области или пройти сквозь барьер по её периметру.</li>\n<li class=\"rd__spc-inline-post\">Существ, находящихся в области, нельзя выбрать целью заклинаний прорицания.</li>\n<li class=\"rd__spc-inline-post\">Ничто не может телепортироваться в область или из области.</li>\n<li class=\"rd__spc-inline-post\">Планарные путешествия блокируются в пределах защищённой области. Если творить это заклинание в одной и той же точке каждый день на протяжении года, оно становится постоянным.</li>\n</ul>\n<p><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку 5-го круга или выше, то можете увеличить размер куба на 100 футов за каждый круг ячейки выше 4-го. Таким образом, вы можете защитить куб размером до 200 футов по одной стороне, если сотворить его, используя ячейку 5-го круга.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "minute",
+      "condition": "",
+      "value": 10
+    },
+    "duration": {
+      "value": "24",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "cube",
+        "size": "100",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "120",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 4,
+    "school": "abj",
+    "materials": {
+      "value": "тонкий лист свинца, осколок непрозрачного стекла, комок хлопка или ткани и толчёный хризолит",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "lichnoe-ubezhishe-mordenkajnena--mordenkainens-private-sanctum"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028200846,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!1EOKBf7KgcAXcLbU"
+}

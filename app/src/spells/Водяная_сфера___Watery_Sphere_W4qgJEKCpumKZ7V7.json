@@ -1,0 +1,180 @@
+{
+  "_id": "W4qgJEKCpumKZ7V7",
+  "name": "Водяная сфера / Watery Sphere",
+  "type": "spell",
+  "img": "icons/magic/water/orb-water-bubbles.webp",
+  "effects": [],
+  "folder": "5iZ8qMTOt7ODg7B1",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "watery%20sphere_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "autoFailFriendly": false,
+      "offHandWeapon": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Watery Sphere",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы создаёте сферу воды с радиусом 10 футов в указанной точке в пределах дистанции заклинания. Сфера может парить в воздухе, однако не выше, чем в 10 футах над землёй. Сфера существует до тех пор, пока действует заклинание.</p>\n<p>Все существа, оказавшиеся внутри сферы, должны пройти испытание Силы. В случае успеха существо выталкивается из сферы в ближайшее свободное пространство. Существа как минимум Огромного размера автоматически успешно проходят  испытание, существа размером Крупный и меньше могут добровольно провалить испытание. При провале существо становится &amp;reference[restrained]{обездвиженным} сферой и погружённым в воду.</p>\n<p>В конце каждого своего хода &amp;reference[restrained]{обездвиженная} цель может повторить испытание, при успехе заканчивая действие заклинания на себе. Сфера может обездвижить до четырёх существ Среднего или меньшего размера или одно Крупное существо.</p>\n<p>Если сфера обездвиживает существо, превышая при этом данное ограничение, то случайное из уже обездвиженных существ выпадает из сферы и &amp;reference[prone]{распластывается} в 5 футах от неё.</p>\n<p>Вы можете действием переместить сферу на расстояние до 30 футов по прямой. Если на её пути оказывается яма, обрыв или другой провал, она безопасно спускается до тех пор, пока не достигнет высоты в 10 футов над полом.</p>\n<p>Все обездвиженные существа перемещаются вместе со сферой. Вы можете направить сферу в существ, заставляя их проходить испытание.</p>\n<p>Когда заклинание заканчивается, сфера падает на землю и гасит все источники огня немагического происхождения в пределах 30 футов. Все существа, которые находились в ней, &amp;reference[prone]{распластываются}. После этого вода исчезает. </p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "radius",
+        "size": "5",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "90",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 4,
+    "school": "con",
+    "materials": {
+      "value": "капля воды",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": "str",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "vodyanaya-sfera--watery-sphere"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028220559,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!W4qgJEKCpumKZ7V7"
+}

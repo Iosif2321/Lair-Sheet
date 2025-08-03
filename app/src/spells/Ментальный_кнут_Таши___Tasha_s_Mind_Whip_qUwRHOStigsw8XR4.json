@@ -1,0 +1,248 @@
+{
+  "_id": "qUwRHOStigsw8XR4",
+  "name": "Ментальный кнут Таши / Tasha's Mind Whip",
+  "type": "spell",
+  "img": "icons/weapons/misc/whip-red-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы проводите психическую атаку на одно существо, которое видите в пределах досягаемости.</p><div><div><p>Цель должна пройти испытание Интеллекта. При провале цель получает [[/r 3d6]] психического урона и не может использовать @Compendium[laaru-dnd5-hw.actions.mMwkUE20bEfKeetq]{ответное действие} до конца своего следующего хода.</p></div><div><p>Кроме того того, в свой следующий ход цель долна выбрать только одно из следующего: перемещение, действие или бонусное действие.</p></div><div><p>При успешном испытании цель получает половину урона и не испытывает никаких других эффектов заклинания.</p><p><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку заклинания 3-го круга или выше, вы можете нацелиться на одно дополнительное существо за каждый круг ячейки выше 2-го, существа должны находиться в пределах 30 футов друг от друга.</p><p><strong>Максимум целей на круг: [[max(1, @item.level - 2)]]</strong></p><section class=\"secret\" id=\"secret-B01AsF20SaWaslJT\"><p><strong>Примечание</strong></p><p>Это заклинание включает в себя активный эффект \"Удар по разуму\" для отслеживания пораженных существ. Действие заклинания не прекращается автоматически в конце хода существа.</p></section></div></div>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "115",
+      "custom": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "round"
+    },
+    "target": {
+      "affects": {
+        "type": "creature",
+        "count": "",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "90",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 2,
+    "school": "enc",
+    "properties": [
+      "vocal"
+    ],
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "1nc3aSw24jSqAMYe",
+            "onSave": false
+          }
+        ],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 3,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "psychic"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "int",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "mentalnyj-knut-tashi--tashas-mind-whip"
+  },
+  "effects": [
+    {
+      "name": "Удар по разуму",
+      "origin": "Item.qUwRHOStigsw8XR4",
+      "duration": {
+        "rounds": 1,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "flags": {
+        "dnd5e": {},
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "dontApply": false,
+          "stackable": "noneName",
+          "showIcon": false,
+          "durationExpression": "",
+          "specialDuration": []
+        }
+      },
+      "_id": "1nc3aSw24jSqAMYe",
+      "changes": [],
+      "description": "<p>Пострадавшее существо не может использовать ответные действия до конца своего следующего хода. Более того, в свой следующий ход оно должно выбрать, будет ли двигаться, использовать действие или бонусное действие; оно получит только одно из трех.</p>",
+      "transfer": false,
+      "statuses": [],
+      "tint": "#ffffff",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": null,
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!qUwRHOStigsw8XR4.1nc3aSw24jSqAMYe"
+    }
+  ],
+  "folder": "1laDscZ7Bn7NoviD",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TCE",
+      "hash": "tasha's%20mind%20whip_tce"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Tasha's Mind Whip",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028234108,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!qUwRHOStigsw8XR4"
+}

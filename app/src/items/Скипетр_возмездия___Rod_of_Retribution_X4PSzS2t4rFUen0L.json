@@ -1,0 +1,213 @@
+{
+  "_id": "X4PSzS2t4rFUen0L",
+  "name": "Скипетр возмездия / Rod of Retribution",
+  "type": "consumable",
+  "img": "icons/weapons/staves/staff-ornate-purple.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "EGW",
+      "hash": "rod%20of%20retribution_egw"
+    },
+    "core": {
+      "sourceId": "Item.iVfOuW2uRG5JlWLE"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "autoFailFriendly": false,
+      "autoSaveFriendly": false,
+      "offHandWeapon": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Rod of Retribution",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 3
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div>\n<p>Этот адамантиновый скипетр увенчан светящимся кристаллическим глазом. Скипетр имеет 3 заряда и восстанавливает все свои израсходованные заряды ежедневно на рассвете.</p>\n<p>Когда существо, которое вы видите в пределах 60 футов, наносит вам урон, пока вы держите этот скипетр, вы можете использовать своё @Compendium[laaru-dnd5-hw.actions.mMwkUE20bEfKeetq]{Ответное действие}, чтобы израсходовать 1 заряд скипетра и заставить существо пройти испытание Ловкости СЛ 13. Существо получает [[/r 2d10]] урона молнией при провале или вдвое меньше урона при успехе. </p>\n</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "EGW",
+      "revision": 1,
+      "book": "EGW",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": false,
+    "rarity": "uncommon",
+    "identified": true,
+    "uses": {
+      "max": "3",
+      "recovery": [
+        {
+          "period": "day",
+          "type": "recoverAll"
+        }
+      ],
+      "autoDestroy": false,
+      "spent": 0
+    },
+    "damage": {
+      "base": {
+        "number": 2,
+        "denomination": 10,
+        "bonus": "",
+        "types": [
+          "lightning"
+        ],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "rod",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "существо, которое вы видите в пределах 60 футов, наносит вам урон",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "13"
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "skipetr-vozmezdiya--rod-of-retribution",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": []
+  },
+  "_stats": {
+    "compendiumSource": "Item.iVfOuW2uRG5JlWLE",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": "07KZOpNY7CeS23fI",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!X4PSzS2t4rFUen0L"
+}

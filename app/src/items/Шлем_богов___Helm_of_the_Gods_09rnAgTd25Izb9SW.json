@@ -1,0 +1,181 @@
+{
+  "name": "Шлем богов / Helm of the Gods",
+  "type": "equipment",
+  "system": {
+    "description": {
+      "value": "<p><em>Требуется настроенность</em></p><p>Нося этот шлем, вы знаете, есть ли в 30 футах от вас небожитель или бестия, а также его местоположение, при условии, что оно не находится за полным @UUID[Compendium.laaru-dnd5-hw.actions.xNd8TVxm9NpiJsw1]{укрытием}.</p><p>Каждый раз, когда вы заканчиваете долгий отдых и надеваете шлем, вы можете помолиться одному из богов, перечисленных в таблице <em>Шлем богов</em>, и сохранить указанное заклинание в шлеме, заменяя любое заклинание, которое уже хранится в нем. СЛ испытания для этих заклинаний 13.</p><p>У шлема есть 3 заряда. Чтобы сотворить заклинание с помощью шлема, вы должны израсходовать 1 заряд. Шлем восстанавливает [[/r 1d3]] заряда ежедневно на рассвете.</p><h4><strong>Шлем богов</strong></h4><div><table><tbody><tr><td><strong>Бог</strong></td><td><strong>Заклинание</strong></td></tr><tr><td>Атрей</td><td>@Compendium[laaru-dnd5-hw.spells.31Wl6sI9H1RspwYu]{Защита от зла и от добра}</td></tr><tr><td>Гелиод</td><td>@Compendium[laaru-dnd5-hw.spells.wE7p0clFpTiKXGyl]{Направляющий луч}</td></tr><tr><td>Ирой</td><td>@Compendium[laaru-dnd5-hw.spells.Y2So9xXGJcssoHvu]{Героизм}</td></tr><tr><td>Караметра</td><td>@Compendium[laaru-dnd5-hw.spells.7hdFEKqTGtjfTdwn]{Вкусные ягоды}</td></tr><tr><td>Керан</td><td>@Compendium[laaru-dnd5-hw.spells.mGV4Eg53XdlCkkZC]{Громовая кара}</td></tr><tr><td>Клотида</td><td>@Compendium[laaru-dnd5-hw.spells.dG8ddfpg5fOIkJ4h]{Опутывание}</td></tr><tr><td>Круфикс</td><td>@Compendium[laaru-dnd5-hw.spells.pwuEGpwpLknLtimK]{Диссонирующий шёпот}</td></tr><tr><td>Могий</td><td>@Compendium[laaru-dnd5-hw.spells.gMQD0mnF2vuD7cUz]{Адское возмездие}</td></tr><tr><td>Нилея</td><td>@Compendium[laaru-dnd5-hw.spells.KlVo17qWGwXLevip]{Фейское сияние}</td></tr><tr><td>Пирфор</td><td>@Compendium[laaru-dnd5-hw.spells.UCbkL21wWQG9Gy4K]{Жгучая кара}</td></tr><tr><td>Тасса</td><td>@Compendium[laaru-dnd5-hw.spells.hYlsH4UD97HeWuws]{Опознание}</td></tr><tr><td>Фарика</td><td>@Compendium[laaru-dnd5-hw.spells.SbBquXD3ciRsDLsk]{Низшее восстановление}</td></tr><tr><td>Фенакс</td><td>@Compendium[laaru-dnd5-hw.spells.KcziiS01MniKTNZ9]{Приворот гуманоида}</td></tr><tr><td>Эреб</td><td>@Compendium[laaru-dnd5-hw.spells.9E1TLV8eksiMDiuE]{Нанесение ран}</td></tr><tr><td>Эфара</td><td>@Compendium[laaru-dnd5-hw.spells.Quw3glddwW6I9X4f]{Убежище}</td></tr></tbody></table></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "MOT",
+      "revision": 1,
+      "book": "MOT",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "rare",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "uses": {
+      "max": "3",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d3"
+        }
+      ],
+      "spent": 0
+    },
+    "armor": {
+      "value": null,
+      "dex": null,
+      "magicalBonus": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "speed": {
+      "value": null,
+      "conditions": ""
+    },
+    "strength": null,
+    "proficient": 1,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "baseItem": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "special",
+          "value": 0,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "shlem-bogov--helm-of-the-gods",
+    "container": null,
+    "attuned": false,
+    "properties": []
+  },
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/helm-of-the-gods-230.webp",
+  "flags": {
+    "core": {
+      "sourceId": "Item.rZpVV60yeCSyzX30"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Helm of the Gods",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 3
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "compendiumSource": "Item.rZpVV60yeCSyzX30",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "09rnAgTd25Izb9SW",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!09rnAgTd25Izb9SW"
+}

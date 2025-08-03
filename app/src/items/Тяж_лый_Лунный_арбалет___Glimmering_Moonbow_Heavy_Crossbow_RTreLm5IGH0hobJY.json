@@ -1,0 +1,344 @@
+{
+  "name": "Тяжёлый Лунный арбалет / Glimmering Moonbow Heavy Crossbow",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "system": {
+    "description": {
+      "value": "<p><em>Требуется настроенность</em></p><p>На этом серебряно-черном арбалете выгравированы фазы луны.</p><p>Вы получаете бонус +1 к броскам атаки и урона, совершённым этим магическим оружием.</p><p>Когда вы попадаете по существу атакой совершенной этим магическим арбалетом, цель дополнительно получает [[/r 1d6]] лучистого урона. Если вы не вкладываете боеприпас в оружие, оно производит свой собственный, автоматически создавая один магический боеприпас, когда вы натягиваете тетиву. Боеприпас, создаваемый арбалетом, исчезает в тот момент, когда он попадает в цель или промахивается.</p><p>Держа этот магический арбалет, вы можете бонусным действием войти в полубестелесное состояние до начала вашего следующего хода. Будучи полубестелесным, вы получаете устойчивость к дробящему, колющему и режущему урону. После того, как это бонусное действие будет использовано, его нельзя будет использовать снова до следующего рассвета.</p><p>Большой арбалет, установленный на прочном деревянном блоке, который заряжается с помощью рукоятки и стреляет толстыми стальными болтами со смертоносным ускорением, пробивающими броню и плоть.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "BMT",
+      "book": "BMT",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 18,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "rare",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "range": {
+      "value": 100,
+      "long": 400,
+      "units": "ft",
+      "reach": null
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [
+          "piercing"
+        ],
+        "custom": {
+          "enabled": true,
+          "formula": "1d10+1+@mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      }
+    },
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "amm",
+      "hvy",
+      "lod",
+      "two",
+      "mgc"
+    ],
+    "proficient": null,
+    "unidentified": {
+      "description": "<p>На этом серебряно-черном арбалете выгравированы фазы луны.</p>"
+    },
+    "type": {
+      "value": "martialR",
+      "baseItem": "heavycrossbow"
+    },
+    "container": null,
+    "magicalBonus": null,
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "100",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "0",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "dex",
+          "bonus": "+1",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "ranged",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "tyazhyolyj-lunnyj-arbalet--glimmering-moonbow-heavy-crossbow",
+    "attuned": false,
+    "ammunition": {}
+  },
+  "img": "icons/weapons/bows/bow-ornamental-silver-black.webp",
+  "flags": {
+    "core": {},
+    "dnd5e": {
+      "persistSourceMigration": true
+    }
+  },
+  "effects": [
+    {
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "bludgeoning",
+          "priority": 7
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_id": "kiMshhz70tAxvwyS",
+      "name": "Damage Resistance",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/weapons/crossbows/crossbow-blue.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!RTreLm5IGH0hobJY.kiMshhz70tAxvwyS"
+    },
+    {
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "piercing",
+          "priority": 7
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_id": "68kYBE4XkGsxFvjn",
+      "name": "Damage Resistance",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/weapons/crossbows/crossbow-blue.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!RTreLm5IGH0hobJY.68kYBE4XkGsxFvjn"
+    },
+    {
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "slashing",
+          "priority": 7
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_id": "24bnpOVjp9ANhFWI",
+      "name": "Damage Resistance",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/weapons/crossbows/crossbow-blue.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!RTreLm5IGH0hobJY.24bnpOVjp9ANhFWI"
+    }
+  ],
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "RTreLm5IGH0hobJY",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!RTreLm5IGH0hobJY"
+}

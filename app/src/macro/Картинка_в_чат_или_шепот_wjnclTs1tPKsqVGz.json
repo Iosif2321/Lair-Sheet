@@ -1,0 +1,40 @@
+{
+  "name": "Картинка в чат или шепот",
+  "type": "script",
+  "author": "ekSJaSkR4p1sowmM",
+  "img": "https://cdn.iconscout.com/icon/free/png-256/send-mail-69-667875.png",
+  "scope": "global",
+  "command": "// Макрос для Foundry, который позволяет отправить картинку (из ссылки) определённому игроку или всем игрокам. Причем если в Чат, то картинка будет приватной, а если как Всплывающее изображение, то будет показано всем. \nconst wait = (delay) => new Promise((resolve) => setTimeout(resolve, delay));\nasync function imageMessage(html, mode) {\n    const url = html.find(\"[name=url]\")[0].value;\n    if (url === \"\") {\n        return;\n    }\n    if (mode == \"chat\") {\n        const messageContent = `<img src=\"${url}\" />`;\n        const checked = html.find(\"[name=whisper]\")[0].checked;\n        if(!checked) {\n            await ChatMessage.create({content: messageContent});\n            return;\n        }\n        const playerId = html.find(\"[name=player]\")[0].value;\n        const playerName = game.users.get(playerId).name;\n        await ChatMessage.create({content: messageContent, whisper: ChatMessage.getWhisperRecipients(playerName)})\n    }\n    if (mode == \"popout\"){\n        const popout = new ImagePopout(url).render(true);\n        popout.shareImage();\n    }\n\n}\n(async () => {\n    let dialogOptions = game.users.filter(u => u.role < 3).map(u => `<option value=${u.id}> ${u.name} </option>`).join(``);\n    \n    \n    let dialogContent = `\n                        <div><h2>Вставьте ссылку на изображение:</h2><div>\n                        <div>URL: <input name=\"url\" style=\"width:350px\"/></div>\n                        <div><i>если изображение взято из Интернета, не забудьте включить http(s):// в url</i></div>\n                        <div>Шептать игроку?<input name=\"whisper\" type=\"checkbox\"/></div>\n                        <div\">Имя игрока:<select name=\"player\" disabled>${dialogOptions}</select></div>\n                        `;\n    let d = new Dialog({\n        title: \"Image to Chat\",\n        content: dialogContent,\n        buttons: {\n            done: {\n                label: \"Отправить в чат!\",\n                callback: (html) => {\n                    imageMessage(html, \"chat\");\n                }\n            },\n            show: {\n                label: \"Показать как всплывающее изображение!\",\n                callback: (html) => {\n                    imageMessage(html, \"popout\");\n                }\n            }\n        },\n        default: \"done\"    \n    })\n    d.render(true)\n    await wait(50)\n    $(document).ready(function() {\n        $(\"[name=whisper]\").change(function () {\n            if($(\"[name=player]\").attr(\"disabled\")){\n                $(\"[name=player]\").removeAttr(\"disabled\")\n            }\n            else {\n               $(\"[name=player]\").attr(\"disabled\", true)  \n            }\n        });\n    });\n})();",
+  "flags": {
+    "advanced-macros": {
+      "runAsGM": false
+    },
+    "exportSource": {
+      "world": "cm1_jes",
+      "system": "dnd5e",
+      "coreVersion": "9.269",
+      "systemVersion": "1.6.3"
+    },
+    "core": {
+      "sourceId": "Macro.fSyGEAXUVN12sTo1"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "3.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1672486740754,
+    "modifiedTime": 1722515869128,
+    "lastModifiedBy": "WOfH6XpTSmINbcuE",
+    "compendiumSource": "Macro.fSyGEAXUVN12sTo1",
+    "duplicateSource": null
+  },
+  "folder": "zM3lWtEgwdtFJ9Xy",
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "ekSJaSkR4p1sowmM": 3
+  },
+  "_id": "wjnclTs1tPKsqVGz",
+  "_key": "!macros!wjnclTs1tPKsqVGz"
+}

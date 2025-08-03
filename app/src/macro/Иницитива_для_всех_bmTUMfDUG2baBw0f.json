@@ -1,0 +1,37 @@
+{
+  "name": "Иницитива для всех",
+  "type": "script",
+  "author": "ekSJaSkR4p1sowmM",
+  "img": "icons/svg/d20-highlight.svg",
+  "scope": "global",
+  "command": "/**\n * Берет все выбранные токены и добавляет их в боевой трекер. Затем бросает инициативу для всех токенов NPC и игроков.\n */\nasync function main() {\n await canvas.tokens.toggleCombat();\n  game.combat.rollNPC({ messageOptions: { rollMode: CONST.DICE_ROLL_MODES.PRIVATE }})\ngame.combat.rollAll()\n}\nmain();",
+  "flags": {
+    "exportSource": {
+      "world": "avernus",
+      "system": "dnd5e",
+      "coreVersion": "9.269",
+      "systemVersion": "1.6.3"
+    },
+    "core": {
+      "sourceId": "Macro.fSyGEAXUVN12sTo1"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1672486312944,
+    "modifiedTime": 1699263437512,
+    "lastModifiedBy": "H9WsizrOeJscXSvG",
+    "compendiumSource": "Macro.fSyGEAXUVN12sTo1",
+    "duplicateSource": null
+  },
+  "folder": "9jJwjbjUc9r6snop",
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "ekSJaSkR4p1sowmM": 3
+  },
+  "_id": "bmTUMfDUG2baBw0f",
+  "_key": "!macros!bmTUMfDUG2baBw0f"
+}

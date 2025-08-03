@@ -1,0 +1,230 @@
+{
+  "_id": "Q38h5che0p6pAhFl",
+  "name": "Управление погодой / Control Weather",
+  "type": "spell",
+  "img": "icons/magic/air/weather-clouds-rainbow.webp",
+  "effects": [],
+  "folder": "SX2gQSbiLHQTHmt7",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "control%20weather_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [],
+        "altValue": [],
+        "context": []
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Control Weather",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы управляете погодой в пределах 5 миль от вас, пока длится заклинание. Вам надо быть под открытым небом, чтобы сотворить это заклинание. Если вы окажетесь вместе, где нет прямого пути между вами и небом, заклинание прекращает действовать.</p>\n<p>Когда вы творите это заклинание, вы меняете текущую погоду, определённую мастером на основе климата и времени года. Вы можете поменять осадки, температуру и ветер. На наступление новой погоды уходит [[/r 1d4 * 10]] (1d4 × 10)  минут. После этого вы можете поменять погоду снова. По окончании заклинания погода постепенно возвращается в норму.</p>\n<p>Когда вы меняете погоду, найдите текущую погоду в этих таблицах и меняйте её на одну стадию вверх или вниз. Меняя ветер, вы можете изменить его направление.</p>\n<table class=\"rd__table  stripe-odd-table\"><caption>Осадки</caption>\n<thead>\n<tr>\n<th class=\"col-1 text-center\" data-rd-isroller=\"false\">Стадия</th>\n<th class=\"col-11\" data-rd-isroller=\"false\">Погода</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td class=\"col-1 text-center\">1</td>\n<td class=\"col-11\">Ясное небо</td>\n</tr>\n<tr>\n<td class=\"col-1 text-center\">2</td>\n<td class=\"col-11\">Лёгкая облачность</td>\n</tr>\n<tr>\n<td class=\"col-1 text-center\">3</td>\n<td class=\"col-11\">Пасмурно или густой туман</td>\n</tr>\n<tr>\n<td class=\"col-1 text-center\">4</td>\n<td class=\"col-11\">Дождь, снег или град</td>\n</tr>\n<tr>\n<td class=\"col-1 text-center\">5</td>\n<td class=\"col-11\">Ливень, сильный град или метель</td>\n</tr>\n</tbody>\n</table>\n<table class=\"rd__table  stripe-odd-table\" style=\"width:99.1803%\"><caption>Температура</caption>\n<thead>\n<tr>\n<th class=\"col-1 text-center\" style=\"width:23.5935%\" data-rd-isroller=\"false\">Стадия</th>\n<th class=\"col-11\" style=\"width:75.9932%\" data-rd-isroller=\"false\">Погода</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td class=\"col-1 text-center\" style=\"width:23.5935%\">1</td>\n<td class=\"col-11\" style=\"width:75.9932%\">Невыносимая жара</td>\n</tr>\n<tr>\n<td class=\"col-1 text-center\" style=\"width:23.5935%\">2</td>\n<td class=\"col-11\" style=\"width:75.9932%\">Жара</td>\n</tr>\n<tr>\n<td class=\"col-1 text-center\" style=\"width:23.5935%\">3</td>\n<td class=\"col-11\" style=\"width:75.9932%\">Тепло</td>\n</tr>\n<tr>\n<td class=\"col-1 text-center\" style=\"width:23.5935%\">4</td>\n<td class=\"col-11\" style=\"width:75.9932%\">Прохладно</td>\n</tr>\n<tr>\n<td class=\"col-1 text-center\" style=\"width:23.5935%\">5</td>\n<td class=\"col-11\" style=\"width:75.9932%\">Холодно</td>\n</tr>\n<tr>\n<td class=\"col-1 text-center\" style=\"width:23.5935%\">6</td>\n<td class=\"col-11\" style=\"width:75.9932%\">Полярный мороз</td>\n</tr>\n</tbody>\n</table>\n<table class=\"rd__table  stripe-odd-table\"><caption>Ветер</caption>\n<thead>\n<tr>\n<th class=\"col-1 text-center\" data-rd-isroller=\"false\">Стадия</th>\n<th class=\"col-11\" data-rd-isroller=\"false\">Погода</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td class=\"col-1 text-center\">1</td>\n<td class=\"col-11\">Штиль</td>\n</tr>\n<tr>\n<td class=\"col-1 text-center\">2</td>\n<td class=\"col-11\">Средний ветер</td>\n</tr>\n<tr>\n<td class=\"col-1 text-center\">3</td>\n<td class=\"col-11\">Сильный ветер</td>\n</tr>\n<tr>\n<td class=\"col-1 text-center\">4</td>\n<td class=\"col-11\">Крепкий ветер</td>\n</tr>\n<tr>\n<td class=\"col-1 text-center\">5</td>\n<td class=\"col-11\">Шторм</td>\n</tr>\n</tbody>\n</table>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "minute",
+      "condition": "",
+      "value": 10
+    },
+    "duration": {
+      "value": "8",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "mi",
+        "type": "radius",
+        "size": "5",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "units": ""
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 8,
+    "school": "trs",
+    "materials": {
+      "value": "курящиеся благовония и кусочки земли и дерева, смешанные с водой",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "upravlenie-pogodoj--control-weather"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028216619,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!Q38h5che0p6pAhFl"
+}

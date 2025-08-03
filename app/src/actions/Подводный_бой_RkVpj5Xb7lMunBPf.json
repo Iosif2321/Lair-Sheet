@@ -1,0 +1,227 @@
+{
+  "name": "Подводный бой",
+  "type": "feat",
+  "img": "icons/svg/anchor.svg",
+  "system": {
+    "description": {
+      "value": "<p>Когда искатели приключений преследуют сахваджинов в их подводном убежище, отбиваются от акул в остове разбитого корабля или оказываются в затопленной пещере, им приходится драться в сложных условиях. </p><p>Под водой действуют следующие правила. Совершая <strong>атаку оружием в ближнем бою,</strong> существо, у которого нет скорости плавания (естественной или магической), получает помеху к броску атаки, если только его оружие не кинжал, копьё, короткий меч, пилум или трезубец. </p><p><strong>Дистанционная атака оружием</strong> автоматически промахивается по цели за пределами обычной дистанции оружия. Даже по цели в пределах обычной дистанции бросок атаки получает помеху, если только оружие не арбалет, сеть или не метательное, как пилум (включая копьё, трезубец и дротик). Существа и объекты, полностью погружённые в воду, получают устойчивость к урону огнём.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": ""
+    },
+    "activation": {
+      "type": "special",
+      "cost": null,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "month"
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": "self",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "self"
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": "",
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": null,
+      "amount": null,
+      "scale": false
+    },
+    "ability": "",
+    "actionType": "util",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "requirements": "",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "properties": [],
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "summons": null
+  },
+  "effects": [
+    {
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 0,
+          "value": "fire",
+          "priority": 20
+        },
+        {
+          "key": "flags.midi-qol.onUseMacroName",
+          "mode": 0,
+          "value": "function.chrisPremades.macros.actions.underwater.range,preItemRoll",
+          "priority": 20
+        },
+        {
+          "key": "flags.midi-qol.onUseMacroName",
+          "mode": 0,
+          "value": "function.chrisPremades.macros.actions.underwater.attack,preAttackRoll",
+          "priority": 20
+        }
+      ],
+      "transfer": false,
+      "_id": "I14hMxhWJgSwRoHT",
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "flags": {
+        "dfreds-convenient-effects": {
+          "description": ""
+        },
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "noneName",
+          "durationExpression": "",
+          "macroRepeat": "none",
+          "specialDuration": []
+        },
+        "core": {
+          "statusId": ""
+        },
+        "ActiveAuras": {
+          "isAura": false,
+          "aura": "None",
+          "radius": "undefined",
+          "alignment": "",
+          "type": "",
+          "ignoreSelf": false,
+          "height": false,
+          "hidden": false,
+          "displayTemp": false,
+          "hostile": false,
+          "onlyOnce": false
+        }
+      },
+      "name": "Underwater",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "coreVersion": "12.331",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "img": "icons/tools/nautical/anchor-blue.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!RkVpj5Xb7lMunBPf.I14hMxhWJgSwRoHT"
+    }
+  ],
+  "flags": {
+    "custom-character-sheet-sections": {
+      "sectionName": "Generic Actions"
+    },
+    "core": {},
+    "rest-recovery": {
+      "data": {
+        "recovery": {
+          "enabled": false
+        }
+      }
+    },
+    "midi-qol": {
+      "effectActivation": false,
+      "rollAttackPerTarget": "default",
+      "itemCondition": "",
+      "effectCondition": ""
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "autoFailFriendly": false,
+      "autoSaveFriendly": false,
+      "rollOther": false,
+      "critOther": false,
+      "offHandWeapon": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": true,
+      "ignoreTotalCover": false,
+      "confirmTargets": "default",
+      "noConcentrationCheck": false
+    },
+    "chris-premades": {
+      "info": {
+        "name": "Underwater",
+        "version": "0.8.17"
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "3.2.0",
+    "coreVersion": "12.331",
+    "createdTime": 1694419884363,
+    "modifiedTime": 1718188829542,
+    "lastModifiedBy": "JQQo5IBQ3V0KZ6YZ",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "folder": "u0WhCiv4T044BCM5",
+  "_id": "RkVpj5Xb7lMunBPf",
+  "sort": 1100000,
+  "ownership": {
+    "default": 0,
+    "3PziFVTWmv5guvzA": 3
+  },
+  "_key": "!items!RkVpj5Xb7lMunBPf"
+}

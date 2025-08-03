@@ -1,0 +1,190 @@
+{
+  "_id": "IoeqpdLDUiW0spHg",
+  "name": "Зелье огненного дыхания / Potion of Fire Breath",
+  "type": "consumable",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Potion%20of%20Fire%20Breath.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "potion%20of%20fire%20breath_dmg"
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Potion of Fire Breath",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 3
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Выпив это зелье, вы можете использовать бонусное действие, чтобы выдохнуть огонь на цель в пределах 30 футов от вас. Цель должна пройти испытание Ловкости со СЛ <strong>13</strong>, получая [[/r 4d6]] урона огнём при провале или половину этого урона при успехе. Эффект прекращается после того, как вы выдохнете огонь трижды, или через 1 час.</p>\n<p>Оранжевая жидкость этого зелья мерцает, алым заполняет верх сосуда и сочится наружу, если его открыть.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "equipped": false,
+    "rarity": "uncommon",
+    "identified": true,
+    "uses": {
+      "max": "3",
+      "autoDestroy": true,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": 4,
+        "denomination": 6,
+        "bonus": "",
+        "types": [
+          "fire"
+        ],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": "<p>Оранжевая жидкость этого зелья мерцает, алым заполняет верх сосуда и сочится наружу, если его открыть.</p>"
+    },
+    "type": {
+      "value": "potion",
+      "subtype": ""
+    },
+    "container": null,
+    "properties": [
+      "mgc"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "13"
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "zele-ognennogo-dyhaniya--potion-of-fire-breath",
+    "attuned": false,
+    "magicalBonus": null
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": "Vn8lmCnqSTHO64uN",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!IoeqpdLDUiW0spHg"
+}

@@ -1,0 +1,321 @@
+{
+  "_id": "ZHRM5kjYcXFMfZXD",
+  "name": "Потусторонний облик Таши / Tasha's Otherworldly Guise",
+  "type": "spell",
+  "img": "icons/creatures/magical/spirit-undead-winged-ghost.webp",
+  "system": {
+    "description": {
+      "value": "<p>Творя заклинание, вы обращаетесь к магии Нижних или Верхних планов (по вашему выбору), для преобразования себя. Вы получаете следующие преимущества до тех пор, пока заклинание не закончится:</p><p><strong>Всегда</strong></p><ul><li>За вашей спиной появляются призрачные крылья, дарующие скорость полета 40 футов. </li><li>Вы получаете бонус +2 к КБ.</li><li>Все ваши атаки оружием считаются магическими, и когда вы совершаете атаку оружием, вы можете использовать свой модификатор базовой характеристики вместо Силы или Ловкости для бросков атаки и урона. </li><li>Действием Атака вы можете совершить две атаки вместо одной. Вы не получаете это преимущество, если у вас уже есть подобное умение (например, «Дополнительная атака»), которое позволяет атаковать более одного раза за действие Атака.</li></ul><p><strong>Верхние планы</strong></p><ul><li><p>невосприимчивость к лучистому урону и некротическому урону.</p></li><li><p>невосприимчивость к состоянию &amp;reference[charmed]{Обворожение}.</p></li></ul><p><strong>Нижние планы</strong></p><ul><li><p>невосприимчивость к урону огнём и ядом.</p></li><li><p>невосприимчивость к состоянию &amp;reference[poisoned]{Отравление}.</p></li></ul><section class=\"secret\" id=\"secret-wSjgIt5vCyBb41cm\"><p><strong>Примечание</strong></p><p>Эта особенность включает в себя два активных эффекта, \"Верхние\" и \"Нижние\", которые автоматически дают вам невосприимчивость к соответствующим типам и условиям урона, скорость полета и бонус к КБ. Она не автоматизирует использование модификатора заклинательной характеристики вместо Силы/Ловкости.</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "",
+      "custom": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "bonus",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "type": "self",
+        "count": "",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "units": ""
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "level": 6,
+    "school": "trs",
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "materials": {
+      "value": "предмет с выгравированным символом Внешних планов стоимостью не менее 500 зм",
+      "consumed": false,
+      "cost": null,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "gXpy3WSXTeBVsxg2"
+          }
+        ],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "potustoronnij-oblik-tashi--tashas-otherworldly-guise"
+  },
+  "effects": [
+    {
+      "name": "Верхние планы",
+      "origin": "Item.ZHRM5kjYcXFMfZXD",
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "flags": {
+        "dnd5e": {},
+        "core": {
+          "sourceId": "Item.ZHRM5kjYcXFMfZXD.ActiveEffect.gXpy3WSXTeBVsxg2"
+        },
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "dontApply": false,
+          "stackable": "noneName",
+          "showIcon": false,
+          "durationExpression": "",
+          "specialDuration": []
+        }
+      },
+      "_id": "gXpy3WSXTeBVsxg2",
+      "changes": [
+        {
+          "key": "system.traits.di.value",
+          "mode": 2,
+          "value": "fire",
+          "priority": 20
+        },
+        {
+          "key": "system.traits.di.value",
+          "mode": 2,
+          "value": "poison",
+          "priority": 20
+        },
+        {
+          "key": "system.traits.ci.value",
+          "mode": 2,
+          "value": "poisoned",
+          "priority": 20
+        },
+        {
+          "key": "system.attributes.ac.bonus",
+          "mode": 2,
+          "value": "2",
+          "priority": 20
+        },
+        {
+          "key": "system.attributes.fly",
+          "mode": 4,
+          "value": "40",
+          "priority": 40
+        }
+      ],
+      "description": "<ul><li><p>невосприимчивость к лучистому урону и некротическому урону.</p></li><li><p>невосприимчивость к состоянию &amp;reference[charmed]{Обворожение}.</p></li></ul>",
+      "transfer": false,
+      "statuses": [],
+      "tint": "#ffffff",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": null,
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!ZHRM5kjYcXFMfZXD.gXpy3WSXTeBVsxg2"
+    },
+    {
+      "name": "Нижние планы",
+      "origin": "Compendium.laaru-dnd5-hw.spells.Item.ZHRM5kjYcXFMfZXD",
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "flags": {
+        "dnd5e": {},
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "dontApply": false,
+          "stackable": "noneName",
+          "showIcon": false,
+          "durationExpression": "",
+          "specialDuration": []
+        }
+      },
+      "_id": "QMLyaPOTslUqGwnN",
+      "changes": [
+        {
+          "key": "system.traits.di.value",
+          "mode": 2,
+          "value": "radiant",
+          "priority": 20
+        },
+        {
+          "key": "system.traits.di.value",
+          "mode": 2,
+          "value": "necrotic",
+          "priority": 20
+        },
+        {
+          "key": "system.traits.ci.value",
+          "mode": 2,
+          "value": "charmed",
+          "priority": 20
+        },
+        {
+          "key": "system.attributes.ac.bonus",
+          "mode": 2,
+          "value": "",
+          "priority": 20
+        },
+        {
+          "key": "system.attributes.fly",
+          "mode": 2,
+          "value": "",
+          "priority": 20
+        }
+      ],
+      "description": "<ul><li><p>невосприимчивость к урону огнём и ядом.</p></li><li><p>невосприимчивость к состоянию &amp;reference[poisoned]{Отравление}.</p></li></ul>",
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": null,
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!ZHRM5kjYcXFMfZXD.QMLyaPOTslUqGwnN"
+    }
+  ],
+  "folder": "YqnZK1fMA9x394B5",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TCE",
+      "hash": "tasha's%20otherworldly%20guise_tce"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Tasha's Otherworldly Guise",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028222576,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!ZHRM5kjYcXFMfZXD"
+}

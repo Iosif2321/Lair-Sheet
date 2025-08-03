@@ -1,0 +1,128 @@
+{
+  "_id": "mzweVbnsJPQiVkAe",
+  "name": "Отбивание снарядов",
+  "type": "feat",
+  "img": "icons/skills/melee/strike-stake-gray.webp",
+  "effects": [],
+  "folder": "ZNPlU3xr9vZNmNq8",
+  "flags": {
+    "midi-qol": {
+      "fumbleThreshold": null,
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "value": "<p>С 3-го уровня вы можете использовать @Compendium[laaru-dnd5-hw.actions.mMwkUE20bEfKeetq]{Ответное действие}, чтобы отбить или поймать снаряд, когда по вам попадают дистанционной атакой оружием. При этом урон, который вы получаете от атаки, уменьшается на [[/r 1d10]] + ваш модификатор <strong>Ловкости </strong>+ ваш уровень монаха.   </p><p>Если урон снижен до <strong>0</strong>, значит, вы можете поймать снаряд рукой, если его размер позволяет держать его в одной руке и если хотя бы одна рука у вас свободна. Поймав его таким образом, можете потратить 1 очко ци, чтобы совершить дистанционную атаку тем оружием или боеприпасом, который вы только что поймали, в качестве части того же <em>ответного действия</em>. Эту атаку вы совершаете с умением, независимо от ваших умений в оружии, и снаряд для этой атаки считается монашеским оружием. Его обычная дистанция — <strong>20 футов</strong>, а дальняя — <strong>60 футов</strong>.</p><p><em>**Примечание Foundry: обратите внимание, что бросок на уменьшение урона рассчитывается по другой формуле.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB pg. 78",
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "reaction",
+      "cost": 1,
+      "condition": "можете потратить 1 очко ци"
+    },
+    "duration": {
+      "value": "",
+      "units": ""
+    },
+    "target": {
+      "value": "",
+      "width": null,
+      "units": "",
+      "type": "",
+      "prompt": true
+    },
+    "range": {
+      "value": 20,
+      "long": 60,
+      "units": "ft"
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": "",
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": "dex",
+    "actionType": "rwak",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        [
+          "1@scale.monk.die + @mod",
+          ""
+        ]
+      ],
+      "versatile": ""
+    },
+    "formula": "1d10 + @mod + @classes.monk.levels",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "requirements": "Monk 3",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "cover": null,
+    "crewed": false,
+    "enchantment": null,
+    "summons": null,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": null
+    },
+    "properties": []
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mzweVbnsJPQiVkAe"
+}

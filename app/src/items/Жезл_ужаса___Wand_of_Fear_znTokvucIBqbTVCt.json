@@ -1,0 +1,263 @@
+{
+  "_id": "znTokvucIBqbTVCt",
+  "name": "Жезл ужаса / Wand of Fear",
+  "type": "consumable",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Wand%20of%20Fear.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "wand%20of%20fear_dmg"
+    },
+    "core": {
+      "sourceId": "Compendium.world.dmgitems.U7GENZpCBtGe0Mxz"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Wand of Fear",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 7
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div><p><em>Требуется настроенность</em></p><p>У этого жезла 7 зарядов для нижеперечисленных свойств. Ежедневно на рассвете жезл восстанавливает [[/r 1d6 + 1]] потраченных зарядов. Потратив последний заряд жезла, бросьте [[/r d20]]. Если выпало 1, жезл рассыпается в пепел и уничтожается.</p><p><strong>Приказ</strong>. Пока вы держите жезл, вы можете использовать действие, чтобы потратить 1 заряд и приказать другому существу бежать или пасть, как при заклинании @Compendium[laaru-dnd5-hw.spells.bM98WJMhzC5LjfrO]{Приказ} (СЛ испытаний 15).</p><p><strong>Конус ужаса</strong>. Пока вы держите жезл, вы можете использовать действие, чтобы потратить 2 заряда и выпустить из навершия жезла 60-футовый конус янтарного света. Каждое существо в конусе должно пройти испытание Мудрости со СЛ 15, при провале оно &amp;reference[frightened]{испугано} вами на 1 минуту. Пока оно так испугано, оно должно тратить свои ходы на попытки переместиться от вас как можно дальше и не может по собственной воле переместиться в пространство в пределах 30 футов от вас. Оно также не может совершать @Compendium[laaru-dnd5-hw.actions.mMwkUE20bEfKeetq]{ответные действия}. В качестве действия оно может использовать только @Compendium[laaru-dnd5-hw.actions.v1tkJ8DKVJFCNFPM]{рывок} или попытки избежать эффекта, который мешает его перемещению. Если ему больше некуда перемещаться, существо может использовать действие @Compendium[laaru-dnd5-hw.actions.UMuz44p8fXeLCZn7]{уклонение}. В конце каждого своего хода существо может повторять испытание, при успехе эффект для него прекращается. </p></div><div><div><p> </p></div></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": false,
+    "rarity": "rare",
+    "identified": true,
+    "uses": {
+      "max": "7",
+      "autoDestroy": false,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "wand",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "cone",
+            "size": "60",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "wis"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          }
+        },
+        "sort": 0
+      },
+      "dnd5eactivity300": {
+        "_id": "dnd5eactivity300",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "cone",
+            "size": "60",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "1d6 +1",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "zhezl-uzhasa--wand-of-fear",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": [
+      "mgc"
+    ]
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.world.dmgitems.U7GENZpCBtGe0Mxz",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739363487401,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": "dRBK3J27k3uNqFqe",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!znTokvucIBqbTVCt"
+}

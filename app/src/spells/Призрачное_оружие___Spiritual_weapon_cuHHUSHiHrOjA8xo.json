@@ -1,0 +1,373 @@
+{
+  "_id": "cuHHUSHiHrOjA8xo",
+  "name": "Призрачное оружие / Spiritual weapon",
+  "type": "spell",
+  "img": "icons/weapons/swords/sword-winged-pink.webp",
+  "effects": [],
+  "folder": "1laDscZ7Bn7NoviD",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "spiritual%20weapon_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": {
+          "0": true
+        },
+        "altValue": {
+          "0": true
+        },
+        "context": {
+          "0": ""
+        }
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "midi-qol": {
+      "fumbleThreshold": null,
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "autoFailFriendly": false,
+      "offHandWeapon": false,
+      "autoSaveFriendly": false
+    },
+    "enhanced-terrain-layer": {
+      "multiple": null,
+      "elevation": null,
+      "depth": null,
+      "environment": ""
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Spiritual weapon",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы создаёте летающее призрачное оружие в пределах дистанции. Оно существует, пока длится заклинание или пока вы не сотворите его снова. Когда вы сотворяете это заклинание, вы можете совершить атаку заклинанием в ближнем бою по существу в пределах 5 футов от оружия. При попадании цель получает урон силой, равный [[/r 1d8]] + модификатор вашей заклинательной характеристики.</p><p>В качестве бонусного действия в свой ход вы можете переместить оружие на расстояние до 20 футов и повторить атаку по существу в пределах 5 футов от него</p><p>Оружие может принять любую форму на ваш выбор. Жрецы божеств, связанных с определенным оружием (к примеру, <em>булава святого Катберта</em> или <em>молот Тора</em>), придают эффекту заклинания вид этого оружия.</p><p><strong>На высоких кругах. </strong>Если вы сотворяете это заклинание, используя ячейку 3-го круга или выше, урон увеличивается на [[/r 1d8]] за каждые два круга ячейки выше 2-го.</p><section class=\"secret\" id=\"secret-6CM8Wntw0RjZujdG\"><p><strong>Примечание</strong></p><p>Данное заклинание настроено как Призыв.</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "bonus",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 2,
+    "school": "evo",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "summon",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "bonuses": {
+          "ac": "",
+          "hd": "",
+          "hp": "",
+          "attackDamage": "(floor((@item.level) / 2))d8 + @mod[force]",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "proficiency": false,
+          "attacks": true,
+          "saves": false
+        },
+        "profiles": [
+          {
+            "count": "",
+            "name": "Алебарда",
+            "_id": "NRXsyLgGICXI2VrA",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.gBr2bX3HA3c7KYW3",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Булава",
+            "_id": "9RnvvHCofLhQiwOg",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.16aDIoSs9J2mkf2s",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Глефа",
+            "_id": "uF1nc8iKnRklX8XA",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.vnPjYNcR9kinMiBQ",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Дубина",
+            "_id": "i0dccwRzb3wQQccM",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.acSYv6c0UZkG595D",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Кинжал",
+            "_id": "SjrXhayyQQEPdJpC",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.Uh0XuqmUXpiQ2wfV",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Копьё",
+            "_id": "NvM4xVJ6iQyfJ4BW",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.7AB7EqzHCfJIvbVT",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Меч",
+            "_id": "xbvMt8bRQayfxNrH",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.lef1lEMD3gDUWyU5",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Молот",
+            "_id": "WXGYDd4jAFHqApFb",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.SihjpsHZIvaxpVZX",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Топор",
+            "_id": "eiT0B4FeeYs51RS9",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.YIxBfob7WDqnP1Zd",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          }
+        ],
+        "summon": {
+          "identifier": "",
+          "mode": "",
+          "prompt": true
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "prizrachnoe-oruzhie--spiritual-weapon"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028225257,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!cuHHUSHiHrOjA8xo"
+}

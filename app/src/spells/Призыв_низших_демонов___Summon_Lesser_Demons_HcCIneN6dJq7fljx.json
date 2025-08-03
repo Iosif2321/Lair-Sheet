@@ -1,0 +1,257 @@
+{
+  "_id": "HcCIneN6dJq7fljx",
+  "name": "Призыв низших демонов / Summon Lesser Demons",
+  "type": "spell",
+  "img": "icons/creatures/unholy/demon-fire-imp.webp",
+  "effects": [],
+  "folder": "V8qhuGxP5pE0yKU2",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "summon%20lesser%20demons_xge"
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Summon Lesser Demons",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы произносите инфернальные слова, призывая демонов из хаоса Бездны. Совершите бросок по следующей таблице, чтобы определить, что именно появится.</p><table class=\"rd__table  stripe-odd-table\" style=\"width:99.2298%;height:68px\"><thead><tr style=\"height:17px\"><th class=\"col-1 text-center\" style=\"width:13.3915%;height:17px\" data-rd-isroller=\"true\">[[/r d6]]</th><th class=\"col-11\" style=\"width:86.2204%;height:17px\" data-rd-isroller=\"false\">призванные демоны</th></tr></thead><tbody><tr style=\"height:17px\"><td class=\"col-1 text-center\" style=\"width:13.3915%;height:17px\" data-roll-min=\"1\" data-roll-max=\"2\">1-2</td><td class=\"col-11\" style=\"width:86.2204%;height:17px\">Два демона с классом опасности 1 или меньше</td></tr><tr style=\"height:17px\"><td class=\"col-1 text-center\" style=\"width:13.3915%;height:17px\" data-roll-min=\"3\" data-roll-max=\"4\">3-4</td><td class=\"col-11\" style=\"width:86.2204%;height:17px\">Четыре демона с классом опасности 1/2 или меньше</td></tr><tr style=\"height:17px\"><td class=\"col-1 text-center\" style=\"width:13.3915%;height:17px\" data-roll-min=\"5\" data-roll-max=\"6\">5-6</td><td class=\"col-11\" style=\"width:86.2204%;height:17px\">Восемь демонов с классом опасности 1/4 или меньше</td></tr></tbody></table><p>Мастер выбирает демонов, таких как @Compendium[laaru-dnd5-hw.monsters.hYUCpxJBZCTOhPGN]{Мейны} или @Compendium[laaru-dnd5-hw.monsters.gQ6pAxwu2hpw4Sz7]{Дретчи}, а вы выбираете видимые вами свободные пространства в пределах дистанции, в которых они появятся. Призванный демон исчезает, когда его ПЗ опускаются до 0 или когда заклинание закончится. Демоны враждебны ко всем существам, включая вас. Совершите проверку инициативы за призванных демонов как за одну группу, и они будут совершать свои собственные ходы. Демоны преследуют и атакуют ближайших не-демонов в меру своих способностей. Как часть сотворения заклинания вы можете начертить на земле круг кровью, используемой в качестве реагента. Круг должен быть достаточного размера, чтобы вместить вас. Пока заклинание длится, призванные демоны не могут пересечь круг или разрушить его, и они не могут атаковать никого в нём. Если реагент использован подобным образом, он расходуется при окончании заклинания.</p><p><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку 6 или 7 круга, вы вызываете в два раза больше демонов. Если вы сотворяете его с помощью ячейки заклинания 8 или 9 круга, вы вызываете в три раза больше демонов.</p><section class=\"secret\" id=\"secret-ogEbQam8V7FpegXm\"><p><em>Примечание. Для работоспособности Призыва, мастеру нужно в настройках прав игроков разрешить создавать Токены и Актёров.</em></p><p><em>Для призыва прописаны известные демоны, других можно добавить в настройках этого заклинания.</em></p></section>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 3,
+    "school": "con",
+    "materials": {
+      "value": "сосуд с кровью гуманоида, убитого за последние 24 часа",
+      "consumed": true,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "summon",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "bonuses": {
+          "ac": "",
+          "hd": "",
+          "hp": "",
+          "attackDamage": "",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "proficiency": false,
+          "attacks": false,
+          "saves": false
+        },
+        "profiles": [
+          {
+            "count": "",
+            "name": "",
+            "_id": "nmcRju7hMUZspy26",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.gQ6pAxwu2hpw4Sz7",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "",
+            "_id": "C1DlIXM6yVNyc9JZ",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.UhK6HWG160Bb4I8V",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "",
+            "_id": "vhBgBTStR7CA4aKL",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.Ohcv5MnrZd4PQ9RM",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          }
+        ],
+        "summon": {
+          "identifier": "",
+          "mode": "",
+          "prompt": true
+        },
+        "sort": 0
+      },
+      "dnd5eactivity300": {
+        "_id": "dnd5eactivity300",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "d6",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "prizyv-nizshih-demonov--summon-lesser-demons"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028211037,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!HcCIneN6dJq7fljx"
+}

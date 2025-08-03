@@ -1,0 +1,274 @@
+{
+  "_id": "DPOuFHSi8U5ESoDo",
+  "name": "Покров духа / Spirit Shroud",
+  "type": "spell",
+  "img": "icons/magic/death/undead-ghosts-trio-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы взываете к духам умерших, и они окружают вас на протяжении длительности заклинания. Духи неосязаемы и неуязвимы.</p><p>До окончания действия заклинания любая ваша атака наносит дополнительно [[/r 1d8]] урона, если вы атакуете существо в пределах 10 футов от вас. Вы выбираете вид урона в момент сотворения этого заклинания из следующих вариантов: лучистый, некротический или холод. Любое существо, получившее этот урон, не сможет восстанавливать ПЗ до начала вашего следующего хода.</p><p>В дополнение к этому, скорость каждого видимого вами существа по вашему выбору, начинающего ход в пределах 10 футов от вас, будет уменьшена на 10 футов до начала вашего следующего хода.</p><p><strong>На высоких кругах. </strong>Когда вы сотворяете это заклинание, используя ячейку 4-го круга или выше, дополнительный урон увеличивается на [[/r 1d8]] за каждые два круга ячейки выше третьего.</p><table><thead><tr><th><p>Круг ячейки заклинания: [[lookup @item.level]]</p></th></tr></thead><tbody><tr><td><p>[[/damage (floor(@item.level - 1)/2)d8 type=radiant]]{Лучистый урон}</p></td></tr><tr><td><p>[[/damage (floor(@item.level - 1)/2)d8 type=necrotic]]{Некротический урон}</p></td></tr><tr><td><p>[[/damage (floor(@item.level - 1)/2)d8 type=cold]]{Урон холодом}</p></td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "",
+      "custom": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "bonus",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "type": "self",
+        "count": "",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "10",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 3,
+    "school": "nec",
+    "properties": [
+      "vocal",
+      "somatic",
+      "concentration",
+      "mgc"
+    ],
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "damage",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "6dWKopyLdqgFRsjD"
+          }
+        ],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": true,
+                "formula": "(floor(@item.level - 1)/2)d8"
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "pokrov-duha--spirit-shroud"
+  },
+  "effects": [
+    {
+      "name": "Замедлен",
+      "origin": "Compendium.laaru-dnd5-hw.spells.Item.DPOuFHSi8U5ESoDo",
+      "duration": {
+        "rounds": 1,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "6dWKopyLdqgFRsjD",
+      "changes": [
+        {
+          "key": "system.attributes.movement.walk",
+          "mode": 2,
+          "value": "-10",
+          "priority": 20
+        },
+        {
+          "key": "system.attributes.movement.fly",
+          "mode": 2,
+          "value": "-10",
+          "priority": 20
+        },
+        {
+          "key": "system.attributes.movement.swim",
+          "mode": 2,
+          "value": "-10",
+          "priority": 20
+        },
+        {
+          "key": "system.attributes.movement.climb",
+          "mode": 2,
+          "value": "-10",
+          "priority": 20
+        },
+        {
+          "key": "system.attributes.movement.burrow",
+          "mode": 2,
+          "value": "-10",
+          "priority": 20
+        }
+      ],
+      "description": "<p>Начало вашего хода в радиусе 10 футов от заклинателя снижает вашу скорость на 10 футов до начала следующего хода заклинателя.</p>",
+      "transfer": false,
+      "statuses": [],
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "dontApply": false,
+          "stackable": "noneName",
+          "showIcon": false,
+          "durationExpression": "",
+          "specialDuration": []
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.0.1",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": null,
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!DPOuFHSi8U5ESoDo.6dWKopyLdqgFRsjD"
+    }
+  ],
+  "folder": "V8qhuGxP5pE0yKU2",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TCE",
+      "hash": "spirit%20shroud_tce"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Spirit Shroud",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028208492,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!DPOuFHSi8U5ESoDo"
+}

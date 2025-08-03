@@ -1,0 +1,236 @@
+{
+  "_id": "sPyBxvjeX9OH6EEN",
+  "name": "Каменная стена / Wall of Stone",
+  "type": "spell",
+  "img": "icons/environment/settlement/fence-stone-brick.webp",
+  "effects": [],
+  "folder": "3zIZihf4NL02gtMG",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "wall%20of%20stone_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [],
+        "altValue": [],
+        "context": []
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Wall of Stone",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Немагическая стена из твердого камня появляется в выбранной вами точке в пределах дистанции. Стена толщиной 6 дюймов и состоит из десяти участков размером 10 на 10 футов. Все участки должны быть состыкованы в единое целое. Как вариант, вы можете создать участки размером 10 на 20 футов, но толщиной всего 3 дюйма.</p>\n<p>Если стена при появлении проходит через пространство, занимаемое существом, она выталкивает его по одну из сторон стены (на ваш выбор). Если существо оказывается окружено со всех сторон стеной (или стеной и другой твёрдой поверхностью), оно может пройти испытание Ловкости. При успехе оно может использовать ответное действие, чтобы переместиться на расстояние вплоть до значения своей скорости так, чтобы стена его больше не окружала.</p>\n<p>Стена может принять любую форму на ваш выбор, но не может занимать одно пространство с существом или объектом. Стена не обязана быть вертикальной или опираться на твёрдое основание. Однако она должна сливаться с уже существующим камнем, чтобы он ее поддерживал. Таким образом можно перекинуть мост через пропасть или создать наклонный подъём.</p>\n<p>Если вы создаёте пролёт длиннее 20 футов, придётся вдвое уменьшить размер каждого участка, чтобы создать опоры. Можете создать на стене грубо сделанные зубцы, бойницы и другие простые детали на ваш выбор. Стена — это каменный объект, который можно повредить или пробить. У каждого её участка КБ 15 и по 30 ПЗ за каждый дюйм толщины. Если довести ПЗ участка до 0, он будет уничтожен, а связанные с ним соседние участки могут обвалиться, если так решит мастер.</p>\n<p>Если вы концентрируетесь на заклинании всю его длительность, стена становится постоянной и её нельзя будет рассеять. В противном случае стена исчезает, когда заклинание прекращает действовать.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "10",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "wall",
+        "size": "100",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "120",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 5,
+    "school": "evo",
+    "materials": {
+      "value": "небольшой гранитный блок",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": "dex",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "kamennaya-stena--wall-of-stone"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028235177,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!sPyBxvjeX9OH6EEN"
+}

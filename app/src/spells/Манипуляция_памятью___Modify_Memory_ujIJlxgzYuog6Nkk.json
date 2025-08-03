@@ -1,0 +1,235 @@
+{
+  "_id": "ujIJlxgzYuog6Nkk",
+  "name": "Манипуляция памятью / Modify Memory",
+  "type": "spell",
+  "img": "icons/magic/control/hypnosis-mesmerism-pendulum.webp",
+  "effects": [],
+  "folder": "3zIZihf4NL02gtMG",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "PHB",
+      "hash": "modify%20memory_phb"
+    },
+    "betterRolls5e": {
+      "critRange": {
+        "type": "String",
+        "value": null
+      },
+      "critDamage": {
+        "type": "String",
+        "value": ""
+      },
+      "quickDesc": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickAttack": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickDamage": {
+        "type": "Array",
+        "value": [],
+        "altValue": [],
+        "context": []
+      },
+      "quickVersatile": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      },
+      "quickProperties": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "type": "Boolean",
+        "value": {
+          "use": true,
+          "resource": true
+        },
+        "altValue": {
+          "use": true,
+          "resource": true
+        }
+      },
+      "quickTemplate": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true,
+        "context": ""
+      },
+      "quickFlavor": {
+        "type": "Boolean",
+        "value": true,
+        "altValue": true
+      },
+      "quickPrompt": {
+        "type": "Boolean",
+        "value": false,
+        "altValue": false
+      }
+    },
+    "core": {},
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Modify Memory",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\"><p>Вы пытаетесь изменить воспоминания другого существа. Одно существо, которое вы видите, должно пройти испытание Мудрости. Если вы сражаетесь с существом, у него преимущество к испытанию. При провале цель &amp;reference[charmed]{обворожена} вами, пока длится заклинание. Обворожённая цель &amp;reference[incapacitated]{выведена из строя} и не знает, что происходит вокруг, но может слышать вас. Если цель получает любой урон или становится целью иного заклинания, это заклинание прекращает действовать и память цели не меняется.</p></div><div class=\"rd__spc-inline-post\"><p>Пока действует это обворожение, вы можете изменить воспоминания цели о событии, случившемся в последние 24 часа и продолжавшемся не более 10 минут. Вы можете просто навсегда стереть воспоминания об этом событии, позволить цели вспомнить событие в точности, изменить детали этого воспоминания или создать воспоминание о другом событии.</p></div><div class=\"rd__spc-inline-post\"><p>Вы должны говорить с целью, чтобы описать, как меняются ее воспоминания, и она должна понимать ваш язык, чтобы воспоминания закрепились. Разум цели сам заполняет пробелы в деталях вашего описания. Если заклинание прекращает действовать, прежде чем вы закончили описание, память существа не меняется. В противном случае изменённые воспоминания сохраняются по окончании действия заклинания.</p></div><div class=\"rd__spc-inline-post\"><p>Изменённая память не всегда влияет на поведение существа, особенно если воспоминания противоречат его природным наклонностям, мировоззрению или убеждениям. Нелогичную изменённую память — например, о том, как существо радостно плескалось в кислоте, — оно отвергнет, как дурной сон. Мастер может посчитать изменённые воспоминания слишком бессмысленными, и они не повлияют на поведение существа.</p></div><div class=\"rd__spc-inline-post\"><p>Сотворённые на цель заклинания @Compendium[laaru-dnd5-hw.spells.Y5EfiRqmCWKJ7Qhk]{Снятие проклятия} или  @Compendium[laaru-dnd5-hw.spells.lFqzcFBz3F0u96i1]{Высшее восстановление} возвращают ей истинную память.</p></div><div class=\"rd__spc-inline-post\"><p><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку 6-го круга или выше, то можете изменить воспоминания цели о событии давностью до 7 дней (6-й круг), 30 дней (7-й круг), 1 года (8-й круг) или любого времени в прошлом существа (9-й круг).</p></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "PHB",
+      "book": "PHB",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "type": "creature",
+        "count": "1",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "30",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 5,
+    "school": "enc",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": "wis",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "manipulyaciya-pamyatyu--modify-memory"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028236314,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!ujIJlxgzYuog6Nkk"
+}

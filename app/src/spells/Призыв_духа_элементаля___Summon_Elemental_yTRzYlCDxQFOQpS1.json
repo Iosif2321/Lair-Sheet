@@ -1,0 +1,221 @@
+{
+  "_id": "yTRzYlCDxQFOQpS1",
+  "name": "Призыв духа элементаля / Summon Elemental",
+  "type": "spell",
+  "img": "icons/creatures/magical/spirit-undead-horned-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы призываете духа элементаля. Существо появляется в незанятом пространстве, которое вы можете видеть в пределах досягаемости. Эта телесная форма использует блок параметров @Compendium[laaru-dnd5-hw.monsters.LmzNg1HMX0qOjzE2]{Духа элементаля}.</p><p>Когда вы творите заклинание, выберите элемент: @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.W8uQB10b0V55TwiF]{Воздух}, @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.bRiivW2PXWOvxIUi]{Земля}, @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.2XbHCaH90fk5lQye]{Огонь} или @UUID[Compendium.laaru-dnd5-hw.monsters.Actor.76kZkArmuzWHfUph]{Вода}.</p><p>Существо напоминает двуногую форму, заключенную в выбранном элементе, который определяет определенные черты в его блоке параметров. Существо исчезает, когда его ПЗ опускаются до 0 или когда заклинание заканчивается.</p><p>Это существо дружественно вам и вашим спутникам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие @Compendium[laaru-dnd5-hw.actions.UMuz44p8fXeLCZn7]{Уклонение} и перемещается, избегая опасностей.</p><p><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку заклинания 5-го круга или выше, используйте более высокий круг  везде, где круг заклинания появляется в блоке параметров.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TCE",
+      "page": "",
+      "custom": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "type": "space",
+        "count": "1",
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "90",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 4,
+    "school": "con",
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration",
+      "mgc"
+    ],
+    "materials": {
+      "value": "воздух, галька, зола и вода в инкрустированном золотом флаконе стоимостью не менее 400 зм",
+      "consumed": false,
+      "cost": 400,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "summon",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "bonuses": {
+          "ac": "@item.level",
+          "hp": "(@item.level - 4) * 10",
+          "attackDamage": "@item.level",
+          "saveDamage": "",
+          "healing": "",
+          "hd": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "proficiency": true,
+          "attacks": true,
+          "saves": false
+        },
+        "profiles": [
+          {
+            "count": "",
+            "name": "Вода",
+            "_id": "Ys6vOBVdW0MrHR2H",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.76kZkArmuzWHfUph",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Воздух",
+            "_id": "mja4oUmwv8ATOgrN",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.W8uQB10b0V55TwiF",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Земля",
+            "_id": "br0ncD4ynZGazZjG",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.bRiivW2PXWOvxIUi",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          },
+          {
+            "count": "",
+            "name": "Огонь",
+            "_id": "T9j8EIcy5rIVOAH1",
+            "uuid": "Compendium.laaru-dnd5-hw.monsters.Actor.2XbHCaH90fk5lQye",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "types": []
+          }
+        ],
+        "summon": {
+          "identifier": "",
+          "mode": "",
+          "prompt": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "prizyv-duha-elementalya--summon-elemental"
+  },
+  "effects": [],
+  "folder": "5iZ8qMTOt7ODg7B1",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "TCE",
+      "hash": "summon%20elemental_tce"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Summon Elemental",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028238960,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!yTRzYlCDxQFOQpS1"
+}

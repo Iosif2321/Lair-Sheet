@@ -1,0 +1,220 @@
+{
+  "_id": "K622SiAXc0idBeEU",
+  "name": "Некротическая оболочка",
+  "type": "feat",
+  "img": "icons/magic/death/undead-skeleton-fire-green.webp",
+  "effects": [
+    {
+      "_id": "bJcoxeIFeIfTTNsG",
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "necrotic",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": "Item.K622SiAXc0idBeEU",
+      "transfer": true,
+      "flags": {
+        "core": {
+          "statusId": ""
+        },
+        "dae": {
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": [],
+          "transfer": true
+        }
+      },
+      "tint": "#ffffff",
+      "name": "Устойчивость к некротическому урону",
+      "description": "",
+      "statuses": [],
+      "img": "icons/magic/death/undead-skeleton-fire-green.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "12.343",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!items.effects!K622SiAXc0idBeEU.bJcoxeIFeIfTTNsG"
+    },
+    {
+      "_id": "XHTP6WowFXsk2n7c",
+      "changes": [
+        {
+          "key": "system.traits.di.value",
+          "mode": 2,
+          "value": "necrotic",
+          "priority": 20
+        }
+      ],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": "Item.K622SiAXc0idBeEU",
+      "transfer": true,
+      "flags": {
+        "core": {
+          "statusId": ""
+        },
+        "dae": {
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": [],
+          "transfer": true
+        }
+      },
+      "tint": "#ffffff",
+      "name": "Невосприимчивость к некротическому урону",
+      "description": "",
+      "statuses": [],
+      "img": "icons/magic/death/undead-skeleton-fire-green.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "12.343",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!items.effects!K622SiAXc0idBeEU.XHTP6WowFXsk2n7c"
+    }
+  ],
+  "folder": "yYug9akvBf9sKD4E",
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "value": "<p>Ваша связь с нежитью и некротической энергией теперь наполняет ваше тело.</p>\n<p>Вы получаете устойчивость к некротическому урону.</p>\n<p>Если вы находитесь в <em>облике ужаса</em>, вместо этого вы получаете невосприимчивость к некротическому урону.</p>\n<p>Кроме того, когда ваше здоровье опускается до <strong>0</strong>, вы можете использовать @Compendium[laaru-dnd5-hw.actions.mMwkUE20bEfKeetq]{ответное действие}, чтобы вместо этого остаться с 1 ПЗ и заставить свое тело извергать смертоносную энергию. Каждое существо по вашему выбору, находящееся в пределах <strong>30 футов</strong> от вас, получает некротический урон , равный [[/r 2d10]] + ваш уровень колдуна. Затем вы получаете 1 уровень &amp;reference[exhaustion]{утомления}. Как только вы воспользуетесь этим ответным действием, вы не сможете совершить её снова, пока не завершите [[/r 1d4]] долгих отдыхов.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "VRGR",
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "reaction",
+      "cost": 1,
+      "condition": "когда ваше здоровье опускается до 0"
+    },
+    "duration": {
+      "value": "",
+      "units": ""
+    },
+    "target": {
+      "value": "30",
+      "width": null,
+      "units": "ft",
+      "type": "radius",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": ""
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": "",
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": "",
+    "actionType": "other",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        [
+          "2d10 +@classes.warlock.levels",
+          "necrotic"
+        ]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "requirements": "Warlock 10 (Undead)",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "cover": null,
+    "crewed": false,
+    "enchantment": null,
+    "summons": null,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": null
+    },
+    "properties": []
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!K622SiAXc0idBeEU"
+}

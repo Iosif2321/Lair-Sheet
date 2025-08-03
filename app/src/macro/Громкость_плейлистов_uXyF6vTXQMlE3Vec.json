@@ -1,0 +1,40 @@
+{
+  "name": "Громкость плейлистов",
+  "type": "script",
+  "scope": "global",
+  "author": "N5s4uI6OpcSYQoF8",
+  "img": "icons/tools/instruments/megaphone.webp",
+  "command": "// Макрос который позволяет выставить выбранный плейлист под фиксированную громкость (от 0 до 1, где 0 - это выключен звук, а 1 - полная громкость. Поддерживаются дроби через запятую, например 0,5). Спасибо Salamander\nlet optionsHtml = game.playlists.contents.map((playlist) => `<option value=\"${playlist.id}\">${playlist.name}</option>`).join('');\n\nnew Dialog({\n  title: 'Установка громкости',\n  content: `\n    <form>\n      <div class=\"form-group\">\n        <label>Выберите плейлисты для редактирования:</label>\n        <select id=\"playlists\" name=\"playlists\" multiple style=\"height: 100px;\">\n          ${optionsHtml}\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label>Новая громкость для всех треков выбранных плейлистов (от 0 до 1):</label>\n        <input type=\"number\" name=\"volume\" min=\"0\" max=\"1\" step=\"0.01\">\n      </div>\n    </form>\n  `,\n  buttons: {\n    yes: {\n      icon: \"<i class='fas fa-check'></i>\",\n      label: 'Применить',\n      callback: async (html) => {\n        let newVolume = Number(html.find('input[name=\"volume\"]').val());\n        let selectedPlaylists = Array.from(html.find('#playlists option:checked'), option => option.value);\n        if (isNaN(newVolume) || newVolume < 0 || newVolume > 1) {\n          ui.notifications.warn(\"Введено некорректное значение громкости. Громкость должна быть в пределах от 0 до 1.\");\n        } else {\n          // Обходим выбранные плейлисты\n          for (let playlistId of selectedPlaylists) {\n            let playlist = game.playlists.get(playlistId);\n            // Обходим все звуковые треки внутри каждого плейлиста\n            for (let sound of playlist.sounds) {\n              // Устанавливаем новую громкость\n              await playlist.updateEmbeddedDocuments(\"PlaylistSound\", [{ _id: sound.id, volume: newVolume }]);\n            }\n          }\n\n          ui.notifications.info(\"Громкость всех композиций выбранных плейлистов успешно обновлена.\");\n        }\n      }\n    },\n    no: {\n      icon: \"<i class='fas fa-times'></i>\",\n      label: 'Отмена'\n    }\n  },\n  default: 'yes'\n}).render(true);",
+  "ownership": {
+    "default": 0,
+    "N5s4uI6OpcSYQoF8": 3
+  },
+  "flags": {
+    "advanced-macros": {
+      "runForSpecificUser": "GM"
+    },
+    "exportSource": {
+      "world": "path-of-the-pilgrim",
+      "system": "dnd5e",
+      "coreVersion": "11.306",
+      "systemVersion": "2.2.2"
+    },
+    "core": {
+      "sourceId": "Macro.AWvkngBfbs9EOVvt"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1690895691269,
+    "modifiedTime": 1699263546147,
+    "lastModifiedBy": "H9WsizrOeJscXSvG",
+    "compendiumSource": "Macro.AWvkngBfbs9EOVvt",
+    "duplicateSource": null
+  },
+  "folder": "vwyjREHxtAnaLnqX",
+  "sort": 100000,
+  "_id": "uXyF6vTXQMlE3Vec",
+  "_key": "!macros!uXyF6vTXQMlE3Vec"
+}

@@ -1,0 +1,569 @@
+{
+  "name": "Приносящая ночь / Nightbringer",
+  "type": "weapon",
+  "folder": "n159IicbyVmxuqDY",
+  "img": "icons/weapons/maces/mace-round-spiked-black.webp",
+  "system": {
+    "description": {
+      "value": "<p>У этой тяжелой булавы рукоять из темного дуба и головка из черненой стали, отделанная золотом. В бою головка булавы окутывается черной энергией.</p><p>Вы получаете бонус +3 к броскам атаки и урона, сделанным этим оружием. Когда вы попадаете в цель, используя это оружие, цель получает дополнительные [[/r 4d4]] лучистого урона.</p><p>Если у вас злое мировоззрение, то при использовании Приносящей ночи вы получаете следующие преимущества:</p><ul><li><p><strong>Благословение королевы драконов</strong>. Вы невосприимчивы к состояниям @UUID[Compendium.laaru-dnd5-hw.actions.5vKRVm8wXReUJasS]{обворожения} и @UUID[Compendium.laaru-dnd5-hw.actions.bM6mDYvBFw64wDMp]{испуга}, а также получаете невосприимчивость к одному из следующих типов повреждений (выбирается когда вы настраиваетесь на оружие): кислота, холод, огонь, молния или яд.</p><section id=\"secret-lndKYgp1h1PpivvM\" class=\"secret\"><p>(выберите и активируйте в бланке персонажа нужный эффект)</p></section></li><li><p><strong>Глаза полуночи</strong>. Вы обладаете @UUID[Compendium.laaru-dnd5-hw.actions.ISAzCKx8W9pk8GB1]{ночным зрением} на расстоянии в 60 футов. Если у вас уже есть ночное зрение, его расстояние увеличивается на 60 футов.</p></li><li><p><strong>Полуночный саван</strong>. Оружие имеет 6 зарядов. Когда вы попадаете по существу атакой с помощью этого оружия, вы можете потратить один заряд, чтобы заставить его пройти испытание Выносливости со СЛ 20. При провале, существо @UUID[Compendium.laaru-dnd5-hw.actions.apswG1jicwhlWT5R]{ослеплено} до начала вашего следующего хода. Оружие восстанавливает [[/r 1d6]] потраченных зарядов ежедневно на рассвете.</p></li></ul>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "MCV2DC",
+      "revision": 1,
+      "book": "MCV2DC",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 4,
+      "units": "lb"
+    },
+    "price": {
+      "value": 16000,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": false,
+    "rarity": "legendary",
+    "identified": true,
+    "cover": null,
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "ft",
+      "reach": null
+    },
+    "uses": {
+      "max": "6",
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "formula",
+          "formula": "1d6"
+        }
+      ],
+      "spent": 0
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [
+          "bludgeoning"
+        ],
+        "custom": {
+          "enabled": true,
+          "formula": "1d6+3+@mod"
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      }
+    },
+    "armor": {
+      "value": 10
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "proficient": 1,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "simpleM",
+      "baseItem": "mace"
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "str",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "prinosyashaya-noch--nightbringer",
+    "container": null,
+    "attuned": false,
+    "crewed": false,
+    "ammunition": {},
+    "magicalBonus": null
+  },
+  "effects": [
+    {
+      "origin": "Item.uRYV9TQ97P3M2uhR",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "8fckYEkdTqtIH2QH",
+      "changes": [
+        {
+          "key": "system.traits.ci.value",
+          "mode": 0,
+          "value": "charmed",
+          "priority": 20
+        },
+        {
+          "key": "system.traits.ci.value",
+          "mode": 0,
+          "value": "frightened",
+          "priority": 20
+        },
+        {
+          "key": "system.attributes.senses.darkvision",
+          "mode": 2,
+          "value": "60",
+          "priority": 20
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": []
+        },
+        "core": {
+          "statusId": ""
+        }
+      },
+      "name": "Благословение королевы драконов",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/weapons/maces/mace-round-spiked-black.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!mmCUD7Ku7dgoD9KU.8fckYEkdTqtIH2QH"
+    },
+    {
+      "origin": "Item.uRYV9TQ97P3M2uhR",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": true,
+      "_id": "OLhCZMXytYr3jPRl",
+      "changes": [
+        {
+          "key": "system.traits.di.value",
+          "mode": 0,
+          "value": "acid",
+          "priority": 20
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": []
+        },
+        "core": {
+          "statusId": ""
+        }
+      },
+      "name": "Невосприимчивость к кислоте",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/weapons/maces/mace-round-spiked-black.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!mmCUD7Ku7dgoD9KU.OLhCZMXytYr3jPRl"
+    },
+    {
+      "origin": "Item.uRYV9TQ97P3M2uhR",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": true,
+      "_id": "Hi9C0wklHMkvbL6b",
+      "changes": [
+        {
+          "key": "system.traits.di.value",
+          "mode": 0,
+          "value": "cold",
+          "priority": 20
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": []
+        },
+        "core": {
+          "statusId": "",
+          "sourceId": "Item.uRYV9TQ97P3M2uhR.ActiveEffect.Hi9C0wklHMkvbL6b"
+        }
+      },
+      "name": "Невосприимчивость к холоду",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/weapons/maces/mace-round-spiked-black.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!mmCUD7Ku7dgoD9KU.Hi9C0wklHMkvbL6b"
+    },
+    {
+      "origin": "Item.uRYV9TQ97P3M2uhR",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": true,
+      "_id": "4q3Y3cURHUrxAqHm",
+      "changes": [
+        {
+          "key": "system.traits.di.value",
+          "mode": 0,
+          "value": "fire",
+          "priority": 20
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": []
+        },
+        "core": {
+          "statusId": ""
+        }
+      },
+      "name": "Невосприимчивость к огню",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/weapons/maces/mace-round-spiked-black.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!mmCUD7Ku7dgoD9KU.4q3Y3cURHUrxAqHm"
+    },
+    {
+      "origin": "Item.uRYV9TQ97P3M2uhR",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": true,
+      "_id": "gt9liVvWWLQ51upT",
+      "changes": [
+        {
+          "key": "system.traits.di.value",
+          "mode": 0,
+          "value": "lightning",
+          "priority": 20
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": []
+        },
+        "core": {
+          "statusId": ""
+        }
+      },
+      "name": "Невосприимчивость к молнии",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/weapons/maces/mace-round-spiked-black.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!mmCUD7Ku7dgoD9KU.gt9liVvWWLQ51upT"
+    },
+    {
+      "origin": "Item.uRYV9TQ97P3M2uhR",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": true,
+      "_id": "hsEqmqzE091Lcqmp",
+      "changes": [
+        {
+          "key": "system.traits.di.value",
+          "mode": 0,
+          "value": "poison",
+          "priority": 20
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": []
+        },
+        "core": {
+          "statusId": ""
+        }
+      },
+      "name": "Невосприимчивость к яду",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/weapons/maces/mace-round-spiked-black.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!mmCUD7Ku7dgoD9KU.hsEqmqzE091Lcqmp"
+    }
+  ],
+  "flags": {
+    "babele": {
+      "translated": true,
+      "hasTranslation": true,
+      "originalName": "Mace +3"
+    },
+    "core": {
+      "sourceId": "Compendium.dnd5e.items.2CQnAvn06bncXPBt"
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 6
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.dnd5e.items.2CQnAvn06bncXPBt",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "_id": "mmCUD7Ku7dgoD9KU",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!mmCUD7Ku7dgoD9KU"
+}

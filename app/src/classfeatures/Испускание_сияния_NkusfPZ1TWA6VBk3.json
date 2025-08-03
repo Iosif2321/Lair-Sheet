@@ -1,0 +1,113 @@
+{
+  "_id": "NkusfPZ1TWA6VBk3",
+  "name": "Испускание сияния",
+  "type": "feat",
+  "img": "icons/magic/light/explosion-beam-impact-silhouette.webp",
+  "effects": [],
+  "folder": "53s9rI626AAxagJ3",
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "value": "<p> Начиная с 3 уровня, вы можете действием высвободить божественную энергию внутри себя, заставляя себя излучать испепеляющий свет, льющийся из ваших глаз и рта, и угрожающий опалить вас.</p>\n<p>Ваше превращение длится 1 минуту или пока вы не закончите его бонусным действием. Во время превращения вы излучаете &amp;reference[brightlight]{яркий свет} в пределах 10 футов и &amp;reference[dimlight]{тусклый} в пределах ещё 10 футов, и в конце каждого вашего хода, вы и каждое существо в пределах 10 футов из вас получаете лучистый урон, равный половине вашего уровня (округленного в большую сторону). Кроме того, раз в ход вы можете нанести дополнительный лучистый урон одной цели, когда вы наносите ему урон атакой или заклинанием. Дополнительный лучистый урон равен вашему уровню.</p>\n<p>Использовав эту особенность, вы не можете использовать её снова, пока не завершите долгий отдых.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": "3 уровень"
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "value": "",
+      "width": null,
+      "units": "",
+      "type": "creature",
+      "prompt": true
+    },
+    "range": {
+      "value": 10,
+      "long": null,
+      "units": "ft"
+    },
+    "uses": {
+      "value": 1,
+      "max": "1",
+      "per": "lr",
+      "recovery": "",
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": "",
+    "actionType": "other",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        [
+          "(ceil(@details.level / 2))",
+          "radiant"
+        ]
+      ],
+      "versatile": "@details.level"
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "requirements": "Аасимар-каратель, 3 уровень",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "attack": {
+      "bonus": "",
+      "flat": false
+    },
+    "cover": null,
+    "crewed": false,
+    "enchantment": null,
+    "summons": null,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": null
+    },
+    "properties": []
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!NkusfPZ1TWA6VBk3"
+}

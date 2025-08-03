@@ -1,0 +1,215 @@
+{
+  "_id": "yV402e4hiwxZNRNN",
+  "name": "Кольцо Красной Ярости / Ring of Red Fury",
+  "type": "equipment",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Ring%20of%20Red%20Fury.webp",
+  "effects": [
+    {
+      "changes": [
+        {
+          "key": "system.attributes.movement.swim",
+          "mode": 4,
+          "value": "@attributes.movement.walk",
+          "priority": 4
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "core": {
+          "statusId": ""
+        },
+        "dae": {
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": [],
+          "transfer": true
+        }
+      },
+      "_id": "r9idsi1izxfjx2mc",
+      "origin": null,
+      "name": "Скорость плавания",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "modules/laaru-dnd5-hw/assets/images/pic/Ring%20of%20Red%20Fury.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!yV402e4hiwxZNRNN.r9idsi1izxfjx2mc"
+    },
+    {
+      "_id": "W0ZD9SrYqnN8K8ao",
+      "changes": [
+        {
+          "key": "system.traits.ci.value",
+          "mode": 2,
+          "value": "paralyzed",
+          "priority": 20
+        },
+        {
+          "key": "system.traits.ci.value",
+          "mode": 2,
+          "value": "restrained",
+          "priority": 20
+        }
+      ],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": "Item.yV402e4hiwxZNRNN",
+      "transfer": true,
+      "flags": {
+        "core": {
+          "statusId": ""
+        },
+        "dae": {
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": [],
+          "transfer": true
+        }
+      },
+      "tint": "#ffffff",
+      "name": "Невосприимчивость к Параличу и Обездвиженности",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.2.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "modules/laaru-dnd5-hw/assets/images/pic/Ring%20of%20Red%20Fury.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!yV402e4hiwxZNRNN.W0ZD9SrYqnN8K8ao"
+    }
+  ],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "CRCotN",
+      "hash": "ring%20of%20red%20fury_crcotn"
+    },
+    "core": {
+      "sourceId": "Item.CiZFoSfxFLRgkxbt"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Ring of Red Fury",
+      "translated": true
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>По всему кольцу проходит полоса руидия. Надев кольцо, вы получаете следующие преимущества:</p>\n<ul>\n<li>Вы можете дышать под водой;</li>\n<li>Вы получаете скорость плавания, равную вашей скорости ходьбы.</li>\n</ul>\n<p><strong>Ярость руидия</strong>. Бонусным действием вы можете использовать кольцо, чтобы получить следующие преимущества, которые длятся в течение 1 минуты или до тех пор, пока вы не будете &amp;reference[incapacitated]{выведены из строя}:</p>\n<ul>\n<li>Вы получаете преимущество на проверки и испытания Силы;</li>\n<li>Когда вы попадаете атакой, вы можете добавить свой бонус умения к броску урона;</li>\n<li>&amp;reference[difficultterrain]{Пересечённая местность} не требует от вас дополнительных перемещения, и вы невосприимчивы к состояниям &amp;reference[paralyzed]{парализованный} и &amp;reference[restrained]{обездвиженный}.</li>\n</ul>\n<p>Вы не можете использовать это свойство кольца снова, пока не закончите долгий отдых.</p>\n<p><strong>Руидиевая порча.</strong> Когда вы используете свойство кольца \"Ярость руидия\", вы должны пройти испытание Харизмы со со СЛ 20. При провале вы получаете 1 степень &amp;reference[exhaustion]{Утомления}. Если вы ещё не страдаете от руидиевой порчи, вы становитесь подвержены ей, после того, как проваливаете это испытание.</p>\n<p><strong>Если руидий будет уничтожен.</strong> Если Апотеон убит или освобождён, весь руидий в Экзандрии мгновенно уничтожается, а кольцо красной ярости становится @Compendium[laaru-dnd5-hw.items.5YF7o9gORMQPHAPE]{Кольцом свободы действий}.</p>\n\n<div id=\"gtx-trans\" style=\"position:absolute;left:364px;top:513.818px\">\n<div class=\"gtx-trans-icon\"> </div>\n</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "CRCotN",
+      "revision": 1,
+      "book": "CRCotN",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "equipped": true,
+    "rarity": "veryRare",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "armor": {
+      "value": null,
+      "dex": null,
+      "magicalBonus": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "speed": {
+      "value": null,
+      "conditions": ""
+    },
+    "strength": null,
+    "proficient": null,
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "ring",
+      "baseItem": ""
+    },
+    "activities": {},
+    "identifier": "kolco-krasnoj-yarosti--ring-of-red-fury",
+    "container": null,
+    "attuned": false,
+    "properties": [
+      "mgc"
+    ]
+  },
+  "_stats": {
+    "compendiumSource": "Item.CiZFoSfxFLRgkxbt",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739358741096,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": "NxR2aEfN9k5MpdNZ",
+  "sort": 3500000,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!yV402e4hiwxZNRNN"
+}

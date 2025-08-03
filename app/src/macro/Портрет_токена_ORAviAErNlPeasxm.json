@@ -1,0 +1,37 @@
+{
+  "name": "Портрет токена",
+  "type": "script",
+  "author": "ekSJaSkR4p1sowmM",
+  "img": "icons/environment/people/commoner.webp",
+  "scope": "global",
+  "command": "// Макрос для Foundry, который позволяет показать игрокам портрет выделенного токена. \ncanvas.tokens.updateAll(\n  token => ({ displayName : CONST.TOKEN_DISPLAY_MODES.HOVER }),\n  token => token._controlled,\n);\n\nconst popout = new ImagePopout(canvas.tokens.controlled[0].actor.img).render(true);\npopout.shareImage();",
+  "flags": {
+    "exportSource": {
+      "world": "avernus",
+      "system": "dnd5e",
+      "coreVersion": "9.269",
+      "systemVersion": "1.6.3"
+    },
+    "core": {
+      "sourceId": "Macro.hLjBBjMSMCjdTMw6"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "3.2.1",
+    "coreVersion": "12.331",
+    "createdTime": 1672485486112,
+    "modifiedTime": 1718966200790,
+    "lastModifiedBy": "IXqDQLPKvtc129vT",
+    "compendiumSource": "Macro.hLjBBjMSMCjdTMw6",
+    "duplicateSource": null
+  },
+  "folder": "zM3lWtEgwdtFJ9Xy",
+  "sort": 250000,
+  "ownership": {
+    "default": 0,
+    "ekSJaSkR4p1sowmM": 3
+  },
+  "_id": "ORAviAErNlPeasxm",
+  "_key": "!macros!ORAviAErNlPeasxm"
+}

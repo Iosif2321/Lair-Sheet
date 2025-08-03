@@ -1,0 +1,27 @@
+{
+  "name": "Свет для v12",
+  "type": "script",
+  "scope": "global",
+  "_id": "QO6uifHkpXXX6xWI",
+  "author": "vyWooFykk4nTWT2i",
+  "img": "icons/sundries/lights/lantern-iron-yellow.webp",
+  "command": "// Макрос для Foundry v12, который позволяет пользователю настраивать параметры освещения своего токена. Спасибо Phenomen! И за фикс Allecks!\nlet data;\n\nasync function tokenUpdate(data) {\n\tcanvas.tokens.controlled.map((token) =>\n\t\ttoken.document.update({ light: data }),\n\t);\n}\n\nconst torchAnimation = {\n\ttype: \"torch\",\n\tspeed: 1,\n\tintensity: 1,\n\treverse: false,\n};\n\nconst prompt = await foundry.applications.api.DialogV2.wait({\n\twindow: {\n\t\ttitle: \"Светильник для токена\",\n\t\ticon: \"fa-solid fa-sun\",\n\t},\n\tcontent: \"Выберите источник света для этого токена\",\n\tmodal: true,\n\trejectClose: false,\n\tbuttons: [\n\t\t{\n\t\t\tlabel: \"Отключить\",\n\t\t\taction: \"none\",\n\t\t},\n\t\t{\n\t\t\tlabel: \"Свеча\",\n\t\t\taction: \"candle\",\n\t\t},\n\t\t{\n\t\t\tlabel: \"Факел\",\n\t\t\taction: \"torch\",\n\t\t},\n\t\t{\n\t\t\tlabel: \"Фокус Свет\",\n\t\t\taction: \"light\",\n\t\t},\n\t\t{\n\t\t\tlabel: \"Лампа\",\n\t\t\taction: \"lamp\",\n\t\t},\n\t\t{\n\t\t\tlabel: \"Потайной фонарь\",\n\t\t\taction: \"bullseye\",\n\t\t},\n\t\t{\n\t\t\tlabel: \"Обычный фонарь (Открыт)\",\n\t\t\taction: \"hoodedOpen\",\n\t\t},\n\t\t{\n\t\t\tlabel: \"Обычный фонарь (Приглушен)\",\n\t\t\taction: \"hoodedClosed\",\n\t\t},\n\t\t{\n\t\t\tlabel: \"Заклинание Тьма\",\n\t\t\taction: \"darkness\",\n\t\t},\n\t],\n\trender: (event, html) =>\n\t\t(html.querySelector(\".form-footer\").style.flexDirection = \"column\"),\n});\n\nswitch (prompt) {\n\tcase \"none\":\n\t\tdata = {\n\t\t\tdim: 0,\n\t\t\tbright: 0,\n\t\t\tangle: 360,\n\t\t\tluminosity: 0.5,\n\t\t\tanimation: { type: \"none\" },\n\t\t};\n\t\tbreak;\n\tcase \"candle\":\n\t\tdata = {\n\t\t\tdim: 10,\n\t\t\tbright: 5,\n\t\t\tangle: 360,\n\t\t\tluminosity: 0.5,\n\t\t\tanimation: { type: \"none\" },\n\t\t};\n\t\tbreak;\n\tcase \"torch\":\n\t\tdata = {\n\t\t\tdim: 40,\n\t\t\tbright: 20,\n\t\t\tangle: 360,\n\t\t\tluminosity: 0.5,\n\t\t\tanimation: torchAnimation,\n\t\t};\n\t\tbreak;\n\tcase \"light\":\n\t\tdata = {\n\t\t\tdim: 40,\n\t\t\tbright: 20,\n\t\t\tangle: 360,\n\t\t\tluminosity: 0.5,\n\t\t\tanimation: { type: \"none\" },\n\t\t};\n\t\tbreak;\n\tcase \"lamp\":\n\t\tdata = {\n\t\t\tdim: 45,\n\t\t\tbright: 15,\n\t\t\tangle: 360,\n\t\t\tluminosity: 0.5,\n\t\t\tanimation: torchAnimation,\n\t\t};\n\t\tbreak;\n\tcase \"bullseye\":\n\t\tdata = {\n\t\t\tdim: 120,\n\t\t\tbright: 60,\n\t\t\tangle: 45,\n\t\t\tluminosity: 0.5,\n\t\t\tanimation: torchAnimation,\n\t\t};\n\t\tbreak;\n\tcase \"hoodedOpen\":\n\t\tdata = {\n\t\t\tdim: 60,\n\t\t\tbright: 30,\n\t\t\tangle: 360,\n\t\t\tluminosity: 0.5,\n\t\t\tanimation: torchAnimation,\n\t\t};\n\t\tbreak;\n\tcase \"hoodedClosed\":\n\t\tdata = {\n\t\t\tdim: 5,\n\t\t\tbright: 0,\n\t\t\tangle: 360,\n\t\t\tluminosity: 0.5,\n\t\t\tanimation: torchAnimation,\n\t\t};\n\t\tbreak;\n\tcase \"darkness\":\n\t\tdata = {\n\t\t\tdim: 0,\n\t\t\tbright: 15,\n\t\t\tangle: 360,\n\t\t\tluminosity: -0.5,\n\t\t\tanimation: { type: \"none\" },\n\t\t};\n\t\tbreak;\n\tdefault:\n\t\tbreak;\n}\n\n\nawait tokenUpdate(data);",
+  "folder": "zM3lWtEgwdtFJ9Xy",
+  "flags": {},
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "3.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1721376272480,
+    "modifiedTime": 1728981097717,
+    "lastModifiedBy": "0P6q3chY9wdzwLFM",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "vyWooFykk4nTWT2i": 3
+  },
+  "_key": "!macros!QO6uifHkpXXX6xWI"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Темп путешествия",
+  "type": "script",
+  "scope": "global",
+  "author": "N5s4uI6OpcSYQoF8",
+  "img": "icons/skills/movement/arrow-down-pink.webp",
+  "command": "// Макрос, который позволяет легко посчитать темп путешествия. Спасибо __salamander__ и Elfrey за макрос! \nasync function calculateTravel() {\n  const defaultSpeed = 30; // Базовая скорость 30 футов за раунд\n  const defaultHoursPerDay = 8;\n  const crewedTransportHoursPerDay = 24;\n  const undergroundTravelDivider = 50; // Делитель для путешествия в подземье\n\n  const paceOptions = {\n    fast: 1.3334,\n    normal: 1,\n    slow: 0.6667\n  };\n\n  const paceDescriptions = {\n    fast: \"Быстрый темп: Штраф −5 к пассивному значению Мудрости (Внимательность)\",\n    normal: \"Нормальный темп\",\n    slow: \"Медленный темп: Возможность перемещаться скрытно\"\n  };\n\n  function roundDown(num) {\n    return Math.floor(num);\n  }\n\n  function convertHoursToTime(hours) {\n    const wholeHours = Math.floor(hours);\n    const minutes = Math.round((hours - wholeHours) * 60);\n    return `${wholeHours}:${minutes.toString().padStart(2, '0')} часа`;\n  }\n\n  let content = `\n    <div style=\"display: flex; align-items: center;\">\n      <div style=\"flex-grow: 1;\">\n        <p>Введите расстояние в милях:</p><input id=\"distance-input\" type=\"number\" style=\"width: calc(100% - 20px);\">\n      </div>\n    </div>\n    <div style=\"display: flex; align-items: center;\">\n      <div style=\"flex-grow: 1; margin-right: 10px;\">\n        <p>Введите скорость:</p>\n        <input id=\"speed-input\" type=\"number\" placeholder=\"Базовый темп (при пустом поле)\" style=\"width: calc(100% - 20px);\">\n      </div>\n      <div style=\"flex-shrink: 0;\">\n        <p style=\"line-height: 1; font-size: smaller;\">Морской<br>транспорт</p>\n        <input type=\"checkbox\" id=\"sea-travel\" value=\"true\" onclick=\"\n          const speedInput = document.getElementById('speed-input');\n          const undergroundCheckbox = document.getElementById('underground-travel');\n          if (this.checked) {\n            speedInput.placeholder = 'Введите скорость судна (мили/ч)';\n            undergroundCheckbox.checked = false;\n            undergroundCheckbox.disabled = true;\n          } else {\n            speedInput.placeholder = 'Базовый темп (при пустом поле)';\n            undergroundCheckbox.disabled = false;\n          }\n        \">\n        <p style=\"line-height: 1; font-size: smaller;\">Подземье</p>\n        <input type=\"checkbox\" id=\"underground-travel\" value=\"true\" onclick=\"\n          const speedInput = document.getElementById('speed-input');\n          const seaCheckbox = document.getElementById('sea-travel');\n          if (this.checked) {\n            speedInput.placeholder = 'Темп путешествия в подземье';\n            seaCheckbox.checked = false;\n            seaCheckbox.disabled = true;\n          } else {\n            speedInput.placeholder = 'Базовый темп (при пустом поле)';\n            seaCheckbox.disabled = false;\n          }\n        \">\n      </div>\n    </div>\n    <p><input type=\"checkbox\" id=\"difficult-terrain\" value=\"true\">Пересеченная местность</p>\n    <p><input type=\"checkbox\" id=\"crewed-transport\" value=\"true\">Использование 24 часового путешествия</p>\n    <p>Выберите темп:</p>\n    <select id=\"pace\" style=\"width: 100%\">\n      <option value=\"fast\">Быстрый</option>\n      <option value=\"normal\" selected>Нормальный</option>\n      <option value=\"slow\">Медленный</option>\n    </select>\n    <br><br>\n  `;\n\n  let data = await Dialog.prompt({\n    title: \"Расчет времени путешествия\",\n    content,\n    label: \"Готово\",\n    callback: (html) => {\n      const distance = parseFloat($(html).find(\"#distance-input\").val());\n      const userEnteredSpeed = parseFloat($(html).find(\"#speed-input\").val());\n      const isSeaTravel = $(html).find(\"#sea-travel\").is(\":checked\");\n      const isDifficultTerrain = $(html).find(\"#difficult-terrain\").is(\":checked\");\n      const isCrewedTransport = $(html).find(\"#crewed-transport\").is(\":checked\");\n      const isUndergroundTravel = $(html).find(\"#underground-travel\").is(\":checked\");\n      const selectedPace = $(html).find(\"#pace\").val();\n\n      let speed = userEnteredSpeed || defaultSpeed;\n      let hoursPerDay = isCrewedTransport ? crewedTransportHoursPerDay : defaultHoursPerDay;\n\n      let milesPerHour;\n      let milesPerDay;\n\n      if (isUndergroundTravel) {\n        // Сначала рассчитываем скорость с учетом темпа\n        milesPerDay = roundDown((speed * paceOptions[selectedPace]) * 10 / undergroundTravelDivider);\n        // Затем применяем модификатор местности\n        if (isDifficultTerrain) milesPerDay *= 0.5;\n        // И только после этого рассчитываем скорость в часах\n        milesPerHour = milesPerDay / defaultHoursPerDay;\n      } else {\n        // Для не подземных путешествий\n        milesPerHour = isSeaTravel ? speed : roundDown(speed / 10);\n        if (isDifficultTerrain) milesPerHour *= 0.5; // Применяем модификатор здесь, если это не морское путешествие\n        milesPerDay = roundDown(milesPerHour * hoursPerDay);\n      }\n\n      let totalDays = distance / milesPerDay;\n      let days = Math.floor(totalDays);\n      let hours = convertHoursToTime((totalDays - days) * hoursPerDay);\n\n      let messageContent = `Время: ${days} дней и ${hours}. <br>` +\n        `Расстояние: ${distance} миль. <br>` +\n        `${paceDescriptions[selectedPace]}. <br>` +\n        `Пересеченная местность: ${isDifficultTerrain ? \"Да\" : \"Нет\"}. <br>` +\n        (isCrewedTransport ? `Использование 24 часового путешествия. <br>` : ``) +\n        (isUndergroundTravel ? `Путешествие в подземье. <br>` : ``) +\n        `Введенная скорость: ${userEnteredSpeed ? userEnteredSpeed + (isSeaTravel ? \" мили/ч\" : \" фт/раунд\") : \"Базовая\"}. <br>` +\n        `Скорость в милях/час: ${milesPerHour}. <br>` +\n        `Скорость в милях/день: ${milesPerDay}.`;\n\n      ChatMessage.create({\n        content: messageContent,\n        speaker: ChatMessage.getSpeaker(),\n        whisper: ChatMessage.getWhisperRecipients(\"GM\"),\n      });\n    },\n  });\n}\n\ncalculateTravel();",
+  "ownership": {
+    "default": 0,
+    "N5s4uI6OpcSYQoF8": 3
+  },
+  "flags": {
+    "advanced-macros": {
+      "runForSpecificUser": "GM"
+    },
+    "exportSource": {
+      "world": "path-of-the-pilgrim",
+      "system": "dnd5e",
+      "coreVersion": "11.305",
+      "systemVersion": "2.2.2"
+    },
+    "core": {
+      "sourceId": "Macro.HpQpKPpcekwf6dDM"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1689685719698,
+    "modifiedTime": 1699264096298,
+    "lastModifiedBy": "H9WsizrOeJscXSvG",
+    "compendiumSource": "Macro.HpQpKPpcekwf6dDM",
+    "duplicateSource": null
+  },
+  "folder": "vwcXHRDEDhe74QLA",
+  "sort": 112500,
+  "_id": "eG34UBC4x3YO6Y34",
+  "_key": "!macros!eG34UBC4x3YO6Y34"
+}

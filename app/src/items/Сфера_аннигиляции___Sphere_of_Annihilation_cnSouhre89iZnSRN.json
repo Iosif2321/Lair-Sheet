@@ -1,0 +1,200 @@
+{
+  "_id": "cnSouhre89iZnSRN",
+  "name": "Сфера аннигиляции / Sphere of Annihilation",
+  "type": "consumable",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Sphere%20of%20Annihilation.webp",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "sphere%20of%20annihilation_dmg"
+    },
+    "core": {
+      "sourceId": "Compendium.world.dmg-items.cnSouhre89iZnSRN"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Sphere of Annihilation",
+      "translated": true
+    },
+    "midiProperties": {
+      "confirmTargets": "default",
+      "saveDamage": "default",
+      "bonusSaveDamage": "default",
+      "autoFailFriendly": false,
+      "autoSaveFriendly": false,
+      "critOther": false,
+      "offHandWeapon": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "noConcentrationCheck": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "midi-qol": {
+      "rollAttackPerTarget": "default",
+      "removeAttackDamageButtons": "default",
+      "itemCondition": "",
+      "effectCondition": ""
+    },
+    "dnd5e": {
+      "persistSourceMigration": true
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div><p><em>Чудесный предмет</em></p><p>Эта чёрная сфера диаметром 2 фута — дыра в мультивселенной, которая парит в пространстве и стабилизирована магическим полем вокруг неё.</p><p>Сфера уничтожает любую материю, сквозь которую проходит, и материю, которая проходит сквозь неё. Единственное исключение — артефакты. Если артефакт не подвержен урону от сферы аннигиляции, он проходит сквозь неё без вреда. Всё остальное, что касается сферы, но не поглощено ею полностью и не уничтожено, получает [[/r 4d10]] урона силой.</p><p>Сфера неподвижна, если ей никто не управляет. Если вы в пределах 60 футов от неуправляемой сферы, то можете использовать действие, чтобы пройти проверку Интеллекта (Магия) со СЛ 25. При успехе сфера левитирует в одном направлении на ваш выбор на расстояние в футах, не превышающее 5 x ваш модификатор Интеллекта (минимум 5 футов). При провале сфера перемещается на 10 футов в вашу сторону.</p><p>Существо, в чьё пространство входит сфера, должно пройти испытание Ловкости со СЛ 13, при провале сфера его коснётся, нанеся [[/r 4d10]]  урона силой. Если вы пытаетесь управлять сферой, которая уже под управлением другого существа, пройдите проверку Интеллекта (Магия) в состязании с проверкой Интеллекта (Магия) другого существа. Победитель состязания управляет сферой, и она перемещается согласно его приказам как обычно. Если сфера сталкивается с планарным порталом, например созданным заклинанием @Compendium[laaru-dnd5-hw.spells.vStdomjAhcRaeA3x]{Врата}, или межпространственным карманом, например созданным @UUID[Compendium.laaru-dnd5-hw.items.Item.dATyJzva8Y5GaKDy]{карманной ямой}, мастер определяет, что происходит, случайным броском по таблице.</p><table><thead><tr><th>[[/r d100]]</th><th>Результат</th></tr></thead><tbody><tr><td><p style=\"text-align:center\">01-50</p></td><td>Сфера уничтожается.</td></tr><tr><td><p style=\"text-align:center\">51-85</p></td><td>Сфера проходит через портал или в межпространственный карман. </td></tr><tr><td><p style=\"text-align:center\">86-00</p></td><td>Разрыв пространства отправляет каждое существо и объект в пределах 180 футов от сферы, включая саму сферу, на случайный план бытия.</td></tr></tbody></table></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "equipped": true,
+    "rarity": "legendary",
+    "identified": true,
+    "uses": {
+      "max": "",
+      "autoDestroy": false,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": 4,
+        "denomination": 10,
+        "bonus": "",
+        "types": [
+          "force"
+        ],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "Неконтролируемая сфера требует проверки Интеллекта (Магия) со СЛ 25.",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "1",
+            "type": "object",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "13"
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "sfera-annigilyacii--sphere-of-annihilation",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": []
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.world.dmg-items.cnSouhre89iZnSRN",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!cnSouhre89iZnSRN"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Удаление выбранных эффектов",
+  "type": "script",
+  "scope": "global",
+  "author": "ekSJaSkR4p1sowmM",
+  "img": "icons/magic/control/buff-luck-fortune-clover-green.webp",
+  "command": "// Макрос для Foundry, который позволяет удалить выбранные эффекты с токена. \nconst tokenActor = token?.actor ?? game.user.character;\nconst effects = tokenActor.effects.filter(i => i.isTemporary).reduce((acc, e) => acc += `\n  <div class=\"form-group\">\n    <label for=\"${e.id}\">${e.label}</label>\n    <div class=\"form-fields\"><input type=\"checkbox\" id=\"${e.id}\" /></div>\n  </div><hr>`, ``);\nconst content = `<form>${effects}</form>`;\nconst title = \"Delete effects\";\nconst buttons = {del: {\n  icon: `<i class=\"fas fa-check\"></i>`,\n  label: \"Delete!\",\n  callback: async (html) => {\n    const selected = html[0].querySelectorAll(\"input[type=checkbox]:checked\");\n    const deleteIds = [];\n    for(let s of selected) deleteIds.push(s.id);\n    await tokenActor.deleteEmbeddedDocuments(\"ActiveEffect\", deleteIds);\n  }\n}};\nnew Dialog({content, title, buttons, default: \"del\"}).render(true);",
+  "flags": {
+    "core": {
+      "sourceId": "Macro.vnS8BMuJ9OUe7B63"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1672482677160,
+    "modifiedTime": 1699263452540,
+    "lastModifiedBy": "H9WsizrOeJscXSvG",
+    "compendiumSource": "Macro.vnS8BMuJ9OUe7B63",
+    "duplicateSource": null
+  },
+  "folder": "9jJwjbjUc9r6snop",
+  "sort": 250000,
+  "ownership": {
+    "default": 0,
+    "ekSJaSkR4p1sowmM": 3
+  },
+  "_id": "NHv5ycGhxA8irUtU",
+  "_key": "!macros!NHv5ycGhxA8irUtU"
+}

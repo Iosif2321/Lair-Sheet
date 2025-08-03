@@ -1,0 +1,181 @@
+{
+  "_id": "r9uwOHJ95YE9a0RG",
+  "name": "Увядание и цветение / Wither and Bloom",
+  "type": "spell",
+  "img": "icons/magic/unholy/hand-fire-skeleton-pink.webp",
+  "effects": [],
+  "folder": "1laDscZ7Bn7NoviD",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "SCC",
+      "hash": "wither%20and%20bloom_scc"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Wither and Bloom",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "value": "<div> </div>\n<div>\n<div>\n<p>Вы пробуждаете жизнь и смерть в сфере радиусом 10 футов, в указанной точке в пределах дистанции заклинания. Каждое существо по вашему выбору в этой области должно пройти испытание Выносливости, получая [[/r 2d6]] некротического урона в случае провала или половину этого урона в случае успеха. Немагическая растительность в этой области увядает.</p>\n<p>Кроме того, одно существо по вашему выбору в этой области может потратить и бросить одну из своих неизрасходованных Костей Здоровья, восстанавливая себе количество ПЗ, равное результату броска + модификатор вашей базовой характеристики.</p>\n<p><strong>На высоких кругах</strong>: Если вы сотворяете это заклинание, используя ячейку 3-го круга или выше, урон увеличивается на [[/r 1d6]] за каждый круг ячейки выше второго, а количество Костей Здоровья, которые существо может потратить и добавить к броску восстановления ПЗ увеличивается на 1 каждый круг ячейки выше второго.</p>\n</div>\n</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "SCC",
+      "book": "SCC",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "ft",
+        "type": "radius",
+        "size": "10",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 2,
+    "school": "nec",
+    "materials": {
+      "value": "увядшая виноградная лоза, свернутая петлёй",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "mgc"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "necrotic"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "con",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "uvyadanie-i-cvetenie--wither-and-bloom"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028234466,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!r9uwOHJ95YE9a0RG"
+}

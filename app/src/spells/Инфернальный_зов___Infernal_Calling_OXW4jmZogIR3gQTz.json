@@ -1,0 +1,171 @@
+{
+  "_id": "OXW4jmZogIR3gQTz",
+  "name": "Инфернальный зов / Infernal Calling",
+  "type": "spell",
+  "img": "icons/creatures/unholy/demon-fire-horned-winged-roar.webp",
+  "effects": [],
+  "folder": "3zIZihf4NL02gtMG",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "infernal%20calling_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Infernal Calling",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__spc-inline-post\">\n<div class=\"rd__spc-inline-post\">Произнося темное заклинание, вы вызываете дьявола из Девяти Преисподних. Вы выбираете тип дьявола, который должен иметь показатель опасности 6 или ниже, например, @Compendium[laaru-dnd5-hw.monsters.dmBS6IZ9befD5mJk]{шипастый} или @Compendium[laaru-dnd5-hw.monsters.bwrvYGku6dZr43cW]{бородатый дьявол}.</div>\n<div class=\"rd__spc-inline-post\">Дьявол появляется в незанятом пространстве, которое вы видите в радиусе действия. Дьявол исчезает, когда его ПЗ опускаются до 0 или когда заклинание заканчивается. Дьявол недружелюбен к вам и вашим спутникам.</div>\n<div class=\"rd__spc-inline-post\">Совершите проверку инициативы за дьявола, который будет совершать свои собственные ходы. Он находится под контролем Мастера и в каждом своем ходу действует в соответствии со своей природой. Дьявол может атаковать вас, если считает, что может победить, или он попытается искусить вас, чтобы вы совершили злой поступок в обмен на небольшую услугу.</div>\n<div class=\"rd__spc-inline-post\">Каждый ваш ход вы можете попытаться дать словесную команду дьяволу (действие не требуется). Он подчиняется команде, если вероятный результат соответствует его желаниям, особенно если результат приведет вас ко злу. В противном случае вы должны совершить проверку Харизмы (Обман, Запугивание или Убеждение) против его проверки Мудрости (Проницательность).</div>\n<div class=\"rd__spc-inline-post\">Вы совершаете проверку с преимуществом, если произносите истинное имя дьявола.</div>\n<div class=\"rd__spc-inline-post\">При провале дьявол становится невосприимчивым к вашим словесным командам на всё время действия заклинания, хотя он всё равно может выполнять ваши команды, если захочет.</div>\n<div class=\"rd__spc-inline-post\">При успехе дьявол будет выполнять вашу команду, например, – «атакуй моих врагов», «исследуй комнату впереди» или «отнеси это сообщение королеве», – пока он не завершит это дело, после чего вернется к вам, чтобы сообщить о выполнении.</div>\n<div class=\"rd__spc-inline-post\">Если вы теряете концентрацию до того, как заклинание закончится, дьявол не исчезает, если он стал невосприимчив к вашим словесным командам. Вместо этого он действует по своему желанию в течение [[/r 3d6]] минут и только потом исчезает.</div>\n<div class=\"rd__spc-inline-post\">Если у вас есть талисман конкретного дьявола, вы можете призвать этого дьявола, если он имеет соответствующий показатель опасности плюс 1, и он подчиняется всем вашим командам без каких-либо проверок Харизмы.</div>\n<div class=\"rd__spc-inline-post\"><strong>На высоких кругах</strong>.  Если вы сотворяете это заклинание, используя ячейку 6 круга или выше, показатель опасности увеличивается на 1 за каждый круг ячейки выше 5.</div>\n</div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "minute",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "90",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 5,
+    "school": "con",
+    "materials": {
+      "value": "рубин стоимостью не менее 999 зм",
+      "consumed": false,
+      "cost": 999,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "3d6",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "infernalnyj-zov--infernal-calling"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028215865,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!OXW4jmZogIR3gQTz"
+}

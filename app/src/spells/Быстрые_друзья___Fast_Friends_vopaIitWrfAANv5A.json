@@ -1,0 +1,208 @@
+{
+  "_id": "vopaIitWrfAANv5A",
+  "name": "Быстрые друзья / Fast Friends",
+  "type": "spell",
+  "img": "icons/skills/social/diplomacy-handshake-blue.webp",
+  "effects": [],
+  "folder": "V8qhuGxP5pE0yKU2",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "AI",
+      "hash": "fast%20friends_ai"
+    },
+    "scene-packer": {
+      "hash": "a494e687e6a1a3a2973994277f286ceb4eb404a5",
+      "sourceId": "Item.wolxMxtz0ev1espU"
+    },
+    "betterRolls5e": {
+      "quickOther": {
+        "context": "",
+        "value": true,
+        "altValue": true
+      },
+      "quickDesc": {
+        "value": true,
+        "altValue": true
+      },
+      "quickSave": {
+        "value": true,
+        "altValue": true
+      },
+      "quickProperties": {
+        "value": true,
+        "altValue": true
+      },
+      "quickVersatile": {
+        "value": false,
+        "altValue": false
+      },
+      "quickFlavor": {
+        "value": true,
+        "altValue": true
+      }
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "autoFailFriendly": false,
+      "offHandWeapon": false,
+      "autoSaveFriendly": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Fast Friends",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p><em>Когда вам нужны гарантии, что поручение будет выполнено, вы не можете полагаться на чьи-то обещания, клятвы или на трудовой договор.</em></p><p>Когда вы сотворяете это заклинание, выберите одного гуманоида в пределах дистанции, который может видеть и слышать вас, и который может вас понять. Существо должно преуспеть в испытании Мудрости, иначе станет &amp;reference[charmed]{обворожённым} вами, пока заклинание активно. Пока существо обворожено таким образом, оно обязуется выполнять любые распоряжения, которые вы  в дружеской манере попросите его выполнить, в меру своих возможностей.</p><p>Вы можете дать существу новое поручение, когда предыдущее будет выполнено, или если вы решите отменить текущую задачу. Если ваши распоряжения могут причинить вред обворожённому существу или если они противоречат обычной деятельности и желаниям существа, то существо может пройти ещё одно испытание Мудрости, чтобы попытаться досрочно окончить действие эффекта. Испытание совершается с преимуществом, если вы или ваши товарищи сражаетесь с этим существом. Если существо умирает, действие заклинания заканчивается.</p><p>После окончания действия данного заклинания существо точно знает, кем оно было &amp;reference[charmed]{обворожено}.</p><p><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку заклинаний 4-го круга или выше, вы можете нацелиться на одно дополнительное существо для каждого круга ячейки выше 3-го.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "AI",
+      "book": "AI",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "30",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 3,
+    "school": "enc",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": "wis",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "bystrye-druzya--fast-friends"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028237239,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!vopaIitWrfAANv5A"
+}

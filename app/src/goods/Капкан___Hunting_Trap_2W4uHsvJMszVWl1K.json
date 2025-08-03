@@ -1,0 +1,267 @@
+{
+  "_id": "2W4uHsvJMszVWl1K",
+  "name": "Капкан / Hunting Trap",
+  "type": "consumable",
+  "img": "icons/environment/traps/trap-jaw-steel.webp",
+  "effects": [],
+  "flags": {
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "autoFailFriendly": false,
+      "rollOther": false,
+      "critOther": false,
+      "offHandWeapon": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "autoSaveFriendly": false
+    },
+    "core": {
+      "sourceId": "Compendium.laaru-dnd5-hw.items.2W4uHsvJMszVWl1K"
+    },
+    "dnd5e": {
+      "persistSourceMigration": true
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>В качестве действия вы можете поставить капкан — зубчатое стальное колесо, которое захлопывается, когда существо наступает на прижимную пластину в центре. Капкан прикован тяжёлой цепью к неподвижному объекту вроде дерева или колышка, вбитого в землю. Существо, наступившее в капкан, должно пройти испытание Ловкости со СЛ 13, при провале получает [[/r 1d4]] колющего урона и прекращает перемещение. После этого, пока существо не освободится из капкана, его перемещение будет ограничено длиной цепи (обычно 3 фута). Существо может использовать действие, чтобы пройти проверку Силы со СЛ 13, при успехе освобождая себя или другое существо своей зоне досягаемости. При каждой неудачной проверке пойманное существо получает 1 колющий урон.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "LOOT",
+      "revision": 1,
+      "book": "LOOT",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 25,
+      "units": "lb"
+    },
+    "price": {
+      "value": 5,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "equipped": false,
+    "rarity": "common",
+    "identified": true,
+    "uses": {
+      "max": "",
+      "autoDestroy": false,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": 1,
+        "denomination": 4,
+        "bonus": "",
+        "types": [
+          "piercing"
+        ],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "",
+          "value": 0,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": "dex",
+          "dc": {
+            "calculation": "",
+            "formula": "13"
+          }
+        },
+        "sort": 0
+      },
+      "dnd5eactivity200": {
+        "_id": "dnd5eactivity200",
+        "type": "damage",
+        "activation": {
+          "type": "",
+          "value": 0,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": true,
+                "formula": "1"
+              },
+              "scaling": {
+                "mode": "whole",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "kapkan--hunting-trap",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": []
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.laaru-dnd5-hw.items.2W4uHsvJMszVWl1K",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.1",
+    "createdTime": 1726661592018,
+    "modifiedTime": 1739365449453,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": "9dVZiANjI8QjL1Z1",
+  "sort": 3100000,
+  "ownership": {
+    "default": 0,
+    "UkvoHT2ggFpbOAml": 3
+  },
+  "_key": "!items!2W4uHsvJMszVWl1K"
+}

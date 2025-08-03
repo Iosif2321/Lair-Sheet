@@ -1,0 +1,248 @@
+{
+  "_id": "fGQzUajaHxTdxtum",
+  "name": "Брешь в реальности / Reality Break",
+  "type": "spell",
+  "img": "icons/magic/earth/explosion-lava-stone-orange.webp",
+  "effects": [],
+  "folder": "SX2gQSbiLHQTHmt7",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "EGW",
+      "hash": "reality%20break_egw"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "autoFailFriendly": false,
+      "rollOther": false,
+      "critOther": false,
+      "offHandWeapon": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "autoSaveFriendly": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Reality Break",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы разрушаете границы между пространствами и временными линиями, погружая существо в пучину хаоса и безумия. Цель должна преуспеть в испытании Мудрости, иначе она не может совершать @Compendium[laaru-dnd5-hw.actions.mMwkUE20bEfKeetq]{ответные действия} до начала своего следующего хода.</p>\n<p>В начале каждого своего хода существо под действием заклинания совершает бросок [[/r d10]] и попадает под действие одного из эффектов, указанных ниже. В конце своего хода существо может повторить испытание Мудрости, при успехе заканчивая на себе эффект.</p>\n<table class=\"rd__table  stripe-odd-table\" style=\"width:99.9875%;height:161.977px\"><caption>Эффекты бреши в реальности</caption>\n<thead>\n<tr style=\"height:32.7273px\">\n<th class=\"col-2 text-center\" style=\"width:5.21048%;height:32.7273px\" data-rd-isroller=\"true\">[[/r d10]]</th>\n<th class=\"col-10\" style=\"width:94.4642%;height:32.7273px\" data-rd-isroller=\"false\">Эффект</th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"height:32.7273px\">\n<td class=\"col-2 text-center\" style=\"width:5.21048%;height:32.7273px\" data-roll-min=\"1\" data-roll-max=\"2\">1-2</td>\n<td class=\"col-10\" style=\"width:94.4642%;height:32.7273px\"><strong>Видение Дальнего Предела</strong>. Цель получает [[/r 6d12]] психического урона и остаётся в состоянии &amp;reference[stunned]{шока} до конца хода.</td>\n</tr>\n<tr style=\"height:32.7273px\">\n<td class=\"col-2 text-center\" style=\"width:5.21048%;height:32.7273px\" data-roll-min=\"3\" data-roll-max=\"5\">3-5</td>\n<td class=\"col-10\" style=\"width:94.4642%;height:32.7273px\"><strong>Разрыв пространства</strong>. Цель совершает бросок испытания Ловкости и получает [[/r 8d12]] урона силой при провале и половину урона при успехе</td>\n</tr>\n<tr style=\"height:38.0682px\">\n<td class=\"col-2 text-center\" style=\"width:5.21048%;height:38.0682px\" data-roll-min=\"6\" data-roll-max=\"8\">6-8</td>\n<td class=\"col-10\" style=\"width:94.4642%;height:38.0682px\"><strong>Червоточина</strong>. Цель, вместе со всем, что она несёт и носит, телепортируется до 30 футов в незанятое видимое пространство по вашему выбору, получает [[/r 10d12]] урона силой и &amp;reference[prone]{распластывается}.</td>\n</tr>\n<tr style=\"height:25.7273px\">\n<td class=\"col-2 text-center\" style=\"width:5.21048%;height:25.7273px\" data-roll-min=\"9\" data-roll-max=\"10\">9-10</td>\n<td class=\"col-10\" style=\"width:94.4642%;height:25.7273px\"><strong>Хлад пустоты</strong>. Цель получает [[/r 10d12]] урона холодом и &amp;reference[blinded]{ослеплена} до начала своего следующего хода.</td>\n</tr>\n</tbody>\n</table>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "EGW",
+      "book": "EGW",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "60",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 8,
+    "school": "con",
+    "materials": {
+      "value": "кристаллическая призма",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "number": 6,
+              "denomination": 12,
+              "bonus": "",
+              "types": [
+                "psychic"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            {
+              "number": 8,
+              "denomination": 12,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            {
+              "number": 10,
+              "denomination": 12,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            {
+              "number": 10,
+              "denomination": 12,
+              "bonus": "",
+              "types": [
+                "cold"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": "wis",
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "bresh-v-realnosti--reality-break"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028226222,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!fGQzUajaHxTdxtum"
+}

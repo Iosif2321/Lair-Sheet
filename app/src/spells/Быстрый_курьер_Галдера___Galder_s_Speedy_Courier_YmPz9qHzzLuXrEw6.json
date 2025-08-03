@@ -1,0 +1,172 @@
+{
+  "_id": "YmPz9qHzzLuXrEw6",
+  "name": "Быстрый курьер Галдера / Galder's Speedy Courier",
+  "type": "spell",
+  "img": "icons/creatures/magical/spirit-undead-horned-blue.webp",
+  "effects": [],
+  "folder": "5iZ8qMTOt7ODg7B1",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "LLK",
+      "hash": "galder's%20speedy%20courier_llk"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "autoFailFriendly": false,
+      "offHandWeapon": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Galder's Speedy Courier",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "value": "<div><div><p>Вы вызываете &amp;reference[size]{небольшого} @Compendium[laaru-dnd5-hw.monsters.Y9UnzitcFp76rhQt]{элементаля воздуха} в точке в пределах дистанции. Элементаль воздуха бесформенен, почти прозрачен, невосприимчив ко всем типам урона и не может взаимодействовать с другими существами или объектами. Он несёт пустой открытый сундук, внутренние размеры которого составляют 3 фута с каждой стороны. Пока действует заклинание, вы можете положить в сундук столько предметов, сколько поместится. После чего вы можете назвать живое существо, которого вы встречали и видели хотя бы один раз раньше, или любое существо, чья часть тела (прядь волос, кусочек ногтя или иная подобная часть) у вас есть.</p><p>Как только крышка сундука закрывается, элементаль и сундук исчезают, а затем снова появляются рядом с целевым существом. Если целевое существо находится на другом плане, или если оно защищено от магического обнаружения или определения местоположения, содержимое сундука снова появляется на земле у ваших ног.</p><p>Целевое существо узнает о содержимом сундука до того, как решит, открывать его или нет, и знает, сколько времени осталось до конца заклинания, в течение которого оно может забрать содержимое сундука. Ни одно другое существо не может открыть сундук и забрать его содержимое. Когда заклинание заканчивается или когда всё содержимое сундука изъято, элементаль и сундук исчезают. Элементаль также исчезает, если целевое существо приказывает ему вернуть вам предметы. Когда элементаль исчезает, все предметы, не взятые из сундука, снова появляются на земле у ваших ног.</p><p><strong>На высоких кругах</strong>. Если вы сотворяете это заклинание, используя ячейку заклинания 8-го круга, вы можете отправить сундук существу, находящемуся на другом плане существования.</p></div></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "LLK",
+      "book": "LLK",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "action",
+      "condition": "",
+      "value": 1
+    },
+    "duration": {
+      "value": "10",
+      "units": "minute"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "10",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 4,
+    "school": "con",
+    "materials": {
+      "value": "25 зм или минералы равноценной стоимости, расходуемые заклинанием",
+      "consumed": true,
+      "cost": 25,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "bystryj-kurer-galdera--galders-speedy-courier"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028222358,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!YmPz9qHzzLuXrEw6"
+}

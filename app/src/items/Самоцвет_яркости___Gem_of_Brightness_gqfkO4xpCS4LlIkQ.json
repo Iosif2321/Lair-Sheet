@@ -1,0 +1,185 @@
+{
+  "_id": "gqfkO4xpCS4LlIkQ",
+  "name": "Самоцвет яркости / Gem of Brightness",
+  "type": "consumable",
+  "img": "modules/laaru-dnd5-hw/assets/images/pic/Gem%20of%20Brightness.jpg",
+  "effects": [],
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "DMG",
+      "hash": "gem%20of%20brightness_dmg"
+    },
+    "core": {
+      "sourceId": "Compendium.world.dmg-items.gqfkO4xpCS4LlIkQ"
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Gem of Brightness",
+      "translated": true
+    },
+    "dnd5e": {
+      "persistSourceMigration": true,
+      "migratedUses": 50
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<div><p><em>Чудесный предмет</em></p><p>У этой призмы 50 зарядов. Пока вы её держите, вы можете использовать действие и произнести одно из трёх командных слов, чтобы вызвать один из следующих эффектов. </p><ul><li>Первое командное слово заставляет самоцвет испускать яркий свет в радиусе 30 футов и тусклый — ещё на 30 футов. Эффект не тратит заряды и длится, пока вы не повторите командное слово в качестве бонусного действия или не используете иную функцию самоцвета. </li><li>Второе командное слово тратит 1 заряд и заставляет самоцвет выстрелить сияющим лучом света в одно существо, которое вы видите в пределах 60 футов от вас. Существо должно пройти испытание Выносливости со СЛ 15, при провале оно ослепнет на 1 минуту. Существо может повторять испытание в конце каждого своего хода, при успехе эффект для него прекращается. </li><li>Третье командное слово тратит 5 зарядов и заставляет самоцвет вспыхнуть ослепляющим светом в 30-футовом конусе, исходящем из него. Каждое существо в конусе должно пройти испытание, как если бы его поразил луч, созданный вторым командным словом.</li></ul><p>Потратив все свои заряды, самоцвет становится немагическим драгоценным камнем стоимостью 50 зм.</p></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "DMG",
+      "revision": 1,
+      "book": "DMG",
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "equipped": true,
+    "rarity": "uncommon",
+    "identified": true,
+    "uses": {
+      "max": "50",
+      "autoDestroy": true,
+      "spent": 0,
+      "recovery": []
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      },
+      "replace": false
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "type": {
+      "value": "trinket",
+      "subtype": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "save",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "Командное слово.",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "cone",
+            "size": "30",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          }
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "samocvet-yarkosti--gem-of-brightness",
+    "container": null,
+    "attuned": false,
+    "magicalBonus": null,
+    "properties": []
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.world.dmg-items.gqfkO4xpCS4LlIkQ",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.2.2",
+    "createdTime": 1739354874978,
+    "modifiedTime": 1739354874978,
+    "lastModifiedBy": "rIPjwHOPF73FMTHt"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "rIPjwHOPF73FMTHt": 3
+  },
+  "_key": "!items!gqfkO4xpCS4LlIkQ"
+}

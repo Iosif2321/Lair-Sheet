@@ -1,0 +1,169 @@
+{
+  "_id": "q7U9wq4H1KTjMjZM",
+  "name": "Поиск высшего скакуна / Find Greater Steed",
+  "type": "spell",
+  "img": "icons/magic/fire/elemental-creature-horse.webp",
+  "effects": [],
+  "folder": "5iZ8qMTOt7ODg7B1",
+  "flags": {
+    "srd5e": {
+      "page": "",
+      "source": "XGE",
+      "hash": "find%20greater%20steed_xge"
+    },
+    "core": {},
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false
+    },
+    "babele": {
+      "hasTranslation": true,
+      "originalName": "Find Greater Steed",
+      "translated": true
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>Вы призываете духа, который принимает форму верного величественного скакуна. Появляясь в свободном пространстве в радиусе действия, дух принимает форму, которую вы выбираете:</p>\n<p>@Compendium[laaru-dnd5-hw.monsters.HmtmLYv1MXX2EsyK]{Грифон}, @Compendium[laaru-dnd5-hw.monsters.i05uitxX7rvnseGz]{Пегас}, @Compendium[laaru-dnd5-hw.monsters.QMb9Xg7zf7tXGXqh]{Перитон}, @Compendium[laaru-dnd5-hw.monsters.0GnA6FBdPjnfgNqc]{Свирепый волк}, @Compendium[laaru-dnd5-hw.monsters.lryd8pTY0riXttpX]{Носорог} или @Compendium[laaru-dnd5-hw.monsters.WpVUY3Idxz7NONZa]{Саблезубый тигр}.</p>\n<p>Параметры существа соответствуют параметрам выбранной формы, хотя на самом деле оно является небожителем, феей или бестией (на ваш выбор), а не его обычным существом.</p>\n<p>Кроме того, если у него Интеллект 5 или меньше, его Интеллект становится равен 6, и он получает способность понимать один язык на ваш выбор, на котором вы разговариваете.</p>\n<p>Вы контролируете скакуна в бою. Пока он находится в пределах 1 мили от вас, вы можете общаться с ним телепатически.</p>\n<p>Находясь верхом на скакуне, вы можете делать так, что сотворённые вами заклинания, нацеливающиеся только на вас, будут нацелены ещё и на скакуна.</p>\n<p>Когда ПЗ скакуна опускаются до 0, он исчезает, не оставляя физического тела.</p>\n<p>Вы можете также в любое время отпустить скакуна действием, заставляя его исчезнуть. В любом случае, повторное использование этого заклинания призывает этого же скакуна, восстанавливая ПЗ до максимума и снимая с него все состояния.</p>\n<p>У вас не может быть больше одного скакуна, призванного этим заклинанием, одновременно. Вы можете действием навсегда отпустить скакуна, освободив его от уз и заставляя исчезнуть.</p>\n<p>Всякий раз, когда скакун исчезает, он оставляет предметы, которые нёс или которые были надеты на него. </p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "XGE",
+      "book": "XGE",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "activation": {
+      "type": "minute",
+      "condition": "",
+      "value": 10
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "target": {
+      "affects": {
+        "choice": false
+      },
+      "template": {
+        "units": "",
+        "contiguous": false
+      }
+    },
+    "range": {
+      "value": "30",
+      "units": "ft"
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "ability": "",
+    "level": 4,
+    "school": "con",
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "properties": [
+      "vocal",
+      "somatic"
+    ],
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          },
+          "affects": {
+            "choice": false
+          },
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0
+      }
+    },
+    "identifier": "poisk-vysshego-skakuna--find-greater-steed"
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.0.4",
+    "createdTime": 1726672812782,
+    "modifiedTime": 1728028233821,
+    "lastModifiedBy": "AeEogDZrsF4vWRU9"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "RcfZuGA1DXFKUxUn": 3
+  },
+  "_key": "!items!q7U9wq4H1KTjMjZM"
+}
