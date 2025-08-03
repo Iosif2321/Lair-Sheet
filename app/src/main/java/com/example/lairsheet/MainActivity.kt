@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.*
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.lairsheet.data.Ruleset
+import com.example.lairsheet.ui.theme.CharacterCreationScreen
 import com.example.lairsheet.ui.theme.LairSheetTheme
 import com.example.lairsheet.ui.theme.MainScreen
 import com.example.lairsheet.ui.theme.SplashScreen
@@ -15,6 +18,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             LairSheetTheme {
                 var showSplash by remember { mutableStateOf(true) }
+                val vm: CharacterViewModel = viewModel()
+                var currentScreen by remember { mutableStateOf<Screen>(Screen.Main) }
+                var ruleset by remember { mutableStateOf(Ruleset.R5E_2014) }
+                val characters by vm.characters(ruleset).collectAsState(emptyList())
                 LaunchedEffect(Unit) {
                     delay(2000)
                     showSplash = false
@@ -22,9 +29,29 @@ class MainActivity : ComponentActivity() {
                 if (showSplash) {
                     SplashScreen()
                 } else {
-                    MainScreen()
+                    when (currentScreen) {
+                        Screen.Main -> MainScreen(
+                            ruleset = ruleset,
+                            characters = characters,
+                            onRulesetChange = { ruleset = it },
+                            onCreateCharacter = { currentScreen = Screen.Create }
+                        )
+                        Screen.Create -> CharacterCreationScreen(
+                            ruleset = ruleset,
+                            onSave = { name, subtitle ->
+                                vm.addCharacter(name, subtitle, ruleset)
+                                currentScreen = Screen.Main
+                            },
+                            onCancel = { currentScreen = Screen.Main }
+                        )
+                    }
                 }
             }
         }
     }
+}
+
+private sealed class Screen {
+    data object Main : Screen()
+    data object Create : Screen()
 }
