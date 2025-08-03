@@ -38,8 +38,8 @@ class MainActivity : ComponentActivity() {
                         )
                         Screen.Create -> CharacterCreationScreen(
                             ruleset = ruleset,
-                            onSave = { name, subtitle ->
-                                vm.addCharacter(name, subtitle, ruleset)
+                            onSave = {
+                                vm.addCharacter(it)
                                 currentScreen = Screen.Main
                             },
                             onCancel = { currentScreen = Screen.Main }

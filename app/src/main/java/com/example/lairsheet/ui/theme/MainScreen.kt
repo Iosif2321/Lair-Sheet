@@ -197,7 +197,7 @@ private fun CharacterCard(item: Character) {
                     color = DeepRed
                 )
                 Text(
-                    text = item.subtitle,
+                    text = "${item.race} ${item.className} ${item.level}",
                     fontSize = 14.sp,
                     color = DeepRed,
                     maxLines = 1,

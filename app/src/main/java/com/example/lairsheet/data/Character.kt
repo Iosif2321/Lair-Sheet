@@ -7,6 +7,16 @@ import androidx.room.PrimaryKey
 data class Character(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     val name: String,
-    val subtitle: String,
+    val className: String,
+    val race: String,
+    val level: Int,
+    val background: String,
+    val alignment: String,
+    val strength: Int,
+    val dexterity: Int,
+    val constitution: Int,
+    val intelligence: Int,
+    val wisdom: Int,
+    val charisma: Int,
     val ruleset: Ruleset
 )
