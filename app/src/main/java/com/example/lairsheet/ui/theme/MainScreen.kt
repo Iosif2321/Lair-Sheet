@@ -7,13 +7,8 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.runtime.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -24,16 +19,21 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lairsheet.R
+import com.example.lairsheet.data.Character
+import com.example.lairsheet.data.Ruleset
 
 @Composable
-fun MainScreen() {
-    var ruleset by remember { mutableStateOf(Ruleset.R5E_2014) }
-
+fun MainScreen(
+    ruleset: Ruleset,
+    characters: List<Character>,
+    onRulesetChange: (Ruleset) -> Unit,
+    onCreateCharacter: () -> Unit
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
-            .padding(16.dp)
+            .padding(16.dp),
     ) {
         Header()
 
@@ -41,17 +41,17 @@ fun MainScreen() {
 
         RulesToggle(
             selected = ruleset,
-            onSelect = { ruleset = it }
+            onSelect = onRulesetChange
         )
 
         Spacer(Modifier.height(16.dp))
 
-        CreateCharacterButton(onClick = { /* TODO: навигация на создание */ })
+        CreateCharacterButton(onClick = onCreateCharacter)
 
         Spacer(Modifier.height(16.dp))
 
         CharacterGrid(
-            items = demoCharacters
+            items = characters
         )
     }
 }
@@ -64,7 +64,7 @@ private fun Header() {
             .clip(RoundedCornerShape(16.dp))
             .background(LightPink)
             .padding(horizontal = 16.dp, vertical = 14.dp)
-            .fillMaxWidth()
+            .fillMaxWidth(),
     ) {
         Image(
             painter = painterResource(id = R.drawable.ic_dragon_logo),
@@ -81,8 +81,6 @@ private fun Header() {
     }
 }
 
-private enum class Ruleset { R5E_2014, R5E_2024 }
-
 @Composable
 private fun RulesToggle(
     selected: Ruleset,
@@ -98,7 +96,7 @@ private fun RulesToggle(
             onClick = { onSelect(Ruleset.R5E_2014) },
             modifier = Modifier
                 .weight(1f)
-                .height(44.dp)
+                .height(44.dp),
         )
         SegmentedButton(
             text = "D&D5e 24",
@@ -106,7 +104,7 @@ private fun RulesToggle(
             onClick = { onSelect(Ruleset.R5E_2024) },
             modifier = Modifier
                 .weight(1f)
-                .height(44.dp)
+                .height(44.dp),
         )
     }
 }
@@ -154,21 +152,8 @@ private fun CreateCharacterButton(onClick: () -> Unit) {
     }
 }
 
-private data class CharacterCardUi(
-    val name: String,
-    val subtitle: String,
-    val avatarRes: Int = R.drawable.ic_dragon_logo // заглушка
-)
-
-private val demoCharacters = listOf(
-    CharacterCardUi("Elias", "Human Fighter"),
-    CharacterCardUi("Seraphine", "Elf Wizard Lv"),
-    CharacterCardUi("Thorin", "Dwarf Cleric"),
-    CharacterCardUi("Mira", "Tiefling Rogue")
-)
-
 @Composable
-private fun CharacterGrid(items: List<CharacterCardUi>) {
+private fun CharacterGrid(items: List<Character>) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -182,7 +167,7 @@ private fun CharacterGrid(items: List<CharacterCardUi>) {
 }
 
 @Composable
-private fun CharacterCard(item: CharacterCardUi) {
+private fun CharacterCard(item: Character) {
     Card(
         colors = CardDefaults.cardColors(
             containerColor = LightPink
@@ -200,7 +185,7 @@ private fun CharacterCard(item: CharacterCardUi) {
             verticalArrangement = Arrangement.SpaceBetween
         ) {
             Image(
-                painter = painterResource(id = item.avatarRes),
+                painter = painterResource(id = R.drawable.ic_dragon_logo),
                 contentDescription = item.name,
                 modifier = Modifier.size(72.dp)
             )
@@ -226,5 +211,12 @@ private fun CharacterCard(item: CharacterCardUi) {
 @Preview(showBackground = true)
 @Composable
 private fun PreviewMainScreen() {
-    LairSheetTheme { MainScreen() }
+    LairSheetTheme {
+        MainScreen(
+            ruleset = Ruleset.R5E_2014,
+            characters = emptyList(),
+            onRulesetChange = {},
+            onCreateCharacter = {}
+        )
+    }
 }
