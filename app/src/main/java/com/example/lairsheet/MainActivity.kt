@@ -12,6 +12,7 @@ import com.example.lairsheet.ui.theme.CharacterCreationScreen
 import com.example.lairsheet.ui.theme.LairSheetTheme
 import com.example.lairsheet.ui.theme.MainScreen
 import com.example.lairsheet.ui.theme.SplashScreen
+import com.example.lairsheet.ui.theme.AuthorsScreen
 import kotlinx.coroutines.delay
 
 class MainActivity : ComponentActivity() {
@@ -42,7 +43,8 @@ class MainActivity : ComponentActivity() {
                             onRulesetChange = { ruleset = it },
                             onCreateCharacter = { currentScreen = Screen.Create },
                             onImportJson = { importLauncher.launch(arrayOf("application/json")) },
-                            onOpenDataFolder = { folderLauncher.launch(null) }
+                            onOpenDataFolder = { folderLauncher.launch(null) },
+                            onShowAuthors = { currentScreen = Screen.Authors }
                         )
                         Screen.Create -> CharacterCreationScreen(
                             ruleset = ruleset,
@@ -52,6 +54,7 @@ class MainActivity : ComponentActivity() {
                             },
                             onCancel = { currentScreen = Screen.Main }
                         )
+                        Screen.Authors -> AuthorsScreen(onBack = { currentScreen = Screen.Main })
                     }
                 }
             }
@@ -62,4 +65,5 @@ class MainActivity : ComponentActivity() {
 private sealed class Screen {
     data object Main : Screen()
     data object Create : Screen()
+    data object Authors : Screen()
 }

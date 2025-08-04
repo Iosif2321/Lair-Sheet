@@ -2,6 +2,7 @@ package com.example.lairsheet.ui.theme
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -31,7 +32,8 @@ fun MainScreen(
     onRulesetChange: (Ruleset) -> Unit,
     onCreateCharacter: () -> Unit,
     onImportJson: () -> Unit,
-    onOpenDataFolder: () -> Unit
+    onOpenDataFolder: () -> Unit,
+    onShowAuthors: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -39,7 +41,7 @@ fun MainScreen(
             .background(MaterialTheme.colorScheme.background)
             .padding(16.dp),
     ) {
-        Header(onImportJson = onImportJson, onOpenDataFolder = onOpenDataFolder)
+        Header(onShowAuthors = onShowAuthors, onImportJson = onImportJson, onOpenDataFolder = onOpenDataFolder)
 
         Spacer(Modifier.height(16.dp))
 
@@ -61,7 +63,7 @@ fun MainScreen(
 }
 
 @Composable
-private fun Header(onImportJson: () -> Unit, onOpenDataFolder: () -> Unit) {
+private fun Header(onShowAuthors: () -> Unit, onImportJson: () -> Unit, onOpenDataFolder: () -> Unit) {
     var expanded by remember { mutableStateOf(false) }
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -74,7 +76,9 @@ private fun Header(onImportJson: () -> Unit, onOpenDataFolder: () -> Unit) {
         Image(
             painter = painterResource(id = R.drawable.ic_dragon_logo),
             contentDescription = "Dragon Logo",
-            modifier = Modifier.size(48.dp)
+            modifier = Modifier
+                .size(48.dp)
+                .clickable { onShowAuthors() }
         )
         Spacer(Modifier.width(12.dp))
         Text(
@@ -238,6 +242,7 @@ private fun PreviewMainScreen() {
             onCreateCharacter = {},
             onImportJson = {},
             onOpenDataFolder = {},
+            onShowAuthors = {},
         )
     }
 }
