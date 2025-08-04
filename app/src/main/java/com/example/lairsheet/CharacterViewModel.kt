@@ -15,13 +15,13 @@ class CharacterViewModel(application: Application) : AndroidViewModel(applicatio
         application,
         AppDatabase::class.java,
         "characters.db"
-    ).build().characterDao()
+    ).fallbackToDestructiveMigration().build().characterDao()
 
     fun characters(ruleset: Ruleset): Flow<List<Character>> = dao.charactersByRuleset(ruleset)
 
-    fun addCharacter(name: String, subtitle: String, ruleset: Ruleset) {
+    fun addCharacter(character: Character) {
         viewModelScope.launch {
-            dao.insert(Character(name = name, subtitle = subtitle, ruleset = ruleset))
+            dao.insert(character)
         }
     }
 }
