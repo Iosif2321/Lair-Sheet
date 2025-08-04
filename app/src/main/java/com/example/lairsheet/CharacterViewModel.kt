@@ -1,19 +1,16 @@
 package com.example.lairsheet
 
 import android.app.Application
-import android.content.Context
-import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.room.Room
+import android.net.Uri
+import org.json.JSONObject
 import com.example.lairsheet.data.AppDatabase
 import com.example.lairsheet.data.Character
 import com.example.lairsheet.data.Ruleset
-import com.google.gson.Gson
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class CharacterViewModel(application: Application) : AndroidViewModel(application) {
     private val dao = Room.databaseBuilder(
@@ -30,13 +27,29 @@ class CharacterViewModel(application: Application) : AndroidViewModel(applicatio
         }
     }
 
-    fun importCharacter(context: Context, uri: Uri) {
+    fun importCharacter(uri: Uri, ruleset: Ruleset) {
+        val ctx = getApplication<Application>()
         viewModelScope.launch {
-            val json = withContext(Dispatchers.IO) {
-                context.contentResolver.openInputStream(uri)?.bufferedReader()?.use { it.readText() }
-            } ?: return@launch
-            val character = Gson().fromJson(json, Character::class.java)
-            dao.insert(character)
+            ctx.contentResolver.openInputStream(uri)?.use { input ->
+                val text = input.bufferedReader().use { it.readText() }
+                val obj = JSONObject(text)
+                val character = Character(
+                    name = obj.getString("name"),
+                    className = obj.getString("class"),
+                    race = obj.getString("race"),
+                    level = obj.getInt("level"),
+                    background = obj.optString("background"),
+                    alignment = obj.optString("alignment"),
+                    strength = obj.optInt("strength"),
+                    dexterity = obj.optInt("dexterity"),
+                    constitution = obj.optInt("constitution"),
+                    intelligence = obj.optInt("intelligence"),
+                    wisdom = obj.optInt("wisdom"),
+                    charisma = obj.optInt("charisma"),
+                    ruleset = ruleset
+                )
+                dao.insert(character)
+            }
         }
     }
 }

@@ -2,6 +2,7 @@ package com.example.lairsheet.ui.theme
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -12,17 +13,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.lairsheet.CharacterViewModel
 import com.example.lairsheet.R
 import com.example.lairsheet.data.Character
 import com.example.lairsheet.data.Ruleset
@@ -35,24 +31,17 @@ fun MainScreen(
     characters: List<Character>,
     onRulesetChange: (Ruleset) -> Unit,
     onCreateCharacter: () -> Unit,
-    onOpenDataCatalog: () -> Unit
+    onImportJson: () -> Unit,
+    onOpenDataFolder: () -> Unit,
+    onShowAuthors: () -> Unit
 ) {
-    val context = LocalContext.current
-    val vm: CharacterViewModel = viewModel()
-    val launcher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-        uri?.let { vm.importCharacter(context, it) }
-    }
-
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
             .padding(16.dp),
     ) {
-        Header(
-            onLoadJson = { launcher.launch(arrayOf("application/json")) },
-            onOpenCatalog = onOpenDataCatalog
-        )
+        Header(onShowAuthors = onShowAuthors, onImportJson = onImportJson, onOpenDataFolder = onOpenDataFolder)
 
         Spacer(Modifier.height(16.dp))
 
@@ -74,10 +63,7 @@ fun MainScreen(
 }
 
 @Composable
-private fun Header(
-    onLoadJson: () -> Unit,
-    onOpenCatalog: () -> Unit
-) {
+private fun Header(onShowAuthors: () -> Unit, onImportJson: () -> Unit, onOpenDataFolder: () -> Unit) {
     var expanded by remember { mutableStateOf(false) }
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -86,36 +72,34 @@ private fun Header(
             .background(LightPink)
             .padding(horizontal = 16.dp, vertical = 14.dp)
             .fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Image(
-                painter = painterResource(id = R.drawable.ic_dragon_logo),
-                contentDescription = "Dragon Logo",
-                modifier = Modifier.size(48.dp)
-            )
-            Spacer(Modifier.width(12.dp))
-            Text(
-                text = "Lair Sheet",
-                fontSize = 28.sp,
-                fontWeight = FontWeight.Bold,
-                color = DeepRed
-            )
+        Image(
+            painter = painterResource(id = R.drawable.ic_dragon_logo),
+            contentDescription = "Dragon Logo",
+            modifier = Modifier
+                .size(48.dp)
+                .clickable { onShowAuthors() }
+        )
+        Spacer(Modifier.width(12.dp))
+        Text(
+            text = "Lair Sheet",
+            fontSize = 28.sp,
+            fontWeight = FontWeight.Bold,
+            color = DeepRed
+        )
+        Spacer(Modifier.weight(1f))
+        IconButton(onClick = { expanded = true }) {
+            Icon(Icons.Default.Menu, contentDescription = "Menu", tint = DeepRed)
         }
-        Box {
-            IconButton(onClick = { expanded = true }) {
-                Icon(Icons.Default.Menu, contentDescription = "Menu")
-            }
-            DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
-                DropdownMenuItem(text = { Text("Загрузить JSON") }, onClick = {
-                    expanded = false
-                    onLoadJson()
-                })
-                DropdownMenuItem(text = { Text("Каталог данных") }, onClick = {
-                    expanded = false
-                    onOpenCatalog()
-                })
-            }
+        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            DropdownMenuItem(text = { Text("Загрузить JSON") }, onClick = {
+                expanded = false
+                onImportJson()
+            })
+            DropdownMenuItem(text = { Text("Каталог данных") }, onClick = {
+                expanded = false
+                onOpenDataFolder()
+            })
         }
     }
 }
@@ -256,7 +240,9 @@ private fun PreviewMainScreen() {
             characters = emptyList(),
             onRulesetChange = {},
             onCreateCharacter = {},
-            onOpenDataCatalog = {}
+            onImportJson = {},
+            onOpenDataFolder = {},
+            onShowAuthors = {},
         )
     }
 }
