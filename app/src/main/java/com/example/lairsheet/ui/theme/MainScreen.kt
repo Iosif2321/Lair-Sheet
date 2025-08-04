@@ -8,7 +8,7 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -21,13 +21,17 @@ import androidx.compose.ui.unit.sp
 import com.example.lairsheet.R
 import com.example.lairsheet.data.Character
 import com.example.lairsheet.data.Ruleset
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Menu
 
 @Composable
 fun MainScreen(
     ruleset: Ruleset,
     characters: List<Character>,
     onRulesetChange: (Ruleset) -> Unit,
-    onCreateCharacter: () -> Unit
+    onCreateCharacter: () -> Unit,
+    onImportJson: () -> Unit,
+    onOpenDataFolder: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -35,7 +39,7 @@ fun MainScreen(
             .background(MaterialTheme.colorScheme.background)
             .padding(16.dp),
     ) {
-        Header()
+        Header(onImportJson = onImportJson, onOpenDataFolder = onOpenDataFolder)
 
         Spacer(Modifier.height(16.dp))
 
@@ -57,7 +61,8 @@ fun MainScreen(
 }
 
 @Composable
-private fun Header() {
+private fun Header(onImportJson: () -> Unit, onOpenDataFolder: () -> Unit) {
+    var expanded by remember { mutableStateOf(false) }
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
@@ -78,6 +83,20 @@ private fun Header() {
             fontWeight = FontWeight.Bold,
             color = DeepRed
         )
+        Spacer(Modifier.weight(1f))
+        IconButton(onClick = { expanded = true }) {
+            Icon(Icons.Default.Menu, contentDescription = "Menu", tint = DeepRed)
+        }
+        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            DropdownMenuItem(text = { Text("Загрузить JSON") }, onClick = {
+                expanded = false
+                onImportJson()
+            })
+            DropdownMenuItem(text = { Text("Каталог данных") }, onClick = {
+                expanded = false
+                onOpenDataFolder()
+            })
+        }
     }
 }
 
@@ -216,7 +235,9 @@ private fun PreviewMainScreen() {
             ruleset = Ruleset.R5E_2014,
             characters = emptyList(),
             onRulesetChange = {},
-            onCreateCharacter = {}
+            onCreateCharacter = {},
+            onImportJson = {},
+            onOpenDataFolder = {},
         )
     }
 }

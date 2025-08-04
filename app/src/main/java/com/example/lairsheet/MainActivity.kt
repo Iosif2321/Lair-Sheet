@@ -3,6 +3,8 @@ package com.example.lairsheet
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.compose.runtime.*
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lairsheet.data.Ruleset
@@ -19,8 +21,12 @@ class MainActivity : ComponentActivity() {
             LairSheetTheme {
                 var showSplash by remember { mutableStateOf(true) }
                 val vm: CharacterViewModel = viewModel()
-                var currentScreen by remember { mutableStateOf<Screen>(Screen.Main) }
                 var ruleset by remember { mutableStateOf(Ruleset.R5E_2014) }
+                val importLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+                    uri?.let { vm.importCharacter(it, ruleset) }
+                }
+                val folderLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocumentTree()) {}
+                var currentScreen by remember { mutableStateOf<Screen>(Screen.Main) }
                 val characters by vm.characters(ruleset).collectAsState(emptyList())
                 LaunchedEffect(Unit) {
                     delay(2000)
@@ -34,7 +40,9 @@ class MainActivity : ComponentActivity() {
                             ruleset = ruleset,
                             characters = characters,
                             onRulesetChange = { ruleset = it },
-                            onCreateCharacter = { currentScreen = Screen.Create }
+                            onCreateCharacter = { currentScreen = Screen.Create },
+                            onImportJson = { importLauncher.launch(arrayOf("application/json")) },
+                            onOpenDataFolder = { folderLauncher.launch(null) }
                         )
                         Screen.Create -> CharacterCreationScreen(
                             ruleset = ruleset,
