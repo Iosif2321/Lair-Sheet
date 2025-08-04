@@ -2,17 +2,13 @@ package com.example.lairsheet.ui.theme
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -24,52 +20,65 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lairsheet.R
+import com.example.lairsheet.data.Character
+import com.example.lairsheet.data.Ruleset
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Menu
 
 @Composable
-fun MainScreen() {
-    var ruleset by remember { mutableStateOf(Ruleset.R5E_2014) }
-
+fun MainScreen(
+    ruleset: Ruleset,
+    characters: List<Character>,
+    onRulesetChange: (Ruleset) -> Unit,
+    onCreateCharacter: () -> Unit,
+    onImportJson: () -> Unit,
+    onOpenDataFolder: () -> Unit,
+    onShowAuthors: () -> Unit
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
-            .padding(16.dp)
+            .padding(16.dp),
     ) {
-        Header()
+        Header(onShowAuthors = onShowAuthors, onImportJson = onImportJson, onOpenDataFolder = onOpenDataFolder)
 
         Spacer(Modifier.height(16.dp))
 
         RulesToggle(
             selected = ruleset,
-            onSelect = { ruleset = it }
+            onSelect = onRulesetChange
         )
 
         Spacer(Modifier.height(16.dp))
 
-        CreateCharacterButton(onClick = { /* TODO: навигация на создание */ })
+        CreateCharacterButton(onClick = onCreateCharacter)
 
         Spacer(Modifier.height(16.dp))
 
         CharacterGrid(
-            items = demoCharacters
+            items = characters
         )
     }
 }
 
 @Composable
-private fun Header() {
+private fun Header(onShowAuthors: () -> Unit, onImportJson: () -> Unit, onOpenDataFolder: () -> Unit) {
+    var expanded by remember { mutableStateOf(false) }
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .clip(RoundedCornerShape(16.dp))
             .background(LightPink)
             .padding(horizontal = 16.dp, vertical = 14.dp)
-            .fillMaxWidth()
+            .fillMaxWidth(),
     ) {
         Image(
             painter = painterResource(id = R.drawable.ic_dragon_logo),
             contentDescription = "Dragon Logo",
-            modifier = Modifier.size(48.dp)
+            modifier = Modifier
+                .size(48.dp)
+                .clickable { onShowAuthors() }
         )
         Spacer(Modifier.width(12.dp))
         Text(
@@ -78,10 +87,22 @@ private fun Header() {
             fontWeight = FontWeight.Bold,
             color = DeepRed
         )
+        Spacer(Modifier.weight(1f))
+        IconButton(onClick = { expanded = true }) {
+            Icon(Icons.Default.Menu, contentDescription = "Menu", tint = DeepRed)
+        }
+        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            DropdownMenuItem(text = { Text("Загрузить JSON") }, onClick = {
+                expanded = false
+                onImportJson()
+            })
+            DropdownMenuItem(text = { Text("Каталог данных") }, onClick = {
+                expanded = false
+                onOpenDataFolder()
+            })
+        }
     }
 }
-
-private enum class Ruleset { R5E_2014, R5E_2024 }
 
 @Composable
 private fun RulesToggle(
@@ -98,7 +119,7 @@ private fun RulesToggle(
             onClick = { onSelect(Ruleset.R5E_2014) },
             modifier = Modifier
                 .weight(1f)
-                .height(44.dp)
+                .height(44.dp),
         )
         SegmentedButton(
             text = "D&D5e 24",
@@ -106,7 +127,7 @@ private fun RulesToggle(
             onClick = { onSelect(Ruleset.R5E_2024) },
             modifier = Modifier
                 .weight(1f)
-                .height(44.dp)
+                .height(44.dp),
         )
     }
 }
@@ -154,21 +175,8 @@ private fun CreateCharacterButton(onClick: () -> Unit) {
     }
 }
 
-private data class CharacterCardUi(
-    val name: String,
-    val subtitle: String,
-    val avatarRes: Int = R.drawable.ic_dragon_logo // заглушка
-)
-
-private val demoCharacters = listOf(
-    CharacterCardUi("Elias", "Human Fighter"),
-    CharacterCardUi("Seraphine", "Elf Wizard Lv"),
-    CharacterCardUi("Thorin", "Dwarf Cleric"),
-    CharacterCardUi("Mira", "Tiefling Rogue")
-)
-
 @Composable
-private fun CharacterGrid(items: List<CharacterCardUi>) {
+private fun CharacterGrid(items: List<Character>) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -182,7 +190,7 @@ private fun CharacterGrid(items: List<CharacterCardUi>) {
 }
 
 @Composable
-private fun CharacterCard(item: CharacterCardUi) {
+private fun CharacterCard(item: Character) {
     Card(
         colors = CardDefaults.cardColors(
             containerColor = LightPink
@@ -200,7 +208,7 @@ private fun CharacterCard(item: CharacterCardUi) {
             verticalArrangement = Arrangement.SpaceBetween
         ) {
             Image(
-                painter = painterResource(id = item.avatarRes),
+                painter = painterResource(id = R.drawable.ic_dragon_logo),
                 contentDescription = item.name,
                 modifier = Modifier.size(72.dp)
             )
@@ -212,7 +220,7 @@ private fun CharacterCard(item: CharacterCardUi) {
                     color = DeepRed
                 )
                 Text(
-                    text = item.subtitle,
+                    text = "${item.race} ${item.className} ${item.level}",
                     fontSize = 14.sp,
                     color = DeepRed,
                     maxLines = 1,
@@ -226,5 +234,15 @@ private fun CharacterCard(item: CharacterCardUi) {
 @Preview(showBackground = true)
 @Composable
 private fun PreviewMainScreen() {
-    LairSheetTheme { MainScreen() }
+    LairSheetTheme {
+        MainScreen(
+            ruleset = Ruleset.R5E_2014,
+            characters = emptyList(),
+            onRulesetChange = {},
+            onCreateCharacter = {},
+            onImportJson = {},
+            onOpenDataFolder = {},
+            onShowAuthors = {},
+        )
+    }
 }
