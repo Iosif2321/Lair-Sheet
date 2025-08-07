@@ -6,6 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.compose.runtime.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lairsheet.data.Ruleset
 import com.example.lairsheet.ui.theme.CharacterCreationScreen
@@ -13,6 +16,7 @@ import com.example.lairsheet.ui.theme.LairSheetTheme
 import com.example.lairsheet.ui.theme.MainScreen
 import com.example.lairsheet.ui.theme.SplashScreen
 import com.example.lairsheet.ui.theme.AuthorsScreen
+import com.example.lairsheet.ui.theme.DiceMenu
 import kotlinx.coroutines.delay
 
 class MainActivity : ComponentActivity() {
@@ -33,29 +37,32 @@ class MainActivity : ComponentActivity() {
                     delay(2000)
                     showSplash = false
                 }
-                if (showSplash) {
-                    SplashScreen()
-                } else {
-                    when (currentScreen) {
-                        Screen.Main -> MainScreen(
-                            ruleset = ruleset,
-                            characters = characters,
-                            onRulesetChange = { ruleset = it },
-                            onCreateCharacter = { currentScreen = Screen.Create },
-                            onImportJson = { importLauncher.launch(arrayOf("application/json")) },
-                            onOpenDataFolder = { folderLauncher.launch(null) },
-                            onShowAuthors = { currentScreen = Screen.Authors }
-                        )
-                        Screen.Create -> CharacterCreationScreen(
-                            ruleset = ruleset,
-                            onSave = {
-                                vm.addCharacter(it)
-                                currentScreen = Screen.Main
-                            },
-                            onCancel = { currentScreen = Screen.Main }
-                        )
-                        Screen.Authors -> AuthorsScreen(onBack = { currentScreen = Screen.Main })
+                Box(Modifier.fillMaxSize()) {
+                    if (showSplash) {
+                        SplashScreen()
+                    } else {
+                        when (currentScreen) {
+                            Screen.Main -> MainScreen(
+                                ruleset = ruleset,
+                                characters = characters,
+                                onRulesetChange = { ruleset = it },
+                                onCreateCharacter = { currentScreen = Screen.Create },
+                                onImportJson = { importLauncher.launch(arrayOf("application/json")) },
+                                onOpenDataFolder = { folderLauncher.launch(null) },
+                                onShowAuthors = { currentScreen = Screen.Authors }
+                            )
+                            Screen.Create -> CharacterCreationScreen(
+                                ruleset = ruleset,
+                                onSave = {
+                                    vm.addCharacter(it)
+                                    currentScreen = Screen.Main
+                                },
+                                onCancel = { currentScreen = Screen.Main }
+                            )
+                            Screen.Authors -> AuthorsScreen(onBack = { currentScreen = Screen.Main })
+                        }
                     }
+                    DiceMenu()
                 }
             }
         }
