@@ -39,6 +39,7 @@ fun MainScreen(
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
+            .statusBarsPadding()                 // добавлено
             .padding(16.dp),
     ) {
         Header(onShowAuthors = onShowAuthors, onImportJson = onImportJson, onOpenDataFolder = onOpenDataFolder)

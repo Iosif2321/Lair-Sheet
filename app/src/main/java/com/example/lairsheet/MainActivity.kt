@@ -1,7 +1,10 @@
 package com.example.lairsheet
 
+import android.app.Activity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -10,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lairsheet.data.Ruleset
 import com.example.lairsheet.ui.create.Step1Screen
@@ -29,11 +33,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             LairSheetTheme {
                 var showSplash by remember { mutableStateOf(true) }
+
                 val vm: CharacterViewModel = viewModel()
                 var ruleset by remember { mutableStateOf(Ruleset.R5E_2014) }
+
                 val importLauncher = rememberLauncherForActivityResult(
                     ActivityResultContracts.OpenDocument()
                 ) { uri -> uri?.let { vm.importCharacter(it, ruleset) } }
+
                 val folderLauncher = rememberLauncherForActivityResult(
                     ActivityResultContracts.OpenDocumentTree()
                 ) {}
@@ -51,8 +58,41 @@ class MainActivity : ComponentActivity() {
                 } else {
                     // Глобальная лента результатов бросков
                     val rollFeed = remember { mutableStateListOf<RollEntry>() }
-                    // Плавающее меню кубиков для всех экранов, КРОМЕ экрана создания
+                    // Плавающее меню кубиков (прячем на экране создания)
                     var diceExpanded by remember { mutableStateOf(false) }
+
+                    // === BACK: логика возврата/выхода ===
+                    val activity = LocalContext.current as? Activity
+                    var lastBackPress by remember { mutableStateOf(0L) }
+
+                    BackHandler {
+                        when (currentScreen) {
+                            Screen.Main -> {
+                                // Сначала закрываем меню кубиков, если открыто
+                                if (diceExpanded) {
+                                    diceExpanded = false
+                                    return@BackHandler
+                                }
+                                // Двойное "Назад" для выхода
+                                val now = System.currentTimeMillis()
+                                if (now - lastBackPress < 2000) {
+                                    activity?.finish()
+                                } else {
+                                    lastBackPress = now
+                                    Toast.makeText(
+                                        activity,
+                                        "Нажмите «Назад» ещё раз для выхода",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                            }
+                            else -> {
+                                // На внутренних экранах — просто вернуться на главный
+                                currentScreen = Screen.Main
+                            }
+                        }
+                    }
+                    // === END BACK ===
 
                     Box(modifier = Modifier.fillMaxSize()) {
                         when (currentScreen) {
