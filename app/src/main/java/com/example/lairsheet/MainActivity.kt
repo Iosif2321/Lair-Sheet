@@ -16,7 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lairsheet.data.Ruleset
-import com.example.lairsheet.ui.create.Step1Screen
+import com.example.lairsheet.ui.create.CharacterCreatorNav
 import com.example.lairsheet.ui.theme.AuthorsScreen
 import com.example.lairsheet.ui.theme.DiceMenu
 import com.example.lairsheet.ui.theme.LairSheetTheme
@@ -34,6 +34,7 @@ class MainActivity : ComponentActivity() {
             LairSheetTheme {
                 var showSplash by remember { mutableStateOf(true) }
 
+                // ТВОЙ БД-VM ОСТАЁТСЯ БЕЗ ИЗМЕНЕНИЙ
                 val vm: CharacterViewModel = viewModel()
                 var ruleset by remember { mutableStateOf(Ruleset.R5E_2014) }
 
@@ -68,12 +69,10 @@ class MainActivity : ComponentActivity() {
                     BackHandler {
                         when (currentScreen) {
                             Screen.Main -> {
-                                // Сначала закрываем меню кубиков, если открыто
                                 if (diceExpanded) {
                                     diceExpanded = false
                                     return@BackHandler
                                 }
-                                // Двойное "Назад" для выхода
                                 val now = System.currentTimeMillis()
                                 if (now - lastBackPress < 2000) {
                                     activity?.finish()
@@ -86,10 +85,7 @@ class MainActivity : ComponentActivity() {
                                     ).show()
                                 }
                             }
-                            else -> {
-                                // На внутренних экранах — просто вернуться на главный
-                                currentScreen = Screen.Main
-                            }
+                            else -> currentScreen = Screen.Main
                         }
                     }
                     // === END BACK ===
@@ -106,25 +102,20 @@ class MainActivity : ComponentActivity() {
                                 onShowAuthors = { currentScreen = Screen.Authors }
                             )
 
-                            Screen.CreateStep1 -> Step1Screen(
-                                onNext = {
+                            // <<< НОВЫЙ МАСТЕР СОЗДАНИЯ ПЕРСОНАЖА >>>
+                            Screen.CreateStep1 -> CharacterCreatorNav(
+                                ruleset = ruleset,
+                                onCancel = { currentScreen = Screen.Main },
+                                onSave = { character ->
+                                    vm.addCharacter(character)
                                     currentScreen = Screen.Main
-                                },
-                                onRollDice = { sides ->
-                                    val value = Random.nextInt(1, sides + 1)
-                                    rollFeed.add(
-                                        RollEntry(
-                                            id = System.nanoTime(),
-                                            sides = sides,
-                                            value = value
-                                        )
-                                    )
                                 }
                             )
 
                             Screen.Authors -> AuthorsScreen(onBack = { currentScreen = Screen.Main })
                         }
 
+                        // Скрываем меню кубиков на экране мастера
                         if (currentScreen != Screen.CreateStep1) {
                             DiceMenu(
                                 expanded = diceExpanded,
