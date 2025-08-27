@@ -15,8 +15,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
+import android.app.Application
 import com.example.lairsheet.data.Ruleset
 import com.example.lairsheet.ui.create.Step1Screen
+import com.example.lairsheet.ui.create.Step2Screen
+import com.example.lairsheet.ui.create.Step2ViewModel
 import com.example.lairsheet.ui.theme.AuthorsScreen
 import com.example.lairsheet.ui.theme.DiceMenu
 import com.example.lairsheet.ui.theme.LairSheetTheme
@@ -47,6 +50,9 @@ class MainActivity : ComponentActivity() {
 
                 var currentScreen by remember { mutableStateOf<Screen>(Screen.Main) }
                 val characters by vm.characters(ruleset).collectAsState(emptyList())
+
+                // Храним черновик персонажа для передачи между шагами
+                var characterDraft by remember { mutableStateOf(com.example.lairsheet.ui.create.CharacterDraft()) }
 
                 LaunchedEffect(Unit) {
                     delay(2000)
@@ -86,8 +92,12 @@ class MainActivity : ComponentActivity() {
                                     ).show()
                                 }
                             }
+                            Screen.CreateStep2 -> {
+                                // С шага 2 возвращаемся на шаг 1
+                                currentScreen = Screen.CreateStep1
+                            }
                             else -> {
-                                // На внутренних экранах — просто вернуться на главный
+                                // На других внутренних экранах — вернуться на главный
                                 currentScreen = Screen.Main
                             }
                         }
@@ -107,8 +117,9 @@ class MainActivity : ComponentActivity() {
                             )
 
                             Screen.CreateStep1 -> Step1Screen(
-                                onNext = {
-                                    currentScreen = Screen.Main
+                                onNext = { draft ->
+                                    characterDraft = draft
+                                    currentScreen = Screen.CreateStep2
                                 },
                                 onRollDice = { sides ->
                                     val value = Random.nextInt(1, sides + 1)
@@ -122,10 +133,28 @@ class MainActivity : ComponentActivity() {
                                 }
                             )
 
+                            Screen.CreateStep2 -> Step2Screen(
+                                modifier = Modifier,
+                                viewModel = Step2ViewModel(
+                                    app = LocalContext.current.applicationContext as Application,
+                                    initialDraft = characterDraft
+                                ),
+                                onNext = { updatedDraft ->
+                                    // Сохраняем персонажа и возвращаемся на главный экран
+                                    println("MainActivity: Character creation completed with draft: $updatedDraft")
+                                    characterDraft = updatedDraft
+                                    currentScreen = Screen.Main
+                                },
+                                onPrevious = {
+                                    println("MainActivity: Going back to Step 1")
+                                    currentScreen = Screen.CreateStep1
+                                }
+                            )
+
                             Screen.Authors -> AuthorsScreen(onBack = { currentScreen = Screen.Main })
                         }
 
-                        if (currentScreen != Screen.CreateStep1) {
+                        if (currentScreen != Screen.CreateStep1 && currentScreen != Screen.CreateStep2) {
                             DiceMenu(
                                 expanded = diceExpanded,
                                 onToggle = { diceExpanded = !diceExpanded },
@@ -159,5 +188,6 @@ class MainActivity : ComponentActivity() {
 private sealed class Screen {
     data object Main : Screen()
     data object CreateStep1 : Screen()
+    data object CreateStep2 : Screen()
     data object Authors : Screen()
 }

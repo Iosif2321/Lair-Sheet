@@ -42,11 +42,11 @@ class DndRepository(private val context: Context) {
         return DndSources(sources)
     }
 
-    private fun parseRaces(arr: JSONArray): List<Race> {
-        val out = ArrayList<Race>(arr.length())
+    private fun parseRaces(arr: JSONArray): List<Race2014> {
+        val out = ArrayList<Race2014>(arr.length())
         for (i in 0 until arr.length()) {
             val o = arr.getJSONObject(i)
-            out += Race(
+            out += Race2014(
                 nameEn = o.optString("name_en"),
                 nameRu = o.optString("name_ru"),
                 subraces = parseSubraces(o.optJSONArray("subraces") ?: JSONArray())
@@ -55,11 +55,11 @@ class DndRepository(private val context: Context) {
         return out
     }
 
-    private fun parseSubraces(arr: JSONArray): List<Subrace> {
-        val out = ArrayList<Subrace>(arr.length())
+    private fun parseSubraces(arr: JSONArray): List<Subrace2014> {
+        val out = ArrayList<Subrace2014>(arr.length())
         for (i in 0 until arr.length()) {
             val o = arr.getJSONObject(i)
-            out += Subrace(
+            out += Subrace2014(
                 nameEn = o.optString("name_en"),
                 nameRu = o.optString("name_ru")
             )
@@ -67,11 +67,11 @@ class DndRepository(private val context: Context) {
         return out
     }
 
-    private fun parseClasses(arr: JSONArray): List<DndClass> {
-        val out = ArrayList<DndClass>(arr.length())
+    private fun parseClasses(arr: JSONArray): List<DndClass2014> {
+        val out = ArrayList<DndClass2014>(arr.length())
         for (i in 0 until arr.length()) {
             val o = arr.getJSONObject(i)
-            out += DndClass(
+            out += DndClass2014(
                 nameEn = o.optString("name_en"),
                 nameRu = o.optString("name_ru"),
                 subclasses = parseSubclasses(o.optJSONArray("subclasses") ?: JSONArray())
@@ -80,11 +80,11 @@ class DndRepository(private val context: Context) {
         return out
     }
 
-    private fun parseSubclasses(arr: JSONArray): List<Subclass> {
-        val out = ArrayList<Subclass>(arr.length())
+    private fun parseSubclasses(arr: JSONArray): List<Subclass2014> {
+        val out = ArrayList<Subclass2014>(arr.length())
         for (i in 0 until arr.length()) {
             val o = arr.getJSONObject(i)
-            out += Subclass(
+            out += Subclass2014(
                 nameEn = o.optString("name_en"),
                 nameRu = o.optString("name_ru")
             )

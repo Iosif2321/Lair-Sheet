@@ -20,8 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lairsheet.R
-import com.example.lairsheet.data.Character
-import com.example.lairsheet.data.Ruleset
+import com.example.lairsheet.data.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 
@@ -221,7 +220,7 @@ private fun CharacterCard(item: Character) {
                     color = DeepRed
                 )
                 Text(
-                    text = "${item.race} ${item.className} ${item.level}",
+                    text = "${item.race.name} ${item.characterClass.name}",
                     fontSize = 14.sp,
                     color = DeepRed,
                     maxLines = 1,

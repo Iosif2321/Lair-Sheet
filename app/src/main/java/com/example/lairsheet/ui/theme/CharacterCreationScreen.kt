@@ -7,8 +7,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.lairsheet.data.Character
-import com.example.lairsheet.data.Ruleset
+import com.example.lairsheet.data.*
 
 @Composable
 fun CharacterCreationScreen(
@@ -146,18 +145,21 @@ fun CharacterCreationScreen(
                     onSave(
                         Character(
                             name = name,
-                            className = className,
-                            race = race,
-                            level = level.toIntOrNull() ?: 1,
-                            background = background,
-                            alignment = alignment,
-                            strength = str.toIntOrNull() ?: 10,
-                            dexterity = dex.toIntOrNull() ?: 10,
-                            constitution = con.toIntOrNull() ?: 10,
-                            intelligence = intScore.toIntOrNull() ?: 10,
-                            wisdom = wis.toIntOrNull() ?: 10,
-                            charisma = cha.toIntOrNull() ?: 10,
-                            ruleset = ruleset
+                            race = Race(race, "Описание расы"),
+                            subrace = null,
+                            characterClass = DndClass(className, "Описание класса"),
+                            subclass = null,
+                            abilityScores = mapOf(
+                                AbilityType.STRENGTH to AbilityScore(AbilityType.STRENGTH, str.toIntOrNull() ?: 10),
+                                AbilityType.DEXTERITY to AbilityScore(AbilityType.DEXTERITY, dex.toIntOrNull() ?: 10),
+                                AbilityType.CONSTITUTION to AbilityScore(AbilityType.CONSTITUTION, con.toIntOrNull() ?: 10),
+                                AbilityType.INTELLIGENCE to AbilityScore(AbilityType.INTELLIGENCE, intScore.toIntOrNull() ?: 10),
+                                AbilityType.WISDOM to AbilityScore(AbilityType.WISDOM, wis.toIntOrNull() ?: 10),
+                                AbilityType.CHARISMA to AbilityScore(AbilityType.CHARISMA, cha.toIntOrNull() ?: 10)
+                            ),
+                            ruleset = ruleset,
+                            createdAt = System.currentTimeMillis(),
+                            updatedAt = System.currentTimeMillis()
                         )
                     )
                 },

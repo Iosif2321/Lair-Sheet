@@ -22,7 +22,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lairsheet.R
@@ -57,15 +59,7 @@ fun Step1Screen(
         ) {
             StepHeader()
 
-            // 1) Источник правил
-            PrettyDropdown(
-                label = "Источник правил",
-                options = state.allSources.map { it.title },
-                selectedIndex = state.selectedSourceIndex,
-                onSelected = { idx -> viewModel.setSource(idx) }
-            )
-
-            // 2) Имя персонажа
+            // 1) Имя персонажа
             OutlinedTextField(
                 value = state.draft.playerName,
                 onValueChange = viewModel::setPlayerName,
@@ -76,59 +70,135 @@ fun Step1Screen(
             )
 
             // 3) Раса
-            PrettyDropdown(
-                label = "Раса",
-                options = state.availableRaces.map { it.nameRu },
-                selectedIndex = state.availableRaces.indexOf(state.draft.race),
-                onSelected = { idx -> state.availableRaces.getOrNull(idx)?.let(viewModel::selectRace) }
-            )
+            if (state.isLoading) {
+                CircularProgressIndicator(modifier = Modifier.align(Alignment.CenterHorizontally))
+            } else {
+                PrettyDropdown(
+                    label = "Раса",
+                    options = state.availableRaces.map { it.name },
+                    selectedIndex = state.availableRaces.indexOf(state.draft.race),
+                    onSelected = { idx -> state.availableRaces.getOrNull(idx)?.let(viewModel::selectRace) }
+                )
+            }
+
+            // Описание выбранной расы
+            if (state.selectedRaceDescription.isNotEmpty()) {
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.surface
+                    )
+                ) {
+                    Text(
+                        text = state.selectedRaceDescription,
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier.padding(16.dp)
+                    )
+                }
+            }
 
             // 3.1) Подраса (если есть)
-            val currentSubraces = state.draft.race?.subraces.orEmpty()
-            if (currentSubraces.isNotEmpty()) {
+            if (state.availableSubraces.isNotEmpty()) {
                 PrettyDropdown(
                     label = "Подраса",
-                    options = currentSubraces.map { it.nameRu },
-                    selectedIndex = currentSubraces.indexOf(state.draft.subrace),
-                    onSelected = { idx -> currentSubraces.getOrNull(idx)?.let(viewModel::selectSubrace) }
+                    options = state.availableSubraces.map { it.name },
+                    selectedIndex = state.availableSubraces.indexOf(state.draft.subrace),
+                    onSelected = { idx -> state.availableSubraces.getOrNull(idx)?.let(viewModel::selectSubrace) }
                 )
+            }
+
+            // Описание выбранной подрасы
+            if (state.selectedSubraceDescription.isNotEmpty()) {
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.surface
+                    )
+                ) {
+                    Text(
+                        text = state.selectedSubraceDescription,
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier.padding(16.dp)
+                    )
+                }
             }
 
             // 4) Класс
             PrettyDropdown(
                 label = "Класс",
-                options = state.availableClasses.map { it.nameRu },
+                options = state.availableClasses.map { it.name },
                 selectedIndex = state.availableClasses.indexOf(state.draft.clazz),
                 onSelected = { idx -> state.availableClasses.getOrNull(idx)?.let(viewModel::selectClass) }
             )
 
+            // Описание выбранного класса
+            if (state.selectedClassDescription.isNotEmpty()) {
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.surface
+                    )
+                ) {
+                    Text(
+                        text = state.selectedClassDescription,
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier.padding(16.dp)
+                    )
+                }
+            }
+
             // 4.1) Подкласс (если есть)
-            val currentSubclasses = state.draft.clazz?.subclasses.orEmpty()
-            if (currentSubclasses.isNotEmpty()) {
+            if (state.availableSubclasses.isNotEmpty()) {
                 PrettyDropdown(
                     label = "Подкласс",
-                    options = currentSubclasses.map { it.nameRu },
-                    selectedIndex = currentSubclasses.indexOf(state.draft.subclass),
-                    onSelected = { idx -> currentSubclasses.getOrNull(idx)?.let(viewModel::selectSubclass) }
+                    options = state.availableSubclasses.map { it.name },
+                    selectedIndex = state.availableSubclasses.indexOf(state.draft.subclass),
+                    onSelected = { idx -> state.availableSubclasses.getOrNull(idx)?.let(viewModel::selectSubclass) }
                 )
             }
 
-            Spacer(Modifier.height(24.dp))
-
-            // Кнопка "Далее" с отступом справа, чтобы не перекрывалась плавающей кнопкой
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    .padding(end = 88.dp), // место под DiceMenu
-                horizontalArrangement = Arrangement.End
-            ) {
-                Button(
-                    onClick = { onNext(state.draft) },
-                    enabled = state.canContinue
+            // Описание выбранного подкласса
+            if (state.selectedSubclassDescription.isNotEmpty()) {
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.surface
+                    )
                 ) {
-                    Text("Далее")
+                    Text(
+                        text = state.selectedSubclassDescription,
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier.padding(16.dp)
+                    )
                 }
             }
+
+            // Добавляем дополнительное пространство для кнопки внизу
+            Spacer(Modifier.height(120.dp))
+        }
+
+        // === Кнопка "Далее" внизу экрана ===
+        Button(
+            onClick = {
+                // Обновляем черновик с текущими данными
+                val updatedDraft = state.draft.copy(
+                    playerName = state.draft.playerName,
+                    race = state.draft.race,
+                    subrace = state.draft.subrace,
+                    clazz = state.draft.clazz,
+                    subclass = state.draft.subclass
+                )
+                onNext(updatedDraft)
+            },
+            enabled = state.canContinue,
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth(0.8f)
+                .padding(bottom = 16.dp)
+                .navigationBarsPadding()
+                .height(56.dp)
+        ) {
+            Text("Далее", fontSize = 18.sp, fontWeight = FontWeight.Bold)
         }
 
         // === Плавающее меню кубиков: фиксировано поверх всего ===
