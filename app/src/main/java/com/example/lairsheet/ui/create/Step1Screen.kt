@@ -37,10 +37,17 @@ fun Step1Screen(
     modifier: Modifier = Modifier,
     viewModel: Step1ViewModel = viewModel(),
     onNext: (CharacterDraft) -> Unit = {},
-    onRollDice: (Int) -> Unit = {}
+    onRollDice: (Int) -> Unit = {},
+    characterIdToEdit: Long? = null
 ) {
     val state = viewModel.uiState
     var diceExpanded by remember { mutableStateOf(false) }
+
+    LaunchedEffect(characterIdToEdit) {
+        if (characterIdToEdit != null) {
+            viewModel.loadCharacterForEditing(characterIdToEdit)
+        }
+    }
 
     // Корневой контейнер: контент снизу, поверх — плавающая DiceMenu
     Box(
@@ -75,8 +82,10 @@ fun Step1Screen(
             } else {
                 PrettyDropdown(
                     label = "Раса",
-                    options = state.availableRaces.map { it.name },
-                    selectedIndex = state.availableRaces.indexOf(state.draft.race),
+                    options = state.availableRaces.map { it.nameRu },
+                    selectedIndex = state.draft.race?.let { r ->
+                        state.availableRaces.indexOfFirst { it.nameRu == r.nameRu || it.nameEn == r.nameEn }
+                    } ?: -1,
                     onSelected = { idx -> state.availableRaces.getOrNull(idx)?.let(viewModel::selectRace) }
                 )
             }
@@ -101,8 +110,10 @@ fun Step1Screen(
             if (state.availableSubraces.isNotEmpty()) {
                 PrettyDropdown(
                     label = "Подраса",
-                    options = state.availableSubraces.map { it.name },
-                    selectedIndex = state.availableSubraces.indexOf(state.draft.subrace),
+                    options = state.availableSubraces.map { it.nameRu },
+                    selectedIndex = state.draft.subrace?.let { sr ->
+                        state.availableSubraces.indexOfFirst { it.nameRu == sr.nameRu || it.nameEn == sr.nameEn }
+                    } ?: -1,
                     onSelected = { idx -> state.availableSubraces.getOrNull(idx)?.let(viewModel::selectSubrace) }
                 )
             }
@@ -127,7 +138,9 @@ fun Step1Screen(
             PrettyDropdown(
                 label = "Класс",
                 options = state.availableClasses.map { it.name },
-                selectedIndex = state.availableClasses.indexOf(state.draft.clazz),
+                selectedIndex = state.draft.clazz?.let { c ->
+                    state.availableClasses.indexOfFirst { it.name == c.name }
+                } ?: -1,
                 onSelected = { idx -> state.availableClasses.getOrNull(idx)?.let(viewModel::selectClass) }
             )
 
@@ -152,7 +165,9 @@ fun Step1Screen(
                 PrettyDropdown(
                     label = "Подкласс",
                     options = state.availableSubclasses.map { it.name },
-                    selectedIndex = state.availableSubclasses.indexOf(state.draft.subclass),
+                    selectedIndex = state.draft.subclass?.let { sc ->
+                        state.availableSubclasses.indexOfFirst { it.name == sc.name }
+                    } ?: -1,
                     onSelected = { idx -> state.availableSubclasses.getOrNull(idx)?.let(viewModel::selectSubclass) }
                 )
             }
@@ -333,7 +348,7 @@ private fun PrettyDropdown(
                         }
 
                         if (index < options.lastIndex) {
-                            Divider(
+                            androidx.compose.material3.HorizontalDivider(
                                 color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f),
                                 thickness = 1.dp
                             )

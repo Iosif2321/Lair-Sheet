@@ -8,9 +8,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import com.example.lairsheet.data.dnd.DndRepository2024
 import com.example.lairsheet.data.DndDescriptions
-import com.example.lairsheet.data.Race
-import com.example.lairsheet.data.Subrace
-import com.example.lairsheet.data.DndClass
+import com.example.lairsheet.ui.create.Race
+import com.example.lairsheet.ui.create.Subrace
+import com.example.lairsheet.data.dnd.DndClass
 import com.example.lairsheet.data.Subclass
 import com.example.lairsheet.data.Character
 import com.example.lairsheet.data.CharacterRepository
@@ -67,25 +67,25 @@ class Step1ViewModel(app: Application) : AndroidViewModel(app) {
 
         if (currentRace != null) {
             newState = newState.copy(
-                selectedRaceDescription = DndDescriptions.getRaceDescription(currentRace.name, currentRace.description)
+                selectedRaceDescription = DndDescriptions.getRaceDescription(currentRace.nameRu, currentRace.description)
             )
         }
 
         if (currentClass != null) {
             newState = newState.copy(
-                selectedClassDescription = DndDescriptions.getClassDescription(currentClass.name, currentClass.description)
+                selectedClassDescription = DndDescriptions.getClassDescription(currentClass.name, currentClass.system.description.value)
             )
         }
 
         if (currentSubrace != null) {
             newState = newState.copy(
-                selectedSubraceDescription = DndDescriptions.getSubraceDescription(currentSubrace.name, currentSubrace.description)
+                selectedSubraceDescription = DndDescriptions.getSubraceDescription(currentSubrace.nameRu, "Описание подрасы ${currentSubrace.nameRu}")
             )
         }
 
         if (currentSubclass != null) {
             newState = newState.copy(
-                selectedSubclassDescription = DndDescriptions.getSubclassDescription(currentSubclass.name, currentSubclass.description)
+                selectedSubclassDescription = DndDescriptions.getSubclassDescription(currentSubclass.name, "Описание подкласса ${currentSubclass.name}")
             )
         }
 
@@ -104,7 +104,7 @@ class Step1ViewModel(app: Application) : AndroidViewModel(app) {
                 uiState = uiState.copy(
                     draft = uiState.draft.copy(race = race, subrace = null),
                     availableSubraces = subraces,
-                    selectedRaceDescription = DndDescriptions.getRaceDescription(race.name, race.description),
+                    selectedRaceDescription = DndDescriptions.getRaceDescription(race.nameRu, race.description),
                     selectedSubraceDescription = ""
                 )
                 saveCurrentDraft()
@@ -112,7 +112,7 @@ class Step1ViewModel(app: Application) : AndroidViewModel(app) {
                 uiState = uiState.copy(
                     draft = uiState.draft.copy(race = race, subrace = null),
                     availableSubraces = emptyList(),
-                    selectedRaceDescription = DndDescriptions.getRaceDescription(race.name, race.description),
+                    selectedRaceDescription = DndDescriptions.getRaceDescription(race.nameRu, race.description),
                     selectedSubraceDescription = ""
                 )
                 saveCurrentDraft()
@@ -123,7 +123,7 @@ class Step1ViewModel(app: Application) : AndroidViewModel(app) {
     fun selectSubrace(subrace: Subrace) {
         uiState = uiState.copy(
             draft = uiState.draft.copy(subrace = subrace),
-            selectedSubraceDescription = DndDescriptions.getSubraceDescription(subrace.name, subrace.description)
+            selectedSubraceDescription = DndDescriptions.getSubraceDescription(subrace.nameRu, subrace.description)
         )
     }
 
@@ -134,7 +134,7 @@ class Step1ViewModel(app: Application) : AndroidViewModel(app) {
                 uiState = uiState.copy(
                     draft = uiState.draft.copy(clazz = clazz, subclass = null),
                     availableSubclasses = subclasses,
-                    selectedClassDescription = DndDescriptions.getClassDescription(clazz.name, clazz.description),
+                    selectedClassDescription = DndDescriptions.getClassDescription(clazz.name, clazz.system.description.value),
                     selectedSubclassDescription = ""
                 )
                 saveCurrentDraft()
@@ -142,7 +142,7 @@ class Step1ViewModel(app: Application) : AndroidViewModel(app) {
                 uiState = uiState.copy(
                     draft = uiState.draft.copy(clazz = clazz, subclass = null),
                     availableSubclasses = emptyList(),
-                    selectedClassDescription = DndDescriptions.getClassDescription(clazz.name, clazz.description),
+                    selectedClassDescription = DndDescriptions.getClassDescription(clazz.name, clazz.system.description.value),
                     selectedSubclassDescription = ""
                 )
                 saveCurrentDraft()
@@ -153,7 +153,7 @@ class Step1ViewModel(app: Application) : AndroidViewModel(app) {
     fun selectSubclass(subclass: Subclass) {
         uiState = uiState.copy(
             draft = uiState.draft.copy(subclass = subclass),
-            selectedSubclassDescription = DndDescriptions.getSubclassDescription(subclass.name, subclass.description)
+            selectedSubclassDescription = DndDescriptions.getSubclassDescription(subclass.name, "Описание подкласса ${subclass.name}")
         )
         saveCurrentDraft()
     }
@@ -190,56 +190,83 @@ class Step1ViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
 
-    // Загрузка персонажа для редактирования
+    // Загрузка персонажа для редактирования (маппинг к текущим справочникам)
     fun loadCharacterForEditing(characterId: Long) {
         viewModelScope.launch {
             try {
-                val character = characterRepository.getCharacterById(characterId)
-                character?.let {
-                    currentCharacterId = it.id
-                    uiState = uiState.copy(
-                        draft = CharacterDraft(
-                            playerName = it.name,
-                            race = it.race,
-                            subrace = it.subrace,
-                            clazz = it.characterClass,
-                            subclass = it.subclass
-                        ),
-                        selectedRaceDescription = it.race?.let { race ->
-                            DndDescriptions.getRaceDescription(race.name, race.description)
-                        } ?: "",
-                        selectedClassDescription = it.characterClass?.let { clazz ->
-                            DndDescriptions.getClassDescription(clazz.name, clazz.description)
-                        } ?: "",
-                        selectedSubraceDescription = it.subrace?.let { subrace ->
-                            DndDescriptions.getSubraceDescription(subrace.name, subrace.description)
-                        } ?: "",
-                        selectedSubclassDescription = it.subclass?.let { subclass ->
-                            DndDescriptions.getSubclassDescription(subclass.name, subclass.description)
-                        } ?: ""
-                    )
+                val it = characterRepository.getCharacterById(characterId) ?: return@launch
+                currentCharacterId = it.id
 
-                    // Загружаем подрасы и подклассы если они выбраны
-                    it.race?.let { race ->
-                        try {
-                            val subraces = repo2024.getSubraces(race)
-                            uiState = uiState.copy(availableSubraces = subraces)
-                        } catch (e: Exception) {
-                            uiState = uiState.copy(availableSubraces = emptyList())
-                        }
-                    }
-
-                    it.characterClass?.let { characterClass ->
-                        try {
-                            val subclasses = repo2024.getSubclasses(characterClass.name)
-                            uiState = uiState.copy(availableSubclasses = subclasses)
-                        } catch (e: Exception) {
-                            uiState = uiState.copy(availableSubclasses = emptyList())
-                        }
+                // Гарантируем, что справочники загружены
+                if (uiState.availableRaces.isEmpty() || uiState.availableClasses.isEmpty()) {
+                    try {
+                        val races = repo2024.getRaces()
+                        val classes = repo2024.getClasses()
+                        uiState = uiState.copy(
+                            availableRaces = races,
+                            availableClasses = classes,
+                            isLoading = false
+                        )
+                    } catch (e: Exception) {
+                        uiState = uiState.copy(isLoading = false)
                     }
                 }
-            } catch (e: Exception) {
-                // Обработка ошибок загрузки
+
+                // Подбор элементов из текущих списков по имени
+                val raceMapped = uiState.availableRaces.firstOrNull { r ->
+                    r.nameRu.equals(it.race.nameRu, ignoreCase = true) ||
+                    r.nameEn.equals(it.race.nameEn, ignoreCase = true)
+                } ?: it.race
+
+                val subraces = try {
+                    repo2024.getSubraces(raceMapped)
+                } catch (_: Exception) { emptyList() }
+
+                val subraceMapped = it.subrace?.let { sr ->
+                    subraces.firstOrNull { s ->
+                        s.nameRu.equals(sr.nameRu, ignoreCase = true) ||
+                        s.nameEn.equals(sr.nameEn, ignoreCase = true)
+                    }
+                }
+
+                val classMapped = uiState.availableClasses.firstOrNull { c ->
+                    c.name.equals(it.characterClass.name, ignoreCase = true)
+                } ?: it.characterClass
+
+                val subclasses = try {
+                    repo2024.getSubclasses(classMapped.name)
+                } catch (_: Exception) { emptyList() }
+
+                val subclassMapped = it.subclass?.let { sc ->
+                    subclasses.firstOrNull { s -> s.name.equals(sc.name, ignoreCase = true) }
+                }
+
+                // Применяем состояние единым апдейтом
+                uiState = uiState.copy(
+                    draft = CharacterDraft(
+                        playerName = it.name,
+                        race = raceMapped,
+                        subrace = subraceMapped,
+                        clazz = classMapped,
+                        subclass = subclassMapped
+                    ),
+                    availableSubraces = subraces,
+                    availableSubclasses = subclasses,
+                    selectedRaceDescription = DndDescriptions.getRaceDescription(
+                        raceMapped.nameRu, raceMapped.description
+                    ),
+                    selectedClassDescription = DndDescriptions.getClassDescription(
+                        classMapped.name, classMapped.system.description.value
+                    ),
+                    selectedSubraceDescription = subraceMapped?.let { sr ->
+                        DndDescriptions.getSubraceDescription(sr.nameRu, sr.description)
+                    } ?: "",
+                    selectedSubclassDescription = subclassMapped?.let { sc ->
+                        DndDescriptions.getSubclassDescription(sc.name, "Описание подкласса ${sc.name}")
+                    } ?: ""
+                )
+            } catch (_: Exception) {
+                // ignore, чтобы не падать в UI
             }
         }
     }

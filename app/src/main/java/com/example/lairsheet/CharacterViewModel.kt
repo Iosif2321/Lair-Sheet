@@ -6,6 +6,12 @@ import androidx.lifecycle.viewModelScope
 import android.net.Uri
 import org.json.JSONObject
 import com.example.lairsheet.data.*
+import com.example.lairsheet.ui.create.Race
+import com.example.lairsheet.ui.create.Subrace
+import com.example.lairsheet.data.dnd.DndClass
+import com.example.lairsheet.data.dnd.ClassSystem
+import com.example.lairsheet.data.dnd.Description
+import com.example.lairsheet.data.dnd.Source
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
@@ -21,6 +27,20 @@ class CharacterViewModel(application: Application) : AndroidViewModel(applicatio
             characterRepository.insertCharacter(character)
         }
     }
+    fun deleteCharacter(character: Character) {
+        viewModelScope.launch {
+            characterRepository.deleteCharacter(character)
+        }
+    }
+
+    fun deleteCharacterById(id: Long) {
+        viewModelScope.launch {
+            characterRepository.deleteCharacterById(id)
+        }
+    }
+
+    suspend fun getCharacterById(id: Long): Character? =
+        characterRepository.getCharacterById(id)
 
     fun importCharacter(uri: Uri, ruleset: Ruleset) {
         val ctx = getApplication<Application>()
@@ -30,9 +50,14 @@ class CharacterViewModel(application: Application) : AndroidViewModel(applicatio
                 val obj = JSONObject(text)
                 val character = Character(
                     name = obj.getString("name"),
-                    race = Race(obj.optString("race", "Человек"), "Описание расы"),
+                    race = Race(obj.optString("race", "Человек"), obj.optString("race", "Human"), ""),
                     subrace = null,
-                    characterClass = DndClass(obj.optString("class", "Воин"), "Описание класса"),
+                    characterClass = DndClass(obj.optString("class", "Воин"), obj.optString("class", "Fighter"), ClassSystem(
+                        Description("Описание класса"),
+                        Source("PHB", "2024"),
+                        emptyList(),
+                        null
+                    )),
                     subclass = null,
                     abilityScores = mapOf(
                         AbilityType.STRENGTH to AbilityScore(AbilityType.STRENGTH, obj.optInt("strength", 10)),

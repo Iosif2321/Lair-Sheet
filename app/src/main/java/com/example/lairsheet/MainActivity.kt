@@ -18,12 +18,20 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import android.app.Application
 import com.example.lairsheet.data.Ruleset
 import com.example.lairsheet.ui.create.Step1Screen
-import com.example.lairsheet.ui.create.Step2Screen
-import com.example.lairsheet.ui.create.Step2ViewModel
+import com.example.lairsheet.ui.create.Step2RaceScreen
+import com.example.lairsheet.ui.create.Step2MethodScreen
+import com.example.lairsheet.ui.create.StandardArrayScreen
+import com.example.lairsheet.ui.create.PointBuyScreen
+import com.example.lairsheet.ui.create.RollScreen
+import com.example.lairsheet.ui.create.CustomAttributesScreen
+import com.example.lairsheet.ui.create.CharacterDraft
+import com.example.lairsheet.ui.create.CharacterCreationState
+import com.example.lairsheet.ui.create.AbilityMethod
 import com.example.lairsheet.ui.theme.AuthorsScreen
 import com.example.lairsheet.ui.theme.DiceMenu
 import com.example.lairsheet.ui.theme.LairSheetTheme
 import com.example.lairsheet.ui.theme.MainScreen
+import com.example.lairsheet.ui.create.CharacterCreatorNav
 import com.example.lairsheet.ui.theme.RollEntry
 import com.example.lairsheet.ui.theme.RollFeed
 import com.example.lairsheet.ui.theme.SplashScreen
@@ -52,7 +60,9 @@ class MainActivity : ComponentActivity() {
                 val characters by vm.characters(ruleset).collectAsState(emptyList())
 
                 // Храним черновик персонажа для передачи между шагами
-                var characterDraft by remember { mutableStateOf(com.example.lairsheet.ui.create.CharacterDraft()) }
+                var characterDraft by remember { mutableStateOf(CharacterDraft()) }
+                // ID персонажа для редактирования (передаём на Step1Screen)
+                var editCharacterId by remember { mutableStateOf<Long?>(null) }
 
                 LaunchedEffect(Unit) {
                     delay(2000)
@@ -92,8 +102,8 @@ class MainActivity : ComponentActivity() {
                                     ).show()
                                 }
                             }
-                            Screen.CreateStep2 -> {
-                                // С шага 2 возвращаемся на шаг 1
+                            Screen.CreateStep2, Screen.Step2Method, Screen.StandardArray, Screen.PointBuy, Screen.Roll, Screen.CustomAttributes -> {
+                                // С шага 2 и его подэкранов возвращаемся на шаг 1
                                 currentScreen = Screen.CreateStep1
                             }
                             else -> {
@@ -105,21 +115,34 @@ class MainActivity : ComponentActivity() {
                     // === END BACK ===
 
                     Box(modifier = Modifier.fillMaxSize()) {
-                        when (currentScreen) {
+                        when (val scr = currentScreen) {
                             Screen.Main -> MainScreen(
                                 ruleset = ruleset,
                                 characters = characters,
                                 onRulesetChange = { ruleset = it },
-                                onCreateCharacter = { currentScreen = Screen.CreateStep1 },
+                                onCreateCharacter = { currentScreen = Screen.NewCreator },
                                 onImportJson = { importLauncher.launch(arrayOf("application/json")) },
                                 onOpenDataFolder = { folderLauncher.launch(null) },
-                                onShowAuthors = { currentScreen = Screen.Authors }
+                                onValidateData = {
+                                    val reports = com.example.lairsheet.data.dnd.DndDataValidator.validateAll(this@MainActivity)
+                                    val ok = reports.all { it.ok }
+                                    Toast.makeText(
+                                        this@MainActivity,
+                                        if (ok) "Данные валидны" else "Найдены проблемы — см. Logcat",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                },
+                                onShowAuthors = { currentScreen = Screen.Authors },
+                                onOpenCharacter = { c -> currentScreen = Screen.Detail(c.id) }
                             )
 
                             Screen.CreateStep1 -> Step1Screen(
+                                characterIdToEdit = editCharacterId,
                                 onNext = { draft ->
                                     characterDraft = draft
-                                    currentScreen = Screen.CreateStep2
+                                    // после входа в шаг редактирования можно сбросить id
+                                    editCharacterId = null
+                                    currentScreen = Screen.Step2Method
                                 },
                                 onRollDice = { sides ->
                                     val value = Random.nextInt(1, sides + 1)
@@ -133,28 +156,135 @@ class MainActivity : ComponentActivity() {
                                 }
                             )
 
-                            Screen.CreateStep2 -> Step2Screen(
-                                modifier = Modifier,
-                                viewModel = Step2ViewModel(
-                                    app = LocalContext.current.applicationContext as Application,
-                                    initialDraft = characterDraft
-                                ),
-                                onNext = { updatedDraft ->
-                                    // Сохраняем персонажа и возвращаемся на главный экран
-                                    println("MainActivity: Character creation completed with draft: $updatedDraft")
-                                    characterDraft = updatedDraft
+                            Screen.Step2Method -> Step2MethodScreen(
+                                onNext = { method ->
+                                    // Выбираем метод и переходим на соответствующий экран
+                                    when (method) {
+                                        AbilityMethod.STANDARD_ARRAY -> currentScreen = Screen.StandardArray
+                                        AbilityMethod.POINT_BUY -> currentScreen = Screen.PointBuy
+                                        AbilityMethod.ROLL -> currentScreen = Screen.Roll
+                                        AbilityMethod.CUSTOM -> currentScreen = Screen.CustomAttributes
+                                    }
+                                },
+                                onBack = { currentScreen = Screen.CreateStep1 }
+                            )
+
+                            Screen.StandardArray -> StandardArrayScreen(
+                                onConfirm = { abilityScores ->
+                                    // Сохраняем в draft
+                                    val str = abilityScores[com.example.lairsheet.data.AbilityType.STRENGTH]?.value ?: 8
+                                    val dex = abilityScores[com.example.lairsheet.data.AbilityType.DEXTERITY]?.value ?: 8
+                                    val con = abilityScores[com.example.lairsheet.data.AbilityType.CONSTITUTION]?.value ?: 8
+                                    val intV = abilityScores[com.example.lairsheet.data.AbilityType.INTELLIGENCE]?.value ?: 8
+                                    val wis = abilityScores[com.example.lairsheet.data.AbilityType.WISDOM]?.value ?: 8
+                                    val cha = abilityScores[com.example.lairsheet.data.AbilityType.CHARISMA]?.value ?: 8
+                                    characterDraft = characterDraft.copy(
+                                        abilityScoreState = com.example.lairsheet.data.AbilityScoreState(
+                                            strength = str,
+                                            dexterity = dex,
+                                            constitution = con,
+                                            intelligence = intV,
+                                            wisdom = wis,
+                                            charisma = cha
+                                        )
+                                    )
                                     currentScreen = Screen.Main
                                 },
-                                onPrevious = {
-                                    println("MainActivity: Going back to Step 1")
+                                onBack = { currentScreen = Screen.Step2Method }
+                            )
+
+                            Screen.PointBuy -> PointBuyScreen(
+                                onConfirm = { abilityScores ->
+                                    val str = abilityScores[com.example.lairsheet.data.AbilityType.STRENGTH]?.value ?: 8
+                                    val dex = abilityScores[com.example.lairsheet.data.AbilityType.DEXTERITY]?.value ?: 8
+                                    val con = abilityScores[com.example.lairsheet.data.AbilityType.CONSTITUTION]?.value ?: 8
+                                    val intV = abilityScores[com.example.lairsheet.data.AbilityType.INTELLIGENCE]?.value ?: 8
+                                    val wis = abilityScores[com.example.lairsheet.data.AbilityType.WISDOM]?.value ?: 8
+                                    val cha = abilityScores[com.example.lairsheet.data.AbilityType.CHARISMA]?.value ?: 8
+                                    characterDraft = characterDraft.copy(
+                                        abilityScoreState = com.example.lairsheet.data.AbilityScoreState(
+                                            strength = str,
+                                            dexterity = dex,
+                                            constitution = con,
+                                            intelligence = intV,
+                                            wisdom = wis,
+                                            charisma = cha
+                                        )
+                                    )
+                                    currentScreen = Screen.Main
+                                },
+                                onBack = { currentScreen = Screen.Step2Method }
+                            )
+
+                            Screen.Roll -> RollScreen(
+                                onConfirm = { abilityScores ->
+                                    val str = abilityScores[com.example.lairsheet.data.AbilityType.STRENGTH]?.value ?: 8
+                                    val dex = abilityScores[com.example.lairsheet.data.AbilityType.DEXTERITY]?.value ?: 8
+                                    val con = abilityScores[com.example.lairsheet.data.AbilityType.CONSTITUTION]?.value ?: 8
+                                    val intV = abilityScores[com.example.lairsheet.data.AbilityType.INTELLIGENCE]?.value ?: 8
+                                    val wis = abilityScores[com.example.lairsheet.data.AbilityType.WISDOM]?.value ?: 8
+                                    val cha = abilityScores[com.example.lairsheet.data.AbilityType.CHARISMA]?.value ?: 8
+                                    characterDraft = characterDraft.copy(
+                                        abilityScoreState = com.example.lairsheet.data.AbilityScoreState(
+                                            strength = str,
+                                            dexterity = dex,
+                                            constitution = con,
+                                            intelligence = intV,
+                                            wisdom = wis,
+                                            charisma = cha
+                                        )
+                                    )
+                                    currentScreen = Screen.Main
+                                },
+                                onBack = { currentScreen = Screen.Step2Method }
+                            )
+
+                            Screen.CustomAttributes -> CustomAttributesScreen(
+                                onConfirm = { abilityScores ->
+                                    val str = abilityScores[com.example.lairsheet.data.AbilityType.STRENGTH]?.value ?: 8
+                                    val dex = abilityScores[com.example.lairsheet.data.AbilityType.DEXTERITY]?.value ?: 8
+                                    val con = abilityScores[com.example.lairsheet.data.AbilityType.CONSTITUTION]?.value ?: 8
+                                    val intV = abilityScores[com.example.lairsheet.data.AbilityType.INTELLIGENCE]?.value ?: 8
+                                    val wis = abilityScores[com.example.lairsheet.data.AbilityType.WISDOM]?.value ?: 8
+                                    val cha = abilityScores[com.example.lairsheet.data.AbilityType.CHARISMA]?.value ?: 8
+                                    characterDraft = characterDraft.copy(
+                                        abilityScoreState = com.example.lairsheet.data.AbilityScoreState(
+                                            strength = str,
+                                            dexterity = dex,
+                                            constitution = con,
+                                            intelligence = intV,
+                                            wisdom = wis,
+                                            charisma = cha
+                                        )
+                                    )
+                                    currentScreen = Screen.Main
+                                },
+                                onBack = { currentScreen = Screen.Step2Method }
+                            )
+
+
+                            is Screen.Detail -> com.example.lairsheet.ui.theme.CharacterDetailScreen(
+                                id = scr.id,
+                                vm = vm,
+                                onBack = { currentScreen = Screen.Main },
+                                onEdit = { id ->
+                                    editCharacterId = id
                                     currentScreen = Screen.CreateStep1
+                                },
+                                onDelete = { id ->
+                                    vm.deleteCharacterById(id)
+                                    currentScreen = Screen.Main
                                 }
                             )
 
                             Screen.Authors -> AuthorsScreen(onBack = { currentScreen = Screen.Main })
+                            Screen.NewCreator -> CharacterCreatorNav(
+                                onClose = { currentScreen = Screen.Main }
+                            )
+                            else -> { }
                         }
 
-                        if (currentScreen != Screen.CreateStep1 && currentScreen != Screen.CreateStep2) {
+                        if (currentScreen != Screen.CreateStep1 && currentScreen != Screen.Step2Method && currentScreen != Screen.StandardArray && currentScreen != Screen.PointBuy && currentScreen != Screen.Roll && currentScreen != Screen.CustomAttributes) {
                             DiceMenu(
                                 expanded = diceExpanded,
                                 onToggle = { diceExpanded = !diceExpanded },
@@ -187,7 +317,14 @@ class MainActivity : ComponentActivity() {
 
 private sealed class Screen {
     data object Main : Screen()
+    data object NewCreator : Screen()
     data object CreateStep1 : Screen()
     data object CreateStep2 : Screen()
     data object Authors : Screen()
+    data class Detail(val id: Long) : Screen()
+    data object Step2Method : Screen()
+    data object StandardArray : Screen()
+    data object PointBuy : Screen()
+    data object Roll : Screen()
+    data object CustomAttributes : Screen()
 }

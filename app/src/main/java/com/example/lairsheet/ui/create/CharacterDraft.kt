@@ -1,9 +1,9 @@
 package com.example.lairsheet.ui.create
 
-import com.example.lairsheet.data.DndClass
-import com.example.lairsheet.data.Race
+import com.example.lairsheet.data.dnd.DndClass
+import com.example.lairsheet.ui.create.Race
 import com.example.lairsheet.data.Subclass
-import com.example.lairsheet.data.Subrace
+import com.example.lairsheet.ui.create.Subrace
 import com.example.lairsheet.data.AbilityScoreState
 
 /**

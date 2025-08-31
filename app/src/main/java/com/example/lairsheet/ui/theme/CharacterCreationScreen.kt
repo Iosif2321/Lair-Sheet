@@ -8,6 +8,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lairsheet.data.*
+import com.example.lairsheet.ui.create.Race
+import com.example.lairsheet.data.dnd.DndClass
+import com.example.lairsheet.data.dnd.ClassSystem
+import com.example.lairsheet.data.dnd.Description
+import com.example.lairsheet.data.dnd.Source
 
 @Composable
 fun CharacterCreationScreen(
@@ -145,9 +150,14 @@ fun CharacterCreationScreen(
                     onSave(
                         Character(
                             name = name,
-                            race = Race(race, "Описание расы"),
+                            race = Race(race, "Race", ""),
                             subrace = null,
-                            characterClass = DndClass(className, "Описание класса"),
+                            characterClass = DndClass(className, "Class", ClassSystem(
+                                Description("Описание класса"),
+                                Source("PHB", "2024"),
+                                emptyList(),
+                                null
+                            )),
                             subclass = null,
                             abilityScores = mapOf(
                                 AbilityType.STRENGTH to AbilityScore(AbilityType.STRENGTH, str.toIntOrNull() ?: 10),

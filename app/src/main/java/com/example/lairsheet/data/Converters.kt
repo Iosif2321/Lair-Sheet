@@ -3,6 +3,9 @@ package com.example.lairsheet.data
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.example.lairsheet.ui.create.Race
+import com.example.lairsheet.ui.create.Subrace
+import com.example.lairsheet.data.dnd.DndClass
 
 class Converters {
     private val gson = Gson()

@@ -23,6 +23,12 @@ import com.example.lairsheet.R
 import com.example.lairsheet.data.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.runtime.rememberCoroutineScope
+import kotlinx.coroutines.launch
+import android.widget.Toast
+import com.example.lairsheet.data.dnd.DndBeyondImporter
+import com.example.lairsheet.data.dnd.AnalisImporter
 
 @Composable
 fun MainScreen(
@@ -32,8 +38,12 @@ fun MainScreen(
     onCreateCharacter: () -> Unit,
     onImportJson: () -> Unit,
     onOpenDataFolder: () -> Unit,
-    onShowAuthors: () -> Unit
+    onValidateData: () -> Unit,
+    onShowAuthors: () -> Unit,
+    onOpenCharacter: (Character) -> Unit
 ) {
+    val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -41,7 +51,32 @@ fun MainScreen(
             .statusBarsPadding()                 // добавлено
             .padding(16.dp),
     ) {
-        Header(onShowAuthors = onShowAuthors, onImportJson = onImportJson, onOpenDataFolder = onOpenDataFolder)
+        Header(
+            onShowAuthors = onShowAuthors,
+            onImportJson = onImportJson,
+            onOpenDataFolder = onOpenDataFolder,
+            onValidateData = onValidateData,
+            onImportFromAssets = {
+                scope.launch {
+                    val rep = DndBeyondImporter.import2024FromAssets(ctx)
+                    Toast.makeText(
+                        ctx,
+                        "Импорт 2024 (assets): сохранено ${rep.savedFiles.size} файлов",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            },
+            onImportAnalisFromAssets = {
+                scope.launch {
+                    val rep = AnalisImporter.importFromAssetsAnalis(ctx)
+                    Toast.makeText(
+                        ctx,
+                        "Импорт analis: сохранено ${rep.savedFiles.size} файлов",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+        )
 
         Spacer(Modifier.height(16.dp))
 
@@ -57,13 +92,21 @@ fun MainScreen(
         Spacer(Modifier.height(16.dp))
 
         CharacterGrid(
-            items = characters
+            items = characters,
+            onOpenCharacter = onOpenCharacter
         )
     }
 }
 
 @Composable
-private fun Header(onShowAuthors: () -> Unit, onImportJson: () -> Unit, onOpenDataFolder: () -> Unit) {
+private fun Header(
+    onShowAuthors: () -> Unit,
+    onImportJson: () -> Unit,
+    onOpenDataFolder: () -> Unit,
+    onValidateData: () -> Unit,
+    onImportFromAssets: () -> Unit,
+    onImportAnalisFromAssets: () -> Unit
+) {
     var expanded by remember { mutableStateOf(false) }
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -96,9 +139,21 @@ private fun Header(onShowAuthors: () -> Unit, onImportJson: () -> Unit, onOpenDa
                 expanded = false
                 onImportJson()
             })
+            DropdownMenuItem(text = { Text("Импорт 2024 (assets)") }, onClick = {
+                expanded = false
+                onImportFromAssets()
+            })
+            DropdownMenuItem(text = { Text("Импорт analis (assets)") }, onClick = {
+                expanded = false
+                onImportAnalisFromAssets()
+            })
             DropdownMenuItem(text = { Text("Каталог данных") }, onClick = {
                 expanded = false
                 onOpenDataFolder()
+            })
+            DropdownMenuItem(text = { Text("Валидировать данные") }, onClick = {
+                expanded = false
+                onValidateData()
             })
         }
     }
@@ -176,7 +231,7 @@ private fun CreateCharacterButton(onClick: () -> Unit) {
 }
 
 @Composable
-private fun CharacterGrid(items: List<Character>) {
+private fun CharacterGrid(items: List<Character>, onOpenCharacter: (Character) -> Unit) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -184,13 +239,13 @@ private fun CharacterGrid(items: List<Character>) {
         modifier = Modifier.fillMaxSize()
     ) {
         items(items) { c ->
-            CharacterCard(item = c)
+            CharacterCard(item = c, onClick = { onOpenCharacter(c) })
         }
     }
 }
 
 @Composable
-private fun CharacterCard(item: Character) {
+private fun CharacterCard(item: Character, onClick: () -> Unit) {
     Card(
         colors = CardDefaults.cardColors(
             containerColor = LightPink
@@ -199,6 +254,7 @@ private fun CharacterCard(item: Character) {
         modifier = Modifier
             .fillMaxWidth()
             .height(180.dp)
+            .clickable { onClick() }
     ) {
         Column(
             modifier = Modifier
@@ -220,7 +276,7 @@ private fun CharacterCard(item: Character) {
                     color = DeepRed
                 )
                 Text(
-                    text = "${item.race.name} ${item.characterClass.name}",
+                    text = "${item.race.nameRu} ${item.characterClass.name}",
                     fontSize = 14.sp,
                     color = DeepRed,
                     maxLines = 1,
@@ -242,7 +298,9 @@ private fun PreviewMainScreen() {
             onCreateCharacter = {},
             onImportJson = {},
             onOpenDataFolder = {},
+            onValidateData = {},
             onShowAuthors = {},
+            onOpenCharacter = {}
         )
     }
 }

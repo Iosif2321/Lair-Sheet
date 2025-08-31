@@ -61,8 +61,15 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
 
+    // Navigation Compose
+    implementation(libs.androidx.navigation.compose)
+
     // Gson for JSON parsing
     implementation("com.google.code.gson:gson:2.10.1")
+
+    // Network importer deps
+    implementation(libs.okhttp)
+    implementation(libs.jsoup)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

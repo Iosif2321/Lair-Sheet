@@ -36,9 +36,40 @@ fun CharacterCreationScreen() {
             )
         }
         composable("attributes") {
-            AttributesScreen(
-                viewModel = vm,
-                onNext = { navController.navigate("background") }
+            Step2MethodScreen(
+                onNext = { method ->
+                    when (method) {
+                        AbilityMethod.STANDARD_ARRAY -> navController.navigate("standard_array")
+                        AbilityMethod.POINT_BUY -> navController.navigate("point_buy")
+                        AbilityMethod.ROLL -> navController.navigate("roll")
+                        AbilityMethod.CUSTOM -> navController.navigate("custom_attributes")
+                    }
+                },
+                onBack = { navController.popBackStack() }
+            )
+        }
+        composable("standard_array") {
+            StandardArrayScreen(
+                onConfirm = { _ -> navController.navigate("background") },
+                onBack = { navController.navigate("attributes") }
+            )
+        }
+        composable("point_buy") {
+            PointBuyScreen(
+                onConfirm = { _ -> navController.navigate("background") },
+                onBack = { navController.navigate("attributes") }
+            )
+        }
+        composable("roll") {
+            RollScreen(
+                onConfirm = { _ -> navController.navigate("background") },
+                onBack = { navController.navigate("attributes") }
+            )
+        }
+        composable("custom_attributes") {
+            CustomAttributesScreen(
+                onConfirm = { _ -> navController.navigate("background") },
+                onBack = { navController.navigate("attributes") }
             )
         }
         composable("background") {
