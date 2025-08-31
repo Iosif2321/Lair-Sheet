@@ -1,0 +1,124 @@
+{
+  "features": [
+    {
+      "key": "darkvision",
+      "name": "Темновидение",
+      "description": "Видит в темноте"
+    },
+    {
+      "key": "draconic-ancestry",
+      "name": "Драконье наследие",
+      "description": "Наследие драконов"
+    },
+    {
+      "key": "breath-weapon",
+      "name": "Дыхательное оружие",
+      "description": "Дыхание дракона"
+    }
+  ],
+  "proficiencies": {
+    "weapons": [
+      "simple-weapons",
+      "martial-weapons",
+      "longsword",
+      "shortsword",
+      "longbow",
+      "shortbow"
+    ],
+    "armor": [
+      "light-armor",
+      "medium-armor",
+      "heavy-armor",
+      "shields"
+    ],
+    "tools": [
+      "smiths-tools",
+      "brewers-supplies",
+      "masons-tools"
+    ],
+    "savingThrows": [
+      "strength",
+      "dexterity",
+      "constitution",
+      "intelligence",
+      "wisdom",
+      "charisma"
+    ],
+    "skills": [
+      "acrobatics",
+      "animal-handling",
+      "arcana",
+      "athletics",
+      "deception",
+      "history",
+      "insight",
+      "intimidation",
+      "investigation",
+      "medicine",
+      "nature",
+      "perception",
+      "performance",
+      "persuasion",
+      "religion",
+      "sleight-of-hand",
+      "stealth",
+      "survival"
+    ]
+  },
+  "equipmentChoices": [
+    {
+      "key": "fighter-starting-equipment",
+      "name": "Стартовое снаряжение воина",
+      "choices": [
+        {
+          "type": "weapon",
+          "options": ["chain-mail", "leather-armor"]
+        },
+        {
+          "type": "weapon",
+          "options": ["longsword", "shortsword"]
+        }
+      ]
+    }
+  ],
+  "advancementLevels": [
+    {
+      "level": 1,
+      "features": ["fighting-style"],
+      "proficiencyBonus": 2
+    },
+    {
+      "level": 2,
+      "features": ["action-surge"],
+      "proficiencyBonus": 2
+    }
+  ],
+  "spellcastingProgression": {
+    "wizard": {
+      "1": {"cantrips": 3, "spells": 6, "level1": 2},
+      "2": {"cantrips": 3, "spells": 8, "level1": 3},
+      "3": {"cantrips": 3, "spells": 10, "level1": 4, "level2": 2}
+    },
+    "sorcerer": {
+      "1": {"cantrips": 4, "spells": 2, "level1": 2},
+      "2": {"cantrips": 4, "spells": 3, "level1": 3},
+      "3": {"cantrips": 4, "spells": 4, "level1": 4, "level2": 2}
+    }
+  },
+  "classProgressions": [
+    {
+      "classKey": "fighter",
+      "levels": [
+        { "level": 1, "features": ["fighting-style"], "proficiencyBonus": 2 },
+        { "level": 2, "features": ["action-surge"], "proficiencyBonus": 2 }
+      ]
+    },
+    {
+      "classKey": "wizard",
+      "levels": [
+        { "level": 1, "features": ["spellcasting"], "proficiencyBonus": 2 },
+        { "level": 2, "features": ["arcane-recovery"], "proficiencyBonus": 2 }
+      ]
+    }
+  ]
+}

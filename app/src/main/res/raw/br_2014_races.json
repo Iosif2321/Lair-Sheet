@@ -1,0 +1,203 @@
+[
+  {
+    "key": "dragonborn",
+    "name": "Драконорожденный",
+    "description": "Наследники драконов (PHB 2014)",
+    "effects": {
+      "abilityBonuses": { "strength": 2, "charisma": 1 },
+      "languages": ["common", "draconic"],
+      "size": "medium",
+      "speed": { "walk": 30 }
+    },
+    "subraces": []
+  },
+  {
+    "key": "dwarf",
+    "name": "Дварф",
+    "description": "Крепкие подземные жители (PHB 2014)",
+    "effects": {
+      "languages": ["common", "dwarvish"],
+      "size": "medium",
+      "speed": { "walk": 25 },
+      "senses": { "darkvision": 60 },
+      "resistances": ["poison"],
+      "advantageOn": { "saves": ["poison"] }
+    },
+    "subraces": [
+      {
+        "key": "hill",
+        "name": "Холмовой",
+        "description": "Выносливые дварфы холмов",
+        "effects": { "abilityBonuses": { "constitution": 2, "wisdom": 1 } }
+      },
+      {
+        "key": "mountain",
+        "name": "Горный",
+        "description": "Сильные дварфы гор",
+        "effects": {
+          "abilityBonuses": { "constitution": 2, "strength": 2 },
+          "proficiencies": { "armor": ["light-armor", "medium-armor"] }
+        }
+      }
+    ]
+  },
+  {
+    "key": "elf",
+    "name": "Эльф",
+    "description": "Грациозные лесные жители (PHB 2014)",
+    "effects": {
+      "abilityBonuses": { "dexterity": 2 },
+      "senses": { "darkvision": 60 },
+      "languages": ["common", "elvish"],
+      "size": "medium",
+      "speed": { "walk": 30 },
+      "advantageOn": { "saves": ["charm"] }
+    },
+    "subraces": [
+      {
+        "key": "high",
+        "name": "Высший",
+        "description": "Магические эльфы",
+        "effects": {
+          "abilityBonuses": { "intelligence": 1 },
+          "proficiencies": { "weapons": ["longsword", "shortsword", "longbow", "shortbow"] }
+        }
+      },
+      {
+        "key": "wood",
+        "name": "Лесной",
+        "description": "Лесные эльфы",
+        "effects": {
+          "abilityBonuses": { "wisdom": 1 },
+          "speed": { "walk": 35 }
+        }
+      },
+      {
+        "key": "drow",
+        "name": "Дроу",
+        "description": "Темные эльфы",
+        "effects": {
+          "abilityBonuses": { "charisma": 1 },
+          "senses": { "darkvision": 120 }
+        }
+      }
+    ]
+  },
+  {
+    "key": "gnome",
+    "name": "Гном",
+    "description": "Умные изобретатели (PHB 2014)",
+    "effects": {
+      "abilityBonuses": { "intelligence": 2 },
+      "senses": { "darkvision": 60 },
+      "languages": ["common", "gnomish"],
+      "size": "small",
+      "speed": { "walk": 25 }
+    },
+    "subraces": [
+      {
+        "key": "forest",
+        "name": "Лесной",
+        "description": "Лесные гномы",
+        "effects": { "abilityBonuses": { "dexterity": 1 } }
+      },
+      {
+        "key": "rock",
+        "name": "Скальный",
+        "description": "Скальные гномы",
+        "effects": { "abilityBonuses": { "constitution": 1 } }
+      }
+    ]
+  },
+  {
+    "key": "half-elf",
+    "name": "Полуэльф",
+    "description": "Гибрид эльфов и людей (PHB 2014)",
+    "effects": {
+      "abilityBonuses": { "charisma": 2 },
+      "languages": ["common", "elvish"],
+      "size": "medium",
+      "speed": { "walk": 30 },
+      "advantageOn": { "saves": ["charm"] }
+    },
+    "subraces": []
+  },
+  {
+    "key": "half-orc",
+    "name": "Полуорк",
+    "description": "Сильные и выносливые (PHB 2014)",
+    "effects": {
+      "abilityBonuses": { "strength": 2, "constitution": 1 },
+      "senses": { "darkvision": 60 },
+      "languages": ["common", "orc"],
+      "size": "medium",
+      "speed": { "walk": 30 }
+    },
+    "subraces": []
+  },
+  {
+    "key": "halfling",
+    "name": "Халфлинг",
+    "description": "Маленькие авантюристы (PHB 2014)",
+    "effects": {
+      "abilityBonuses": { "dexterity": 2 },
+      "languages": ["common", "halfling"],
+      "size": "small",
+      "speed": { "walk": 25 }
+    },
+    "subraces": [
+      {
+        "key": "lightfoot",
+        "name": "Легконогий",
+        "description": "Ловкие и удачливые",
+        "effects": { "abilityBonuses": { "charisma": 1 } }
+      },
+      {
+        "key": "stout",
+        "name": "Крепкий",
+        "description": "Выносливые халфлинги",
+        "effects": { "abilityBonuses": { "constitution": 1 } }
+      }
+    ]
+  },
+  {
+    "key": "human",
+    "name": "Человек",
+    "description": "Адаптивная раса (PHB 2014)",
+    "effects": {
+      "abilityBonuses": {
+        "strength": 1, "dexterity": 1, "constitution": 1,
+        "intelligence": 1, "wisdom": 1, "charisma": 1
+      },
+      "languages": ["common"],
+      "size": "medium",
+      "speed": { "walk": 30 }
+    },
+    "subraces": [
+      {
+        "key": "variant",
+        "name": "Вариант",
+        "description": "Вариативный человек",
+        "effects": {
+          "languages": ["common"],
+          "size": "medium",
+          "speed": { "walk": 30 }
+        }
+      }
+    ]
+  },
+  {
+    "key": "tiefling",
+    "name": "Тифлинг",
+    "description": "Наследники нижних планов (PHB 2014)",
+    "effects": {
+      "abilityBonuses": { "charisma": 2, "intelligence": 1 },
+      "senses": { "darkvision": 60 },
+      "resistances": ["fire"],
+      "languages": ["common", "infernal"],
+      "size": "medium",
+      "speed": { "walk": 30 }
+    },
+    "subraces": []
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "features": [
+    {
+      "key": "fighting-style",
+      "name": "Стиль боя",
+      "description": "Выберите стиль боя, дающий специальные бонусы (Дуэлянт, Защита, Великое оружие и т.д.)."
+    },
+    {
+      "key": "second-wind",
+      "name": "Второе дыхание",
+      "description": "Как бонусное действие, восстановите 1к10 + уровень Воина хитов. Используется 1 раз между краткими/долгими отдыхами."
+    },
+    {
+      "key": "action-surge",
+      "name": "Прилив сил",
+      "description": "Начиная с 2 уровня, получите дополнительное действие в свой ход. Используется 1 раз между краткими/долгими отдыхами."
+    },
+    {
+      "key": "arcane-recovery",
+      "name": "Магическое восстановление",
+      "description": "Раз в день во время короткого отдыха восстановите часть ячеек заклинаний (суммарный уровень не выше половины уровня волшебника)."
+    },
+    {
+      "key": "spellcasting",
+      "name": "Наложение заклинаний",
+      "description": "Вы изучаете и готовите заклинания согласно таблице класса и используете Интеллект в качестве ключевой характеристики заклинателя."
+    }
+  ],
+  "classProgressions": [
+    {
+      "classKey": "fighter",
+      "levels": [
+        { "level": 1, "features": ["fighting-style", "second-wind"], "proficiencyBonus": 2 },
+        { "level": 2, "features": ["action-surge"], "proficiencyBonus": 2 }
+      ]
+    },
+    {
+      "classKey": "wizard",
+      "levels": [
+        { "level": 1, "features": ["spellcasting"], "proficiencyBonus": 2 },
+        { "level": 2, "features": ["arcane-recovery"], "proficiencyBonus": 2 }
+      ]
+    }
+  ],
+  "spellcastingProgression": {
+    "wizard": {
+      "1": { "cantrips": 3, "spells": 6, "level1": 2 },
+      "2": { "cantrips": 3, "spells": 8, "level1": 3 }
+    }
+  }
+}
