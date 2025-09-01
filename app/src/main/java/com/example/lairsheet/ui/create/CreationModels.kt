@@ -105,6 +105,8 @@ data class AttributesUiState(
     val remainingBudget: Int = pointBuy.budget,
     // Roll
     val roll: RollConfig = RollConfig(),
+    // Детали бросков по характеристикам: 4 значения d6 на строку
+    val rollDetails: Map<AbilityType, List<Int>> = emptyMap(),
     // Расовые бонусы
     val racialMode: RacialBonusMode = RacialBonusMode.FLEXIBLE_2024,
     val flexible: RacialBonusChoice = RacialBonusChoice(),

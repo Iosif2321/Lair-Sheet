@@ -24,6 +24,9 @@ interface CharacterDao {
     @Query("DELETE FROM characters WHERE id = :id")
     suspend fun deleteCharacterById(id: Long)
 
+    @Query("DELETE FROM characters WHERE ruleset = :ruleset")
+    suspend fun deleteCharactersByRuleset(ruleset: Ruleset)
+
     @Query("DELETE FROM characters")
     suspend fun deleteAllCharacters()
 

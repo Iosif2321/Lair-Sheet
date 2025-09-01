@@ -19,6 +19,12 @@ class CharacterRepository(private val characterDao: CharacterDao) {
     suspend fun deleteCharacterById(id: Long) =
         characterDao.deleteCharacterById(id)
 
+    suspend fun deleteCharactersByRuleset(ruleset: Ruleset) =
+        characterDao.deleteCharactersByRuleset(ruleset)
+
+    suspend fun deleteAllCharacters() =
+        characterDao.deleteAllCharacters()
+
     suspend fun getCharacterById(id: Long): Character? =
         characterDao.getCharacterById(id)
 

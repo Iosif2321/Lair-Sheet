@@ -48,17 +48,27 @@ fun Step2RaceClassScreen(
     onBack: () -> Unit
 ) {
     val ctx = LocalContext.current
-    val is2024 = remember(state.selectedSources) { Ruleset.R5E_2024 in state.selectedSources }
+    // Выбор активного набора правил:
+    // Если выбран 2014 — предпочитаем его (даже если 2024 тоже отмечен), т.к. только там есть подрасы.
+    val has2014 = remember(state.selectedSources) { Ruleset.R5E_2014 in state.selectedSources }
+    val has2024 = remember(state.selectedSources) { Ruleset.R5E_2024 in state.selectedSources }
+    // Предпочитаем 2024 как основной источник для списка рас/классов, но поддерживаем fallback подрас с 2014.
+    val use2024 = has2024
     val repo2024 = remember { DndRepository2024(ctx) }
     val repo2014 = remember { DndRepository2014(ctx) }
 
     // Данные
-    val races = remember(state.selectedSources) { if (is2024) repo2024.getRaces() else repo2014.getRaces() }
-    val classes = remember(state.selectedSources) { if (is2024) repo2024.getClasses() else repo2014.getClasses() }
+    val races = remember(state.selectedSources) { if (use2024) repo2024.getRaces() else repo2014.getRaces() }
+    val classes = remember(state.selectedSources) { if (use2024) repo2024.getClasses() else repo2014.getClasses() }
     val subracesRaw = remember(state.selectedRace, state.selectedSources) {
-        when (val r = state.selectedRace) {
-            null -> emptyList()
-            else -> if (is2024) repo2024.getSubraces(r) else repo2014.getSubraces(r)
+        val r = state.selectedRace ?: return@remember emptyList()
+        // 1) Пытаемся взять подрасы из активного источника (2024 или 2014)
+        val primary = if (use2024) repo2024.getSubraces(r) else repo2014.getSubraces(r)
+        if (primary.isNotEmpty()) {
+            primary
+        } else {
+            // 2) Fallback: если активен 2024 и подрас нет, а 2014 включён — подгружаем из 2014
+            if (use2024 && has2014) repo2014.getSubraces(r) else emptyList()
         }
     }
     // Фильтрация "вариант" подрас — такие подрасы не показываем вовсе
@@ -71,7 +81,7 @@ fun Step2RaceClassScreen(
     val subclasses = remember(state.selectedClass, state.selectedSources) {
         when (val cl = state.selectedClass) {
             null -> emptyList()
-            else -> if (is2024) repo2024.getSubclasses(cl.name) else repo2014.getSubclasses(cl.name)
+            else -> if (use2024) repo2024.getSubclasses(cl.name) else repo2014.getSubclasses(cl.name)
         }
     }
 
@@ -185,6 +195,7 @@ fun Step2RaceClassScreen(
                     )
                 }
 
+                // Подраса: показываем ТОЛЬКО если у выбранной расы есть подрасы (после фильтра «вариант/variant»)
                 if (needSubrace) {
                     Text(
                         "Подраса",

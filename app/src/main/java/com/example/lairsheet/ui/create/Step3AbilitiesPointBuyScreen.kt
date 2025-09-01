@@ -37,6 +37,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import dnd.lair.core.PointBuy as CorePointBuy
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lairsheet.data.AbilityType
 import com.example.lairsheet.data.Ruleset
@@ -192,7 +193,7 @@ fun Step3AbilitiesPointBuyScreen(
                 // Ряд стоимостей
                 Row(horizontalArrangement = Arrangement.SpaceBetween, modifier = Modifier.fillMaxWidth()) {
                     (8..15).forEach { v ->
-                        val cost = state.pointBuy.costs[v] ?: 0
+                        val cost = CorePointBuy.costFor(v)
                         Text("${cost}очк", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f))
                     }
                 }
@@ -215,7 +216,7 @@ fun Step3AbilitiesPointBuyScreen(
                 AbilityType.values().forEachIndexed { index, t ->
                     val baseVal = state.base[t] ?: 8
                     val totalVal = state.total[t] ?: baseVal
-                    val mod = (totalVal - 10) / 2
+                    val mod = java.lang.Math.floorDiv(totalVal - 10, 2)
                     val costForVal = state.pointBuy.costs[baseVal] ?: 0
 
                     Row(

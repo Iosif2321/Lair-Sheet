@@ -39,6 +39,18 @@ class CharacterViewModel(application: Application) : AndroidViewModel(applicatio
         }
     }
 
+    fun clearAllCharacters() {
+        viewModelScope.launch {
+            characterRepository.deleteAllCharacters()
+        }
+    }
+
+    fun clearCharactersByRuleset(ruleset: Ruleset) {
+        viewModelScope.launch {
+            characterRepository.deleteCharactersByRuleset(ruleset)
+        }
+    }
+
     suspend fun getCharacterById(id: Long): Character? =
         characterRepository.getCharacterById(id)
 

@@ -16,20 +16,58 @@ import com.example.lairsheet.data.CharacterRepository
 import com.example.lairsheet.data.Ruleset
 import com.example.lairsheet.data.AbilityScore
 import com.example.lairsheet.data.AbilityType
+import com.example.lairsheet.data.FantasyNames
+import dnd.lair.core.PointBuy as CorePointBuy
 import kotlinx.coroutines.launch
 
 /**
  * Корневой навигатор мастера.
  * Держит общее состояние и передаёт его на экраны.
  */
+data class QuickStart(val ruleset: Ruleset)
+
 @Composable
 fun CharacterCreatorNav(
-    onClose: () -> Unit
+    onClose: () -> Unit,
+    quickStart: QuickStart? = null
 ) {
     val nav = rememberNavController()
     val ctx = LocalContext.current
     val scope = rememberCoroutineScope()
     val repo = remember { CharacterRepository(AppDatabase.getDatabase(ctx).characterDao()) }
+
+    // Быстрый старт: имя из подготовленного списка фэнтези-имён (1000 шт.)
+    fun generateName(): String = FantasyNames.next()
+
+    fun randomPointBuy(min: Int = 8, max: Int = 15, budget: Int = 27): Pair<Map<AbilityType, Int>, Int> {
+        val m = AbilityType.values().associateWith { min }.toMutableMap()
+        var remaining = budget
+        fun cost(v: Int) = CorePointBuy.costFor(v)
+        // current spent
+        fun spent() = m.values.sumOf { cost(it) }
+        // Try random increments while possible
+        var attempts = 0
+        while (attempts < 1000) {
+            attempts++
+            val key = AbilityType.values().random()
+            val cur = m[key] ?: min
+            if (cur >= max) continue
+            val delta = cost(cur + 1) - cost(cur)
+            if (delta <= remaining) {
+                m[key] = cur + 1
+                remaining -= delta
+            } else {
+                // check if any increment possible
+                val any = AbilityType.values().any { k ->
+                    val v = m[k]!!
+                    v < max && (cost(v + 1) - cost(v)) <= remaining
+                }
+                if (!any) break
+            }
+        }
+        val rem = budget - spent()
+        return m.toMap() to rem.coerceAtLeast(0)
+    }
 
     // Простое rememberSaveable через кастомный Saver.
     var state by rememberSaveable(
@@ -57,6 +95,20 @@ fun CharacterCreatorNav(
             }
         )
     ) { mutableStateOf(CharacterCreationState()) }
+
+    // Применяем быстрый старт один раз перед навигацией:
+    var appliedQuickStart by rememberSaveable { mutableStateOf(false) }
+    if (quickStart != null && !appliedQuickStart) {
+        val name = generateName()
+        // Устанавливаем источник правил и имя; метод начисления не выбираем заранее,
+        // чтобы показать экран выбора метода (Step2Method).
+        state = state.copy(
+            selectedSources = setOf(quickStart.ruleset),
+            characterName = name,
+            abilityMethod = null
+        )
+        appliedQuickStart = true
+    }
 
     fun saveDraft(step: Int? = null) {
         val name = state.characterName.trim()
@@ -96,7 +148,10 @@ fun CharacterCreatorNav(
         }
     }
 
-    NavHost(navController = nav, startDestination = "sources") {
+    // Если запущен быстрый старт — сразу переходим на экран выбора метода начисления (Step2Method).
+    val startDest = if (quickStart != null) "attributes" else "sources"
+
+    NavHost(navController = nav, startDestination = startDest) {
         composable("sources") {
             Step1SourcesScreen(
                 state = state,

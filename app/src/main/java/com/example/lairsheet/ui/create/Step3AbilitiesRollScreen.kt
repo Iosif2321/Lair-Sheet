@@ -4,10 +4,21 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -16,19 +27,21 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lairsheet.data.AbilityType
 import com.example.lairsheet.data.Ruleset
 import com.example.lairsheet.data.dnd.DndRepository2014
+import com.example.lairsheet.ui.theme.DeepRed
+import com.example.lairsheet.ui.theme.DiceIcon
 
 /**
- * Шаг 3 — «Roll» (броски 4d6dl1).
- * - Кнопка «Бросок»: генерирует 6 значений по формуле (по умолчанию 4d6dl1)
- * - Пул значений назначается на характеристики
- * - Можно править формулу/кол-во результатов и бросать заново
- * - Готовность: 6 значений назначены (пул пуст), валидируется во VM
- * - Автосохранение: onStateChanged(vm.state) после любого действия
+ * Шаг 3 — «Броски»:
+ * Строка: Название (аббр) | A+B+C+D | = | Сумма | [Кнопка броска]
+ * Итоговые значения — в раскрывающемся блоке.
  */
 @Composable
 fun Step3AbilitiesRollScreen(
@@ -42,12 +55,10 @@ fun Step3AbilitiesRollScreen(
     val is2014 = remember(initial.selectedSources) { Ruleset.R5E_2014 in initial.selectedSources }
 
     LaunchedEffect(Unit) {
-        // Инициализация метода и восстановление
         vm.selectMethod(AbilityMethod.ROLL)
         val base = if (initial.abilityScores.isNotEmpty()) {
             AbilityType.values().associateWith { t -> initial.abilityScores[t] ?: 8 }
         } else initial.pointBuyValues
-        // Восстанавливаем пул как «снимок» последних бросков, если был сохранён
         val pool = initial.rollResults
         vm.loadBase(base = base, pool = pool)
 
@@ -72,64 +83,194 @@ fun Step3AbilitiesRollScreen(
             vm.toggleRacialMode(RacialBonusMode.FLEXIBLE_2024)
             vm.setFixedBonuses(emptyMap())
         }
-
         onStateChanged(vm.state)
     }
 
     val state = remember(vm.state) { vm.state }
 
+    // Константы ширины колонок для выравнивания
+    val nameW = 180.dp
+    val exprW = 160.dp
+    val eqW = 20.dp
+    val sumW = 56.dp
+    val btnW = 40.dp
+    val btnH = 36.dp
+
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(16.dp)
+            .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         Text(
             "Шаг 3: Распределение характеристик — Броски",
-            style = MaterialTheme.typography.titleLarge
+            style = MaterialTheme.typography.titleLarge,
+            color = DeepRed
         )
 
-        // Панель конфигурации бросков + кнопка «Бросок»
-        RollConfigPanel(
-            formula = state.roll.formula,
-            count = state.roll.rollsCount,
-            onApply = { f, c ->
-                vm.setRollConfig(formula = f, count = c)
-                onStateChanged(vm.state)
-            },
-            onRoll = {
-                vm.rollPool()
-                onStateChanged(vm.state)
+        // Инфо-карта
+        Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
+            Column(Modifier.fillMaxWidth().padding(12.dp)) {
+                Text("Броски 4×d6", style = MaterialTheme.typography.titleMedium)
+                Text(
+                    "Для каждой характеристики нажмите «Бросок». Выпадает 4 значения (0..6). Отображается A+B+C+D = Сумма. Перебрасывать можно бесконечно.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f)
+                )
             }
-        )
+        }
 
-        // Пул значений, назначение на характеристики
-        PoolChips(
-            pool = state.pool,
-            onAssign = { value, type ->
-                vm.assignFromPool(type, value)
-                onStateChanged(vm.state)
+        // Карта строк бросков
+        Card(
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+            elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+        ) {
+            Column(Modifier.fillMaxWidth().padding(vertical = 8.dp)) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 12.dp, vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text("Характеристики", style = MaterialTheme.typography.titleMedium)
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        OutlinedButton(
+                            onClick = {
+                                AbilityType.values().forEach { vm.rollAbility(it) }
+                                onStateChanged(vm.state)
+                            },
+                            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp)
+                        ) { Text("Бросить всё") }
+                        OutlinedButton(
+                            onClick = {
+                                vm.clearRolls()
+                                vm.loadBase(base = defaultBase(), pool = emptyList())
+                                onStateChanged(vm.state)
+                            },
+                            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp)
+                        ) { Text("Сбросить всё") }
+                    }
+                }
+                HorizontalDivider()
+
+                val names = remember {
+                    mapOf(
+                        AbilityType.STRENGTH to "Сила",
+                        AbilityType.DEXTERITY to "Ловкость",
+                        AbilityType.CONSTITUTION to "Телосложение",
+                        AbilityType.INTELLIGENCE to "Интеллект",
+                        AbilityType.WISDOM to "Мудрость",
+                        AbilityType.CHARISMA to "Харизма"
+                    )
+                }
+                val abbr = remember {
+                    mapOf(
+                        AbilityType.STRENGTH to "СИЛ",
+                        AbilityType.DEXTERITY to "ЛОВ",
+                        AbilityType.CONSTITUTION to "ТЕЛ",
+                        AbilityType.INTELLIGENCE to "ИНТ",
+                        AbilityType.WISDOM to "МУД",
+                        AbilityType.CHARISMA to "ХАР"
+                    )
+                }
+
+                AbilityType.values().forEachIndexed { index, t ->
+                    val dice = state.rollDetails[t] ?: emptyList()
+                    val baseVal = state.base[t] ?: 0
+                    val totalVal = state.total[t] ?: baseVal
+
+                    val expr = if (dice.size == 4) {
+                        "${dice[0]} + ${dice[1]} + ${dice[2]} + ${dice[3]}"
+                    } else {
+                        "— + — + — + —"
+                    }
+                    val sum = if (dice.size == 4) dice.sum().toString() else "—"
+
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 12.dp, vertical = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        // Характеристика (аббр)
+                        Text(
+                            text = "${names[t] ?: t.name} (${abbr[t] ?: t.name.take(3)})",
+                            modifier = Modifier.width(nameW),
+                            style = MaterialTheme.typography.titleMedium,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+
+                        // A+B+C+D
+                        Text(
+                            text = expr,
+                            modifier = Modifier.width(exprW),
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+
+                        // "="
+                        Text(
+                            text = "=",
+                            modifier = Modifier.width(eqW),
+                            style = MaterialTheme.typography.titleMedium,
+                            textAlign = TextAlign.Center
+                        )
+
+                        // (Сумма)
+                        Text(
+                            text = sum,
+                            modifier = Modifier.width(sumW),
+                            style = MaterialTheme.typography.titleMedium,
+                            color = if (dice.size == 4) DeepRed else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+                            textAlign = TextAlign.Center
+                        )
+
+                        // Заполнитель — выравнивает кнопку по правому краю строки
+                        Spacer(modifier = Modifier.weight(1f))
+
+                        // Кнопка броска кубика
+                        IconButton(
+                            onClick = {
+                                vm.rollAbility(t)
+                                onStateChanged(vm.state)
+                            },
+                            modifier = Modifier
+                                .width(btnW)
+                                .height(btnH)
+                        ) {
+                            DiceIcon(
+                                sides = 6,
+                                modifier = Modifier
+                                    .width(18.dp)
+                                    .height(18.dp),
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        }
+                    }
+
+                    if (index != AbilityType.values().lastIndex) HorizontalDivider()
+                }
             }
-        )
+        }
 
-        // Сетка характеристик (управление через пул)
-        AbilityGrid(
-            totals = state.total,
-            base = state.base,
-            mode = state.method,
-            onPlus = { /* no-op */ },
-            onMinus = { /* no-op */ },
-            onCustomChange = { _, _ -> /* no-op */ }
-        )
-
-        TotalsCard(total = state.total)
+        // Итоговые значения — в раскрывающемся блоке
+        ExpandableCard(
+            title = "Итоговые значения",
+            description = "Раскройте, чтобы посмотреть текущие итоговые значения после суммирования.",
+            initiallyExpanded = false
+        ) {
+            TotalsCard(total = state.total)
+        }
 
         Row(
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             TextButton(onClick = {
-                // Сброс: очистить базу и пул
+                vm.clearRolls()
                 vm.loadBase(base = defaultBase(), pool = emptyList())
                 onStateChanged(vm.state)
             }) {

@@ -98,6 +98,11 @@ fun Step3AbilitiesStandardArrayScreen(
             }
         )
 
+        TextButton(onClick = {
+            vm.applyStandardArrayDefaultOrder()
+            onStateChanged(vm.state)
+        }) { Text("Авторазложить 15/14/13/12/10/8") }
+
         // Сетка характеристик (управление через пул)
         AbilityGrid(
             totals = state.total,

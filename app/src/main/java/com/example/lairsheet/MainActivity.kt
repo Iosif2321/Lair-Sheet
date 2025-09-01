@@ -32,9 +32,11 @@ import com.example.lairsheet.ui.theme.DiceMenu
 import com.example.lairsheet.ui.theme.LairSheetTheme
 import com.example.lairsheet.ui.theme.MainScreen
 import com.example.lairsheet.ui.create.CharacterCreatorNav
+import com.example.lairsheet.ui.create.QuickStart
 import com.example.lairsheet.ui.theme.RollEntry
 import com.example.lairsheet.ui.theme.RollFeed
 import com.example.lairsheet.ui.theme.SplashScreen
+import com.example.lairsheet.ui.theme.DeveloperScreen
 import kotlinx.coroutines.delay
 import kotlin.random.Random
 
@@ -277,9 +279,37 @@ class MainActivity : ComponentActivity() {
                                 }
                             )
 
-                            Screen.Authors -> AuthorsScreen(onBack = { currentScreen = Screen.Main })
+                            Screen.Authors -> AuthorsScreen(
+                                onBack = { currentScreen = Screen.Main },
+                                onDeveloper = { currentScreen = Screen.Developer }
+                            )
                             Screen.NewCreator -> CharacterCreatorNav(
                                 onClose = { currentScreen = Screen.Main }
+                            )
+                            is Screen.NewCreatorQuick -> CharacterCreatorNav(
+                                onClose = { currentScreen = Screen.Main },
+                                quickStart = QuickStart(scr.ruleset)
+                            )
+                            Screen.Developer -> DeveloperScreen(
+                                onBack = { currentScreen = Screen.Authors },
+                                onClear2014 = {
+                                    vm.clearCharactersByRuleset(Ruleset.R5E_2014)
+                                    Toast.makeText(this@MainActivity, "Очищено: R5E 2014", Toast.LENGTH_SHORT).show()
+                                },
+                                onClear2024 = {
+                                    vm.clearCharactersByRuleset(Ruleset.R5E_2024)
+                                    Toast.makeText(this@MainActivity, "Очищено: R5E 2024", Toast.LENGTH_SHORT).show()
+                                },
+                                onClearAll = {
+                                    vm.clearAllCharacters()
+                                    Toast.makeText(this@MainActivity, "Очищены все персонажи", Toast.LENGTH_SHORT).show()
+                                },
+                                onQuickCreate2014 = {
+                                    currentScreen = Screen.NewCreatorQuick(Ruleset.R5E_2014)
+                                },
+                                onQuickCreate2024 = {
+                                    currentScreen = Screen.NewCreatorQuick(Ruleset.R5E_2024)
+                                }
                             )
                             else -> { }
                         }
@@ -318,9 +348,11 @@ class MainActivity : ComponentActivity() {
 private sealed class Screen {
     data object Main : Screen()
     data object NewCreator : Screen()
+    data class NewCreatorQuick(val ruleset: Ruleset) : Screen()
     data object CreateStep1 : Screen()
     data object CreateStep2 : Screen()
     data object Authors : Screen()
+    data object Developer : Screen()
     data class Detail(val id: Long) : Screen()
     data object Step2Method : Screen()
     data object StandardArray : Screen()

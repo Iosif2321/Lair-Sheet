@@ -224,7 +224,7 @@ fun TotalsCard(total: Map<AbilityType, Int>) {
                             AbilityType.CHARISMA -> "Харизма"
                         }
                     )
-                    val mod = (v - 10) / 2
+                    val mod = java.lang.Math.floorDiv(v - 10, 2)
                     Text("$v (мод ${if (mod >= 0) "+$mod" else "$mod"})", fontWeight = FontWeight.SemiBold)
                 }
                 HorizontalDivider()
