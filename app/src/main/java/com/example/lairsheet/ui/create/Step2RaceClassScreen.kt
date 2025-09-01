@@ -35,6 +35,7 @@ import com.example.lairsheet.data.Subclass
 import com.example.lairsheet.data.dnd.DndClass
 import com.example.lairsheet.data.dnd.DndRepository2014
 import com.example.lairsheet.data.dnd.DndRepository2024
+import com.example.lairsheet.ui.create.NavBarButtons
 
 @Composable
 fun Step2RaceClassScreen(
@@ -61,14 +62,12 @@ fun Step2RaceClassScreen(
     val races = remember(state.selectedSources) { if (use2024) repo2024.getRaces() else repo2014.getRaces() }
     val classes = remember(state.selectedSources) { if (use2024) repo2024.getClasses() else repo2014.getClasses() }
     val subracesRaw = remember(state.selectedRace, state.selectedSources) {
-        val r = state.selectedRace ?: return@remember emptyList()
-        // 1) Пытаемся взять подрасы из активного источника (2024 или 2014)
-        val primary = if (use2024) repo2024.getSubraces(r) else repo2014.getSubraces(r)
-        if (primary.isNotEmpty()) {
-            primary
+        val r = state.selectedRace ?: return@remember emptyList<Subrace>()
+        // В 2024 подрасы скрыты целиком
+        if (use2024) {
+            emptyList()
         } else {
-            // 2) Fallback: если активен 2024 и подрас нет, а 2014 включён — подгружаем из 2014
-            if (use2024 && has2014) repo2014.getSubraces(r) else emptyList()
+            repo2014.getSubraces(r)
         }
     }
     // Фильтрация "вариант" подрас — такие подрасы не показываем вовсе
@@ -114,17 +113,11 @@ fun Step2RaceClassScreen(
 
     Scaffold(
         bottomBar = {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .navigationBarsPadding()
-                    .padding(16.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                TextButton(onClick = onBack) { Text("Назад") }
-                Spacer(Modifier.weight(1f))
-                Button(onClick = onConfirm, enabled = ready) { Text("Далее") }
-            }
+            NavBarButtons(
+                onBack = onBack,
+                onNext = onConfirm,
+                nextEnabled = ready
+            )
         }
     ) { inner ->
         Column(

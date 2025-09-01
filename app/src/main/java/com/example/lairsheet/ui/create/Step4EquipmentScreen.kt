@@ -14,12 +14,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.example.lairsheet.data.Ruleset
+import com.example.lairsheet.data.AbilityType
 import com.example.lairsheet.data.dnd.*
+import com.example.lairsheet.ui.create.NavBarButtons
 
 @Composable
 fun Step4EquipmentScreen(
     state: CharacterCreationState,
-    onConfirm: (List<String>) -> Unit,
+    onConfirm: (EquipmentSummary) -> Unit,
     onBack: () -> Unit
 ) {
     val ctx = LocalContext.current
@@ -66,6 +68,61 @@ fun Step4EquipmentScreen(
 
     val totalGp = remember(chosen, itemMap) { chosen.sumOf { (k, q) -> moneyToGp(itemMap[k]?.price) * q } }
     val totalWeight = remember(chosen, itemMap) { chosen.sumOf { (k, q) -> (itemMap[k]?.weightLb?.toDouble() ?: 0.0) * q } }
+
+    // AC расчёт по выбранным предметам и DEX модификатору
+    val dexScore = remember(state.abilityScores) { state.abilityScores[AbilityType.DEXTERITY] ?: 10 }
+    val dexMod = remember(dexScore) { java.lang.Math.floorDiv(dexScore - 10, 2) }
+    val grouped = remember(chosen) { chosen.groupBy { it.first }.mapValues { e -> e.value.sumOf { it.second } } }
+
+    fun armorBaseFor(item: Item, fallback: Int): Int = item.armorClass ?: fallback
+
+    val computedAc = remember(grouped, itemMap, dexMod) {
+        var bestHeavy: Int? = null
+        var bestMedium: Int? = null
+        var bestLight: Int? = null
+        var hasShield = false
+
+        grouped.keys.forEach { key ->
+            val it = itemMap[key] ?: return@forEach
+            val cat = it.category.lowercase()
+            if ("shield" in cat || it.name.contains("shield", ignoreCase = true)) {
+                hasShield = true
+            }
+            if ("armor" in cat) {
+                when {
+                    "heavy" in cat -> {
+                        val base = armorBaseFor(it, 16)
+                        bestHeavy = listOfNotNull(bestHeavy, base).maxOrNull() ?: base
+                    }
+                    "medium" in cat -> {
+                        val base = armorBaseFor(it, 12)
+                        bestMedium = listOfNotNull(bestMedium, base).maxOrNull() ?: base
+                    }
+                    "light" in cat -> {
+                        val base = armorBaseFor(it, 11)
+                        bestLight = listOfNotNull(bestLight, base).maxOrNull() ?: base
+                    }
+                    else -> {
+                        // если категория просто "armor", попробуем по armorClass без типа
+                        val base = it.armorClass
+                        if (base != null) {
+                            // считаем как тяжёлая без модификатора, чтобы не занижать
+                            bestHeavy = listOfNotNull(bestHeavy, base).maxOrNull() ?: base
+                        }
+                    }
+                }
+            }
+        }
+
+        var ac = when {
+            bestHeavy != null -> bestHeavy!!
+            bestMedium != null -> bestMedium!! + kotlin.math.min(dexMod, 2)
+            bestLight != null -> bestLight!! + dexMod
+            else -> 10 + dexMod // без брони
+        }
+        if (hasShield) ac += 2
+        ac
+    }
 
     val ready = starting?.choices?.all { ch -> (picks[ch.id]?.size ?: 0) >= ch.pick } == true
 
@@ -149,26 +206,25 @@ fun Step4EquipmentScreen(
         }
 
         Spacer(Modifier.height(24.dp))
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Button(onClick = onBack) { Text("Назад") }
-            Spacer(Modifier.weight(1f))
-            Button(
-                onClick = {
-                    val names = chosen.map { (k, q) ->
-                        val it = itemMap[k]
-                        val n = it?.name ?: k
-                        if (q > 1) "$n ×$q" else n
-                    }
-                    onConfirm(names)
-                },
-                enabled = starting != null && ready
-            ) {
-                Text("Далее")
-            }
-        }
+        NavBarButtons(
+            onBack = onBack,
+            onNext = {
+                val names = chosen.map { (k, q) ->
+                    val it = itemMap[k]
+                    val n = it?.name ?: k
+                    if (q > 1) "$n ×$q" else n
+                }
+                onConfirm(
+                    EquipmentSummary(
+                        items = names,
+                        armorClass = computedAc,
+                        totalWeightLb = totalWeight,
+                        totalGoldGp = totalGp
+                    )
+                )
+            },
+            nextEnabled = starting != null && ready
+        )
     }
 }
 

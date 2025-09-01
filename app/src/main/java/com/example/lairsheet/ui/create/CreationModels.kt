@@ -32,6 +32,10 @@ data class CharacterCreationState(
     val selectedClass: DndClass? = null,
     val selectedSubclass: Subclass? = null,
 
+    // Предыстория (экран между шагами 3 и 4)
+    val selectedBackground: Background? = null,
+    val backgroundBonuses: Map<AbilityType, Int> = emptyMap(),
+
     // Шаг начисления характеристик
     val abilityMethod: AbilityMethod? = null,
     // Сырые итоговые значения (до применения расовых/фоновых модификаторов в дальнейших шагах)
@@ -47,7 +51,12 @@ data class CharacterCreationState(
     val manualValues: Map<AbilityType, Int> = defaultBase(),
 
     // Собранное снаряжение (этап Equip)
-    val selectedEquipment: List<String> = emptyList()
+    val selectedEquipment: List<String> = emptyList(),
+
+    // Итоговые агрегаты по снаряжению (для сохранения/показа)
+    val equipmentArmorClass: Int = 10,
+    val equipmentCarryWeight: Double = 0.0,
+    val equipmentGoldValue: Double = 0.0
 )
 
 /* ====== Этап 2: Распределение характеристик — тип метода ====== */
@@ -85,6 +94,15 @@ data class RollConfig(
 
 enum class RacialBonusMode { FLEXIBLE_2024, FIXED_2014 }
 enum class FlexibleScheme { PLUS2_PLUS1, PLUS1x3 }
+
+// Предыстория (минимальная модель под схему бонусов 2024)
+data class Background(
+    val nameRu: String,
+    val shortDescription: String = "",
+    // Для 2024: схема распределения бонусов по разным хар-кам; null для 2014
+    val scheme: List<Int>? = null,
+    val feat: String? = null
+)
 
 data class RacialBonusChoice(
     val scheme: FlexibleScheme = FlexibleScheme.PLUS2_PLUS1,

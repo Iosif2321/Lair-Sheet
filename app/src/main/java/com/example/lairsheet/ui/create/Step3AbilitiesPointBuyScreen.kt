@@ -42,6 +42,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lairsheet.data.AbilityType
 import com.example.lairsheet.data.Ruleset
 import com.example.lairsheet.data.dnd.DndRepository2014
+import com.example.lairsheet.ui.create.NavBarButtons
 
 /**
  * Шаг 3 — «Point Buy» с макетом, как на референсах.
@@ -281,22 +282,14 @@ fun Step3AbilitiesPointBuyScreen(
 
         Spacer(Modifier.height(8.dp))
 
-        // Нижняя панель управления шагом
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            TextButton(onClick = onBack, modifier = Modifier.weight(1f)) { Text("Назад") }
-            ElevatedButton(
-                onClick = {
-                    val totals = state.total.mapValues { it.value }
-                    onDone(totals)
-                },
-                enabled = state.ready,
-                modifier = Modifier.weight(1f)
-            ) { Text("Далее") }
-        }
+        NavBarButtons(
+            onBack = onBack,
+            onNext = {
+                val totals = state.total.mapValues { it.value }
+                onDone(totals)
+            },
+            nextEnabled = state.ready
+        )
     }
 }
 

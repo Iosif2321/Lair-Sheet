@@ -22,6 +22,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lairsheet.data.AbilityType
 import com.example.lairsheet.data.Ruleset
 import com.example.lairsheet.data.dnd.DndRepository2014
+import com.example.lairsheet.ui.create.NavBarButtons
 
 /**
  * Шаг 3 — «Стандартный массив».
@@ -129,15 +130,15 @@ fun Step3AbilitiesStandardArrayScreen(
             }) {
                 Text("Сброс")
             }
-            Spacer(modifier = Modifier.weight(1f))
-            TextButton(onClick = onBack) { Text("Назад") }
-            ElevatedButton(
-                onClick = {
-                    val totals = vm.state.total.mapValues { it.value }
-                    onDone(totals)
-                },
-                enabled = state.ready
-            ) { Text("Далее") }
         }
+
+        NavBarButtons(
+            onBack = onBack,
+            onNext = {
+                val totals = vm.state.total.mapValues { it.value }
+                onDone(totals)
+            },
+            nextEnabled = state.ready
+        )
     }
 }

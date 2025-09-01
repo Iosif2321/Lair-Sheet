@@ -115,12 +115,8 @@ class DndRepository2024(private val context: Context) {
     }
 
     fun getSubraces(race: Race): List<Subrace> {
-        return getBrRaces()
-            .find { it.key == race.nameEn || it.name == race.nameRu }
-            ?.subraces
-            ?.map { brSubrace ->
-                Subrace(brSubrace.name, brSubrace.key, brSubrace.description)
-            } ?: emptyList()
+        // В 2024 подрасы отключены
+        return emptyList()
     }
 
     fun getSubclasses(className: String): List<Subclass> {

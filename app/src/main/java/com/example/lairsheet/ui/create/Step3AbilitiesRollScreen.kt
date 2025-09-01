@@ -37,6 +37,7 @@ import com.example.lairsheet.data.Ruleset
 import com.example.lairsheet.data.dnd.DndRepository2014
 import com.example.lairsheet.ui.theme.DeepRed
 import com.example.lairsheet.ui.theme.DiceIcon
+import com.example.lairsheet.ui.create.NavBarButtons
 
 /**
  * Шаг 3 — «Броски»:
@@ -276,15 +277,15 @@ fun Step3AbilitiesRollScreen(
             }) {
                 Text("Сброс")
             }
-            Spacer(modifier = androidx.compose.ui.Modifier.weight(1f))
-            TextButton(onClick = onBack) { Text("Назад") }
-            ElevatedButton(
-                onClick = {
-                    val totals = vm.state.total.mapValues { it.value }
-                    onDone(totals)
-                },
-                enabled = state.ready
-            ) { Text("Далее") }
         }
+
+        NavBarButtons(
+            onBack = onBack,
+            onNext = {
+                val totals = vm.state.total.mapValues { it.value }
+                onDone(totals)
+            },
+            nextEnabled = state.ready
+        )
     }
 }

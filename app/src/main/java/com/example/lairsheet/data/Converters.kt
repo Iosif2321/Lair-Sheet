@@ -55,4 +55,14 @@ class Converters {
 
     @TypeConverter
     fun toSubclass(json: String?): Subclass? = json?.let { gson.fromJson(it, Subclass::class.java) }
+
+    // List<String> (equipment items)
+    @TypeConverter
+    fun fromStringList(list: List<String>): String = gson.toJson(list)
+
+    @TypeConverter
+    fun toStringList(json: String): List<String> {
+        val type = object : TypeToken<List<String>>() {}.type
+        return gson.fromJson(json, type)
+    }
 }

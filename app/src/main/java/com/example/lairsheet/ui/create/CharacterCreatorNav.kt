@@ -18,6 +18,7 @@ import com.example.lairsheet.data.AbilityScore
 import com.example.lairsheet.data.AbilityType
 import com.example.lairsheet.data.FantasyNames
 import dnd.lair.core.PointBuy as CorePointBuy
+import com.example.lairsheet.data.dnd.BackgroundsRepository
 import kotlinx.coroutines.launch
 
 /**
@@ -35,6 +36,7 @@ fun CharacterCreatorNav(
     val ctx = LocalContext.current
     val scope = rememberCoroutineScope()
     val repo = remember { CharacterRepository(AppDatabase.getDatabase(ctx).characterDao()) }
+    val bgRepo = remember { BackgroundsRepository() }
 
     // Быстрый старт: имя из подготовленного списка фэнтези-имён (1000 шт.)
     fun generateName(): String = FantasyNames.next()
@@ -117,8 +119,9 @@ fun CharacterCreatorNav(
         val ruleset = state.selectedSources.firstOrNull() ?: Ruleset.R5E_2024
         if (name.length >= 3 && race != null && clazz != null) {
             val now = System.currentTimeMillis()
+            // Сохраняем характеристики в БД только когда шаг завершён
             val abilityMap: Map<AbilityType, AbilityScore> =
-                if (state.abilityScores.isNotEmpty())
+                if (state.abilityStepCompleted && state.abilityScores.isNotEmpty())
                     state.abilityScores.mapValues { (k, v) -> AbilityScore(k, v) }
                 else emptyMap()
             val base = Character(
@@ -131,6 +134,10 @@ fun CharacterCreatorNav(
                 abilityMethod = state.abilityMethod?.routeKey,
                 abilityScores = abilityMap,
                 ruleset = ruleset,
+                equipmentItems = state.selectedEquipment,
+                armorClass = state.equipmentArmorClass,
+                carryWeightLb = state.equipmentCarryWeight,
+                goldValueGp = state.equipmentGoldValue,
                 creationStep = step ?: 1,
                 isCompleted = false,
                 createdAt = now,
@@ -158,7 +165,12 @@ fun CharacterCreatorNav(
                 onToggle = { ruleset, checked ->
                     val m = state.selectedSources.toMutableSet()
                     if (checked) m.add(ruleset) else m.remove(ruleset)
-                    state = state.copy(selectedSources = m)
+                    var newState = state.copy(selectedSources = m)
+                    // При выборе 2024 — сбрасываем подрасу
+                    if (ruleset == Ruleset.R5E_2024 && checked) {
+                        newState = newState.copy(selectedSubrace = null)
+                    }
+                    state = newState
                 },
                 onNext = { nav.navigate("race_class") },
                 onCancel = { onClose() }
@@ -234,7 +246,7 @@ fun CharacterCreatorNav(
                         abilityStepCompleted = true
                     )
                     saveDraft(step = 2)
-                    nav.navigate("equipment")
+                    nav.navigate("background")
                 }
             )
         }
@@ -259,7 +271,7 @@ fun CharacterCreatorNav(
                         abilityStepCompleted = true
                     )
                     saveDraft(step = 2)
-                    nav.navigate("equipment")
+                    nav.navigate("background")
                 }
             )
         }
@@ -284,7 +296,7 @@ fun CharacterCreatorNav(
                         abilityStepCompleted = true
                     )
                     saveDraft(step = 2)
-                    nav.navigate("equipment")
+                    nav.navigate("background")
                 }
             )
         }
@@ -308,6 +320,42 @@ fun CharacterCreatorNav(
                         abilityStepCompleted = true
                     )
                     saveDraft(step = 2)
+                    nav.navigate("background")
+                }
+            )
+        }
+        composable("background") {
+            val use2024 = remember(state.selectedSources) { state.selectedSources.contains(Ruleset.R5E_2024) || state.selectedSources.contains(Ruleset.EXPANDED) }
+            val backgrounds = remember(state.selectedSources) { bgRepo.getAllFor(state.selectedSources) }
+            StepBackgroundScreen(
+                state = state,
+                backgrounds = backgrounds,
+                onSelect = { bg ->
+                    state = state.copy(selectedBackground = bg, backgroundBonuses = emptyMap())
+                    saveDraft(step = 3)
+                },
+                onAssignBonus = { ability, mag ->
+                    val m = state.backgroundBonuses.toMutableMap()
+                    if (mag <= 0) m.remove(ability) else m[ability] = mag
+                    state = state.copy(backgroundBonuses = m)
+                },
+                onBack = {
+                    // назад к последнему экрану выбора метода/способа
+                    nav.popBackStack()
+                },
+                onNext = {
+                    val bg = state.selectedBackground
+                    val scheme = bg?.scheme
+                    if (use2024 && scheme != null) {
+                        // Применяем бонусы предыстории к уже рассчитанным итогам шага 3 (abilityScores)
+                        val add = state.backgroundBonuses
+                        val merged = AbilityType.values().associateWith { t ->
+                            val base = state.abilityScores[t] ?: 8
+                            (base + (add[t] ?: 0)).coerceIn(1, 20)
+                        }
+                        state = state.copy(abilityScores = merged)
+                    }
+                    saveDraft(step = 3)
                     nav.navigate("equipment")
                 }
             )
@@ -315,8 +363,13 @@ fun CharacterCreatorNav(
         composable("equipment") {
             Step4EquipmentScreen(
                 state = state,
-                onConfirm = { items ->
-                    state = state.copy(selectedEquipment = items)
+                onConfirm = { summary ->
+                    state = state.copy(
+                        selectedEquipment = summary.items,
+                        equipmentArmorClass = summary.armorClass,
+                        equipmentCarryWeight = summary.totalWeightLb,
+                        equipmentGoldValue = summary.totalGoldGp
+                    )
                     saveDraft(step = 3)
                     // здесь можно перейти на итоговый экран/сохранение
                     nav.popBackStack() // возвращаемся назад или добавим summary позже

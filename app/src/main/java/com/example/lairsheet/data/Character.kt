@@ -22,6 +22,13 @@ data class Character(
     val abilityMethod: String? = null,
     val abilityScores: Map<AbilityType, AbilityScore>,
     val ruleset: Ruleset = Ruleset.R5E_2024,
+
+    // Снаряжение: итоговый список (названия), итоговые агрегаты
+    val equipmentItems: List<String> = emptyList(),
+    val armorClass: Int? = null,
+    val carryWeightLb: Double? = null,
+    val goldValueGp: Double? = null,
+
     val creationStep: Int = 0, // 0: draft, 1: basic info, 2: abilities, 3: completed
     val isCompleted: Boolean = false,
     val createdAt: Long = System.currentTimeMillis(),
